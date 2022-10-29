@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Oct 29 14:08:19 2022
+Sat Oct 29 14:56:26 2022
 
 
 Command Line:  C:\lscc\radiant\3.2\ispfpga\bin\nt64\synthesis.exe -f latticeE155FinalProject_impl_1_lattice.synproj -gui -msgset C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/promote.xml 
@@ -165,8 +165,8 @@ INFO - synthesis: The default VHDL library search path is now "C:/Users/jzales/D
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): top
 INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(6): compiling module top. VERI-1018
-INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(26): compiling module rfid_spi. VERI-1018
-WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(13): net cyphertext[127] does not have a driver. VDB-1002
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(24): compiling module MCU_spi. VERI-1018
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(39): expression size 129 truncated to fit in target size 128. VERI-1209
                                                          
 
 
@@ -191,284 +191,27 @@ WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/l
                                                          
 
 
-WARNING - synthesis: I/O Port clk 's net has no driver and is unused.
-WARNING - synthesis: I/O Port load 's net has no driver and is unused.
-######## Missing driver on net done. Patching with GND.
-######## Missing driver on net cyphertext[127]. Patching with GND.
-######## Missing driver on net cyphertext[126]. Patching with GND.
-######## Missing driver on net cyphertext[125]. Patching with GND.
-######## Missing driver on net cyphertext[124]. Patching with GND.
-######## Missing driver on net cyphertext[123]. Patching with GND.
-######## Missing driver on net cyphertext[122]. Patching with GND.
-######## Missing driver on net cyphertext[121]. Patching with GND.
-######## Missing driver on net cyphertext[120]. Patching with GND.
-######## Missing driver on net cyphertext[119]. Patching with GND.
-######## Missing driver on net cyphertext[118]. Patching with GND.
-######## Missing driver on net cyphertext[117]. Patching with GND.
-######## Missing driver on net cyphertext[116]. Patching with GND.
-######## Missing driver on net cyphertext[115]. Patching with GND.
-######## Missing driver on net cyphertext[114]. Patching with GND.
-######## Missing driver on net cyphertext[113]. Patching with GND.
-######## Missing driver on net cyphertext[112]. Patching with GND.
-######## Missing driver on net cyphertext[111]. Patching with GND.
-######## Missing driver on net cyphertext[110]. Patching with GND.
-######## Missing driver on net cyphertext[109]. Patching with GND.
-######## Missing driver on net cyphertext[108]. Patching with GND.
-######## Missing driver on net cyphertext[107]. Patching with GND.
-######## Missing driver on net cyphertext[106]. Patching with GND.
-######## Missing driver on net cyphertext[105]. Patching with GND.
-######## Missing driver on net cyphertext[104]. Patching with GND.
-######## Missing driver on net cyphertext[103]. Patching with GND.
-######## Missing driver on net cyphertext[102]. Patching with GND.
-######## Missing driver on net cyphertext[101]. Patching with GND.
-######## Missing driver on net cyphertext[100]. Patching with GND.
-######## Missing driver on net cyphertext[99]. Patching with GND.
-######## Missing driver on net cyphertext[98]. Patching with GND.
-######## Missing driver on net cyphertext[97]. Patching with GND.
-######## Missing driver on net cyphertext[96]. Patching with GND.
-######## Missing driver on net cyphertext[95]. Patching with GND.
-######## Missing driver on net cyphertext[94]. Patching with GND.
-######## Missing driver on net cyphertext[93]. Patching with GND.
-######## Missing driver on net cyphertext[92]. Patching with GND.
-######## Missing driver on net cyphertext[91]. Patching with GND.
-######## Missing driver on net cyphertext[90]. Patching with GND.
-######## Missing driver on net cyphertext[89]. Patching with GND.
-######## Missing driver on net cyphertext[88]. Patching with GND.
-######## Missing driver on net cyphertext[87]. Patching with GND.
-######## Missing driver on net cyphertext[86]. Patching with GND.
-######## Missing driver on net cyphertext[85]. Patching with GND.
-######## Missing driver on net cyphertext[84]. Patching with GND.
-######## Missing driver on net cyphertext[83]. Patching with GND.
-######## Missing driver on net cyphertext[82]. Patching with GND.
-######## Missing driver on net cyphertext[81]. Patching with GND.
-######## Missing driver on net cyphertext[80]. Patching with GND.
-######## Missing driver on net cyphertext[79]. Patching with GND.
-######## Missing driver on net cyphertext[78]. Patching with GND.
-######## Missing driver on net cyphertext[77]. Patching with GND.
-######## Missing driver on net cyphertext[76]. Patching with GND.
-######## Missing driver on net cyphertext[75]. Patching with GND.
-######## Missing driver on net cyphertext[74]. Patching with GND.
-######## Missing driver on net cyphertext[73]. Patching with GND.
-######## Missing driver on net cyphertext[72]. Patching with GND.
-######## Missing driver on net cyphertext[71]. Patching with GND.
-######## Missing driver on net cyphertext[70]. Patching with GND.
-######## Missing driver on net cyphertext[69]. Patching with GND.
-######## Missing driver on net cyphertext[68]. Patching with GND.
-######## Missing driver on net cyphertext[67]. Patching with GND.
-######## Missing driver on net cyphertext[66]. Patching with GND.
-######## Missing driver on net cyphertext[65]. Patching with GND.
-######## Missing driver on net cyphertext[64]. Patching with GND.
-######## Missing driver on net cyphertext[63]. Patching with GND.
-######## Missing driver on net cyphertext[62]. Patching with GND.
-######## Missing driver on net cyphertext[61]. Patching with GND.
-######## Missing driver on net cyphertext[60]. Patching with GND.
-######## Missing driver on net cyphertext[59]. Patching with GND.
-######## Missing driver on net cyphertext[58]. Patching with GND.
-######## Missing driver on net cyphertext[57]. Patching with GND.
-######## Missing driver on net cyphertext[56]. Patching with GND.
-######## Missing driver on net cyphertext[55]. Patching with GND.
-######## Missing driver on net cyphertext[54]. Patching with GND.
-######## Missing driver on net cyphertext[53]. Patching with GND.
-######## Missing driver on net cyphertext[52]. Patching with GND.
-######## Missing driver on net cyphertext[51]. Patching with GND.
-######## Missing driver on net cyphertext[50]. Patching with GND.
-######## Missing driver on net cyphertext[49]. Patching with GND.
-######## Missing driver on net cyphertext[48]. Patching with GND.
-######## Missing driver on net cyphertext[47]. Patching with GND.
-######## Missing driver on net cyphertext[46]. Patching with GND.
-######## Missing driver on net cyphertext[45]. Patching with GND.
-######## Missing driver on net cyphertext[44]. Patching with GND.
-######## Missing driver on net cyphertext[43]. Patching with GND.
-######## Missing driver on net cyphertext[42]. Patching with GND.
-######## Missing driver on net cyphertext[41]. Patching with GND.
-######## Missing driver on net cyphertext[40]. Patching with GND.
-######## Missing driver on net cyphertext[39]. Patching with GND.
-######## Missing driver on net cyphertext[38]. Patching with GND.
-######## Missing driver on net cyphertext[37]. Patching with GND.
-######## Missing driver on net cyphertext[36]. Patching with GND.
-######## Missing driver on net cyphertext[35]. Patching with GND.
-######## Missing driver on net cyphertext[34]. Patching with GND.
-######## Missing driver on net cyphertext[33]. Patching with GND.
-######## Missing driver on net cyphertext[32]. Patching with GND.
-######## Missing driver on net cyphertext[31]. Patching with GND.
-######## Missing driver on net cyphertext[30]. Patching with GND.
-######## Missing driver on net cyphertext[29]. Patching with GND.
-######## Missing driver on net cyphertext[28]. Patching with GND.
-######## Missing driver on net cyphertext[27]. Patching with GND.
-######## Missing driver on net cyphertext[26]. Patching with GND.
-######## Missing driver on net cyphertext[25]. Patching with GND.
-######## Missing driver on net cyphertext[24]. Patching with GND.
-######## Missing driver on net cyphertext[23]. Patching with GND.
-######## Missing driver on net cyphertext[22]. Patching with GND.
-######## Missing driver on net cyphertext[21]. Patching with GND.
-######## Missing driver on net cyphertext[20]. Patching with GND.
-######## Missing driver on net cyphertext[19]. Patching with GND.
-######## Missing driver on net cyphertext[18]. Patching with GND.
-######## Missing driver on net cyphertext[17]. Patching with GND.
-######## Missing driver on net cyphertext[16]. Patching with GND.
-######## Missing driver on net cyphertext[15]. Patching with GND.
-######## Missing driver on net cyphertext[14]. Patching with GND.
-######## Missing driver on net cyphertext[13]. Patching with GND.
-######## Missing driver on net cyphertext[12]. Patching with GND.
-######## Missing driver on net cyphertext[11]. Patching with GND.
-######## Missing driver on net cyphertext[10]. Patching with GND.
-######## Missing driver on net cyphertext[9]. Patching with GND.
-######## Missing driver on net cyphertext[8]. Patching with GND.
-######## Missing driver on net cyphertext[7]. Patching with GND.
-######## Missing driver on net cyphertext[6]. Patching with GND.
-######## Missing driver on net cyphertext[5]. Patching with GND.
-######## Missing driver on net cyphertext[4]. Patching with GND.
-######## Missing driver on net cyphertext[3]. Patching with GND.
-######## Missing driver on net cyphertext[2]. Patching with GND.
-######## Missing driver on net cyphertext[1]. Patching with GND.
-######## Missing driver on net cyphertext[0]. Patching with GND.
-WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(50): Register \spi/wasdone is stuck at Zero. VDB-5013
-
-
-
-######## Found 2 RTL RAMs in the design.
-######## Mapping RTL RAM \spi/key to 1 EBR blocks in PSEUDO_DUAL_PORT Mode
-
-######## Mapping RTL RAM \spi/plaintext to 1 EBR blocks in PSEUDO_DUAL_PORT Mode
-
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \spi/cyphertextcaptured_ is stuck at Zero
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(13): Removing unused instance spi. VDB-5034
 WARNING - synthesis: I/O Port clk 's net has no driver and is unused.
 WARNING - synthesis: I/O Port sck 's net has no driver and is unused.
 WARNING - synthesis: I/O Port sdi 's net has no driver and is unused.
-WARNING - synthesis: I/O Port load 's net has no driver and is unused.
+WARNING - synthesis: I/O Port CE 's net has no driver and is unused.
+WARNING - synthesis: I/O Port pwm 's net has no driver and is unused.
+######## Missing driver on net pwm. Patching with GND.
+
+
+
+WARNING - synthesis: I/O Port clk 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sck 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sdi 's net has no driver and is unused.
+WARNING - synthesis: I/O Port CE 's net has no driver and is unused.
 
 
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (top)######################
 Number of register bits => 0 of 5280 (0 % )
-OB => 2
+OB => 1
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
 Number of even-length carry chains : 0
@@ -483,11 +226,10 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : done, loads : 0
-  Net : sdo, loads : 0
+  Net : pwm, loads : 0
 ################### End Clock Report ##################
 
-Peak Memory Usage: 83 MB
+Peak Memory Usage: 80 MB
 
 --------------------------------------------------------------
 Total CPU Time: 1 secs 

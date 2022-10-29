@@ -1,7 +1,7 @@
 (DELAYFILE
   (SDFVERSION "3.0")
   (DESIGN "top")
-  (DATE "Sat Oct 29 14:08:38 2022")
+  (DATE "Sat Oct 29 14:56:44 2022")
   (VENDOR "Lattice")
   (PROGRAM "backanno")
   (VERSION "Radiant Software (64-bit) 3.2.0.18.0")
@@ -11,20 +11,11 @@
   (TEMPERATURE -40:25:85)
   (TIMESCALE 1ps)
   (CELL
-    (CELLTYPE "done")
-    (INSTANCE done_I)
+    (CELLTYPE "pwm")
+    (INSTANCE pwm_I)
     (DELAY
       (ABSOLUTE
-        (IOPATH PADDO done (1914:2001:2088)(1914:2001:2088))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "sdo")
-    (INSTANCE sdo_I)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH PADDO sdo (1914:2001:2088)(1914:2001:2088))
+        (IOPATH PADDO pwm (1914:2001:2088)(1914:2001:2088))
       )
     )
   )
@@ -33,8 +24,7 @@
     (INSTANCE )
     (DELAY
       (ABSOLUTE
-        (INTERCONNECT SLICE_0/F0 done_I/PADDO (3080:3298:3516)(3080:3298:3516))
-        (INTERCONNECT SLICE_0/F0 sdo_I/PADDO (3080:3298:3516)(3080:3298:3516))
+        (INTERCONNECT SLICE_0/F0 pwm_I/PADDO (3661:3826:3992)(3661:3826:3992))
       )
     )
   )

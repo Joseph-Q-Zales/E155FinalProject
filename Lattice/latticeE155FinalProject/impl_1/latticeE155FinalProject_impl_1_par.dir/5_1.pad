@@ -6,21 +6,20 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Sat Oct 29 14:08:30 2022
+Sat Oct 29 14:56:36 2022
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+--------------------+
 | Port Name | Pin/Bank | Buffer Type  | Site  | Properties         |
 +-----------+----------+--------------+-------+--------------------+
-| done      | 27/0     | LVCMOS33_OUT | PR19B | DRIVE:8mA PULL:NA  |
-| sdo       | 26/0     | LVCMOS33_OUT | PR19A | DRIVE:8mA PULL:NA  |
+| pwm       | 15/1     | LVCMOS33_OUT | PL25A | DRIVE:8mA PULL:NA  |
 +-----------+----------+--------------+-------+--------------------+
 
 Vccio by Bank:
 +------+-------+
 | Bank | Vccio |
 +------+-------+
-| 0    | 3.3V  |
+| 1    | 3.3V  |
 +------+-------+
 
 Pinout by Pin Number:
@@ -37,7 +36,7 @@ Pinout by Pin Number:
 | 12/1     |     unused, PULL:UP |            |              | PL19A |                  |
 | 13/1     |     unused, PULL:UP |            |              | PL20A |                  |
 | 14/1     |     unused, PULL:UP |            |              | PL24A | SPI_SO           |
-| 15/1     |     unused, PULL:UP |            |              | PL25A | SPISCK           |
+| 15/1     | pwm                 |            | LVCMOS33_OUT | PL25A | SPISCK           |
 | 16/1     |     unused, PULL:UP |            |              | PL25B | SPI_SS           |
 | 17/1     |     unused, PULL:UP |            |              | PL24B | SPI_SI           |
 | 18/1     |     unused, PULL:UP |            |              | PL23B |                  |
@@ -46,8 +45,8 @@ Pinout by Pin Number:
 | 21/1     |     unused, PULL:UP |            |              | PL19B |                  |
 | 23/0     |     unused, PULL:UP |            |              | PR20A |                  |
 | 25/0     |     unused, PULL:UP |            |              | PR20B |                  |
-| 26/0     | sdo                 |            | LVCMOS33_OUT | PR19A |                  |
-| 27/0     | done                |            | LVCMOS33_OUT | PR19B |                  |
+| 26/0     |     unused, PULL:UP |            |              | PR19A |                  |
+| 27/0     |     unused, PULL:UP |            |              | PR19B |                  |
 | 28/0     |     unused, PULL:UP |            |              | PR18A |                  |
 | 31/0     |     unused, PULL:UP |            |              | PR17B |                  |
 | 32/0     |     unused, PULL:UP |            |              | PR17A |                  |
@@ -88,8 +87,7 @@ Pinout by Pin Number:
 
 Locate Constraints for each Pin: 
 
-ldc_set_location -site {27} [ get_ports {done} ]
-ldc_set_location -site {26} [ get_ports {sdo} ]
+ldc_set_location -site {15} [ get_ports {pwm} ]
 
 
 
@@ -97,5 +95,5 @@ ldc_set_location -site {26} [ get_ports {sdo} ]
 
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Sat Oct 29 14:08:30 2022
+Sat Oct 29 14:56:36 2022
 

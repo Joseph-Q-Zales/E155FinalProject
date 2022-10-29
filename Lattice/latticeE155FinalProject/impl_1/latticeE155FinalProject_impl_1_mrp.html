@@ -47,7 +47,7 @@ Target Device:        iCE40UP5KSG48
 Target Performance:   High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 3.2.0.18.0
-Mapped on: Sat Oct 29 14:08:24 2022
+Mapped on: Sat Oct 29 14:56:31 2022
 
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
@@ -62,15 +62,15 @@ Command line:   map -i latticeE155FinalProject_impl_1_syn.udb -o
    Number of LUT4s:             1 out of  5280 (<1%)
       Number of logic LUT4s:               1
       Number of ripple logic:              0 (0 LUT4s)
-   Number of IO sites used:   2 out of 39 (5%)
-      Number of IO sites used for general PIO: 2
+   Number of IO sites used:   1 out of 39 (3%)
+      Number of IO sites used for general PIO: 1
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 2 out of 36 (6%)
+      Number of IO sites used for PIO+I3C: 1 out of 36 (3%)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 2 out of 39 (5%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 1 out of 39 (3%)
    Number of DSPs:             0 out of 8 (0%)
    Number of I2Cs:             0 out of 2 (0%)
    Number of High Speed OSCs:  0 out of 1 (0%)
@@ -102,11 +102,11 @@ WARNING - map: Top module port &apos;clk&apos; does not connect to anything.
 WARNING - map: Top module port &apos;sck&apos; does not connect to anything.
 WARNING - map: Top module port &apos;sdi&apos; does not connect to anything.
 
-WARNING - map: Top module port &apos;load&apos; does not connect to anything.
+WARNING - map: Top module port &apos;CE&apos; does not connect to anything.
 WARNING - map: Top module port &apos;clk&apos; does not connect to anything.
 WARNING - map: Top module port &apos;sck&apos; does not connect to anything.
 WARNING - map: Top module port &apos;sdi&apos; does not connect to anything.
-WARNING - map: Top module port &apos;load&apos; does not connect to anything.
+WARNING - map: Top module port &apos;CE&apos; does not connect to anything.
 
 
 
@@ -116,16 +116,14 @@ WARNING - map: Top module port &apos;load&apos; does not connect to anything.
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| done                | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| sdo                 | OUTPUT    |           |       |       |           |
+| pwm                 | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
 
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
-Block done_pad.vhi_inst was optimized away.
+Block pwm_pad.vhi_inst was optimized away.
 
 
 
@@ -135,6 +133,8 @@ Block done_pad.vhi_inst was optimized away.
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 50 MB
+
+
 
 
 

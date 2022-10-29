@@ -1,8 +1,8 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
 Register bits:  0 of 5280 (0.000%)
-I/O cells:      2
+I/O cells:      1
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                 OB         2          100.0
-                              TOTAL         2
+                                 OB         1          100.0
+                              TOTAL         1
