@@ -1,0 +1,76 @@
+
+// Verilog netlist produced by program backanno, Version Radiant Software (64-bit) 3.2.0.18.0
+
+// backanno -o latticeE155FinalProject_impl_1_vo.vo -sp High-Performance_1.2V -w -neg -gui latticeE155FinalProject_impl_1.udb 
+// Netlist created on Sat Oct 29 14:08:30 2022
+// Netlist written on Sat Oct 29 14:08:38 2022
+// Design is for device iCE40UP5K
+// Design is for package SG48
+// Design is for performance grade High-Performance_1.2V
+
+`timescale 1 ns / 1 ps
+
+module top ( done, sdo, clk, sck, sdi, load );
+  input  clk, sck, sdi, load;
+  output done, sdo;
+  wire   GND_net;
+
+  SLICE_0 SLICE_0( .F0(GND_net));
+  done done_I( .PADDO(GND_net), .done(done));
+  sdo sdo_I( .PADDO(GND_net), .sdo(sdo));
+endmodule
+
+module SLICE_0 ( output F0 );
+  wire   GNDI;
+
+  lut4 i5( .A(GNDI), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+  endspecify
+
+endmodule
+
+module lut4 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0000") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module gnd ( output PWR0 );
+
+  VLO INST1( .Z(PWR0));
+endmodule
+
+module done ( input PADDO, output done );
+  wire   VCCI;
+
+  BB_B_B \done_pad.bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(done));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => done) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module BB_B_B ( input T_N, I, output O, inout B );
+
+  BB_B INST10( .T_N(T_N), .I(I), .O(O), .B(B));
+endmodule
+
+module vcc ( output PWR1 );
+
+  VHI INST1( .Z(PWR1));
+endmodule
+
+module sdo ( input PADDO, output sdo );
+  wire   VCCI;
+
+  BB_B_B \sdo_pad.bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(sdo));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => sdo) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
