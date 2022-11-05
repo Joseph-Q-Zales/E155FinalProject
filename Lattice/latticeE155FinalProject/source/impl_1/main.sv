@@ -9,7 +9,7 @@ module top(input  logic clk,
            input  logic CE,
            output logic pwm);
                     
-    logic [127:0] flattenedMCUout;
+    logic [47:0] flattenedMCUout;
     MCU_spi spi(sck, sdi, flattenedMCUout);
 	// AES_spi spi(sck, sdi, sdo, done, key, plaintext, cyphertext);   
     
@@ -17,16 +17,14 @@ endmodule
 
 /////////////////////////////////////////////
 // MCU_spi
-//   SPI interface.  Shifts in the flattened MCU output
+//   SPI interface.  Shifts  in the flattened MCU output
 // 	 As only shifting in data, no need to wory about SDO
 /////////////////////////////////////////////
 // asking about how this works: get rid of cyphertext as sdi is a 1 bit signal that pushes cyphertext out slowly
 module MCU_spi(input  logic sck, 
                input  logic sdi,
-               output logic [127:0] flattenedMCUout);
+               output logic [47:0] flattenedMCUout);
 
-    logic         sdodelayed, wasdone;
-    logic [127:0] cyphertextcaptured;
                
     // assert load
     // apply 256 sclks to shift in key and plaintext, starting with plaintext[127]
@@ -34,9 +32,9 @@ module MCU_spi(input  logic sck,
     // then apply 128 sclks to shift out cyphertext, starting with cyphertext[127]
     // SPI mode is equivalent to cpol = 0, cpha = 0 since data is sampled on first edge and the first
     // edge is a rising edge (clock going from low in the idle state to high).
-	// TODO: ******DO WE NEED AN IF (CE) block
+
 	always_ff @(posedge sck)
-		flattenedMCUout = {flattenedMCUout, sdi};
+		flattenedMCUout = {flattenedMCUout[46:0], sdi};
     
 endmodule
 
