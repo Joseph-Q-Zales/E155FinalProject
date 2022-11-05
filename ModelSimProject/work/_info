@@ -1,0 +1,165 @@
+m255
+K4
+z2
+!s11f vlog 2021.4 2021.10, Oct 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/lscc/radiant/3.2/modeltech/win32loem
+vmake_signals
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1667692346
+!i10b 1
+!s100 SZbi=Zl;PU7hU[QR:K0`Q0
+Ic@[HPndWj=[NVB6l0F@kc0
+S1
+Z2 dC:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject
+Z3 w1667691246
+Z4 8C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv
+Z5 FC:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv
+!i122 3
+L0 55 17
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OT;L;2021.4;73
+r1
+!s85 0
+31
+Z8 !s108 1667692346.000000
+Z9 !s107 C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv|
+Z10 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv|
+!s101 -O0
+!i113 1
+Z11 o-work work -sv -O0
+Z12 tCvgOpt 0
+vmakingSignals_tb
+R0
+R1
+!i10b 1
+!s100 ?gN7OENTzIf`nQ[<XXGC40
+InSRKcZC:adRVU4fPR6[A[2
+S1
+R2
+w1667692344
+8C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingSignals_tb.sv
+FC:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingSignals_tb.sv
+!i122 4
+L0 9 31
+R6
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingSignals_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingSignals_tb.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+nmaking@signals_tb
+vMCU_spi
+R0
+R1
+!i10b 1
+!s100 G1J2h1=:_:91EE25=J`Y?1
+IdcKNkm@AGz44<j2:_FZdd1
+S1
+R2
+R3
+R4
+R5
+!i122 3
+L0 39 12
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+n@m@c@u_spi
+vpwmDriver
+R0
+R1
+!i10b 1
+!s100 oEIhMk?5c?_AB?;HB1Hl_3
+IEkFk>?ekKnXe:4eWmcA^R3
+S1
+R2
+R3
+R4
+R5
+!i122 3
+L0 95 8
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+npwm@driver
+vtop
+R0
+R1
+!i10b 1
+!s100 gc=@aGo^DaH5ZFim0G4=M2
+I8McPEfa4YNIdD8Lhhn6?a3
+S1
+R2
+R3
+R4
+R5
+!i122 3
+L0 6 26
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+vuniqueTune
+R0
+R1
+!i10b 1
+!s100 VR7g>eL?@I<VE3Zl]CCP62
+I8Ig>aZ3Rmb=;i_hSg_HAT3
+S1
+R2
+R3
+R4
+R5
+!i122 3
+L0 76 14
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+nunique@tune

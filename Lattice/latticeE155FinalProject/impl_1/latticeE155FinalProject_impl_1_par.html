@@ -42,7 +42,7 @@ if (a)
 <DIV id="content" onclick="hideTocList()"><PRE>
 <A name="Par"></A>Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Sat Nov  5 13:06:21 2022
+Sat Nov  5 16:34:12 2022
 
 Command Line: par -w -n 1 -t 1 -s 1 -cores 1 -exp parPathBased=ON \
 	latticeE155FinalProject_impl_1_map.udb latticeE155FinalProject_impl_1.udb 
@@ -60,7 +60,7 @@ Total (real) run time for 1-seed: 5 secs
 par done!
 
 Lattice Place and Route Report for Design &quot;latticeE155FinalProject_impl_1_map.udb&quot;
-Sat Nov  5 13:06:21 2022
+Sat Nov  5 16:34:12 2022
 
 
 <A name="par_best"></A><B><U><big>Best Par Run</big></U></B>
@@ -81,22 +81,30 @@ Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
 Performance Grade:   High-Performance_1.2V
+WARNING - par: Unable to find the instance/port &apos;clk&apos; in the constraint &apos;ldc_set_location -site {4} [get_ports clk]&apos;
+
+WARNING - par: In the constraint &apos;ldc_set_location -site {4} [get_ports clk]&apos;, the locate object is not specified
+
+WARNING - par: Unable to find the instance/port &apos;sck&apos; in the constraint &apos;ldc_set_location -site {21} [get_ports sck]&apos;
+
+WARNING - par: In the constraint &apos;ldc_set_location -site {21} [get_ports sck]&apos;, the locate object is not specified
+
+WARNING - par: Unable to find the instance/port &apos;sdi&apos; in the constraint &apos;ldc_set_location -site {10} [get_ports sdi]&apos;
+
+WARNING - par: In the constraint &apos;ldc_set_location -site {10} [get_ports sdi]&apos;, the locate object is not specified
+
 WARNING - par: Top module port &apos;clk&apos; does not connect to anything.
 WARNING - par: Top module port &apos;sck&apos; does not connect to anything.
 WARNING - par: Top module port &apos;sdi&apos; does not connect to anything.
-WARNING - par: Top module port &apos;CE&apos; does not connect to anything.
 WARNING - par: Top module port &apos;clk&apos; does not connect to anything.
 WARNING - par: Top module port &apos;sck&apos; does not connect to anything.
 WARNING - par: Top module port &apos;sdi&apos; does not connect to anything.
-WARNING - par: Top module port &apos;CE&apos; does not connect to anything.
 WARNING - par: Top module port &apos;clk&apos; does not connect to anything.
 WARNING - par: Top module port &apos;sck&apos; does not connect to anything.
 WARNING - par: Top module port &apos;sdi&apos; does not connect to anything.
-WARNING - par: Top module port &apos;CE&apos; does not connect to anything.
 WARNING - par: Top module port &apos;clk&apos; does not connect to anything.
 WARNING - par: Top module port &apos;sck&apos; does not connect to anything.
 WARNING - par: Top module port &apos;sdi&apos; does not connect to anything.
-WARNING - par: Top module port &apos;CE&apos; does not connect to anything.
 Number of Signals: 1
 Number of Connections: 1
 
@@ -128,13 +136,13 @@ Pin Constraint Summary:
    0 out of 1 pins locked (0% locked).
 .
 .......
-Finished Placer Phase 0 (HIER). CPU time: 0 secs , REAL time: 3 secs 
+Finished Placer Phase 0 (HIER). CPU time: 0 secs , REAL time: 4 secs 
 
 
 ................
-Finished Placer Phase 0 (AP).  CPU time: 0 secs , REAL time: 3 secs 
+Finished Placer Phase 0 (AP).  CPU time: 0 secs , REAL time: 4 secs 
 
-Starting Placer Phase 1. CPU time: 0 secs , REAL time: 3 secs 
+Starting Placer Phase 1. CPU time: 0 secs , REAL time: 4 secs 
 ..  ..
 ....................
 
@@ -143,13 +151,13 @@ Placer score = 114.
 Device SLICE utilization summary after final SLICE packing:
    SLICE              1/2640         &lt;1% used
 
-Finished Placer Phase 1. CPU time: 1 secs , REAL time: 4 secs 
+Finished Placer Phase 1. CPU time: 1 secs , REAL time: 5 secs 
 
 Starting Placer Phase 2.
 .
 
 Placer score =  228
-Finished Placer Phase 2.  CPU time: 1 secs , REAL time: 4 secs 
+Finished Placer Phase 2.  CPU time: 1 secs , REAL time: 5 secs 
 
 
 
@@ -177,7 +185,7 @@ I/O Bank Usage Summary:
 | 2        | 0 / 8 (  0%)  | OFF        |            |            |
 +----------+---------------+------------+------------+------------+
 
-Total Placer CPU time: 1 secs , REAL time: 4 secs 
+Total Placer CPU time: 1 secs , REAL time: 5 secs 
 
 Writing design to file latticeE155FinalProject_impl_1_par.dir/5_1.udb ...
 
@@ -187,7 +195,7 @@ INFO - par: ASE feature is off due to non timing-driven settings.
 -----------------------------------------------------------------
 
 
-Start NBR router at 13:06:25 11/05/22
+Start NBR router at 16:34:17 11/05/22
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -209,18 +217,18 @@ Preassignment Summary:
 --------------------------------------------------------------------------------
 Completed routing resource preassignment
 
-Start NBR section for initial routing at 13:06:26 11/05/22
+Start NBR section for initial routing at 16:34:17 11/05/22
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
 
 Info: Initial congestion level at 75.00% usage is 0
 Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 13:06:26 11/05/22
+Start NBR section for normal routing at 16:34:17 11/05/22
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
 
-Start NBR section for post-routing at 13:06:26 11/05/22
+Start NBR section for post-routing at 16:34:17 11/05/22
 
 End NBR router with 0 unrouted connection
 
@@ -252,7 +260,7 @@ PAR_SUMMARY::Number of errors = 0
 
 Total CPU  Time: 1 secs 
 Total REAL Time: 5 secs 
-Peak Memory Usage: 71.22 MB
+Peak Memory Usage: 74.74 MB
 
 
 par done!

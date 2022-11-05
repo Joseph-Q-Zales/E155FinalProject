@@ -1,88 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
-    <Task name="PAR">
+    <Task name="Export">
         <Message>
-            <ID>71003020</ID>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>No port matched 'CE'.</Dynamic>
+            <Navigation>C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>16</Severity>
+            <Dynamic>bitgen: Unable to find the instance/port 'clk' in the constraint 'ldc_set_location -site {4} [get_ports clk]'</Dynamic>
+            <Navigation>WARNING</Navigation>
+            <Navigation>bitgen: Unable to find the instance/port 'clk' in the constraint 'ldc_set_location -site {4} [get_ports clk]'</Navigation>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>16</Severity>
+            <Dynamic>bitgen: In the constraint 'ldc_set_location -site {4} [get_ports clk]', the locate object is not specified</Dynamic>
+            <Navigation>WARNING</Navigation>
+            <Navigation>bitgen: In the constraint 'ldc_set_location -site {4} [get_ports clk]', the locate object is not specified</Navigation>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>16</Severity>
+            <Dynamic>bitgen: Unable to find the instance/port 'sck' in the constraint 'ldc_set_location -site {21} [get_ports sck]'</Dynamic>
+            <Navigation>WARNING</Navigation>
+            <Navigation>bitgen: Unable to find the instance/port 'sck' in the constraint 'ldc_set_location -site {21} [get_ports sck]'</Navigation>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>16</Severity>
+            <Dynamic>bitgen: In the constraint 'ldc_set_location -site {21} [get_ports sck]', the locate object is not specified</Dynamic>
+            <Navigation>WARNING</Navigation>
+            <Navigation>bitgen: In the constraint 'ldc_set_location -site {21} [get_ports sck]', the locate object is not specified</Navigation>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>16</Severity>
+            <Dynamic>bitgen: Unable to find the instance/port 'sdi' in the constraint 'ldc_set_location -site {10} [get_ports sdi]'</Dynamic>
+            <Navigation>WARNING</Navigation>
+            <Navigation>bitgen: Unable to find the instance/port 'sdi' in the constraint 'ldc_set_location -site {10} [get_ports sdi]'</Navigation>
+        </Message>
+        <Message>
+            <ID>1009991</ID>
+            <Severity>16</Severity>
+            <Dynamic>bitgen: In the constraint 'ldc_set_location -site {10} [get_ports sdi]', the locate object is not specified</Dynamic>
+            <Navigation>WARNING</Navigation>
+            <Navigation>bitgen: In the constraint 'ldc_set_location -site {10} [get_ports sdi]', the locate object is not specified</Navigation>
+        </Message>
+        <Message>
+            <ID>1009992</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001032</ID>
             <Severity>16</Severity>
             <Dynamic>clk</Dynamic>
+            <Dynamic>ldc_set_location -site {4} [get_ports clk]</Dynamic>
         </Message>
         <Message>
-            <ID>71003020</ID>
+            <ID>77001031</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {4} [get_ports clk]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001032</ID>
             <Severity>16</Severity>
             <Dynamic>sck</Dynamic>
+            <Dynamic>ldc_set_location -site {21} [get_ports sck]</Dynamic>
         </Message>
         <Message>
-            <ID>71003020</ID>
+            <ID>77001031</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {21} [get_ports sck]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001032</ID>
             <Severity>16</Severity>
             <Dynamic>sdi</Dynamic>
+            <Dynamic>ldc_set_location -site {10} [get_ports sdi]</Dynamic>
         </Message>
         <Message>
-            <ID>71003020</ID>
+            <ID>77001031</ID>
             <Severity>16</Severity>
-            <Dynamic>CE</Dynamic>
+            <Dynamic>ldc_set_location -site {10} [get_ports sdi]</Dynamic>
         </Message>
         <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>CE</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>CE</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>CE</Dynamic>
+            <ID>1191031</ID>
+            <Severity>1</Severity>
         </Message>
     </Task>
-    <Task name="Map">
+    <Task name="PAR">
+        <Message>
+            <ID>77001032</ID>
+            <Severity>16</Severity>
+            <Dynamic>clk</Dynamic>
+            <Dynamic>ldc_set_location -site {4} [get_ports clk]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001031</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {4} [get_ports clk]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001032</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+            <Dynamic>ldc_set_location -site {21} [get_ports sck]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001031</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {21} [get_ports sck]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001032</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
+            <Dynamic>ldc_set_location -site {10} [get_ports sdi]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001031</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {10} [get_ports sdi]</Dynamic>
+        </Message>
         <Message>
             <ID>71003020</ID>
             <Severity>16</Severity>
@@ -101,7 +147,17 @@
         <Message>
             <ID>71003020</ID>
             <Severity>16</Severity>
-            <Dynamic>CE</Dynamic>
+            <Dynamic>clk</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
         </Message>
         <Message>
             <ID>71003020</ID>
@@ -121,7 +177,17 @@
         <Message>
             <ID>71003020</ID>
             <Severity>16</Severity>
-            <Dynamic>CE</Dynamic>
+            <Dynamic>clk</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
         </Message>
     </Task>
     <Task name="Synthesis">
@@ -132,7 +198,7 @@
         <Message>
             <ID>35002033</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Dynamic>
+            <Dynamic>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Dynamic>
         </Message>
         <Message>
             <ID>35901328</ID>
@@ -410,31 +476,52 @@
             <ID>35921504</ID>
             <Severity>1</Severity>
             <Dynamic></Dynamic>
-            <Dynamic>C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/impl_1</Dynamic>
+            <Dynamic>C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/impl_1</Dynamic>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(6): </Dynamic>
+            <Dynamic>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(6): </Dynamic>
             <Dynamic>top</Dynamic>
-            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
             <Navigation>6</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(24): </Dynamic>
+            <Dynamic>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(39): </Dynamic>
             <Dynamic>MCU_spi</Dynamic>
-            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
-            <Navigation>24</Navigation>
+            <Navigation>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>39</Navigation>
         </Message>
         <Message>
-            <ID>35935034</ID>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(55): </Dynamic>
+            <Dynamic>make_signals</Dynamic>
+            <Navigation>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>55</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(76): </Dynamic>
+            <Dynamic>uniqueTune</Dynamic>
+            <Navigation>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>76</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(95): </Dynamic>
+            <Dynamic>pwmDriver</Dynamic>
+            <Navigation>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>95</Navigation>
+        </Message>
+        <Message>
+            <ID>35002028</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(13): </Dynamic>
-            <Dynamic>spi</Dynamic>
-            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
-            <Navigation>13</Navigation>
+            <Dynamic>clk</Dynamic>
         </Message>
         <Message>
             <ID>35002028</ID>
@@ -450,47 +537,69 @@
             <ID>35002028</ID>
             <Severity>16</Severity>
             <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>16</Severity>
-            <Dynamic>CE</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>16</Severity>
-            <Dynamic>pwm</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>16</Severity>
-            <Dynamic>CE</Dynamic>
         </Message>
         <Message>
             <ID>35811145</ID>
             <Severity>1</Severity>
-            <Dynamic>i13</Dynamic>
+            <Dynamic>i17</Dynamic>
         </Message>
     </Task>
-    <Task name="Export">
+    <Task name="Map">
         <Message>
-            <ID>1191031</ID>
-            <Severity>1</Severity>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>No port matched 'CE'.</Dynamic>
+            <Navigation>C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>1027013</ID>
+            <Severity>16</Severity>
+            <Dynamic>port</Dynamic>
+            <Dynamic>CE</Dynamic>
+        </Message>
+        <Message>
+            <ID>1014301</ID>
+            <Severity>16</Severity>
+            <Dynamic>CE</Dynamic>
+            <Dynamic>ldc_set_location -site {20} [get_ports CE]</Dynamic>
+        </Message>
+        <Message>
+            <ID>1011001</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {20} [get_ports CE]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>clk</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>clk</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

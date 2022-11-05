@@ -47,13 +47,14 @@ Target Device:        iCE40UP5KSG48
 Target Performance:   High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 3.2.0.18.0
-Mapped on: Sat Nov  5 13:06:20 2022
+Mapped on: Sat Nov  5 16:34:12 2022
 
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
-Command line:   map -i latticeE155FinalProject_impl_1_syn.udb -o
-     latticeE155FinalProject_impl_1_map.udb -mp
+Command line:   map -i latticeE155FinalProject_impl_1_syn.udb -pdc C:/Users/afas
+     cetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155Final
+     Project/pins_spi.pdc -o latticeE155FinalProject_impl_1_map.udb -mp
      latticeE155FinalProject_impl_1.mrp -hierrpt -gui
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
@@ -87,26 +88,32 @@ Command line:   map -i latticeE155FinalProject_impl_1_syn.udb -o
    Number of Clock Enables:  0
    Number of LSRs:  0
    Top 10 highest fanout non-clock nets:
+      Net VCC_net: 1 loads
 
 
 
 
-   Number of warnings:  8
+   Number of warnings:  10
    Number of errors:    0
 
 
 
 <A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
 
-WARNING - map: Top module port &apos;clk&apos; does not connect to anything.
-WARNING - map: Top module port &apos;sck&apos; does not connect to anything.
-WARNING - map: Top module port &apos;sdi&apos; does not connect to anything.
+WARNING - map: C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/L
 
-WARNING - map: Top module port &apos;CE&apos; does not connect to anything.
+     attice/latticeE155FinalProject/pins_spi.pdc (1) : No port matched &apos;CE&apos;.
+WARNING - map: No port matched &apos;CE&apos;.
+WARNING - map: Can&apos;t resolve object &apos;CE&apos; in constraint &apos;ldc_set_location -site
+     {20} [get_ports CE]&apos;.
+WARNING - map: Remove invalid constraint &apos;ldc_set_location -site {20} [get_ports
+     CE]&apos;.
 WARNING - map: Top module port &apos;clk&apos; does not connect to anything.
 WARNING - map: Top module port &apos;sck&apos; does not connect to anything.
 WARNING - map: Top module port &apos;sdi&apos; does not connect to anything.
-WARNING - map: Top module port &apos;CE&apos; does not connect to anything.
+WARNING - map: Top module port &apos;clk&apos; does not connect to anything.
+WARNING - map: Top module port &apos;sck&apos; does not connect to anything.
+WARNING - map: Top module port &apos;sdi&apos; does not connect to anything.
 
 
 
@@ -121,20 +128,12 @@ WARNING - map: Top module port &apos;CE&apos; does not connect to anything.
 
 
 
-<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
-
-Block pwm_pad.vhi_inst was optimized away.
-
-
-
 <A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
 -------------------------
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 50 MB
-
-
+   Peak Memory Usage: 54 MB
 
 
 
@@ -236,7 +235,6 @@ Copyright (c) 2002-2022 Lattice Semiconductor
 <LI><A href=#mrp_ds>Design Summary</A></LI>
 <LI><A href=#mrp_dwe>Design Errors/Warnings</A></LI>
 <LI><A href=#mrp_ioa>IO (PIO) Attributes</A></LI>
-<LI><A href=#mrp_rm>Removed logic</A></LI>
 <LI><A href=#mrp_runtime>Run Time and Memory Usage</A></LI>
 </UL>
 </DIV>

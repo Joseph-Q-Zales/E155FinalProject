@@ -2,27 +2,27 @@
 // Verilog netlist produced by program backanno, Version Radiant Software (64-bit) 3.2.0.18.0
 
 // backanno -o latticeE155FinalProject_impl_1_vo.vo -sp High-Performance_1.2V -w -neg -gui latticeE155FinalProject_impl_1.udb 
-// Netlist created on Sat Nov  5 13:06:26 2022
-// Netlist written on Sat Nov  5 13:06:34 2022
+// Netlist created on Sat Nov  5 16:34:17 2022
+// Netlist written on Sat Nov  5 16:34:25 2022
 // Design is for device iCE40UP5K
 // Design is for package SG48
 // Design is for performance grade High-Performance_1.2V
 
 `timescale 1 ns / 1 ps
 
-module top ( pwm, clk, sck, sdi, CE );
-  input  clk, sck, sdi, CE;
+module top ( pwm, clk, sck, sdi );
+  input  clk, sck, sdi;
   output pwm;
-  wire   GND_net;
+  wire   VCC_net;
 
-  SLICE_0 SLICE_0( .F0(GND_net));
-  pwm pwm_I( .PADDO(GND_net), .pwm(pwm));
+  SLICE_0 SLICE_0( .F0(VCC_net));
+  pwm pwm_I( .PADDO(VCC_net), .pwm(pwm));
 endmodule
 
 module SLICE_0 ( output F0 );
   wire   GNDI;
 
-  lut4 i5( .A(GNDI), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  lut4 i18( .A(GNDI), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
   gnd DRIVEGND( .PWR0(GNDI));
 
   specify
@@ -32,7 +32,7 @@ endmodule
 
 module lut4 ( input A, B, C, D, output Z );
 
-  LUT4 #("0x0000") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+  LUT4 #("0xFFFF") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
 endmodule
 
 module gnd ( output PWR0 );

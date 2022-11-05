@@ -1,0 +1,4 @@
+ldc_set_location -site {20} [get_ports CE]
+ldc_set_location -site {4} [get_ports clk]
+ldc_set_location -site {21} [get_ports sck]
+ldc_set_location -site {10} [get_ports sdi]

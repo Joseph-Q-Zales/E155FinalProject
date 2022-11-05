@@ -14,6 +14,18 @@ Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
 Performance Grade:   High-Performance_1.2V
+WARNING - bitgen: Unable to find the instance/port 'clk' in the constraint 'ldc_set_location -site {4} [get_ports clk]'
+
+WARNING - bitgen: In the constraint 'ldc_set_location -site {4} [get_ports clk]', the locate object is not specified
+
+WARNING - bitgen: Unable to find the instance/port 'sck' in the constraint 'ldc_set_location -site {21} [get_ports sck]'
+
+WARNING - bitgen: In the constraint 'ldc_set_location -site {21} [get_ports sck]', the locate object is not specified
+
+WARNING - bitgen: Unable to find the instance/port 'sdi' in the constraint 'ldc_set_location -site {10} [get_ports sdi]'
+
+WARNING - bitgen: In the constraint 'ldc_set_location -site {10} [get_ports sdi]', the locate object is not specified
+
 Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
 
 
@@ -38,18 +50,19 @@ Preference Summary:
 
 
 Creating bit map...
-Saving bit stream in "C:\Users\jzales\Desktop\E155FinalProject\E155FinalProject\Lattice\latticeE155FinalProject\impl_1\latticeE155FinalProject_impl_1.bin".
+Saving bit stream in "C:\Users\afascetti\Desktop\MicroPsFinalProject\E155FinalProject\Lattice\latticeE155FinalProject\impl_1\latticeE155FinalProject_impl_1.bin".
+    <postMsg mid="1009992" type="Info" dynamic="1" navigation="0" arg0="Bitstream authenticated."  />
 Bitstream generation complete!
 
 Total CPU Time: 0 secs 
 Total REAL Time: 7 secs 
-Peak Memory Usage: 105 MB
+Peak Memory Usage: 108 MB
 
 
 ibisgen "latticeE155FinalProject_impl_1.udb" "C:/lscc/radiant/3.2/cae_library/ibis/iCE40UP.ibs"
 IBIS Models Generator: Lattice Radiant Software (64-bit) 3.2.0.18.0
 
-Sat Nov  5 13:06:33 2022
+Sat Nov  5 16:34:25 2022
 
 Loading latticeE155FinalProject_impl_1.udb ...
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
@@ -63,12 +76,18 @@ Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
 Performance Grade:   High-Performance_1.2V
+    <postMsg mid="77001032" type="Warning" dynamic="2" navigation="0" arg0="clk" arg1="ldc_set_location -site {4} [get_ports clk]"  />
+    <postMsg mid="77001031" type="Warning" dynamic="1" navigation="0" arg0="ldc_set_location -site {4} [get_ports clk]"  />
+    <postMsg mid="77001032" type="Warning" dynamic="2" navigation="0" arg0="sck" arg1="ldc_set_location -site {21} [get_ports sck]"  />
+    <postMsg mid="77001031" type="Warning" dynamic="1" navigation="0" arg0="ldc_set_location -site {21} [get_ports sck]"  />
+    <postMsg mid="77001032" type="Warning" dynamic="2" navigation="0" arg0="sdi" arg1="ldc_set_location -site {10} [get_ports sdi]"  />
+    <postMsg mid="77001031" type="Warning" dynamic="1" navigation="0" arg0="ldc_set_location -site {10} [get_ports sdi]"  />
 Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
 
 Created design models.
 
 
-Generating: C:\Users\jzales\Desktop\E155FinalProject\E155FinalProject\Lattice\latticeE155FinalProject\impl_1\IBIS\latticeE155FinalProject_impl_1.ibs
+Generating: C:\Users\afascetti\Desktop\MicroPsFinalProject\E155FinalProject\Lattice\latticeE155FinalProject\impl_1\IBIS\latticeE155FinalProject_impl_1.ibs
 
 
     <postMsg mid="1191031" type="Info" dynamic="0" navigation="0"  />
@@ -100,4 +119,4 @@ Writing SDF timing to file latticeE155FinalProject_impl_1_vo.sdf
 Backanno finished with 0 posted error messages.
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 51 MB
+Peak Memory Usage: 54 MB

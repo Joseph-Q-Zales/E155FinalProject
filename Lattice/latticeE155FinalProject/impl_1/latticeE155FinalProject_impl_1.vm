@@ -1,8 +1,8 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 3.2.0.18.0
-// Netlist written on Sat Nov  5 13:06:20 2022
+// Netlist written on Sat Nov  5 16:34:12 2022
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
-// file 0 "c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv"
+// file 0 "c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv"
 // file 1 "c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v"
 // file 2 "c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd"
 // file 3 "c:/lscc/radiant/3.2/cae_library/simulation/verilog/ice40up/ccu2_b.v"
@@ -60,13 +60,13 @@
 // Verilog Description of module top
 //
 
-module top (input clk, input sck, input sdi, input CE, output pwm);
+module top (input clk, input sck, input sdi, output pwm);
     
     
     wire VCC_net, GND_net;
     
-    (* lineinfo="@0(10[25],10[28])" *) OB pwm_pad (.I(GND_net), .O(pwm));
-    VLO i5 (.Z(GND_net));
-    VHI i13 (.Z(VCC_net));
+    VLO i17 (.Z(GND_net));
+    (* lineinfo="@0(9[25],9[28])" *) OB pwm_pad (.I(VCC_net), .O(pwm));
+    VHI i18 (.Z(VCC_net));
     
 endmodule

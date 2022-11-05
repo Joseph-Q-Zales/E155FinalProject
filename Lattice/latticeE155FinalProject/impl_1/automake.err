@@ -1,0 +1,3 @@
+ERROR - Could not resolve blackbox module 'pwmDriver' in device iCE40UP5K.
+ERROR - Could not resolve blackbox module 'uniqueTune' in device iCE40UP5K.
+ERROR - Could not resolve blackbox module 'make_signals' in device iCE40UP5K.
