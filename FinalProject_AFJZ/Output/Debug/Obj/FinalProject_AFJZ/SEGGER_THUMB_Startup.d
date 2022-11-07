@@ -1,2 +1,2 @@
 Output/Debug/Obj/FinalProject_AFJZ/SEGGER_THUMB_Startup.o: \
- C:\Users\afascetti\Documents\SEGGER\ Embedded\ Studio\ for\ ARM\ Projects\FinalProject_AFJZ\SEGGER_THUMB_Startup.s
+ C:\Users\jzales\Desktop\E155FinalProject\E155FinalProject\FinalProject_AFJZ\SEGGER_THUMB_Startup.s
