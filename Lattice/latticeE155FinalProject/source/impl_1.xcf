@@ -18,8 +18,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>../../impl_1/latticeE155FinalProject_impl_1.bin</File>
-			<FileTime>11/05/22 15:41:34</FileTime>
-			<JedecChecksum>0x965A</JedecChecksum>
+			<FileTime>11/06/22 17:08:47</FileTime>
+			<JedecChecksum>0x96F9</JedecChecksum>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>

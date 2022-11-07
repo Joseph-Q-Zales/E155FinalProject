@@ -1,3 +1,4 @@
 ERROR - Could not resolve blackbox module 'pwmDriver' in device iCE40UP5K.
 ERROR - Could not resolve blackbox module 'uniqueTune' in device iCE40UP5K.
 ERROR - Could not resolve blackbox module 'make_signals' in device iCE40UP5K.
+ERROR - c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(10): syntax error near output. VERI-1137

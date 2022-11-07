@@ -1,5 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="PAR">
+        <Message>
+            <ID>77001032</ID>
+            <Severity>16</Severity>
+            <Dynamic>clk</Dynamic>
+            <Dynamic>ldc_set_location -site {4} [get_ports clk]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001031</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {4} [get_ports clk]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001032</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+            <Dynamic>ldc_set_location -site {21} [get_ports sck]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001031</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {21} [get_ports sck]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001032</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
+            <Dynamic>ldc_set_location -site {10} [get_ports sdi]</Dynamic>
+        </Message>
+        <Message>
+            <ID>77001031</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {10} [get_ports sdi]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>clk</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>clk</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>clk</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>clk</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>sdi</Dynamic>
+        </Message>
+    </Task>
     <Task name="Export">
         <Message>
             <ID>1026001</ID>
@@ -9,6 +104,15 @@
             <Dynamic>No port matched 'CE'.</Dynamic>
             <Navigation>C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Navigation>
             <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Dynamic>
+            <Dynamic>5</Dynamic>
+            <Dynamic>No port matched 'tester'.</Dynamic>
+            <Navigation>C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Navigation>
+            <Navigation>5</Navigation>
         </Message>
         <Message>
             <ID>1009991</ID>
@@ -95,69 +199,58 @@
             <Severity>1</Severity>
         </Message>
     </Task>
-    <Task name="PAR">
+    <Task name="Map">
         <Message>
-            <ID>77001032</ID>
+            <ID>1026001</ID>
             <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
-            <Dynamic>ldc_set_location -site {4} [get_ports clk]</Dynamic>
+            <Dynamic>C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>No port matched 'CE'.</Dynamic>
+            <Navigation>C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Navigation>
+            <Navigation>1</Navigation>
         </Message>
         <Message>
-            <ID>77001031</ID>
+            <ID>1026001</ID>
             <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {4} [get_ports clk]</Dynamic>
+            <Dynamic>C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Dynamic>
+            <Dynamic>5</Dynamic>
+            <Dynamic>No port matched 'tester'.</Dynamic>
+            <Navigation>C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Navigation>
+            <Navigation>5</Navigation>
         </Message>
         <Message>
-            <ID>77001032</ID>
+            <ID>1027013</ID>
             <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-            <Dynamic>ldc_set_location -site {21} [get_ports sck]</Dynamic>
+            <Dynamic>port</Dynamic>
+            <Dynamic>CE</Dynamic>
         </Message>
         <Message>
-            <ID>77001031</ID>
+            <ID>1014301</ID>
             <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {21} [get_ports sck]</Dynamic>
+            <Dynamic>CE</Dynamic>
+            <Dynamic>ldc_set_location -site {20} [get_ports CE]</Dynamic>
         </Message>
         <Message>
-            <ID>77001032</ID>
+            <ID>1027013</ID>
             <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-            <Dynamic>ldc_set_location -site {10} [get_ports sdi]</Dynamic>
+            <Dynamic>port</Dynamic>
+            <Dynamic>tester</Dynamic>
         </Message>
         <Message>
-            <ID>77001031</ID>
+            <ID>1014301</ID>
             <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {10} [get_ports sdi]</Dynamic>
+            <Dynamic>tester</Dynamic>
+            <Dynamic>ldc_set_location -site {19} [get_ports tester]</Dynamic>
         </Message>
         <Message>
-            <ID>71003020</ID>
+            <ID>1011001</ID>
             <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
+            <Dynamic>ldc_set_location -site {20} [get_ports CE]</Dynamic>
         </Message>
         <Message>
-            <ID>71003020</ID>
+            <ID>1011001</ID>
             <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
+            <Dynamic>ldc_set_location -site {19} [get_ports tester]</Dynamic>
         </Message>
         <Message>
             <ID>71003020</ID>
@@ -489,34 +582,34 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(39): </Dynamic>
+            <Dynamic>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(38): </Dynamic>
             <Dynamic>MCU_spi</Dynamic>
             <Navigation>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
-            <Navigation>39</Navigation>
+            <Navigation>38</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(55): </Dynamic>
+            <Dynamic>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(54): </Dynamic>
             <Dynamic>make_signals</Dynamic>
             <Navigation>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
-            <Navigation>55</Navigation>
+            <Navigation>54</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(76): </Dynamic>
+            <Dynamic>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(75): </Dynamic>
             <Dynamic>uniqueTune</Dynamic>
             <Navigation>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
-            <Navigation>76</Navigation>
+            <Navigation>75</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(95): </Dynamic>
+            <Dynamic>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(94): </Dynamic>
             <Dynamic>pwmDriver</Dynamic>
             <Navigation>c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
-            <Navigation>95</Navigation>
+            <Navigation>94</Navigation>
         </Message>
         <Message>
             <ID>35002028</ID>
@@ -542,64 +635,6 @@
             <ID>35811145</ID>
             <Severity>1</Severity>
             <Dynamic>i17</Dynamic>
-        </Message>
-    </Task>
-    <Task name="Map">
-        <Message>
-            <ID>1026001</ID>
-            <Severity>16</Severity>
-            <Dynamic>C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Dynamic>
-            <Dynamic>1</Dynamic>
-            <Dynamic>No port matched 'CE'.</Dynamic>
-            <Navigation>C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>1027013</ID>
-            <Severity>16</Severity>
-            <Dynamic>port</Dynamic>
-            <Dynamic>CE</Dynamic>
-        </Message>
-        <Message>
-            <ID>1014301</ID>
-            <Severity>16</Severity>
-            <Dynamic>CE</Dynamic>
-            <Dynamic>ldc_set_location -site {20} [get_ports CE]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1011001</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {20} [get_ports CE]</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

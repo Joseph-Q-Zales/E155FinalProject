@@ -1,7 +1,7 @@
 (DELAYFILE
   (SDFVERSION "3.0")
   (DESIGN "top")
-  (DATE "Sat Nov  5 16:34:25 2022")
+  (DATE "Sun Nov  6 17:08:47 2022")
   (VENDOR "Lattice")
   (PROGRAM "backanno")
   (VERSION "Radiant Software (64-bit) 3.2.0.18.0")
@@ -24,7 +24,7 @@
     (INSTANCE )
     (DELAY
       (ABSOLUTE
-        (INTERCONNECT SLICE_0/F0 pwm_I/PADDO (3661:3826:3992)(3661:3826:3992))
+        (INTERCONNECT SLICE_0/F0 pwm_I/PADDO (4851:4890:4930)(4851:4890:4930))
       )
     )
   )

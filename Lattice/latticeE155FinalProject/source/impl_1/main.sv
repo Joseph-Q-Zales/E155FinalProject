@@ -35,7 +35,6 @@ endmodule
 //   SPI interface.  Shifts  in the flattened MCU output
 // 	 As only shifting in data, no need to wory about SDO
 /////////////////////////////////////////////
-// asking about how this works: get rid of cyphertext as sdi is a 1 bit signal that pushes cyphertext out slowly
 module MCU_spi(input  logic sck, 
                input  logic sdi,
                output logic [47:0] flattenedMCUout);
