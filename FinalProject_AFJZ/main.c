@@ -52,6 +52,7 @@ int main(void) {
  // signalData[2] = 0b11110000;
  // signalData[3] = 0b00001111;
  // signalData[4] = 0b10101010;
+
  // signalData[5] = 0b11001100;
 
  //char* signalData = 0b000000001111111111110000000011111010101011001100;
