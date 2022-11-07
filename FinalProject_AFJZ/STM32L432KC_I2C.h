@@ -10,6 +10,9 @@
 #include <stdint.h>
 #include <stm32l432xx.h>
 
+#define I2C_SCL PA9
+#define I2C_SDA PA10
+
 /* Enables the I2C peripheral and intializes its functions.
  * Refer to the datasheet for more low-level details. */ 
 void initI2C();
