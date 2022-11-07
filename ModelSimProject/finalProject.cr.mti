@@ -1,1 +1,19 @@
+C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv {1 {vlog -work work -sv -stats=none C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module top
+-- Compiling module MCU_spi
+-- Compiling module make_signals
+-- Compiling module uniqueTune
+-- Compiling module pwmDriver
 
+Top level modules:
+	top
+
+} {} {}} C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingSignals_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingSignals_tb.sv
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module makingSignals_tb
+
+Top level modules:
+	makingSignals_tb
+
+} {} {}}

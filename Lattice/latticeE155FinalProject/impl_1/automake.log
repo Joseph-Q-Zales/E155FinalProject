@@ -62,7 +62,7 @@ Peak Memory Usage: 108 MB
 ibisgen "latticeE155FinalProject_impl_1.udb" "C:/lscc/radiant/3.2/cae_library/ibis/iCE40UP.ibs"
 IBIS Models Generator: Lattice Radiant Software (64-bit) 3.2.0.18.0
 
-Sat Nov  5 16:34:25 2022
+Sun Nov  6 17:08:47 2022
 
 Loading latticeE155FinalProject_impl_1.udb ...
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
@@ -119,4 +119,4 @@ Writing SDF timing to file latticeE155FinalProject_impl_1_vo.sdf
 Backanno finished with 0 posted error messages.
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 54 MB
+Peak Memory Usage: 77 MB

@@ -1,8 +1,7 @@
 DRC: Design Rule Check Radiant Software (64-bit) 3.2.0.18.0
-Sat Nov  5 15:43:18 2022
+Sun Nov  6 16:16:22 2022
 
 WARNING - Top module port 'clk' does not connect to anything.
-WARNING - Top module port 'sck' does not connect to anything.
-WARNING - Top module port 'sdi' does not connect to anything.
+WARNING - The clock port [sck] is assigned to a non clock dedicated pin [21], which might affect the clock performance. Use dedicated clock resources for the port.
 WARNING - No port matched 'CE'.
 WARNING - Can't resolve object 'CE' in constraint 'ldc_set_location -site {20} [get_ports CE]'.
