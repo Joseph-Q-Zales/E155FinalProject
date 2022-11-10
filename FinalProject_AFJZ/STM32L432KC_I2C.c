@@ -32,7 +32,8 @@ void initI2C() {
   GPIOA->AFR[1] |= (0b0100 << GPIO_AFRH_AFSEL9_Pos);  // SCL to af4
   GPIOA->AFR[1] |= (0b0100 << GPIO_AFRH_AFSEL10_Pos); // SDA to af4
 
-  // OSPEEDR?
+  // set output speed type to high for I2C
+  GPIOA->OSPEEDR |= (GPIO_OSPEEDR_OSPEED3);
 
   // turning off clock stretching as not supported by RFID peripheral
   I2C1->CR1 |= (I2C_CR1_NOSTRETCH_Msk);
@@ -68,17 +69,45 @@ void initI2C() {
   I2C1->TIMINGR |= (0x2 << I2C_TIMINGR_SDADEL_Pos);
   I2C1->TIMINGR |= (0xF << I2C_TIMINGR_SCLH_Pos);
   I2C1->TIMINGR |= (0x13 << I2C_TIMINGR_SCLL_Pos);
-  
+
   // turning on the peripheral
   I2C1->CR1 |= I2C_CR1_PE;
 }
 
+/* initializes the controller communication on MCU
+*     -- address: the address of the peripheral to send to
+*     -- nbyts: number of byts to send the peripheral
+*     -- RdWr: set to 0 for writing, 1 for reading
+*    ** note, hard coded for 7-bit peripherals ** */
+void comInitI2C(char address, char nbyts, uint16_t RdWr) {
+
+  // 7 bit addressing mode
+  I2C1->CR2 &= ~(I2C_CR2_Add10);
+  
+  // set slave address to send to 0x00 (the general call address for the PN532)
+  I2C1->CR2 &= ~(I2C_CR2_SADD_Msk);
+
+  // set transfer direction (RD_WRN)
+  if(RdWr) { // if RdWr is a 1, we are reading
+    I2C1->CR2 |= (I2C_CR2_RD_WRN);
+  }
+  else { // sets to 0 if a write transfer
+    I2C1->CR2 &= ~(I2C_CR2_RD_WRN);
+  }
+
+  // set NBYTES (numb bytes to send)
+  I2C1->CR2 &= ~(I2C_CR2_NBYTES_Msk);
+  I2C1->CR2 |= _VAL2FLD(I2C_CR2_NBYTES, nbyts);
+
+}
 
 /* Transmits a character (1 byte) over I2C.
  *    -- address: the address of the peripheral to send to over I2C
  *    -- w: the character received over I2C */
 void sendI2C(char address, char w) {
-
+  
+  // TODO: make sure that we are only going to send 1 byte at a time
+  comInitI2C(address, 1, 0);
 }
 
 /* Reads a character (1 byte) over I2C.

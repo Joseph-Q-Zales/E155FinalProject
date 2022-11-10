@@ -18,6 +18,12 @@
 void initI2C();
 
 
+/* initializes the controller communication on MCU
+*     -- address: the address of the peripheral to send to
+*     -- nbits: number of bits to send the peripheral
+*    ** note, hard coded for 7-bit peripherals ** */
+void comInitI2C(char address, char nbits);
+
 /* Transmits a character (1 byte) over I2C.
  *    -- address: the address of the peripheral to send to over I2C
  *    -- w: the character received over I2C */
