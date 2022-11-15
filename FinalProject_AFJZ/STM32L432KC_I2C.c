@@ -35,12 +35,28 @@ void initI2C() {
   // set output speed type to high for I2C
   GPIOA->OSPEEDR |= (GPIO_OSPEEDR_OSPEED3);
 
-  // turning off clock stretching as not supported by RFID peripheral
-  I2C1->CR1 |= (I2C_CR1_NOSTRETCH_Msk);
+  // turning on open drain
+  GPIOA->OTYPER |= (GPIO_OTYPER_OT9);
+  GPIOA->OTYPER |= (GPIO_OTYPER_OT10);
+  
+  // turning on pull up resistors
+  GPIOA->PUPDR |= (_VAL2FLD(GPIO_PUPDR_PUPD9, 0b01));
+  GPIOA->PUPDR |= (_VAL2FLD(GPIO_PUPDR_PUPD10, 0b01));
+
+
+  //TODO determine if we actually need stretch
+  //// turning off clock stretching as not supported by RFID peripheral
+  //I2C1->CR1 |= (I2C_CR1_NOSTRETCH);
 
   // turning analog noise filter on
-  I2C1->CR1 &= ~(I2C_CR1_ANFOFF_Msk);
+  I2C1->CR1 &= ~(I2C_CR1_ANFOFF);
   
+    // turns on the RX interupt enable
+  I2C1->CR1 |= (I2C_CR1_RXIE);
+  // turns on the TX interupt enable
+  I2C1->CR1 |= (I2C_CR1_TXIE);
+  // turns on the TC interupt enable
+  I2C1->CR1 |= (I2C_CR1_TCIE);
 
   // cleraning TIMINGR section
   I2C1->TIMINGR &= ~(I2C_TIMINGR_PRESC_Msk); 
@@ -70,6 +86,7 @@ void initI2C() {
   I2C1->TIMINGR |= (0xF << I2C_TIMINGR_SCLH_Pos);
   I2C1->TIMINGR |= (0x13 << I2C_TIMINGR_SCLL_Pos);
 
+
   // turning on the peripheral
   I2C1->CR1 |= I2C_CR1_PE;
 }
@@ -78,11 +95,11 @@ void initI2C() {
 *     -- address: the address of the peripheral to send to
 *     -- nbyts: number of byts to send the peripheral
 *     -- RdWr: set to 0 for writing, 1 for reading
-*    ** note, hard coded for 7-bit peripherals ** */
+*/
 void comInitI2C(char address, char nbyts, uint16_t RdWr) {
 
   // 7 bit addressing mode
-  I2C1->CR2 &= ~(I2C_CR2_Add10);
+  I2C1->CR2 &= ~(I2C_CR2_ADD10);
   
   // set slave address to send to 0x00 (the general call address for the PN532)
   I2C1->CR2 &= ~(I2C_CR2_SADD_Msk);
@@ -96,25 +113,43 @@ void comInitI2C(char address, char nbyts, uint16_t RdWr) {
   }
 
   // set NBYTES (numb bytes to send)
-  I2C1->CR2 &= ~(I2C_CR2_NBYTES_Msk);
+
   I2C1->CR2 |= _VAL2FLD(I2C_CR2_NBYTES, nbyts);
+
 
 }
 
 /* Transmits a character (1 byte) over I2C.
  *    -- address: the address of the peripheral to send to over I2C
- *    -- w: the character received over I2C */
-void sendI2C(char address, char w) {
+ *    -- send: the character received over I2C 
+ *    -- nbytes: the number of bytes being sent*/
+void sendI2C(char address, char send, char nbytes) {
   
-  // TODO: make sure that we are only going to send 1 byte at a time
-  comInitI2C(address, 1, 0);
+  comInitI2C(address, nbytes, 0);
+  
+  // while TXIS not equal to 1, wait
+  while (!(I2C1->ISR & I2C_ISR_TXIS));
+  
+  // once it goes high, set the transfer register (TXDR) to be w
+  *((volatile char *) (&I2C1->TXDR)) = send; // writing the sending character to DR
+
+   
+  // enables the start bit
+  I2C1->CR2 |= (I2C_CR2_START);
 }
 
 /* Reads a character (1 byte) over I2C.
  *    -- address: the address of the peripheral to send to over I2C
- *    -- w: the character received over I2C */
-char readI2C(char address) {
+ *    -- nbytes: the amount of bytes to receive */
+char readI2C(char address, char nbytes) {
+  
+  comInitI2C(address, nbytes, 1);
+  
+  // while RNXE is not equal to 1, wait
+  while (!(I2C1->ISR & I2C_ISR_RXNE));
 
-return (char) 0;
+  char rec = (volatile char) I2C1->RXDR;
+
+  return rec;
 
 }

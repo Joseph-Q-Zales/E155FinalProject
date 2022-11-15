@@ -35,6 +35,7 @@ int main(void) {
   // "clock divide" = master clock frequency / desired baud rate
   // the phase for the SPI clock is 0 and the polarity is 0
   initSPI(1, 0, 0);
+  initI2C();
 
 
   //////// do I2C
@@ -69,7 +70,9 @@ int main(void) {
 
   // send the signal data to the FPGA
   while(1){
-    mcu_to_fpga(signalData0, signalData1, signalData2, signalData3, signalData4, signalData5);
+
+    sendI2C(0xAB, 0xCC, 1);
+    //mcu_to_fpga(signalData0, signalData1, signalData2, signalData3, signalData4, signalData5);
   }
   
   // AA_55_0F_F0_AA_55_0F_F0

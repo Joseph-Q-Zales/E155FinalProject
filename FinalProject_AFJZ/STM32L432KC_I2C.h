@@ -1,5 +1,5 @@
-// STM32F401RE_I2C.h
-// Header for SPI functions
+// STM32L432KC_I2C.h
+// Header for I2C functions
 // Authors: Ava Fascetti and Joe Zales
 // Emails: afascetti@hmc.edu || jzales@hmc.edu
 // Created: 11/6/22
@@ -20,19 +20,21 @@ void initI2C();
 
 /* initializes the controller communication on MCU
 *     -- address: the address of the peripheral to send to
-*     -- nbits: number of bits to send the peripheral
-*    ** note, hard coded for 7-bit peripherals ** */
-void comInitI2C(char address, char nbits);
+*     -- nbyts: number of byts to send the peripheral
+*     -- RdWr: set to 0 for writing, 1 for reading
+ */
+void comInitI2C(char address, char nbyts, uint16_t RdWr);
 
 /* Transmits a character (1 byte) over I2C.
  *    -- address: the address of the peripheral to send to over I2C
- *    -- w: the character received over I2C */
-void sendI2C(char address, char w);
+ *    -- send: the character received over I2C 
+ *    -- nbytes: the number of bytes being sent*/
+void sendI2C(char address, char send, char nbytes);
 
 
 /* Reads a character (1 byte) over I2C.
  *    -- address: the address of the peripheral to send to over I2C
- *    -- w: the character received over I2C */
-char readI2C(char address);
+ *    -- nbytes: the amount of bytes to receive */
+char readI2C(char address, char nbytes);
 
 #endif

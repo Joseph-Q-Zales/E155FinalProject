@@ -24,4 +24,5 @@ Output/Debug/Obj/FinalProject_AFJZ/STM32L432KC_SPI.o: \
  C:\Users\jzales\Desktop\E155FinalProject\E155FinalProject\FinalProject_AFJZ\STM32L432KC_TIM.h \
  C:\Users\jzales\Desktop\E155FinalProject\E155FinalProject\FinalProject_AFJZ\STM32L432KC_FLASH.h \
  C:\Users\jzales\Desktop\E155FinalProject\E155FinalProject\FinalProject_AFJZ\STM32L432KC_USART.h \
- C:\Users\jzales\Desktop\E155FinalProject\E155FinalProject\FinalProject_AFJZ\STM32L432KC_SPI.h
+ C:\Users\jzales\Desktop\E155FinalProject\E155FinalProject\FinalProject_AFJZ\STM32L432KC_SPI.h \
+ C:\Users\jzales\Desktop\E155FinalProject\E155FinalProject\FinalProject_AFJZ\STM32L432KC_I2C.h
