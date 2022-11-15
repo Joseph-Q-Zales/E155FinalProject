@@ -14,7 +14,7 @@
 void initI2C() {
 
   // turns on GPIOA clock domains
-  RCC->AHB2ENR |= (RCC_AHB2ENR_GPIOAEN);
+  RCC->AHB2ENR |= (RCC_AHB2ENR_GPIOBEN);
   
   // Turn on HSI 16 MHz clock
   RCC->CR |= (RCC_CR_HSION);  
@@ -29,19 +29,22 @@ void initI2C() {
   pinMode(I2C_SDA, GPIO_ALT); // I2C1_SDA
 
   // set to AF04 for I2C alternate functions
-  GPIOA->AFR[1] |= (0b0100 << GPIO_AFRH_AFSEL9_Pos);  // SCL to af4
-  GPIOA->AFR[1] |= (0b0100 << GPIO_AFRH_AFSEL10_Pos); // SDA to af4
+  GPIOB->AFR[0] |= (0b0100 << GPIO_AFRL_AFSEL6_Pos);  // SCL to af4 (PB6)
+  GPIOB->AFR[0] |= (0b0100 << GPIO_AFRL_AFSEL7_Pos); // SDA to af4  (PB7)
+  //GPIOA->AFR[1] |= (0b0100 << GPIO_AFRH_AFSEL9_Pos);  // SCL to af4
+  //GPIOA->AFR[1] |= (0b0100 << GPIO_AFRH_AFSEL10_Pos); // SDA to af4
 
   // set output speed type to high for I2C
-  GPIOA->OSPEEDR |= (GPIO_OSPEEDR_OSPEED3);
+  GPIOB->OSPEEDR |= (GPIO_OSPEEDR_OSPEED3);
+
+  // turning on pull up resistors
+  GPIOB->PUPDR |= (_VAL2FLD(GPIO_PUPDR_PUPD6, 0b01));
+  GPIOB->PUPDR |= (_VAL2FLD(GPIO_PUPDR_PUPD7, 0b01));
 
   // turning on open drain
-  GPIOA->OTYPER |= (GPIO_OTYPER_OT9);
-  GPIOA->OTYPER |= (GPIO_OTYPER_OT10);
+  GPIOB->OTYPER |= (GPIO_OTYPER_OT6);
+  GPIOB->OTYPER |= (GPIO_OTYPER_OT7);
   
-  // turning on pull up resistors
-  GPIOA->PUPDR |= (_VAL2FLD(GPIO_PUPDR_PUPD9, 0b01));
-  GPIOA->PUPDR |= (_VAL2FLD(GPIO_PUPDR_PUPD10, 0b01));
 
 
   //TODO determine if we actually need stretch
@@ -116,7 +119,8 @@ void comInitI2C(char address, char nbyts, uint16_t RdWr) {
 
   I2C1->CR2 |= _VAL2FLD(I2C_CR2_NBYTES, nbyts);
 
-
+    // enables the start bit
+  I2C1->CR2 |= (I2C_CR2_START);
 }
 
 /* Transmits a character (1 byte) over I2C.
@@ -128,14 +132,13 @@ void sendI2C(char address, char send, char nbytes) {
   comInitI2C(address, nbytes, 0);
   
   // while TXIS not equal to 1, wait
-  while (!(I2C1->ISR & I2C_ISR_TXIS));
+  //while (!(I2C1->ISR & I2C_ISR_TXIS));
   
   // once it goes high, set the transfer register (TXDR) to be w
   *((volatile char *) (&I2C1->TXDR)) = send; // writing the sending character to DR
 
    
-  // enables the start bit
-  I2C1->CR2 |= (I2C_CR2_START);
+
 }
 
 /* Reads a character (1 byte) over I2C.

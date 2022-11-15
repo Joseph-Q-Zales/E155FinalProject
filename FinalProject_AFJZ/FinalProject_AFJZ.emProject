@@ -49,7 +49,6 @@
       <file file_name="STM32L432KC_GPIO.h" />
       <file file_name="STM32L432KC_RCC.c" />
       <file file_name="STM32L432KC_RCC.h" />
-      <file file_name="STM32L432KC_SPI.c" />
       <file file_name="STM32L432KC_SPI.h" />
       <file file_name="STM32L432KC_TIM.c" />
       <file file_name="STM32L432KC_TIM.h" />
@@ -59,6 +58,7 @@
       <file file_name="STM32L432KC_I2C.h" />
       <file file_name="PN532.c" />
       <file file_name="PN532.h" />
+      <file file_name="STM32L432KC_SPI.c" />
     </folder>
     <folder Name="Script Files">
       <file file_name="STM32L4xx/Scripts/STM32L4xx_Target.js">
