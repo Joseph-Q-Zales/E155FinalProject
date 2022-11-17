@@ -71,8 +71,8 @@ int main(void) {
   // send the signal data to the FPGA
   while(1){
 
-    sendI2C(0xAB, 0xCC, 1);
-    //delay_millis(TIM15, 50);
+    sendI2C(0xA0, 0x43, 1);
+
     //mcu_to_fpga(signalData0, signalData1, signalData2, signalData3, signalData4, signalData5);
   }
   

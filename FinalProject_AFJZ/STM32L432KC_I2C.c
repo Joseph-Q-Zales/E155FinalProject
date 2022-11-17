@@ -107,6 +107,8 @@ void comInitI2C(char address, char nbyts, uint16_t RdWr) {
   // set slave address to send to 0x00 (the general call address for the PN532)
   I2C1->CR2 &= ~(I2C_CR2_SADD_Msk);
 
+  I2C1->CR2 |= _VAL2FLD(I2C_CR2_SADD, address);
+
   // set transfer direction (RD_WRN)
   if(RdWr) { // if RdWr is a 1, we are reading
     I2C1->CR2 |= (I2C_CR2_RD_WRN);
