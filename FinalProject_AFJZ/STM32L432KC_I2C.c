@@ -13,7 +13,7 @@
  * Refer to the datasheet for more low-level details. */ 
 void initI2C() {
 
-  // turns on GPIOA clock domains
+  // turns on GPIOB clock domains
   RCC->AHB2ENR |= (RCC_AHB2ENR_GPIOBEN);
   
   // Turn on HSI 16 MHz clock
@@ -24,7 +24,7 @@ void initI2C() {
   // turns on the I2C 1 for the clock domain
   RCC->APB1ENR1 |= (RCC_APB1ENR1_I2C1EN);
 
-  // initially assinging I2C pins
+  // initially assigning I2C pins
   pinMode(I2C_SCL, GPIO_ALT); // I2C1_SCL
   pinMode(I2C_SDA, GPIO_ALT); // I2C1_SDA
 
@@ -54,14 +54,14 @@ void initI2C() {
   // turning analog noise filter on
   I2C1->CR1 &= ~(I2C_CR1_ANFOFF);
   
-    // turns on the RX interupt enable
+   // turns on the RX interupt enable
   I2C1->CR1 |= (I2C_CR1_RXIE);
   // turns on the TX interupt enable
   I2C1->CR1 |= (I2C_CR1_TXIE);
   // turns on the TC interupt enable
   I2C1->CR1 |= (I2C_CR1_TCIE);
 
-  // cleraning TIMINGR section
+  // clearing TIMINGR section
   I2C1->TIMINGR &= ~(I2C_TIMINGR_PRESC_Msk); 
   I2C1->TIMINGR &= ~(I2C_TIMINGR_SCLDEL_Msk); 
   I2C1->TIMINGR &= ~(I2C_TIMINGR_SDADEL_Msk);
