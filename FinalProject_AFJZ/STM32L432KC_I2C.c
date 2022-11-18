@@ -38,8 +38,8 @@ void initI2C() {
   GPIOB->OSPEEDR |= (GPIO_OSPEEDR_OSPEED3);
 
   // turning on pull up resistors
-  GPIOB->PUPDR |= (_VAL2FLD(GPIO_PUPDR_PUPD6, 0b01));
-  GPIOB->PUPDR |= (_VAL2FLD(GPIO_PUPDR_PUPD7, 0b01));
+  //GPIOB->PUPDR |= (_VAL2FLD(GPIO_PUPDR_PUPD6, 0b01));
+  //GPIOB->PUPDR |= (_VAL2FLD(GPIO_PUPDR_PUPD7, 0b01));
 
   // turning on open drain
   GPIOB->OTYPER |= (GPIO_OTYPER_OT6);

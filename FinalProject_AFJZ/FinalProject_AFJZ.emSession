@@ -5,7 +5,6 @@
   <BreakpointListItem trigger="" line="67" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="74" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="38" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="STM32L432KC_I2C.c" useHWbreakpoint="false"/>
-  <Exceptions set="MemManage;UsageFault_Coprocessor;UsageFault_CheckingError;UsageFault_StateError;BusFault;ExceptionEntryReturnFault;HardFault"/>
  </Breakpoints>
  <ExecutionProfileWindow/>
  <FrameBufferWindow>
@@ -62,7 +61,7 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="29" useTextEdit="1" path="main.c" left="0" selected="1" top="7" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="14" y="24" useTextEdit="1" path="main.c" left="0" top="7" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="STM32L432KC_RCC.c" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="56" y="7683" useTextEdit="1" openedFrom="C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/FinalProject_AFJZ/STM32L432KC_I2C.c" path="STM32L4xx/Device/Include/stm32l432xx.h" left="0" top="7661" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="37" y="1" useTextEdit="1" path="PN532.c" left="0" top="0" codecName="Default"/>
@@ -74,7 +73,7 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="219" useTextEdit="1" path="STM32L4xx/Source/STM32L4xx_Startup.s" left="0" top="197" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditRight" x="0" y="0" useTextEdit="1" path="STM32L432KC_SPI.c" left="0" top="6" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditRight" x="19" y="13" useTextEdit="1" path="STM32L432KC_I2C.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditRight" x="43" y="32" useTextEdit="1" path="STM32L432KC_I2C.c" left="0" top="9" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditRight" x="29" y="18" useTextEdit="1" path="STM32L432KC_I2C.c" left="0" selected="1" top="9" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="FinalProject_AFJZ" fileDialogDefaultFilter="*.c;*.h" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/jzales/Desktop/Segger files/E155lab6t2/lib" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>
