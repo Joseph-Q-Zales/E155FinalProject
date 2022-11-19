@@ -13,6 +13,12 @@ module top(input  logic clk, // for simulation purposes, delete and make an inte
 	logic [9:0] freq; // max frequency of 1023 with 10 bits
 	logic [9:0] dur; // CHANGE, just for now doing 600
 	logic song;
+	logic int_osc;
+	
+	
+	// Internal high-speed oscillator (instantiates the 48 MHz clock)
+	HSOSC #(.CLKHF_DIV(2'b01))
+		hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b0), .CLKHF(int_osc));
 	
 	// get signal data from MCU
     MCU_spi spi(sck, sdi, flattenedMCUout);
@@ -24,7 +30,7 @@ module top(input  logic clk, // for simulation purposes, delete and make an inte
 	uniqueTune tune(sd0, sd1, sd2, sd3, sd4, sd5, freq, dur);
 	
 	// output pwm based on frequency and duration
-	pwmDriver pwmer(freq, dur, song); // need to put in a continous flip flop or something? make sure that the song output keeps playing? (see comment in module)
+	pwmDriver pwmer(int_osc, en, freq, dur, song); // need to put in a continous flip flop or something? make sure that the song output keeps playing? (see comment in module)
 	
 	assign pwm = song;
     
@@ -89,14 +95,41 @@ endmodule
 
 //////
 //    takes in the unique frequency and song duration and creates the song based on it!
-// only outputs one bit, but does so continously ---- HOW TO IMPLEMENT THIS?
+// 	  only outputs one bit, but does so continously ---- HOW TO IMPLEMENT THIS?
 /////
-module pwmDriver(input logic[9:0] freq,
+module pwmDriver(input logic int_osc, en,
+				input logic[9:0] freq,
 				input logic[9:0] dur,
 				output logic song);
-				
+	
+	
+	
 	// MAKE PWM DRIVER BASED ON FREQ AND DUR
 	assign song = 1;
 				
+endmodule
+
+module freqClk(input logic int_osc, en,
+				input logic[9:0] freq,
+				output logic toneFreq);
+	logic clkStrobe;
+	logic[31:0] counter;
+	logic[31:0] threshold;
+	
+	assign threshold = 10000;
+	
+	// strobe counter (modified from E155 L02 on 9/1/22)
+	always_ff @(posedge int_osc) begin
+		if(clkStrobe) 	counter <= 0;
+		else if (en) 	counter <= counter + 1;
+		else 			counter <= 0;
+	end
+	
+	// strobe generation (modified from E155 L02 on 9/1/22)
+	always_ff @(posedge int_osc) begin
+			clkStrobe <= (counter == threshold);
+	end
+	
+	assign toneFreq = clkStrobe;
 endmodule
 

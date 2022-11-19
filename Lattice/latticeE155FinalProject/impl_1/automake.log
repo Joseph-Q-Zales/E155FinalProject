@@ -50,7 +50,7 @@ Preference Summary:
 
 
 Creating bit map...
-Saving bit stream in "C:\Users\afascetti\Desktop\MicroPsFinalProject\E155FinalProject\Lattice\latticeE155FinalProject\impl_1\latticeE155FinalProject_impl_1.bin".
+Saving bit stream in "C:\Users\jzales\Desktop\E155FinalProject\E155FinalProject\Lattice\latticeE155FinalProject\impl_1\latticeE155FinalProject_impl_1.bin".
     <postMsg mid="1009992" type="Info" dynamic="1" navigation="0" arg0="Bitstream authenticated."  />
 Bitstream generation complete!
 
@@ -62,7 +62,7 @@ Peak Memory Usage: 108 MB
 ibisgen "latticeE155FinalProject_impl_1.udb" "C:/lscc/radiant/3.2/cae_library/ibis/iCE40UP.ibs"
 IBIS Models Generator: Lattice Radiant Software (64-bit) 3.2.0.18.0
 
-Sun Nov  6 17:08:47 2022
+Sat Nov 19 13:17:46 2022
 
 Loading latticeE155FinalProject_impl_1.udb ...
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
@@ -87,7 +87,7 @@ Successfully loading design udb and device data from disks and to up-layer in CP
 Created design models.
 
 
-Generating: C:\Users\afascetti\Desktop\MicroPsFinalProject\E155FinalProject\Lattice\latticeE155FinalProject\impl_1\IBIS\latticeE155FinalProject_impl_1.ibs
+Generating: C:\Users\jzales\Desktop\E155FinalProject\E155FinalProject\Lattice\latticeE155FinalProject\impl_1\IBIS\latticeE155FinalProject_impl_1.ibs
 
 
     <postMsg mid="1191031" type="Info" dynamic="0" navigation="0"  />
@@ -119,4 +119,4 @@ Writing SDF timing to file latticeE155FinalProject_impl_1_vo.sdf
 Backanno finished with 0 posted error messages.
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 77 MB
+Peak Memory Usage: 76 MB
