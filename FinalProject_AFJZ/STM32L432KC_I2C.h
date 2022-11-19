@@ -29,7 +29,7 @@ void comInitI2C(char address, char nbyts, uint16_t RdWr);
  *    -- address: the address of the peripheral to send to over I2C
  *    -- send: the character received over I2C 
  *    -- nbytes: the number of bytes being sent*/
-void sendI2C(char address, char send, char nbytes);
+void sendI2C(char address, char send[], char nbytes);
 
 
 /* Reads a character (1 byte) over I2C.

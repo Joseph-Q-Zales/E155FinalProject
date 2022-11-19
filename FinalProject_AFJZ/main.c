@@ -14,6 +14,7 @@ Purpose : Generic application start
 #include <stdlib.h>
 #include <stm32l432xx.h>
 #include "STM32L432KC.h"
+#include "PN532.h"
 
 // Function prototypes
 void mcu_to_fpga(char, char, char, char, char, char);
@@ -35,7 +36,9 @@ int main(void) {
   // "clock divide" = master clock frequency / desired baud rate
   // the phase for the SPI clock is 0 and the polarity is 0
   initSPI(1, 0, 0);
-  initI2C();
+
+  // initializes the PN532, also initializes the I2C1
+  initPN532();
 
 
   //////// do I2C
@@ -66,13 +69,25 @@ int main(void) {
   char signalData4 = 0b10011001;
   char signalData5 = 0b10101010;
 
+  char toSend[2] = {0x45, 0x72};
+
   //mcu_to_fpga(signalData0, signalData1, signalData2, signalData3, signalData4, signalData5);
 
   // send the signal data to the FPGA
   while(1){
+    
+    // testing I2C
+    sendI2C(0xA0, toSend, 2);
 
-    sendI2C(0xA0, 0x43, 1);
+    //sendI2C(0xA0, 0xCC, 1);
+    
+    // wait while the IRQ bit remains high
+    //while(digitalRead(RFID_IRQ));
 
+    //readI2C(0x
+
+
+    
     //mcu_to_fpga(signalData0, signalData1, signalData2, signalData3, signalData4, signalData5);
   }
   

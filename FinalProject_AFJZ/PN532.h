@@ -11,10 +11,18 @@
 #include <stm32l432xx.h>
 #include "STM32L432KC_I2C.h"
 
+#define RFID_IRQ PB1
+
+#define PN532_I2CDAT_reg 0xDA
 /* initializes the RFID breakout board as per PN532 data sheet
 *
 */
 void initPN532();
 
+
+/* reads the PN532 data memory location
+*   returns the 4 byte identifier of the RFID card tapped
+*/
+uint32_t readPN532();
 
 #endif

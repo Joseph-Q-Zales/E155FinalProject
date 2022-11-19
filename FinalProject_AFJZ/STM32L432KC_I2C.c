@@ -129,17 +129,24 @@ void comInitI2C(char address, char nbyts, uint16_t RdWr) {
  *    -- address: the address of the peripheral to send to over I2C
  *    -- send: the character received over I2C 
  *    -- nbytes: the number of bytes being sent*/
-void sendI2C(char address, char send, char nbytes) {
+void sendI2C(char address, char send[], char nbytes) {
   
   comInitI2C(address, nbytes, 0);
-  
-  // while TXIS not equal to 1, wait
-  //while (!(I2C1->ISR & I2C_ISR_TXIS));
-  
-  // once it goes high, set the transfer register (TXDR) to be w
-  *((volatile char *) (&I2C1->TXDR)) = send; // writing the sending character to DR
 
-   
+  I2C1->ISR |= (I2C_ISR_TXIS_Msk);
+
+  // for loop going through entire send array
+  for(int i = 0; i < nbytes; i++) {
+    
+    if (i != 0) {
+      // while TXIS not equal to 1, wait
+      while (!(I2C1->ISR & I2C_ISR_TXIS));
+    }
+
+    // once it goes high, set the transfer register (TXDR) to be w
+    *((volatile char *) (&I2C1->TXDR)) = send[i]; // writing the sending character to DR
+
+   }
 
 }
 
