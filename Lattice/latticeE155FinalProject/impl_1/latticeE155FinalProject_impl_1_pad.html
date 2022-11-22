@@ -48,13 +48,15 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Sat Nov 19 13:17:38 2022
+Mon Nov 21 20:43:39 2022
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+--------------------+
 | Port Name | Pin/Bank | Buffer Type  | Site  | Properties         |
 +-----------+----------+--------------+-------+--------------------+
 | pwm       | 13/1     | LVCMOS33_OUT | PL20A | DRIVE:8mA PULL:NA  |
+| sck       | 21/1     | LVCMOS33_IN  | PL19B | PULL:100K          |
+| sdi       | 10/1     | LVCMOS33_IN  | PL17A | PULL:100K          |
 +-----------+----------+--------------+-------+--------------------+
 
 Vccio by Bank:
@@ -73,7 +75,7 @@ Vccio by Bank:
 | 4/2      |     unused, PULL:UP |            |              | PL10A |                  |
 | 6/1      |     unused, PULL:UP |            |              | PL14B |                  |
 | 9/1      |     unused, PULL:UP |            |              | PL16A |                  |
-| 10/1     |     unused, PULL:UP |            |              | PL17A |                  |
+| 10/1     | sdi                 | LOCATED    | LVCMOS33_IN  | PL17A |                  |
 | 11/1     |     unused, PULL:UP |            |              | PL18A |                  |
 | 12/1     |     unused, PULL:UP |            |              | PL19A |                  |
 | 13/1     | pwm                 | LOCATED    | LVCMOS33_OUT | PL20A |                  |
@@ -84,7 +86,7 @@ Vccio by Bank:
 | 18/1     |     unused, PULL:UP |            |              | PL23B |                  |
 | 19/1     |     unused, PULL:UP |            |              | PL22B |                  |
 | 20/1     |     unused, PULL:UP |            |              | PL20B | PCLKT1_0         |
-| 21/1     |     unused, PULL:UP |            |              | PL19B |                  |
+| 21/1     | sck                 | LOCATED    | LVCMOS33_IN  | PL19B |                  |
 | 23/0     |     unused, PULL:UP |            |              | PR20A |                  |
 | 25/0     |     unused, PULL:UP |            |              | PR20B |                  |
 | 26/0     |     unused, PULL:UP |            |              | PR19A |                  |
@@ -130,6 +132,8 @@ Vccio by Bank:
 Locate Constraints for each Pin: 
 
 ldc_set_location -site {13} [ get_ports {pwm} ]
+ldc_set_location -site {21} [ get_ports {sck} ]
+ldc_set_location -site {10} [ get_ports {sdi} ]
 
 
 
@@ -137,7 +141,7 @@ ldc_set_location -site {13} [ get_ports {pwm} ]
 
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Sat Nov 19 13:17:38 2022
+Mon Nov 21 20:43:39 2022
 
 
 

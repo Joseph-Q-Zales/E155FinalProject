@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Nov 19 13:17:42 2022
+Mon Nov 21 20:43:44 2022
 
 
 Command: bitgen -w -freq 0 -gui latticeE155FinalProject_impl_1.udb 
@@ -21,6 +21,6 @@ Preference Summary:
 
 
 Creating bit map...
-Saving bit stream in "C:\Users\jzales\Desktop\E155FinalProject\E155FinalProject\Lattice\latticeE155FinalProject\impl_1\latticeE155FinalProject_impl_1.bin".
+Saving bit stream in "C:\Users\afascetti\Desktop\MicroPsFinalProject\E155FinalProject\Lattice\latticeE155FinalProject\impl_1\latticeE155FinalProject_impl_1.bin".
 INFO - Bitstream authenticated.
 Bitstream generation complete!

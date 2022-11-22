@@ -40,6 +40,8 @@ int main(void) {
   // initializes the PN532, also initializes the I2C1
   initPN532();
 
+  initTIM(TIM15);
+
 
   //////// do I2C
 
@@ -69,7 +71,7 @@ int main(void) {
   char signalData4 = 0b10011001;
   char signalData5 = 0b10101010;
 
-  char toSend[2] = {0x45, 0x72};
+  char toSend[1] = {0x45};
 
   //mcu_to_fpga(signalData0, signalData1, signalData2, signalData3, signalData4, signalData5);
 
@@ -77,7 +79,8 @@ int main(void) {
   while(1){
     
     // testing I2C
-    sendI2C(0xA0, toSend, 2);
+    sendI2C(0x00, toSend, 1);
+    for (int i = 0; i < 200; i++);
 
     //sendI2C(0xA0, 0xCC, 1);
     

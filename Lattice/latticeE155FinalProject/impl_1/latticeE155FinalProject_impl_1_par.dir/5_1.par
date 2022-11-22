@@ -1,6 +1,6 @@
 
 Lattice Place and Route Report for Design "latticeE155FinalProject_impl_1_map.udb"
-Sat Nov 19 13:17:33 2022
+Mon Nov 21 20:43:31 2022
 
 PAR: Place And Route Radiant Software (64-bit) 3.2.0.18.0.
 Command Line: par -w -t 1 -cores 1 -exp parPathBased=ON \
@@ -23,39 +23,27 @@ WARNING - par: Unable to find the instance/port 'clk' in the constraint 'ldc_set
 
 WARNING - par: In the constraint 'ldc_set_location -site {4} [get_ports clk]', the locate object is not specified
 
-WARNING - par: Unable to find the instance/port 'sck' in the constraint 'ldc_set_location -site {21} [get_ports sck]'
+WARNING - par: Unable to find the instance/port 'clk' in the constraint 'ldc_set_location -site {4} [get_ports clk]'
 
-WARNING - par: In the constraint 'ldc_set_location -site {21} [get_ports sck]', the locate object is not specified
-
-WARNING - par: Unable to find the instance/port 'sdi' in the constraint 'ldc_set_location -site {10} [get_ports sdi]'
-
-WARNING - par: In the constraint 'ldc_set_location -site {10} [get_ports sdi]', the locate object is not specified
+WARNING - par: In the constraint 'ldc_set_location -site {4} [get_ports clk]', the locate object is not specified
 
 WARNING - par: Top module port 'clk' does not connect to anything.
-WARNING - par: Top module port 'sck' does not connect to anything.
-WARNING - par: Top module port 'sdi' does not connect to anything.
 WARNING - par: Top module port 'clk' does not connect to anything.
-WARNING - par: Top module port 'sck' does not connect to anything.
-WARNING - par: Top module port 'sdi' does not connect to anything.
 WARNING - par: Top module port 'clk' does not connect to anything.
-WARNING - par: Top module port 'sck' does not connect to anything.
-WARNING - par: Top module port 'sdi' does not connect to anything.
 WARNING - par: Top module port 'clk' does not connect to anything.
-WARNING - par: Top module port 'sck' does not connect to anything.
-WARNING - par: Top module port 'sdi' does not connect to anything.
-Number of Signals: 1
-Number of Connections: 1
+Number of Signals: 653
+Number of Connections: 1322
 Device utilization summary:
 
-   SLICE (est.)       1/2640         <1% used
-     LUT              1/5280         <1% used
-     REG              0/5280          0% used
-   PIO                1/56            1% used
-                      1/36            2% bonded
-   IOLOGIC            0/56            0% used
-   DSP                0/8             0% used
+   SLICE (est.)     179/2640          6% used
+     LUT            325/5280          6% used
+     REG            183/5280          3% used
+   PIO                3/56            5% used
+                      3/36            8% bonded
+   IOLOGIC            1/56            1% used
+   DSP                2/8            25% used
    I2C                0/2             0% used
-   HFOSC              0/1             0% used
+   HFOSC              1/1           100% used
    LFOSC              0/1             0% used
    LEDDA_IP           0/1             0% used
    RGBA_DRV           0/1             0% used
@@ -70,45 +58,51 @@ Device utilization summary:
    OPENDRAIN          0/3             0% used
 
 Pin Constraint Summary:
-   1 out of 1 pins locked (100% locked).
+   3 out of 3 pins locked (100% locked).
 
-Finished Placer Phase 0 (HIER). CPU time: 0 secs , REAL time: 4 secs 
+Finished Placer Phase 0 (HIER). CPU time: 0 secs , REAL time: 3 secs 
 
 
-................
+.......................
 Finished Placer Phase 0 (AP).  CPU time: 0 secs , REAL time: 4 secs 
 
 Starting Placer Phase 1. CPU time: 0 secs , REAL time: 4 secs 
 ..  ..
 ....................
 
-Placer score = 171.
+Placer score = 58869.
 
 Device SLICE utilization summary after final SLICE packing:
-   SLICE              1/2640         <1% used
+   SLICE            171/2640          6% used
 
-Finished Placer Phase 1. CPU time: 0 secs , REAL time: 5 secs 
+WARNING - par: Unable to find the instance/port 'clk' in the constraint 'ldc_set_location -site {4} [get_ports clk]'
+
+WARNING - par: In the constraint 'ldc_set_location -site {4} [get_ports clk]', the locate object is not specified
+
+Finished Placer Phase 1. CPU time: 4 secs , REAL time: 8 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  342
-Finished Placer Phase 2.  CPU time: 0 secs , REAL time: 5 secs 
+Placer score =  70103
+Finished Placer Phase 2.  CPU time: 4 secs , REAL time: 8 secs 
 
 
 ------------------ Clock Report ------------------
 
 Global Clocks :
+  PRIMARY "int_osc" from comp "hf_osc" on site "HFOSC_R1C32", clk load = 73, ce load = 0, sr load = 0
+  PRIMARY "sck_c" from comp "sck" on PIO site "21 (PL19B)", clk load = 25, ce load = 0, sr load = 0
 
-  PRIMARY  : 0 out of 8 (0%)
+  PRIMARY  : 2 out of 8 (25%)
 
 --------------- End of Clock Report ---------------
 
 
 I/O Usage Summary (final):
-   1 out of 56 (1.8%) I/O sites used.
-   1 out of 36 (2.8%) bonded I/O sites used.
-   Number of I/O comps: 1; differential: 0
+   3 out of 56 (5.4%) I/O sites used.
+   3 out of 36 (8.3%) bonded I/O sites used.
+   Number of I/O comps: 3; differential: 0
    Number of Vref pins used: 0
 
 I/O Bank Usage Summary:
@@ -116,21 +110,20 @@ I/O Bank Usage Summary:
 | I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
 +----------+---------------+------------+------------+------------+
 | 0        | 0 / 14 (  0%) | OFF        |            |            |
-| 1        | 1 / 14 (  7%) | 3.3V       |            |            |
+| 1        | 3 / 14 ( 21%) | 3.3V       |            |            |
 | 2        | 0 / 8 (  0%)  | OFF        |            |            |
 +----------+---------------+------------+------------+------------+
 
-Total Placer CPU time: 0 secs , REAL time: 5 secs 
+Total Placer CPU time: 4 secs , REAL time: 8 secs 
 
 Writing design to file latticeE155FinalProject_impl_1_par.dir/5_1.udb ...
 
+WARNING - par: Unable to find the instance/port 'clk' in the constraint 'ldc_set_location -site {4} [get_ports clk]'
 
------------------------------------------------------------------
-INFO - par: ASE feature is off due to non timing-driven settings.  
------------------------------------------------------------------
+WARNING - par: In the constraint 'ldc_set_location -site {4} [get_ports clk]', the locate object is not specified
 
 
-Start NBR router at 13:17:38 11/19/22
+Start NBR router at 20:43:39 11/21/22
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -148,35 +141,62 @@ Note: NBR uses a different method to calculate timing slacks. The
 Starting routing resource preassignment
 Preassignment Summary:
 --------------------------------------------------------------------------------
-0 connections routed (of 1 total) (0.00%)
+280 connections routed with dedicated routing resources
+2 global clock signals routed
+378 connections routed (of 1233 total) (30.66%)
+---------------------------------------------------------
+Clock routing summary:
+Primary clocks (2 used out of 8 available):
+#4  Signal "int_osc"
+       Clock   loads: 73    out of    73 routed (100.00%)
+#7  Signal "sck_c"
+       Clock   loads: 25    out of    25 routed (100.00%)
+---------------------------------------------------------
 --------------------------------------------------------------------------------
 Completed routing resource preassignment
 
-Start NBR section for initial routing at 13:17:38 11/19/22
+Start NBR section for initial routing at 20:43:39 11/21/22
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
+20(0.01%) conflicts; 855(69.34%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.186ns/0.000ns; real time: 0 secs 
+Level 4, iteration 2
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 8.653ns/0.000ns; real time: 0 secs 
 
 Info: Initial congestion level at 75.00% usage is 0
 Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 13:17:38 11/19/22
+Start NBR section for normal routing at 20:43:39 11/21/22
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 8.593ns/0.000ns; real time: 0 secs 
 
-Start NBR section for post-routing at 13:17:38 11/19/22
+Start NBR section for setup/hold timing optimization with effort level 3 at 20:43:39 11/21/22
+
+Starting full timing analysis...
+
+Start NBR section for post-routing at 20:43:40 11/21/22
 
 End NBR router with 0 unrouted connection
+
+Starting full timing analysis...
 
 NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
+  Estimated worst slack<setup> : 5.628ns
+  Estimated worst slack<hold > : 1.715ns
+  Timing score<setup> : 0
+  Timing score<hold > : 0
+  Number of connections with timing violations<setup> : 0 (0.00%)
+  Number of connections with timing violations<hold > : 0 (0.00%)
 -----------
 
 
-Total CPU time 0 secs 
+Total CPU time 1 secs 
 Total REAL time: 0 secs 
 Completely routed.
-End of route.  1 routed (100.00%); 0 unrouted.
+End of route.  1233 routed (100.00%); 0 unrouted.
 
 Writing design to file latticeE155FinalProject_impl_1_par.dir/5_1.udb ...
 
@@ -186,15 +206,15 @@ All signals are completely routed.
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = <n/a>
-PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
-PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
-PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 5.628
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 1.715
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  Time: 0 secs 
-Total REAL Time: 5 secs 
-Peak Memory Usage: 74.83 MB
+Total CPU  Time: 5 secs 
+Total REAL Time: 9 secs 
+Peak Memory Usage: 119.05 MB
 
 
 par done!

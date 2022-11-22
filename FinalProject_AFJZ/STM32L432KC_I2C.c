@@ -136,17 +136,18 @@ void sendI2C(char address, char send[], char nbytes) {
   I2C1->ISR |= (I2C_ISR_TXIS_Msk);
 
   // for loop going through entire send array
-  for(int i = 0; i < nbytes; i++) {
+  //for(int i = 0; i < nbytes; i++) {
     
-    if (i != 0) {
+    //if (i != 0) {
       // while TXIS not equal to 1, wait
-      while (!(I2C1->ISR & I2C_ISR_TXIS));
-    }
+      //while (!(I2C1->ISR & I2C_ISR_TXE));
+      //while (!(I2C1->ISR & I2C_ISR_TXIS));
+    //}
 
     // once it goes high, set the transfer register (TXDR) to be w
-    *((volatile char *) (&I2C1->TXDR)) = send[i]; // writing the sending character to DR
+    *((volatile char *) (&I2C1->TXDR)) = send[0]; // writing the sending character to DR
 
-   }
+   //}
 
 }
 
