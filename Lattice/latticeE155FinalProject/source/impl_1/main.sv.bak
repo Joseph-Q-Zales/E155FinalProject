@@ -173,7 +173,7 @@ module duration(input logic int_osc,
 				input logic[35:0] clockSpeed,
 				output logic done);
 				
-	logic[31:0] counter, THRESHOLD;
+	logic[31:0] counter = 0, THRESHOLD;
 	logic clkStrobe;
 	
 	// calculate THRESHOLD based on dur
@@ -188,7 +188,7 @@ module duration(input logic int_osc,
 		end
 		else  			begin
 				clkStrobe <= 0;
-				counter <= 1;
+				counter <= counter + 1;
 		end
 		// clkStrobe <= (counter == THRESHOLD);
 	end

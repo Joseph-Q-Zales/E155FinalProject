@@ -30,7 +30,7 @@ module makingNoise_tb();
         start = 1;
         #1000;
 
-        $stop;
+        //$stop;
     end
 
 
