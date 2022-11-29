@@ -178,8 +178,8 @@ int main(void) {
   // send the signal data to the FPGA
   while(1){
 
-    // testing I2C
-    sendI2C(0x48, toSend, 1);
+    // testing I2C (PN532 address is 48, shifted by 1 for alingment
+    sendI2C((0x48 >> 1), toSend, 1);
     delay_millis(TIM2, 5);
 
     //readI2C(0x00, 1);
