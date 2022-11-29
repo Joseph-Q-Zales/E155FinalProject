@@ -103,11 +103,14 @@ void comInitI2C(char address, char nbyts, uint16_t RdWr) {
 
   // 7 bit addressing mode
   I2C1->CR2 &= ~(I2C_CR2_ADD10);
+
+  // master only sends 7 bits followed by r/w
+  I2C1->CR2 |= (I2C_CR2_HEAD10R);
   
   // set slave address to send to 0x00 (the general call address for the PN532)
   I2C1->CR2 &= ~(I2C_CR2_SADD_Msk);
 
-  I2C1->CR2 |= _VAL2FLD(I2C_CR2_SADD, address);
+  I2C1->CR2 |= (address << 1);
 
   // set transfer direction (RD_WRN)
   if(RdWr) { // if RdWr is a 1, we are reading
@@ -122,7 +125,9 @@ void comInitI2C(char address, char nbyts, uint16_t RdWr) {
   I2C1->CR2 |= _VAL2FLD(I2C_CR2_NBYTES, nbyts);
 
     // enables the start bit
-  I2C1->CR2 |= (I2C_CR2_START);
+  //I2C1->CR2 |= (I2C_CR2_START);
+  I2C1 -> CR2 |= (1 << 13);
+
 }
 
 /* Transmits a character (1 byte) over I2C.
@@ -136,18 +141,18 @@ void sendI2C(char address, char send[], char nbytes) {
   I2C1->ISR |= (I2C_ISR_TXIS_Msk);
 
   // for loop going through entire send array
-  //for(int i = 0; i < nbytes; i++) {
+  for(int i = 0; i < nbytes; i++) {
     
-    //if (i != 0) {
+    if (i != 0) {
       // while TXIS not equal to 1, wait
       //while (!(I2C1->ISR & I2C_ISR_TXE));
-      //while (!(I2C1->ISR & I2C_ISR_TXIS));
-    //}
+      while (!(I2C1->ISR & I2C_ISR_TXIS));
+    }
 
     // once it goes high, set the transfer register (TXDR) to be w
     *((volatile char *) (&I2C1->TXDR)) = send[0]; // writing the sending character to DR
 
-   //}
+   }
 
 }
 
