@@ -1,4 +1,11 @@
-C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv {2 {vlog -work work -sv -stats=none C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv
+C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingSignals_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingSignals_tb.sv
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module makingSignals_tb
+
+Top level modules:
+	makingSignals_tb
+
+} {} {}} C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv {2 {vlog -work work -sv -stats=none C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv
 Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
 -- Compiling module top
 ** Warning: C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv(22): (vlog-2597) '2400000000' is being treated as 32-bit signed integer and will overflow.
@@ -10,13 +17,6 @@ Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oc
 
 Top level modules:
 	top
-
-} {} {}} C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingSignals_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingSignals_tb.sv
-Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
--- Compiling module makingSignals_tb
-
-Top level modules:
-	makingSignals_tb
 
 } {} {}} C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingNoise_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingNoise_tb.sv
 Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021

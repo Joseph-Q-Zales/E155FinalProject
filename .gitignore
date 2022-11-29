@@ -76,3 +76,4 @@ transcript*
 sc_dpiheader.h
 vsim.dbg
 *.o
+*.mti
