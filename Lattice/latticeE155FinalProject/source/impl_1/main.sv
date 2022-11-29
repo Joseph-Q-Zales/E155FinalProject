@@ -16,9 +16,16 @@ module top(input  logic clk, // for simulation purposes, delete and make an inte
 	logic int_osc;
 	logic start;
 	
-	// Internal high-speed oscillator (instantiates the 24 MHz clock)
-	HSOSC #(.CLKHF_DIV(2'b01))
-		hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b0), .CLKHF(int_osc));
+	logic[35:0] clockSpeed;
+
+	// clockspeed is 2.4MHz
+	assign clockSpeed = 2400000000;
+
+	// // Internal high-speed oscillator (instantiates the 24 MHz clock)
+	// HSOSC #(.CLKHF_DIV(2'b01))
+	// 	hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b0), .CLKHF(int_osc));
+	
+	assign int_osc = clk;
 	
 	// get signal data from MCU
     MCU_spi spi(sck, sdi, newFlattenedMCUout);
@@ -35,7 +42,7 @@ module top(input  logic clk, // for simulation purposes, delete and make an inte
 	make_signals makingSignals(flattenedMCUout, sd0, sd1, sd2, sd3, sd4, sd5);
 	
 	// FSM to create unique tune from signal data
-	tune makeMusic(int_osc, start, sd0, sd1, sd2, sd3, sd4, sd5, song);
+	tune makeMusic(int_osc, start, sd0, sd1, sd2, sd3, sd4, sd5, clockSpeed, song);
 	
 	assign pwm = song;
     
@@ -92,6 +99,7 @@ module tune(input logic int_osc,
 				input logic[7:0] sd3,
 				input logic[7:0] sd4,
 				input logic[7:0] sd5,
+				input logic[35:0] clockSpeed,
 				output logic song);
 				
 	logic done, en, rep;
@@ -102,7 +110,6 @@ module tune(input logic int_osc,
 	// state and next state definitions
 	typedef enum logic[1:0] {idle, note1, note2, note3} statetype;
 	statetype state, nextstate;
-	
 	// state register
 	always_ff @(posedge int_osc) begin
 		if(start) 	state <= note1;
@@ -110,12 +117,12 @@ module tune(input logic int_osc,
 	end
 	
 	// assign repeat
-	assign threshold = 5;//((sd0 + sd5) % 3);        		// TODO - make a new signal to assign to how many times we repeat (mod on the MCU side)
+	assign threshold = 2;//((sd0 + sd5) % 3);        		// TODO - make a new signal to assign to how many times we repeat (mod on the MCU side)
 	assign rep = ~(counter == threshold);
 	
 	// instantiate dur and freq modules
-	duration howLong(int_osc, dur, done);
-	freqGenerator pitch(int_osc, en, freq, toneFreq);
+	duration howLong(int_osc, dur, clockSpeed, done);
+	freqGenerator pitch(int_osc, en, freq, clockSpeed, toneFreq);
 	
 	// only play music when we aren't in the idle state
 	always_ff @(posedge int_osc) begin
@@ -125,15 +132,15 @@ module tune(input logic int_osc,
 	
 	always_ff @(posedge int_osc) begin
 		if (state == note1) begin
-			freq <= sd0;
+			freq <= (sd0*3);
 			dur <= sd1;
 		end
 		else if (state == note2) begin
-			freq <= sd2;
+			freq <= (sd2*3);
 			dur <= sd3;
 		end
 		else if (state == note3) begin
-			freq <= sd4;
+			freq <= (sd4*3);
 			dur <= sd5;
 			counter <= counter + 1;
 		end
@@ -163,19 +170,44 @@ endmodule
 /////
 module duration(input logic int_osc,
 				input logic[7:0] dur,
+				input logic[35:0] clockSpeed,
 				output logic done);
 				
 	logic[31:0] counter, THRESHOLD;
+	logic clkStrobe;
 	
 	// calculate THRESHOLD based on dur
-	assign THRESHOLD = dur*24000000 - 1;
+	assign THRESHOLD = dur*clockSpeed - 1;
 	
+
+	// strobe counter (modified from E155 L02 on 9/1/22)
 	always_ff @(posedge int_osc) begin
-		counter <= counter + 1;
+		if(counter == THRESHOLD) begin
+			 	counter <= 0;
+				clkStrobe <= 1;
+		end
+		else  			begin
+				clkStrobe <= 0;
+				counter <= counter + 1;
+		end
+		// clkStrobe <= (counter == THRESHOLD);
 	end
 	
-	assign done = (counter == THRESHOLD);
-				
+	// strobe generation (modified from E155 L02 on 9/1/22)
+	// always_ff @(posedge int_osc) begin
+	// 		clkStrobe <= (counter == THRESHOLD);
+	// end
+	
+	assign done = clkStrobe;
+
+	// always_ff @(posedge int_osc) begin
+	// 	counter <= counter + 1;
+	// end
+	 
+	// assign done = (counter == THRESHOLD);
+
+
+		
 endmodule
 				
 
@@ -185,13 +217,14 @@ endmodule
 /////
 module freqGenerator(input logic int_osc, en,
 				input logic[9:0] freq,
+				input logic[35:0] clockSpeed,
 				output logic toneFreq);
 	logic clkStrobe;
 	logic[31:0] counter;
 	logic[31:0] threshold;
 	
 	// threshold value is calculated from freq
-	assign threshold = (1/freq)*24000000/2 - 1;
+	assign threshold = ((1/freq)*clockSpeed)/2 - 1;
 	
 	// strobe counter (modified from E155 L02 on 9/1/22)
 	always_ff @(posedge int_osc) begin

@@ -19,12 +19,12 @@ module makingSignals_tb();
     // test case
     initial begin   
         flattenedMCUoutin       <= 48'h5566778899AA;
-  	signalData0 = 0b01010101;  //55
-	signalData1 = 0b01100110;  //66
-	signalData2 = 0b01110111;  //77
-	signalData3 = 0b10001000;  //88
-	signalData4 = 0b10011001; //99
-	signalData5 = 0b10101010; //AA
+  	signalData0 = 8'b01010101;  //55
+	signalData1 = 8'b01100110;  //66
+	signalData2 = 8'b01110111;  //77
+	signalData3 = 8'b10001000;  //88
+	signalData4 = 8'b10011001; //99
+	signalData5 = 8'b10101010; //AA
     end
 
 

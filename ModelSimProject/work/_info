@@ -9,50 +9,152 @@ z2
 !i10f 100
 cModel Technology
 dC:/lscc/radiant/3.2/modeltech/win32loem
-vmake_signals
+vduration
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z1 !s110 1667783518
+Z1 !s110 1669698499
 !i10b 1
-!s100 0K1iz9Y1ZQi746RjLlHK63
-IY6jigo?M:>3IX][LG:K`@0
+!s100 jGH_@VdaEA6RMd?Z=1QAB2
+IhoiZ9EVIAOb@b9jU^VKcY1
 S1
 Z2 dC:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject
-Z3 w1667783167
+Z3 w1669698396
 Z4 8C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv
 Z5 FC:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv
-!i122 11
-L0 54 17
+!i122 78
+L0 171 41
 Z6 VDg1SIo80bB@j0V0VzS_@n1
 Z7 OT;L;2021.4;73
 r1
 !s85 0
 31
-Z8 !s108 1667783518.000000
+Z8 !s108 1669698499.000000
 Z9 !s107 C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv|
 Z10 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv|
 !s101 -O0
 !i113 1
 Z11 o-work work -sv -O0
 Z12 tCvgOpt 0
-vmakingSignals_tb
+vduration_tb
 R0
 R1
 !i10b 1
-!s100 WmIGTkCW:ha=Xaab;[M_e3
-ILLFWg@6VjTj_?<>k26^`k0
+!s100 gabgg1RnF_j05<_ePb3W@3
+Ib<@@YiR@```Sbo1;;_oY60
 S1
 R2
-w1667778528
-8C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingSignals_tb.sv
-FC:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingSignals_tb.sv
-!i122 12
-L0 9 39
+w1669698496
+8C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/duration_tb.sv
+FC:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/duration_tb.sv
+!i122 79
+L0 7 23
 R6
 R7
 r1
 !s85 0
 31
 R8
+!s107 C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/duration_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/duration_tb.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+vfreqGenerator
+R0
+R1
+!i10b 1
+!s100 [QNdJB;iALY5[Ff`P3aOT1
+IC:E`Cb50>JChSm9MjblPf2
+S1
+R2
+R3
+R4
+R5
+!i122 78
+L0 218 25
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+nfreq@generator
+vmake_signals
+R0
+R1
+!i10b 1
+!s100 :GEL1?@HhD21PeFCHC6Zz1
+Ihind?6RN?Bk60KYL1Ue2@3
+S1
+R2
+R3
+R4
+R5
+!i122 78
+L0 72 17
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+vmakingNoise_tb
+R0
+Z13 !s110 1669698480
+!i10b 1
+!s100 Ef>`V[:onUe_Ul[o`5lh11
+IZPI@cmECEH`]T>J=NJVD_1
+S1
+R2
+w1669695600
+8C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingNoise_tb.sv
+FC:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingNoise_tb.sv
+!i122 77
+L0 7 33
+R6
+R7
+r1
+!s85 0
+31
+Z14 !s108 1669698480.000000
+!s107 C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingNoise_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingNoise_tb.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+nmaking@noise_tb
+vmakingSignals_tb
+R0
+R13
+!i10b 1
+!s100 ij<6P]=?GY1Z76_?h42oz3
+I=:K7GVnDobhR^i`2ddT6Q0
+S1
+R2
+w1669694280
+8C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingSignals_tb.sv
+FC:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingSignals_tb.sv
+!i122 76
+L0 8 39
+R6
+R7
+r1
+!s85 0
+31
+R14
 !s107 C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingSignals_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/ModelSimProject/makingSignals_tb.sv|
 !s101 -O0
@@ -64,15 +166,15 @@ vMCU_spi
 R0
 R1
 !i10b 1
-!s100 ]=ckd;;=d<oZ2?=jYl0jO2
-IjJ>4]Ga7lo_hhJnB^z<G^1
+!s100 iXba;5;@`JR]m12g6D=kL1
+IZXVNoNk=DaXPLj3UXA>HI2
 S1
 R2
 R3
 R4
 R5
-!i122 11
-L0 38 12
+!i122 78
+L0 56 12
 R6
 R7
 r1
@@ -88,17 +190,43 @@ R12
 n@m@c@u_spi
 vpwmDriver
 R0
-R1
+Z15 !s110 1667783518
 !i10b 1
 !s100 z8Scdi`4<3C3UUYCQZ<i;3
 I?Lho@IoKD6[d68jBbHYcH1
 S1
 R2
-R3
+Z16 w1667783167
 R4
 R5
 !i122 11
 L0 94 8
+R6
+R7
+r1
+!s85 0
+31
+Z17 !s108 1667783518.000000
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+npwm@driver
+vtop
+R0
+R1
+!i10b 1
+!s100 W:knE@cc[MA9Kk8:W9^5j0
+IPk9e63GlEeJb?ac8IYKDb1
+S1
+R2
+R3
+R4
+R5
+!i122 78
+L0 6 44
 R6
 R7
 r1
@@ -111,20 +239,19 @@ R10
 !i113 1
 R11
 R12
-npwm@driver
-vtop
+vtune
 R0
 R1
 !i10b 1
-!s100 gc=@aGo^DaH5ZFim0G4=M2
-I8McPEfa4YNIdD8Lhhn6?a3
+!s100 VF2ZKKXa`:6CbL@<UMc;e3
+IjGVR;@ESdKcYkBL]WCfHF2
 S1
 R2
 R3
 R4
 R5
-!i122 11
-L0 6 26
+!i122 78
+L0 94 73
 R6
 R7
 r1
@@ -139,13 +266,13 @@ R11
 R12
 vuniqueTune
 R0
-R1
+R15
 !i10b 1
 !s100 o]iJ97S@g1]fz[9?mMjkk3
 I95EXPR:4gDR;<==h]h<cH3
 S1
 R2
-R3
+R16
 R4
 R5
 !i122 11
@@ -155,7 +282,7 @@ R7
 r1
 !s85 0
 31
-R8
+R17
 R9
 R10
 !s101 -O0

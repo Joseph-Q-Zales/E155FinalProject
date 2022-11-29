@@ -47,7 +47,7 @@ Target Device:        iCE40UP5KSG48
 Target Performance:   High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 3.2.0.18.0
-Mapped on: Mon Nov 21 20:43:30 2022
+Mapped on: Mon Nov 28 20:40:31 2022
 
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
@@ -58,25 +58,25 @@ Command line:   map -i latticeE155FinalProject_impl_1_syn.udb -pdc C:/Users/afas
      latticeE155FinalProject_impl_1.mrp -hierrpt -gui
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of slice registers: 183 out of  5280 (3%)
+   Number of slice registers: 186 out of  5280 (4%)
    Number of I/O registers:      1 out of   117 (1%)
-   Number of LUT4s:           325 out of  5280 (6%)
-      Number of logic LUT4s:             115
+   Number of LUT4s:           343 out of  5280 (6%)
+      Number of logic LUT4s:             125
       Number of inserted feedthru LUT4s:  97
       Number of replicated LUT4s:          1
-      Number of ripple logic:             56 (112 LUT4s)
-   Number of IO sites used:   3 out of 39 (8%)
-      Number of IO sites used for general PIO: 3
+      Number of ripple logic:             60 (120 LUT4s)
+   Number of IO sites used:   4 out of 39 (10%)
+      Number of IO sites used for general PIO: 4
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 3 out of 36 (8%)
+      Number of IO sites used for PIO+I3C: 4 out of 36 (11%)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 3 out of 39 (8%)
-   Number of DSPs:             2 out of 8 (25%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 4 out of 39 (10%)
+   Number of DSPs:             3 out of 8 (37%)
    Number of I2Cs:             0 out of 2 (0%)
-   Number of High Speed OSCs:  1 out of 1 (100%)
+   Number of High Speed OSCs:  0 out of 1 (0%)
    Number of Low Speed OSCs:   0 out of 1 (0%)
    Number of RGB PWM:          0 out of 1 (0%)
    Number of RGB Drivers:      0 out of 1 (0%)
@@ -87,32 +87,33 @@ Command line:   map -i latticeE155FinalProject_impl_1_syn.udb -pdc C:/Users/afas
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  2
-      Net int_osc: 106 loads, 106 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
+      Net int_osc_c: 109 loads, 109 rising, 0 falling (Driver: Port clk)
       Net sck_c: 48 loads, 48 rising, 0 falling (Driver: Port sck)
    Number of Clock Enables:  3
       Net flattenedMCUout_47__N_49: 48 loads, 48 SLICEs
-      Net n569: 2 loads, 2 SLICEs
-      Net makeMusic.n554: 15 loads, 15 SLICEs
-   Number of LSRs:  2
+      Net makeMusic.n1431: 8 loads, 8 SLICEs
+      Net n1458: 2 loads, 2 SLICEs
+   Number of LSRs:  3
       Net start: 4 loads, 4 SLICEs
-      Net makeMusic.pitch.n568: 17 loads, 17 SLICEs
+      Net done: 17 loads, 17 SLICEs
+      Net makeMusic.pitch.n1447: 17 loads, 17 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net VCC_net: 64 loads
+      Net VCC_net: 54 loads
       Net flattenedMCUout_47__N_49: 48 loads
-      Net makeMusic.freq_9__N_86: 20 loads
 
-      Net makeMusic.n293[2]: 19 loads
-      Net makeMusic.pitch.n568: 17 loads
-      Net makeMusic.n554: 15 loads
-      Net start: 7 loads
-      Net makeMusic.pitch.threshold[31]: 5 loads
-      Net makeMusic.counter[0]: 4 loads
-      Net makeMusic.n293[3]: 4 loads
-
-
+      Net makeMusic.freq_9__N_96: 21 loads
+      Net done: 20 loads
+      Net makeMusic.n311[2]: 20 loads
+      Net makeMusic.pitch.n1447: 17 loads
+      Net makeMusic.n311[3]: 13 loads
+      Net makeMusic.n1469: 10 loads
+      Net makeMusic.n1431: 8 loads
+      Net makeMusic.pitch.threshold_31__N_246[26]: 8 loads
 
 
-   Number of warnings:  11
+
+
+   Number of warnings:  3
    Number of errors:    0
 
 
@@ -120,24 +121,14 @@ Command line:   map -i latticeE155FinalProject_impl_1_syn.udb -pdc C:/Users/afas
 
 <A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
 
-WARNING - map: C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/L
-     attice/latticeE155FinalProject/pins_spi.pdc (1) : No port matched &apos;CE&apos;.
-WARNING - map: C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/L
-     attice/latticeE155FinalProject/pins_spi.pdc (5) : No port matched &apos;tester&apos;.
-WARNING - map: No port matched &apos;CE&apos;.
-WARNING - map: Can&apos;t resolve object &apos;CE&apos; in constraint &apos;ldc_set_location -site
-     {20} [get_ports CE]&apos;.
-WARNING - map: No port matched &apos;tester&apos;.
-WARNING - map: Can&apos;t resolve object &apos;tester&apos; in constraint &apos;ldc_set_location
-     -site {19} [get_ports tester]&apos;.
-WARNING - map: Remove invalid constraint &apos;ldc_set_location -site {20} [get_ports
-     CE]&apos;.
-WARNING - map: Remove invalid constraint &apos;ldc_set_location -site {19} [get_ports
-     tester]&apos;.
-WARNING - map: Top module port &apos;clk&apos; does not connect to anything.
-WARNING - map: Top module port &apos;clk&apos; does not connect to anything.
+WARNING - map: The clock port [clk] is assigned to a non clock dedicated pin
+     [4], which might affect the clock performance. Use dedicated clock
+     resources for the port.
 WARNING - map: The clock port [sck] is assigned to a non clock dedicated pin
-     [21], which might affect the clock performance. Use dedicated clock
+     [28], which might affect the clock performance. Use dedicated clock
+     resources for the port.
+WARNING - map: The clock port [clk] is assigned to a non clock dedicated pin
+     [4], which might affect the clock performance. Use dedicated clock
      resources for the port.
 
 
@@ -152,6 +143,8 @@ WARNING - map: The clock port [sck] is assigned to a non clock dedicated pin
 +---------------------+-----------+-----------+-------+-------+-----------+
 | sck                 | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| clk                 | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 | pwm                 | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
@@ -163,29 +156,18 @@ Block i1 was optimized away.
 
 
 
-OSC Summary
------------
-
-OSC 1:                                 Pin/Node Value
-  OSC Instance Name:                            hf_osc
-  Power UP:                            NODE     VCC_net
-  Enable Signal:                                GND
-  OSC Output:                          NODE     int_osc
-  DIV Setting:                                  01
-
-
-
 <A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
 ---------------
 
-Instance Name: makeMusic/pitch/mult_30
+Instance Name: makeMusic/mult_113
          Type: DSP
-Instance Name: makeMusic/howLong/mult_31
+Instance Name: makeMusic/howLong/mult_126
+         Type: DSP
+Instance Name: makeMusic/howLong/mult_125
+
          Type: DSP
 Instance Name: spi/newFlattenedMCUout_i0
          Type: IOLOGIC
-Instance Name: hf_osc
-         Type: HFOSC
 
 
 
@@ -195,6 +177,22 @@ Instance Name: hf_osc
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 60 MB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

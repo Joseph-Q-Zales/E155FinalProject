@@ -1,61 +1,59 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  183 of 5280 (3.466%)
-I/O cells:      3
+Register bits:  186 of 5280 (3.523%)
+I/O cells:      4
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        56          100.0
-                            FD1P3XZ       183          100.0
-                         HSOSC_CORE         1          100.0
-                                 IB         2          100.0
+                               CCU2        60          100.0
+                            FD1P3XZ       186          100.0
+                                 IB         3          100.0
                               IOL_B         1          100.0
-                               LUT4       114          100.0
-                              MAC16         2          100.0
+                               LUT4       124          100.0
+                              MAC16         3          100.0
                                  OB         1          100.0
 SUB MODULES
                             MCU_spi         1
                            duration         1
                       freqGenerator         1
                                tune         1
-                              TOTAL       364
+                              TOTAL       382
 ----------------------------------------------------------------------
 Report for cell tune.v1
 Instance Path : makeMusic
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        56          100.0
-                            FD1P3XZ        87           47.5
-                               LUT4        81           71.1
-                              MAC16         2          100.0
+                                FA2        60          100.0
+                            FD1P3XZ        90           48.4
+                               LUT4        91           73.4
+                              MAC16         3          100.0
 SUB MODULES
                            duration         1
                       freqGenerator         1
-                              TOTAL       228
+                              TOTAL       246
 ----------------------------------------------------------------------
 Report for cell freqGenerator.v1
 Instance Path : makeMusic.pitch
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        27           48.2
-                            FD1P3XZ        33           18.0
-                               LUT4        22           19.3
-                              MAC16         1           50.0
-                              TOTAL        83
+                                FA2        25           41.7
+                            FD1P3XZ        33           17.7
+                               LUT4        22           17.7
+                              TOTAL        80
 ----------------------------------------------------------------------
 Report for cell duration.v1
 Instance Path : makeMusic.howLong
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        29           51.8
-                            FD1P3XZ        32           17.5
-                               LUT4        19           16.7
-                              MAC16         1           50.0
-                              TOTAL        81
+                                FA2        35           58.3
+                            FD1P3XZ        33           17.7
+                               LUT4        18           14.5
+                              MAC16         2           66.7
+                              TOTAL        88
 ----------------------------------------------------------------------
 Report for cell MCU_spi.v1
 Instance Path : spi
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3XZ        47           25.7
+                            FD1P3XZ        47           25.3
                               IOL_B         1          100.0
                               TOTAL        48

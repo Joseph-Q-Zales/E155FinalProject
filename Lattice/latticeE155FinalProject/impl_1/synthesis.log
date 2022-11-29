@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Nov 21 20:43:25 2022
+Mon Nov 28 20:39:30 2022
 
 
 Command Line:  C:\lscc\radiant\3.2\ispfpga\bin\nt64\synthesis.exe -f latticeE155FinalProject_impl_1_lattice.synproj -gui -msgset C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/promote.xml 
@@ -122,14 +122,14 @@ INFO - synthesis: The default VHDL library search path is now "C:/Users/afascett
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): top
 INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(6): compiling module top. VERI-1018
-INFO - synthesis: C:/lscc/radiant/3.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
-INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(49): compiling module MCU_spi. VERI-1018
-INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(65): compiling module make_signals. VERI-1018
-INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(87): compiling module tune. VERI-1018
-WARNING - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(113): expression size 3 truncated to fit in target size 2. VERI-1209
-INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(164): compiling module duration. VERI-1018
-INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(186): compiling module freqGenerator. VERI-1018
-WARNING - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(138): expression size 32 truncated to fit in target size 2. VERI-1209
+INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(56): compiling module MCU_spi. VERI-1018
+INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(72): compiling module make_signals. VERI-1018
+INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(94): compiling module tune. VERI-1018
+INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(172): compiling module duration. VERI-1018
+WARNING - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(181): expression size 36 truncated to fit in target size 32. VERI-1209
+INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(210): compiling module freqGenerator. VERI-1018
+WARNING - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(219): expression size 36 truncated to fit in target size 32. VERI-1209
+WARNING - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(146): expression size 32 truncated to fit in target size 2. VERI-1209
                                                          
 
 
@@ -154,7 +154,6 @@ WARNING - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalpro
                                                          
 
 
-WARNING - synthesis: I/O Port clk 's net has no driver and is unused.
 INFO - synthesis: Extracted state machine for register '\makeMusic/state' with one-hot encoding
 State machine has 4 reachable states with original encodings of:
 
@@ -179,48 +178,46 @@ original encoding -> new encoding (one-hot encoding)
 
 
 
-Mapped 2 multiplier(s)
+Mapped 3 multiplier(s)
 
 
-WARNING - synthesis: I/O Port clk 's net has no driver and is unused.
 INFO - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 183 of 5280 (3 % )
-CCU2 => 56
-FD1P3XZ => 183
-HSOSC_CORE => 1
-IB => 2
+Number of register bits => 186 of 5280 (3 % )
+CCU2 => 60
+FD1P3XZ => 186
+IB => 3
 IOL_B => 1
-LUT4 => 114
-MAC16 => 2
+LUT4 => 124
+MAC16 => 3
 OB => 1
 ################### End Area Report ##################
-Number of odd-length carry chains : 1
+Number of odd-length carry chains : 2
 Number of even-length carry chains : 3
 
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 2
-  Net : int_osc, loads : 0
+  Net : int_osc_c, loads : 0
   Net : sck_c, loads : 0
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : flattenedMCUout_47__N_49, loads : 49
-  Net : makeMusic/pitch/n568, loads : 32
-  Net : makeMusic/freq_9__N_86, loads : 20
-  Net : makeMusic/n295, loads : 19
-  Net : makeMusic/n554, loads : 15
+  Net : makeMusic/howLong/done, loads : 33
+  Net : makeMusic/pitch/n1447, loads : 32
+  Net : makeMusic/freq_9__N_96, loads : 21
+  Net : makeMusic/n313, loads : 20
+  Net : makeMusic/n312, loads : 13
+  Net : makeMusic/n1469, loads : 10
+  Net : makeMusic/n1431, loads : 8
+  Net : makeMusic/pitch/threshold_31__N_246[26], loads : 8
   Net : start, loads : 7
-  Net : makeMusic/pitch/threshold[31], loads : 5
-  Net : makeMusic/counter[0], loads : 4
-  Net : makeMusic/n294, loads : 4
-  Net : makeMusic/en_N_101, loads : 3
 ################### End Clock Report ##################
 
-Peak Memory Usage: 97 MB
+Peak Memory Usage: 108 MB
 
 --------------------------------------------------------------
 Total CPU Time: 1 secs 

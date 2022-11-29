@@ -4,43 +4,42 @@ Report for cell top
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                  IOLGC	       1.00        100.0
-                                  LUT4	        325        100.0
+                                  LUT4	        343        100.0
                                  IOREG	          1        100.0
-                                 IOBUF	          3        100.0
-                                PFUREG	        183        100.0
-                                   DSP	          2        100.0
+                                 IOBUF	          4        100.0
+                                PFUREG	        186        100.0
+                                   DSP	          3        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
                                MCU_spi	          1         0.0
-                                  tune	          1        59.4
+                                  tune	          1        61.5
 ---------------------------------------------------
 Report for cell tune
    Instance path: top/makeMusic
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        193        59.4
-                                PFUREG	         87        47.5
-                                   DSP	          2        100.0
+                                  LUT4	        211        61.5
+                                PFUREG	         90        48.4
+                                   DSP	          3        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                              duration	          1        23.7
-                         freqGenerator	          1        23.4
+                              duration	          1        25.7
+                         freqGenerator	          1        21.0
 ---------------------------------------------------
 Report for cell freqGenerator
    Instance path: top/makeMusic/pitch
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         76        23.4
-                                PFUREG	         33        18.0
-                                   DSP	          1        50.0
+                                  LUT4	         72        21.0
+                                PFUREG	         33        17.7
 ---------------------------------------------------
 Report for cell duration
    Instance path: top/makeMusic/howLong
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         77        23.7
-                                PFUREG	         32        17.5
-                                   DSP	          1        50.0
+                                  LUT4	         88        25.7
+                                PFUREG	         33        17.7
+                                   DSP	          2        66.7
 ---------------------------------------------------
 Report for cell MCU_spi
    Instance path: top/spi
@@ -48,4 +47,4 @@ Report for cell MCU_spi
                                   cell	      count    Res Usage(%)
                                  IOLGC	       1.00        100.0
                                  IOREG	          1        100.0
-                                PFUREG	         47        25.7
+                                PFUREG	         47        25.3
