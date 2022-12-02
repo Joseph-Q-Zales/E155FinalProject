@@ -5,3 +5,7 @@ ERROR - c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/
 ERROR - c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(30): instantiating unknown module makeMusic. VERI-1063
 ERROR - c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(16): syntax error near new. VERI-1137
 ERROR - c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(17): syntax error near new. VERI-1137
+ERROR - c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(196): sd1 is not declared. VERI-1128
+ERROR - c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(48): tune expects 10 arguments. VERI-1182
+ERROR - c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(255): net pwr_2 is constantly driven from multiple places at instance makingMusic_2, on port q. VDB-1000
+ERROR - c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(255): net makingMusic is constantly driven from multiple places at instance makingMusic_2, on port q. VDB-1000

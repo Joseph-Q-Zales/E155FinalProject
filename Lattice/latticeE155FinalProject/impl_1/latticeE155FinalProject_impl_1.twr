@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 3.2.0.18.0
 
-Mon Nov 28 20:40:39 2022
+Thu Dec  1 18:13:33 2022
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -28,6 +28,7 @@ Package Status:                     Preliminary    Version 1.5
         1.1  SDC Constraints
         1.2  Combinational Loop
     2  CLOCK SUMMARY
+        2.1  Clock int_osc
     3  TIMING ANALYSIS SUMMARY
         3.1  Overall (Setup and Hold)
             3.1.1  Constraint Coverage
@@ -52,6 +53,7 @@ Package Status:                     Preliminary    Version 1.5
 
 1.1  SDC Constraints
 =====================
+create_clock -name {int_osc} -period 41.6667 [get_pins {hf_osc/CLKHF }] 
 
 Operating conditions:
 --------------------
@@ -65,6 +67,21 @@ None
 2  CLOCK SUMMARY
 ==============================================
 
+2.1 Clock "int_osc"
+=======================
+create_clock -name {int_osc} -period 41.6667 [get_pins {hf_osc/CLKHF }] 
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+             Clock int_osc              |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From int_osc                           |             Target |          41.667 ns |         24.000 MHz 
+                                        | Actual (all paths) |          38.104 ns |         26.244 MHz 
+hf_osc/CLKHF (MPW)                      |   (50% duty cycle) |          20.792 ns |         48.095 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+
 ==============================================
 3  TIMING ANALYSIS SUMMARY
 ==============================================
@@ -74,7 +91,7 @@ None
 
 3.1.1  Constraint Coverage
 ---------------------------
-Constraint Coverage: 0%
+Constraint Coverage: 69.738%
 
 3.1.2  Timing Errors
 ---------------------
@@ -87,20 +104,54 @@ Total Negative Slack: 0.000 ns (setup), 0.000 ns (hold)
 3.2  Setup Summary Report
 ==========================
 
---------------------------------------------------
-There is no end point satisfying reporting criteria
-
-Total Negative Slack: 0
-
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+makeMusic/howLong/counter_113__i31/SR    |    3.563 ns 
+{makeMusic/howLong/counter_113__i29/SR   makeMusic/howLong/counter_113__i30/SR}              
+                                         |    3.563 ns 
+{makeMusic/howLong/counter_113__i27/SR   makeMusic/howLong/counter_113__i28/SR}              
+                                         |    3.563 ns 
+{makeMusic/howLong/counter_113__i25/SR   makeMusic/howLong/counter_113__i26/SR}              
+                                         |    3.563 ns 
+{makeMusic/howLong/counter_113__i23/SR   makeMusic/howLong/counter_113__i24/SR}              
+                                         |    3.563 ns 
+{makeMusic/howLong/counter_113__i5/SR   makeMusic/howLong/counter_113__i6/SR}              
+                                         |    3.563 ns 
+{makeMusic/howLong/counter_113__i3/SR   makeMusic/howLong/counter_113__i4/SR}              
+                                         |    3.563 ns 
+{makeMusic/howLong/counter_113__i1/SR   makeMusic/howLong/counter_113__i2/SR}              
+                                         |    3.563 ns 
+makeMusic/howLong/counter_113__i0/SR     |    3.563 ns 
+{makeMusic/howLong/counter_113__i7/SR   makeMusic/howLong/counter_113__i8/SR}              
+                                         |    3.642 ns 
+-------------------------------------------------------
+                                         |             
+Setup # of endpoints with negative slack:|           0 
+                                         |             
+-------------------------------------------------------
 
 3.3  Hold Summary Report
 =========================
 
---------------------------------------------------
-There is no end point satisfying reporting criteria
-
-Total Negative Slack: 0
-
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+makeMusic/dur_i0_i4/D                    |    1.715 ns 
+makeMusic/state_i1/D                     |    1.715 ns 
+makeMusic/dur_i0_i7/D                    |    1.715 ns 
+makeMusic/dur_i0_i5/D                    |    1.715 ns 
+makeMusic/en_c/D                         |    1.715 ns 
+makeMusic/counter_112__i0/D              |    1.715 ns 
+makeMusic/counter_112__i1/D              |    1.715 ns 
+makeMusic/dur_i0_i1/D                    |    1.715 ns 
+makeMusic/makingMusic_c/D                |    1.715 ns 
+makeMusic/pitch/counter_115__i12/D       |    1.882 ns 
+-------------------------------------------------------
+                                         |             
+Hold # of endpoints with negative slack: |           0 
+                                         |             
+-------------------------------------------------------
 
 3.4  Unconstrained Report
 ===========================
@@ -109,9 +160,16 @@ Total Negative Slack: 0
 --------------------------------------
 
 Clocked but unconstrained timing start points
---------------------------------------------------
-There is no start point satisfying reporting criteria
-
+-------------------------------------------------------------------
+         Listing 1 Start Points         |           Type           
+-------------------------------------------------------------------
+makeMusic/makingMusic_c/Q               |          No required time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing start po |                          
+ints                                    |                         1
+                                        |                          
+-------------------------------------------------------------------
 
 Clocked but unconstrained timing end points
 --------------------------------------------------
@@ -132,15 +190,16 @@ create_generated_clock,
 ...
 
 -------------------------------------------------------------------
-     Listing 4 Start or End Points      |           Type           
+     Listing 5 Start or End Points      |           Type           
 -------------------------------------------------------------------
+ce                                      |                     input
 sdi                                     |                     input
 sck                                     |                     input
 clk                                     |                     input
 pwm                                     |                    output
 -------------------------------------------------------------------
                                         |                          
-Number of I/O ports without constraint  |                         4
+Number of I/O ports without constraint  |                         5
                                         |                          
 -------------------------------------------------------------------
 
@@ -149,20 +208,20 @@ Define the clock for these registers.
 -------------------------------------------------------------------
          Listing 10 Instance(s)         |           Type           
 -------------------------------------------------------------------
-makeMusic/pitch/counter_122__i31        |                  No Clock
-makeMusic/pitch/counter_122__i24        |                  No Clock
-makeMusic/pitch/counter_122__i30        |                  No Clock
-makeMusic/pitch/counter_122__i28        |                  No Clock
-makeMusic/pitch/counter_122__i26        |                  No Clock
-makeMusic/pitch/counter_122__i20        |                  No Clock
-makeMusic/pitch/counter_122__i18        |                  No Clock
-makeMusic/pitch/counter_122__i22        |                  No Clock
-makeMusic/pitch/counter_122__i14        |                  No Clock
-makeMusic/pitch/counter_122__i16        |                  No Clock
+flattenedMCUout__i2                     |                  No Clock
+flattenedMCUout__i12                    |                  No Clock
+flattenedMCUout__i10                    |                  No Clock
+flattenedMCUout__i14                    |                  No Clock
+flattenedMCUout__i8                     |                  No Clock
+flattenedMCUout__i5                     |                  No Clock
+flattenedMCUout__i24                    |                  No Clock
+flattenedMCUout__i18                    |                  No Clock
+flattenedMCUout__i22                    |                  No Clock
+flattenedMCUout__i16                    |                  No Clock
 -------------------------------------------------------------------
                                         |                          
 Number of registers without clock defin |                          
-ition                                   |                       863
+ition                                   |                       217
                                         |                          
 -------------------------------------------------------------------
 
@@ -183,6 +242,966 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
                     Detailed Report for timing paths 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/dur_i0_i7/Q  (SLICE_R8C12A)
+Path End         : makeMusic/howLong/counter_113__i31/SR  (SLICE_R6C14A)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 18
+Delay Ratio      : 69.8% (route), 30.2% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 3.562 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  50      
+makeMusic/howLong/int_osc                                    NET DELAY            5.499                  5.499  50      
+
+
+Data Path
+
+makeMusic/dur_i0_i7/CK->makeMusic/dur_i0_i7/Q
+                                          SLICE_R8C12A       CLK_TO_Q1_DELAY      1.388                  6.887  3       
+makeMusic/howLong/dur[7]                                     NET DELAY            3.979                 10.866  3       
+makeMusic/howLong/mult_127/A7->makeMusic/howLong/mult_127/O8
+                                          DSP_DSP_R1C6       A_TO_O_DELAY         4.523                 15.389  1       
+makeMusic/howLong/n982[8]                                    NET DELAY            4.349                 19.738  1       
+makeMusic/howLong/add_157_5/C0->makeMusic/howLong/add_157_5/CO0
+                                          SLICE_R2C12C       C0_TO_COUT0_DELAY    0.343                 20.081  2       
+makeMusic/howLong/n8302                                      NET DELAY            0.000                 20.081  2       
+makeMusic/howLong/add_157_5/CI1->makeMusic/howLong/add_157_5/CO1
+                                          SLICE_R2C12C       CIN1_TO_COUT1_DELAY  0.277                 20.358  2       
+makeMusic/howLong/n5841                                      NET DELAY            0.000                 20.358  2       
+makeMusic/howLong/add_157_7/CI0->makeMusic/howLong/add_157_7/CO0
+                                          SLICE_R2C12D       CIN0_TO_COUT0_DELAY  0.277                 20.635  2       
+makeMusic/howLong/n8308                                      NET DELAY            0.000                 20.635  2       
+makeMusic/howLong/add_157_7/CI1->makeMusic/howLong/add_157_7/CO1
+                                          SLICE_R2C12D       CIN1_TO_COUT1_DELAY  0.277                 20.912  2       
+makeMusic/howLong/n5843                                      NET DELAY            1.216                 22.128  2       
+makeMusic/howLong/add_157_9/D0->makeMusic/howLong/add_157_9/S0
+                                          SLICE_R2C13A       D0_TO_F0_DELAY       0.449                 22.577  1       
+makeMusic/howLong/THRESHOLD_31__N_133[23]
+                                                             NET DELAY            3.675                 26.252  1       
+makeMusic/howLong/sub_14_sub_3_add_2_13/B1->makeMusic/howLong/sub_14_sub_3_add_2_13/CO1
+                                          SLICE_R4C12C       B1_TO_COUT1_DELAY    0.357                 26.609  2       
+makeMusic/howLong/n5932                                      NET DELAY            0.000                 26.609  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI0->makeMusic/howLong/sub_14_sub_3_add_2_15/CO0
+                                          SLICE_R4C12D       CIN0_TO_COUT0_DELAY  0.277                 26.886  2       
+makeMusic/howLong/n8317                                      NET DELAY            0.000                 26.886  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI1->makeMusic/howLong/sub_14_sub_3_add_2_15/CO1
+                                          SLICE_R4C12D       CIN1_TO_COUT1_DELAY  0.277                 27.163  2       
+makeMusic/howLong/n5934                                      NET DELAY            0.555                 27.718  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI0->makeMusic/howLong/sub_14_sub_3_add_2_17/CO0
+                                          SLICE_R4C13A       CIN0_TO_COUT0_DELAY  0.277                 27.995  2       
+makeMusic/howLong/n8323                                      NET DELAY            0.000                 27.995  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI1->makeMusic/howLong/sub_14_sub_3_add_2_17/CO1
+                                          SLICE_R4C13A       CIN1_TO_COUT1_DELAY  0.277                 28.272  2       
+makeMusic/howLong/n5936                                      NET DELAY            0.000                 28.272  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI0->makeMusic/howLong/sub_14_sub_3_add_2_19/CO0
+                                          SLICE_R4C13B       CIN0_TO_COUT0_DELAY  0.277                 28.549  2       
+makeMusic/howLong/n8329                                      NET DELAY            0.000                 28.549  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI1->makeMusic/howLong/sub_14_sub_3_add_2_19/CO1
+                                          SLICE_R4C13B       CIN1_TO_COUT1_DELAY  0.277                 28.826  2       
+makeMusic/howLong/n5938                                      NET DELAY            0.661                 29.487  2       
+makeMusic/howLong/sub_14_sub_3_add_2_21/D0->makeMusic/howLong/sub_14_sub_3_add_2_21/S0
+                                          SLICE_R4C13C       D0_TO_F0_DELAY       0.449                 29.936  1       
+makeMusic/howLong/THRESHOLD[30]                              NET DELAY            3.146                 33.082  1       
+makeMusic/howLong/i10_4_lut/C->makeMusic/howLong/i10_4_lut/Z
+                                          SLICE_R5C13B       A0_TO_F0_DELAY       0.449                 33.531  1       
+makeMusic/howLong/n42                                        NET DELAY            2.763                 36.294  1       
+makeMusic/howLong/i27_4_lut/C->makeMusic/howLong/i27_4_lut/Z
+                                          SLICE_R5C11A       D1_TO_F1_DELAY       0.449                 36.743  2       
+makeMusic/howLong/n59                                        NET DELAY            2.551                 39.294  2       
+makeMusic/howLong/i2622_4_lut/B->makeMusic/howLong/i2622_4_lut/Z
+                                          SLICE_R5C11B       A1_TO_F1_DELAY       0.449                 39.743  17      
+makeMusic/howLong/counter_31__N_293 ( LSR )
+                                                             NET DELAY            3.331                 43.074  17      
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT           0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  50      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY            5.499                 47.165  50      
+                                                             Uncertainty          0.000                 47.165  
+                                                             Setup time           0.529                 46.636  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Required Time                                                                                           46.636  
+Arrival Time                                                                                           -43.073  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                     3.562  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/dur_i0_i7/Q  (SLICE_R8C12A)
+Path End         : {makeMusic/howLong/counter_113__i29/SR   makeMusic/howLong/counter_113__i30/SR}  (SLICE_R6C13D)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 18
+Delay Ratio      : 69.8% (route), 30.2% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 3.562 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  50      
+makeMusic/howLong/int_osc                                    NET DELAY            5.499                  5.499  50      
+
+
+Data Path
+
+makeMusic/dur_i0_i7/CK->makeMusic/dur_i0_i7/Q
+                                          SLICE_R8C12A       CLK_TO_Q1_DELAY      1.388                  6.887  3       
+makeMusic/howLong/dur[7]                                     NET DELAY            3.979                 10.866  3       
+makeMusic/howLong/mult_127/A7->makeMusic/howLong/mult_127/O8
+                                          DSP_DSP_R1C6       A_TO_O_DELAY         4.523                 15.389  1       
+makeMusic/howLong/n982[8]                                    NET DELAY            4.349                 19.738  1       
+makeMusic/howLong/add_157_5/C0->makeMusic/howLong/add_157_5/CO0
+                                          SLICE_R2C12C       C0_TO_COUT0_DELAY    0.343                 20.081  2       
+makeMusic/howLong/n8302                                      NET DELAY            0.000                 20.081  2       
+makeMusic/howLong/add_157_5/CI1->makeMusic/howLong/add_157_5/CO1
+                                          SLICE_R2C12C       CIN1_TO_COUT1_DELAY  0.277                 20.358  2       
+makeMusic/howLong/n5841                                      NET DELAY            0.000                 20.358  2       
+makeMusic/howLong/add_157_7/CI0->makeMusic/howLong/add_157_7/CO0
+                                          SLICE_R2C12D       CIN0_TO_COUT0_DELAY  0.277                 20.635  2       
+makeMusic/howLong/n8308                                      NET DELAY            0.000                 20.635  2       
+makeMusic/howLong/add_157_7/CI1->makeMusic/howLong/add_157_7/CO1
+                                          SLICE_R2C12D       CIN1_TO_COUT1_DELAY  0.277                 20.912  2       
+makeMusic/howLong/n5843                                      NET DELAY            1.216                 22.128  2       
+makeMusic/howLong/add_157_9/D0->makeMusic/howLong/add_157_9/S0
+                                          SLICE_R2C13A       D0_TO_F0_DELAY       0.449                 22.577  1       
+makeMusic/howLong/THRESHOLD_31__N_133[23]
+                                                             NET DELAY            3.675                 26.252  1       
+makeMusic/howLong/sub_14_sub_3_add_2_13/B1->makeMusic/howLong/sub_14_sub_3_add_2_13/CO1
+                                          SLICE_R4C12C       B1_TO_COUT1_DELAY    0.357                 26.609  2       
+makeMusic/howLong/n5932                                      NET DELAY            0.000                 26.609  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI0->makeMusic/howLong/sub_14_sub_3_add_2_15/CO0
+                                          SLICE_R4C12D       CIN0_TO_COUT0_DELAY  0.277                 26.886  2       
+makeMusic/howLong/n8317                                      NET DELAY            0.000                 26.886  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI1->makeMusic/howLong/sub_14_sub_3_add_2_15/CO1
+                                          SLICE_R4C12D       CIN1_TO_COUT1_DELAY  0.277                 27.163  2       
+makeMusic/howLong/n5934                                      NET DELAY            0.555                 27.718  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI0->makeMusic/howLong/sub_14_sub_3_add_2_17/CO0
+                                          SLICE_R4C13A       CIN0_TO_COUT0_DELAY  0.277                 27.995  2       
+makeMusic/howLong/n8323                                      NET DELAY            0.000                 27.995  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI1->makeMusic/howLong/sub_14_sub_3_add_2_17/CO1
+                                          SLICE_R4C13A       CIN1_TO_COUT1_DELAY  0.277                 28.272  2       
+makeMusic/howLong/n5936                                      NET DELAY            0.000                 28.272  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI0->makeMusic/howLong/sub_14_sub_3_add_2_19/CO0
+                                          SLICE_R4C13B       CIN0_TO_COUT0_DELAY  0.277                 28.549  2       
+makeMusic/howLong/n8329                                      NET DELAY            0.000                 28.549  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI1->makeMusic/howLong/sub_14_sub_3_add_2_19/CO1
+                                          SLICE_R4C13B       CIN1_TO_COUT1_DELAY  0.277                 28.826  2       
+makeMusic/howLong/n5938                                      NET DELAY            0.661                 29.487  2       
+makeMusic/howLong/sub_14_sub_3_add_2_21/D0->makeMusic/howLong/sub_14_sub_3_add_2_21/S0
+                                          SLICE_R4C13C       D0_TO_F0_DELAY       0.449                 29.936  1       
+makeMusic/howLong/THRESHOLD[30]                              NET DELAY            3.146                 33.082  1       
+makeMusic/howLong/i10_4_lut/C->makeMusic/howLong/i10_4_lut/Z
+                                          SLICE_R5C13B       A0_TO_F0_DELAY       0.449                 33.531  1       
+makeMusic/howLong/n42                                        NET DELAY            2.763                 36.294  1       
+makeMusic/howLong/i27_4_lut/C->makeMusic/howLong/i27_4_lut/Z
+                                          SLICE_R5C11A       D1_TO_F1_DELAY       0.449                 36.743  2       
+makeMusic/howLong/n59                                        NET DELAY            2.551                 39.294  2       
+makeMusic/howLong/i2622_4_lut/B->makeMusic/howLong/i2622_4_lut/Z
+                                          SLICE_R5C11B       A1_TO_F1_DELAY       0.449                 39.743  17      
+makeMusic/howLong/counter_31__N_293 ( LSR )
+                                                             NET DELAY            3.331                 43.074  17      
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT           0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  50      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY            5.499                 47.165  50      
+                                                             Uncertainty          0.000                 47.165  
+                                                             Setup time           0.529                 46.636  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Required Time                                                                                           46.636  
+Arrival Time                                                                                           -43.073  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                     3.562  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/dur_i0_i7/Q  (SLICE_R8C12A)
+Path End         : {makeMusic/howLong/counter_113__i27/SR   makeMusic/howLong/counter_113__i28/SR}  (SLICE_R6C13C)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 18
+Delay Ratio      : 69.8% (route), 30.2% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 3.562 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  50      
+makeMusic/howLong/int_osc                                    NET DELAY            5.499                  5.499  50      
+
+
+Data Path
+
+makeMusic/dur_i0_i7/CK->makeMusic/dur_i0_i7/Q
+                                          SLICE_R8C12A       CLK_TO_Q1_DELAY      1.388                  6.887  3       
+makeMusic/howLong/dur[7]                                     NET DELAY            3.979                 10.866  3       
+makeMusic/howLong/mult_127/A7->makeMusic/howLong/mult_127/O8
+                                          DSP_DSP_R1C6       A_TO_O_DELAY         4.523                 15.389  1       
+makeMusic/howLong/n982[8]                                    NET DELAY            4.349                 19.738  1       
+makeMusic/howLong/add_157_5/C0->makeMusic/howLong/add_157_5/CO0
+                                          SLICE_R2C12C       C0_TO_COUT0_DELAY    0.343                 20.081  2       
+makeMusic/howLong/n8302                                      NET DELAY            0.000                 20.081  2       
+makeMusic/howLong/add_157_5/CI1->makeMusic/howLong/add_157_5/CO1
+                                          SLICE_R2C12C       CIN1_TO_COUT1_DELAY  0.277                 20.358  2       
+makeMusic/howLong/n5841                                      NET DELAY            0.000                 20.358  2       
+makeMusic/howLong/add_157_7/CI0->makeMusic/howLong/add_157_7/CO0
+                                          SLICE_R2C12D       CIN0_TO_COUT0_DELAY  0.277                 20.635  2       
+makeMusic/howLong/n8308                                      NET DELAY            0.000                 20.635  2       
+makeMusic/howLong/add_157_7/CI1->makeMusic/howLong/add_157_7/CO1
+                                          SLICE_R2C12D       CIN1_TO_COUT1_DELAY  0.277                 20.912  2       
+makeMusic/howLong/n5843                                      NET DELAY            1.216                 22.128  2       
+makeMusic/howLong/add_157_9/D0->makeMusic/howLong/add_157_9/S0
+                                          SLICE_R2C13A       D0_TO_F0_DELAY       0.449                 22.577  1       
+makeMusic/howLong/THRESHOLD_31__N_133[23]
+                                                             NET DELAY            3.675                 26.252  1       
+makeMusic/howLong/sub_14_sub_3_add_2_13/B1->makeMusic/howLong/sub_14_sub_3_add_2_13/CO1
+                                          SLICE_R4C12C       B1_TO_COUT1_DELAY    0.357                 26.609  2       
+makeMusic/howLong/n5932                                      NET DELAY            0.000                 26.609  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI0->makeMusic/howLong/sub_14_sub_3_add_2_15/CO0
+                                          SLICE_R4C12D       CIN0_TO_COUT0_DELAY  0.277                 26.886  2       
+makeMusic/howLong/n8317                                      NET DELAY            0.000                 26.886  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI1->makeMusic/howLong/sub_14_sub_3_add_2_15/CO1
+                                          SLICE_R4C12D       CIN1_TO_COUT1_DELAY  0.277                 27.163  2       
+makeMusic/howLong/n5934                                      NET DELAY            0.555                 27.718  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI0->makeMusic/howLong/sub_14_sub_3_add_2_17/CO0
+                                          SLICE_R4C13A       CIN0_TO_COUT0_DELAY  0.277                 27.995  2       
+makeMusic/howLong/n8323                                      NET DELAY            0.000                 27.995  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI1->makeMusic/howLong/sub_14_sub_3_add_2_17/CO1
+                                          SLICE_R4C13A       CIN1_TO_COUT1_DELAY  0.277                 28.272  2       
+makeMusic/howLong/n5936                                      NET DELAY            0.000                 28.272  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI0->makeMusic/howLong/sub_14_sub_3_add_2_19/CO0
+                                          SLICE_R4C13B       CIN0_TO_COUT0_DELAY  0.277                 28.549  2       
+makeMusic/howLong/n8329                                      NET DELAY            0.000                 28.549  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI1->makeMusic/howLong/sub_14_sub_3_add_2_19/CO1
+                                          SLICE_R4C13B       CIN1_TO_COUT1_DELAY  0.277                 28.826  2       
+makeMusic/howLong/n5938                                      NET DELAY            0.661                 29.487  2       
+makeMusic/howLong/sub_14_sub_3_add_2_21/D0->makeMusic/howLong/sub_14_sub_3_add_2_21/S0
+                                          SLICE_R4C13C       D0_TO_F0_DELAY       0.449                 29.936  1       
+makeMusic/howLong/THRESHOLD[30]                              NET DELAY            3.146                 33.082  1       
+makeMusic/howLong/i10_4_lut/C->makeMusic/howLong/i10_4_lut/Z
+                                          SLICE_R5C13B       A0_TO_F0_DELAY       0.449                 33.531  1       
+makeMusic/howLong/n42                                        NET DELAY            2.763                 36.294  1       
+makeMusic/howLong/i27_4_lut/C->makeMusic/howLong/i27_4_lut/Z
+                                          SLICE_R5C11A       D1_TO_F1_DELAY       0.449                 36.743  2       
+makeMusic/howLong/n59                                        NET DELAY            2.551                 39.294  2       
+makeMusic/howLong/i2622_4_lut/B->makeMusic/howLong/i2622_4_lut/Z
+                                          SLICE_R5C11B       A1_TO_F1_DELAY       0.449                 39.743  17      
+makeMusic/howLong/counter_31__N_293 ( LSR )
+                                                             NET DELAY            3.331                 43.074  17      
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT           0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  50      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY            5.499                 47.165  50      
+                                                             Uncertainty          0.000                 47.165  
+                                                             Setup time           0.529                 46.636  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Required Time                                                                                           46.636  
+Arrival Time                                                                                           -43.073  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                     3.562  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/dur_i0_i7/Q  (SLICE_R8C12A)
+Path End         : {makeMusic/howLong/counter_113__i25/SR   makeMusic/howLong/counter_113__i26/SR}  (SLICE_R6C13B)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 18
+Delay Ratio      : 69.8% (route), 30.2% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 3.562 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  50      
+makeMusic/howLong/int_osc                                    NET DELAY            5.499                  5.499  50      
+
+
+Data Path
+
+makeMusic/dur_i0_i7/CK->makeMusic/dur_i0_i7/Q
+                                          SLICE_R8C12A       CLK_TO_Q1_DELAY      1.388                  6.887  3       
+makeMusic/howLong/dur[7]                                     NET DELAY            3.979                 10.866  3       
+makeMusic/howLong/mult_127/A7->makeMusic/howLong/mult_127/O8
+                                          DSP_DSP_R1C6       A_TO_O_DELAY         4.523                 15.389  1       
+makeMusic/howLong/n982[8]                                    NET DELAY            4.349                 19.738  1       
+makeMusic/howLong/add_157_5/C0->makeMusic/howLong/add_157_5/CO0
+                                          SLICE_R2C12C       C0_TO_COUT0_DELAY    0.343                 20.081  2       
+makeMusic/howLong/n8302                                      NET DELAY            0.000                 20.081  2       
+makeMusic/howLong/add_157_5/CI1->makeMusic/howLong/add_157_5/CO1
+                                          SLICE_R2C12C       CIN1_TO_COUT1_DELAY  0.277                 20.358  2       
+makeMusic/howLong/n5841                                      NET DELAY            0.000                 20.358  2       
+makeMusic/howLong/add_157_7/CI0->makeMusic/howLong/add_157_7/CO0
+                                          SLICE_R2C12D       CIN0_TO_COUT0_DELAY  0.277                 20.635  2       
+makeMusic/howLong/n8308                                      NET DELAY            0.000                 20.635  2       
+makeMusic/howLong/add_157_7/CI1->makeMusic/howLong/add_157_7/CO1
+                                          SLICE_R2C12D       CIN1_TO_COUT1_DELAY  0.277                 20.912  2       
+makeMusic/howLong/n5843                                      NET DELAY            1.216                 22.128  2       
+makeMusic/howLong/add_157_9/D0->makeMusic/howLong/add_157_9/S0
+                                          SLICE_R2C13A       D0_TO_F0_DELAY       0.449                 22.577  1       
+makeMusic/howLong/THRESHOLD_31__N_133[23]
+                                                             NET DELAY            3.675                 26.252  1       
+makeMusic/howLong/sub_14_sub_3_add_2_13/B1->makeMusic/howLong/sub_14_sub_3_add_2_13/CO1
+                                          SLICE_R4C12C       B1_TO_COUT1_DELAY    0.357                 26.609  2       
+makeMusic/howLong/n5932                                      NET DELAY            0.000                 26.609  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI0->makeMusic/howLong/sub_14_sub_3_add_2_15/CO0
+                                          SLICE_R4C12D       CIN0_TO_COUT0_DELAY  0.277                 26.886  2       
+makeMusic/howLong/n8317                                      NET DELAY            0.000                 26.886  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI1->makeMusic/howLong/sub_14_sub_3_add_2_15/CO1
+                                          SLICE_R4C12D       CIN1_TO_COUT1_DELAY  0.277                 27.163  2       
+makeMusic/howLong/n5934                                      NET DELAY            0.555                 27.718  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI0->makeMusic/howLong/sub_14_sub_3_add_2_17/CO0
+                                          SLICE_R4C13A       CIN0_TO_COUT0_DELAY  0.277                 27.995  2       
+makeMusic/howLong/n8323                                      NET DELAY            0.000                 27.995  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI1->makeMusic/howLong/sub_14_sub_3_add_2_17/CO1
+                                          SLICE_R4C13A       CIN1_TO_COUT1_DELAY  0.277                 28.272  2       
+makeMusic/howLong/n5936                                      NET DELAY            0.000                 28.272  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI0->makeMusic/howLong/sub_14_sub_3_add_2_19/CO0
+                                          SLICE_R4C13B       CIN0_TO_COUT0_DELAY  0.277                 28.549  2       
+makeMusic/howLong/n8329                                      NET DELAY            0.000                 28.549  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI1->makeMusic/howLong/sub_14_sub_3_add_2_19/CO1
+                                          SLICE_R4C13B       CIN1_TO_COUT1_DELAY  0.277                 28.826  2       
+makeMusic/howLong/n5938                                      NET DELAY            0.661                 29.487  2       
+makeMusic/howLong/sub_14_sub_3_add_2_21/D0->makeMusic/howLong/sub_14_sub_3_add_2_21/S0
+                                          SLICE_R4C13C       D0_TO_F0_DELAY       0.449                 29.936  1       
+makeMusic/howLong/THRESHOLD[30]                              NET DELAY            3.146                 33.082  1       
+makeMusic/howLong/i10_4_lut/C->makeMusic/howLong/i10_4_lut/Z
+                                          SLICE_R5C13B       A0_TO_F0_DELAY       0.449                 33.531  1       
+makeMusic/howLong/n42                                        NET DELAY            2.763                 36.294  1       
+makeMusic/howLong/i27_4_lut/C->makeMusic/howLong/i27_4_lut/Z
+                                          SLICE_R5C11A       D1_TO_F1_DELAY       0.449                 36.743  2       
+makeMusic/howLong/n59                                        NET DELAY            2.551                 39.294  2       
+makeMusic/howLong/i2622_4_lut/B->makeMusic/howLong/i2622_4_lut/Z
+                                          SLICE_R5C11B       A1_TO_F1_DELAY       0.449                 39.743  17      
+makeMusic/howLong/counter_31__N_293 ( LSR )
+                                                             NET DELAY            3.331                 43.074  17      
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT           0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  50      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY            5.499                 47.165  50      
+                                                             Uncertainty          0.000                 47.165  
+                                                             Setup time           0.529                 46.636  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Required Time                                                                                           46.636  
+Arrival Time                                                                                           -43.073  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                     3.562  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/dur_i0_i7/Q  (SLICE_R8C12A)
+Path End         : {makeMusic/howLong/counter_113__i23/SR   makeMusic/howLong/counter_113__i24/SR}  (SLICE_R6C13A)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 18
+Delay Ratio      : 69.8% (route), 30.2% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 3.562 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  50      
+makeMusic/howLong/int_osc                                    NET DELAY            5.499                  5.499  50      
+
+
+Data Path
+
+makeMusic/dur_i0_i7/CK->makeMusic/dur_i0_i7/Q
+                                          SLICE_R8C12A       CLK_TO_Q1_DELAY      1.388                  6.887  3       
+makeMusic/howLong/dur[7]                                     NET DELAY            3.979                 10.866  3       
+makeMusic/howLong/mult_127/A7->makeMusic/howLong/mult_127/O8
+                                          DSP_DSP_R1C6       A_TO_O_DELAY         4.523                 15.389  1       
+makeMusic/howLong/n982[8]                                    NET DELAY            4.349                 19.738  1       
+makeMusic/howLong/add_157_5/C0->makeMusic/howLong/add_157_5/CO0
+                                          SLICE_R2C12C       C0_TO_COUT0_DELAY    0.343                 20.081  2       
+makeMusic/howLong/n8302                                      NET DELAY            0.000                 20.081  2       
+makeMusic/howLong/add_157_5/CI1->makeMusic/howLong/add_157_5/CO1
+                                          SLICE_R2C12C       CIN1_TO_COUT1_DELAY  0.277                 20.358  2       
+makeMusic/howLong/n5841                                      NET DELAY            0.000                 20.358  2       
+makeMusic/howLong/add_157_7/CI0->makeMusic/howLong/add_157_7/CO0
+                                          SLICE_R2C12D       CIN0_TO_COUT0_DELAY  0.277                 20.635  2       
+makeMusic/howLong/n8308                                      NET DELAY            0.000                 20.635  2       
+makeMusic/howLong/add_157_7/CI1->makeMusic/howLong/add_157_7/CO1
+                                          SLICE_R2C12D       CIN1_TO_COUT1_DELAY  0.277                 20.912  2       
+makeMusic/howLong/n5843                                      NET DELAY            1.216                 22.128  2       
+makeMusic/howLong/add_157_9/D0->makeMusic/howLong/add_157_9/S0
+                                          SLICE_R2C13A       D0_TO_F0_DELAY       0.449                 22.577  1       
+makeMusic/howLong/THRESHOLD_31__N_133[23]
+                                                             NET DELAY            3.675                 26.252  1       
+makeMusic/howLong/sub_14_sub_3_add_2_13/B1->makeMusic/howLong/sub_14_sub_3_add_2_13/CO1
+                                          SLICE_R4C12C       B1_TO_COUT1_DELAY    0.357                 26.609  2       
+makeMusic/howLong/n5932                                      NET DELAY            0.000                 26.609  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI0->makeMusic/howLong/sub_14_sub_3_add_2_15/CO0
+                                          SLICE_R4C12D       CIN0_TO_COUT0_DELAY  0.277                 26.886  2       
+makeMusic/howLong/n8317                                      NET DELAY            0.000                 26.886  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI1->makeMusic/howLong/sub_14_sub_3_add_2_15/CO1
+                                          SLICE_R4C12D       CIN1_TO_COUT1_DELAY  0.277                 27.163  2       
+makeMusic/howLong/n5934                                      NET DELAY            0.555                 27.718  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI0->makeMusic/howLong/sub_14_sub_3_add_2_17/CO0
+                                          SLICE_R4C13A       CIN0_TO_COUT0_DELAY  0.277                 27.995  2       
+makeMusic/howLong/n8323                                      NET DELAY            0.000                 27.995  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI1->makeMusic/howLong/sub_14_sub_3_add_2_17/CO1
+                                          SLICE_R4C13A       CIN1_TO_COUT1_DELAY  0.277                 28.272  2       
+makeMusic/howLong/n5936                                      NET DELAY            0.000                 28.272  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI0->makeMusic/howLong/sub_14_sub_3_add_2_19/CO0
+                                          SLICE_R4C13B       CIN0_TO_COUT0_DELAY  0.277                 28.549  2       
+makeMusic/howLong/n8329                                      NET DELAY            0.000                 28.549  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI1->makeMusic/howLong/sub_14_sub_3_add_2_19/CO1
+                                          SLICE_R4C13B       CIN1_TO_COUT1_DELAY  0.277                 28.826  2       
+makeMusic/howLong/n5938                                      NET DELAY            0.661                 29.487  2       
+makeMusic/howLong/sub_14_sub_3_add_2_21/D0->makeMusic/howLong/sub_14_sub_3_add_2_21/S0
+                                          SLICE_R4C13C       D0_TO_F0_DELAY       0.449                 29.936  1       
+makeMusic/howLong/THRESHOLD[30]                              NET DELAY            3.146                 33.082  1       
+makeMusic/howLong/i10_4_lut/C->makeMusic/howLong/i10_4_lut/Z
+                                          SLICE_R5C13B       A0_TO_F0_DELAY       0.449                 33.531  1       
+makeMusic/howLong/n42                                        NET DELAY            2.763                 36.294  1       
+makeMusic/howLong/i27_4_lut/C->makeMusic/howLong/i27_4_lut/Z
+                                          SLICE_R5C11A       D1_TO_F1_DELAY       0.449                 36.743  2       
+makeMusic/howLong/n59                                        NET DELAY            2.551                 39.294  2       
+makeMusic/howLong/i2622_4_lut/B->makeMusic/howLong/i2622_4_lut/Z
+                                          SLICE_R5C11B       A1_TO_F1_DELAY       0.449                 39.743  17      
+makeMusic/howLong/counter_31__N_293 ( LSR )
+                                                             NET DELAY            3.331                 43.074  17      
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT           0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  50      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY            5.499                 47.165  50      
+                                                             Uncertainty          0.000                 47.165  
+                                                             Setup time           0.529                 46.636  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Required Time                                                                                           46.636  
+Arrival Time                                                                                           -43.073  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                     3.562  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/dur_i0_i7/Q  (SLICE_R8C12A)
+Path End         : {makeMusic/howLong/counter_113__i5/SR   makeMusic/howLong/counter_113__i6/SR}  (SLICE_R6C10D)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 18
+Delay Ratio      : 69.8% (route), 30.2% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 3.562 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  50      
+makeMusic/howLong/int_osc                                    NET DELAY            5.499                  5.499  50      
+
+
+Data Path
+
+makeMusic/dur_i0_i7/CK->makeMusic/dur_i0_i7/Q
+                                          SLICE_R8C12A       CLK_TO_Q1_DELAY      1.388                  6.887  3       
+makeMusic/howLong/dur[7]                                     NET DELAY            3.979                 10.866  3       
+makeMusic/howLong/mult_127/A7->makeMusic/howLong/mult_127/O8
+                                          DSP_DSP_R1C6       A_TO_O_DELAY         4.523                 15.389  1       
+makeMusic/howLong/n982[8]                                    NET DELAY            4.349                 19.738  1       
+makeMusic/howLong/add_157_5/C0->makeMusic/howLong/add_157_5/CO0
+                                          SLICE_R2C12C       C0_TO_COUT0_DELAY    0.343                 20.081  2       
+makeMusic/howLong/n8302                                      NET DELAY            0.000                 20.081  2       
+makeMusic/howLong/add_157_5/CI1->makeMusic/howLong/add_157_5/CO1
+                                          SLICE_R2C12C       CIN1_TO_COUT1_DELAY  0.277                 20.358  2       
+makeMusic/howLong/n5841                                      NET DELAY            0.000                 20.358  2       
+makeMusic/howLong/add_157_7/CI0->makeMusic/howLong/add_157_7/CO0
+                                          SLICE_R2C12D       CIN0_TO_COUT0_DELAY  0.277                 20.635  2       
+makeMusic/howLong/n8308                                      NET DELAY            0.000                 20.635  2       
+makeMusic/howLong/add_157_7/CI1->makeMusic/howLong/add_157_7/CO1
+                                          SLICE_R2C12D       CIN1_TO_COUT1_DELAY  0.277                 20.912  2       
+makeMusic/howLong/n5843                                      NET DELAY            1.216                 22.128  2       
+makeMusic/howLong/add_157_9/D0->makeMusic/howLong/add_157_9/S0
+                                          SLICE_R2C13A       D0_TO_F0_DELAY       0.449                 22.577  1       
+makeMusic/howLong/THRESHOLD_31__N_133[23]
+                                                             NET DELAY            3.675                 26.252  1       
+makeMusic/howLong/sub_14_sub_3_add_2_13/B1->makeMusic/howLong/sub_14_sub_3_add_2_13/CO1
+                                          SLICE_R4C12C       B1_TO_COUT1_DELAY    0.357                 26.609  2       
+makeMusic/howLong/n5932                                      NET DELAY            0.000                 26.609  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI0->makeMusic/howLong/sub_14_sub_3_add_2_15/CO0
+                                          SLICE_R4C12D       CIN0_TO_COUT0_DELAY  0.277                 26.886  2       
+makeMusic/howLong/n8317                                      NET DELAY            0.000                 26.886  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI1->makeMusic/howLong/sub_14_sub_3_add_2_15/CO1
+                                          SLICE_R4C12D       CIN1_TO_COUT1_DELAY  0.277                 27.163  2       
+makeMusic/howLong/n5934                                      NET DELAY            0.555                 27.718  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI0->makeMusic/howLong/sub_14_sub_3_add_2_17/CO0
+                                          SLICE_R4C13A       CIN0_TO_COUT0_DELAY  0.277                 27.995  2       
+makeMusic/howLong/n8323                                      NET DELAY            0.000                 27.995  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI1->makeMusic/howLong/sub_14_sub_3_add_2_17/CO1
+                                          SLICE_R4C13A       CIN1_TO_COUT1_DELAY  0.277                 28.272  2       
+makeMusic/howLong/n5936                                      NET DELAY            0.000                 28.272  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI0->makeMusic/howLong/sub_14_sub_3_add_2_19/CO0
+                                          SLICE_R4C13B       CIN0_TO_COUT0_DELAY  0.277                 28.549  2       
+makeMusic/howLong/n8329                                      NET DELAY            0.000                 28.549  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI1->makeMusic/howLong/sub_14_sub_3_add_2_19/CO1
+                                          SLICE_R4C13B       CIN1_TO_COUT1_DELAY  0.277                 28.826  2       
+makeMusic/howLong/n5938                                      NET DELAY            0.661                 29.487  2       
+makeMusic/howLong/sub_14_sub_3_add_2_21/D0->makeMusic/howLong/sub_14_sub_3_add_2_21/S0
+                                          SLICE_R4C13C       D0_TO_F0_DELAY       0.449                 29.936  1       
+makeMusic/howLong/THRESHOLD[30]                              NET DELAY            3.146                 33.082  1       
+makeMusic/howLong/i10_4_lut/C->makeMusic/howLong/i10_4_lut/Z
+                                          SLICE_R5C13B       A0_TO_F0_DELAY       0.449                 33.531  1       
+makeMusic/howLong/n42                                        NET DELAY            2.763                 36.294  1       
+makeMusic/howLong/i27_4_lut/C->makeMusic/howLong/i27_4_lut/Z
+                                          SLICE_R5C11A       D1_TO_F1_DELAY       0.449                 36.743  2       
+makeMusic/howLong/n59                                        NET DELAY            2.551                 39.294  2       
+makeMusic/howLong/i2622_4_lut/B->makeMusic/howLong/i2622_4_lut/Z
+                                          SLICE_R5C11B       A1_TO_F1_DELAY       0.449                 39.743  17      
+makeMusic/howLong/counter_31__N_293 ( LSR )
+                                                             NET DELAY            3.331                 43.074  17      
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT           0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  50      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY            5.499                 47.165  50      
+                                                             Uncertainty          0.000                 47.165  
+                                                             Setup time           0.529                 46.636  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Required Time                                                                                           46.636  
+Arrival Time                                                                                           -43.073  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                     3.562  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/dur_i0_i7/Q  (SLICE_R8C12A)
+Path End         : {makeMusic/howLong/counter_113__i3/SR   makeMusic/howLong/counter_113__i4/SR}  (SLICE_R6C10C)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 18
+Delay Ratio      : 69.8% (route), 30.2% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 3.562 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  50      
+makeMusic/howLong/int_osc                                    NET DELAY            5.499                  5.499  50      
+
+
+Data Path
+
+makeMusic/dur_i0_i7/CK->makeMusic/dur_i0_i7/Q
+                                          SLICE_R8C12A       CLK_TO_Q1_DELAY      1.388                  6.887  3       
+makeMusic/howLong/dur[7]                                     NET DELAY            3.979                 10.866  3       
+makeMusic/howLong/mult_127/A7->makeMusic/howLong/mult_127/O8
+                                          DSP_DSP_R1C6       A_TO_O_DELAY         4.523                 15.389  1       
+makeMusic/howLong/n982[8]                                    NET DELAY            4.349                 19.738  1       
+makeMusic/howLong/add_157_5/C0->makeMusic/howLong/add_157_5/CO0
+                                          SLICE_R2C12C       C0_TO_COUT0_DELAY    0.343                 20.081  2       
+makeMusic/howLong/n8302                                      NET DELAY            0.000                 20.081  2       
+makeMusic/howLong/add_157_5/CI1->makeMusic/howLong/add_157_5/CO1
+                                          SLICE_R2C12C       CIN1_TO_COUT1_DELAY  0.277                 20.358  2       
+makeMusic/howLong/n5841                                      NET DELAY            0.000                 20.358  2       
+makeMusic/howLong/add_157_7/CI0->makeMusic/howLong/add_157_7/CO0
+                                          SLICE_R2C12D       CIN0_TO_COUT0_DELAY  0.277                 20.635  2       
+makeMusic/howLong/n8308                                      NET DELAY            0.000                 20.635  2       
+makeMusic/howLong/add_157_7/CI1->makeMusic/howLong/add_157_7/CO1
+                                          SLICE_R2C12D       CIN1_TO_COUT1_DELAY  0.277                 20.912  2       
+makeMusic/howLong/n5843                                      NET DELAY            1.216                 22.128  2       
+makeMusic/howLong/add_157_9/D0->makeMusic/howLong/add_157_9/S0
+                                          SLICE_R2C13A       D0_TO_F0_DELAY       0.449                 22.577  1       
+makeMusic/howLong/THRESHOLD_31__N_133[23]
+                                                             NET DELAY            3.675                 26.252  1       
+makeMusic/howLong/sub_14_sub_3_add_2_13/B1->makeMusic/howLong/sub_14_sub_3_add_2_13/CO1
+                                          SLICE_R4C12C       B1_TO_COUT1_DELAY    0.357                 26.609  2       
+makeMusic/howLong/n5932                                      NET DELAY            0.000                 26.609  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI0->makeMusic/howLong/sub_14_sub_3_add_2_15/CO0
+                                          SLICE_R4C12D       CIN0_TO_COUT0_DELAY  0.277                 26.886  2       
+makeMusic/howLong/n8317                                      NET DELAY            0.000                 26.886  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI1->makeMusic/howLong/sub_14_sub_3_add_2_15/CO1
+                                          SLICE_R4C12D       CIN1_TO_COUT1_DELAY  0.277                 27.163  2       
+makeMusic/howLong/n5934                                      NET DELAY            0.555                 27.718  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI0->makeMusic/howLong/sub_14_sub_3_add_2_17/CO0
+                                          SLICE_R4C13A       CIN0_TO_COUT0_DELAY  0.277                 27.995  2       
+makeMusic/howLong/n8323                                      NET DELAY            0.000                 27.995  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI1->makeMusic/howLong/sub_14_sub_3_add_2_17/CO1
+                                          SLICE_R4C13A       CIN1_TO_COUT1_DELAY  0.277                 28.272  2       
+makeMusic/howLong/n5936                                      NET DELAY            0.000                 28.272  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI0->makeMusic/howLong/sub_14_sub_3_add_2_19/CO0
+                                          SLICE_R4C13B       CIN0_TO_COUT0_DELAY  0.277                 28.549  2       
+makeMusic/howLong/n8329                                      NET DELAY            0.000                 28.549  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI1->makeMusic/howLong/sub_14_sub_3_add_2_19/CO1
+                                          SLICE_R4C13B       CIN1_TO_COUT1_DELAY  0.277                 28.826  2       
+makeMusic/howLong/n5938                                      NET DELAY            0.661                 29.487  2       
+makeMusic/howLong/sub_14_sub_3_add_2_21/D0->makeMusic/howLong/sub_14_sub_3_add_2_21/S0
+                                          SLICE_R4C13C       D0_TO_F0_DELAY       0.449                 29.936  1       
+makeMusic/howLong/THRESHOLD[30]                              NET DELAY            3.146                 33.082  1       
+makeMusic/howLong/i10_4_lut/C->makeMusic/howLong/i10_4_lut/Z
+                                          SLICE_R5C13B       A0_TO_F0_DELAY       0.449                 33.531  1       
+makeMusic/howLong/n42                                        NET DELAY            2.763                 36.294  1       
+makeMusic/howLong/i27_4_lut/C->makeMusic/howLong/i27_4_lut/Z
+                                          SLICE_R5C11A       D1_TO_F1_DELAY       0.449                 36.743  2       
+makeMusic/howLong/n59                                        NET DELAY            2.551                 39.294  2       
+makeMusic/howLong/i2622_4_lut/B->makeMusic/howLong/i2622_4_lut/Z
+                                          SLICE_R5C11B       A1_TO_F1_DELAY       0.449                 39.743  17      
+makeMusic/howLong/counter_31__N_293 ( LSR )
+                                                             NET DELAY            3.331                 43.074  17      
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT           0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  50      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY            5.499                 47.165  50      
+                                                             Uncertainty          0.000                 47.165  
+                                                             Setup time           0.529                 46.636  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Required Time                                                                                           46.636  
+Arrival Time                                                                                           -43.073  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                     3.562  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/dur_i0_i7/Q  (SLICE_R8C12A)
+Path End         : {makeMusic/howLong/counter_113__i1/SR   makeMusic/howLong/counter_113__i2/SR}  (SLICE_R6C10B)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 18
+Delay Ratio      : 69.8% (route), 30.2% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 3.562 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  50      
+makeMusic/howLong/int_osc                                    NET DELAY            5.499                  5.499  50      
+
+
+Data Path
+
+makeMusic/dur_i0_i7/CK->makeMusic/dur_i0_i7/Q
+                                          SLICE_R8C12A       CLK_TO_Q1_DELAY      1.388                  6.887  3       
+makeMusic/howLong/dur[7]                                     NET DELAY            3.979                 10.866  3       
+makeMusic/howLong/mult_127/A7->makeMusic/howLong/mult_127/O8
+                                          DSP_DSP_R1C6       A_TO_O_DELAY         4.523                 15.389  1       
+makeMusic/howLong/n982[8]                                    NET DELAY            4.349                 19.738  1       
+makeMusic/howLong/add_157_5/C0->makeMusic/howLong/add_157_5/CO0
+                                          SLICE_R2C12C       C0_TO_COUT0_DELAY    0.343                 20.081  2       
+makeMusic/howLong/n8302                                      NET DELAY            0.000                 20.081  2       
+makeMusic/howLong/add_157_5/CI1->makeMusic/howLong/add_157_5/CO1
+                                          SLICE_R2C12C       CIN1_TO_COUT1_DELAY  0.277                 20.358  2       
+makeMusic/howLong/n5841                                      NET DELAY            0.000                 20.358  2       
+makeMusic/howLong/add_157_7/CI0->makeMusic/howLong/add_157_7/CO0
+                                          SLICE_R2C12D       CIN0_TO_COUT0_DELAY  0.277                 20.635  2       
+makeMusic/howLong/n8308                                      NET DELAY            0.000                 20.635  2       
+makeMusic/howLong/add_157_7/CI1->makeMusic/howLong/add_157_7/CO1
+                                          SLICE_R2C12D       CIN1_TO_COUT1_DELAY  0.277                 20.912  2       
+makeMusic/howLong/n5843                                      NET DELAY            1.216                 22.128  2       
+makeMusic/howLong/add_157_9/D0->makeMusic/howLong/add_157_9/S0
+                                          SLICE_R2C13A       D0_TO_F0_DELAY       0.449                 22.577  1       
+makeMusic/howLong/THRESHOLD_31__N_133[23]
+                                                             NET DELAY            3.675                 26.252  1       
+makeMusic/howLong/sub_14_sub_3_add_2_13/B1->makeMusic/howLong/sub_14_sub_3_add_2_13/CO1
+                                          SLICE_R4C12C       B1_TO_COUT1_DELAY    0.357                 26.609  2       
+makeMusic/howLong/n5932                                      NET DELAY            0.000                 26.609  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI0->makeMusic/howLong/sub_14_sub_3_add_2_15/CO0
+                                          SLICE_R4C12D       CIN0_TO_COUT0_DELAY  0.277                 26.886  2       
+makeMusic/howLong/n8317                                      NET DELAY            0.000                 26.886  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI1->makeMusic/howLong/sub_14_sub_3_add_2_15/CO1
+                                          SLICE_R4C12D       CIN1_TO_COUT1_DELAY  0.277                 27.163  2       
+makeMusic/howLong/n5934                                      NET DELAY            0.555                 27.718  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI0->makeMusic/howLong/sub_14_sub_3_add_2_17/CO0
+                                          SLICE_R4C13A       CIN0_TO_COUT0_DELAY  0.277                 27.995  2       
+makeMusic/howLong/n8323                                      NET DELAY            0.000                 27.995  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI1->makeMusic/howLong/sub_14_sub_3_add_2_17/CO1
+                                          SLICE_R4C13A       CIN1_TO_COUT1_DELAY  0.277                 28.272  2       
+makeMusic/howLong/n5936                                      NET DELAY            0.000                 28.272  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI0->makeMusic/howLong/sub_14_sub_3_add_2_19/CO0
+                                          SLICE_R4C13B       CIN0_TO_COUT0_DELAY  0.277                 28.549  2       
+makeMusic/howLong/n8329                                      NET DELAY            0.000                 28.549  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI1->makeMusic/howLong/sub_14_sub_3_add_2_19/CO1
+                                          SLICE_R4C13B       CIN1_TO_COUT1_DELAY  0.277                 28.826  2       
+makeMusic/howLong/n5938                                      NET DELAY            0.661                 29.487  2       
+makeMusic/howLong/sub_14_sub_3_add_2_21/D0->makeMusic/howLong/sub_14_sub_3_add_2_21/S0
+                                          SLICE_R4C13C       D0_TO_F0_DELAY       0.449                 29.936  1       
+makeMusic/howLong/THRESHOLD[30]                              NET DELAY            3.146                 33.082  1       
+makeMusic/howLong/i10_4_lut/C->makeMusic/howLong/i10_4_lut/Z
+                                          SLICE_R5C13B       A0_TO_F0_DELAY       0.449                 33.531  1       
+makeMusic/howLong/n42                                        NET DELAY            2.763                 36.294  1       
+makeMusic/howLong/i27_4_lut/C->makeMusic/howLong/i27_4_lut/Z
+                                          SLICE_R5C11A       D1_TO_F1_DELAY       0.449                 36.743  2       
+makeMusic/howLong/n59                                        NET DELAY            2.551                 39.294  2       
+makeMusic/howLong/i2622_4_lut/B->makeMusic/howLong/i2622_4_lut/Z
+                                          SLICE_R5C11B       A1_TO_F1_DELAY       0.449                 39.743  17      
+makeMusic/howLong/counter_31__N_293 ( LSR )
+                                                             NET DELAY            3.331                 43.074  17      
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT           0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  50      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY            5.499                 47.165  50      
+                                                             Uncertainty          0.000                 47.165  
+                                                             Setup time           0.529                 46.636  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Required Time                                                                                           46.636  
+Arrival Time                                                                                           -43.073  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                     3.562  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/dur_i0_i7/Q  (SLICE_R8C12A)
+Path End         : makeMusic/howLong/counter_113__i0/SR  (SLICE_R6C10A)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 18
+Delay Ratio      : 69.8% (route), 30.2% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 3.562 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  50      
+makeMusic/howLong/int_osc                                    NET DELAY            5.499                  5.499  50      
+
+
+Data Path
+
+makeMusic/dur_i0_i7/CK->makeMusic/dur_i0_i7/Q
+                                          SLICE_R8C12A       CLK_TO_Q1_DELAY      1.388                  6.887  3       
+makeMusic/howLong/dur[7]                                     NET DELAY            3.979                 10.866  3       
+makeMusic/howLong/mult_127/A7->makeMusic/howLong/mult_127/O8
+                                          DSP_DSP_R1C6       A_TO_O_DELAY         4.523                 15.389  1       
+makeMusic/howLong/n982[8]                                    NET DELAY            4.349                 19.738  1       
+makeMusic/howLong/add_157_5/C0->makeMusic/howLong/add_157_5/CO0
+                                          SLICE_R2C12C       C0_TO_COUT0_DELAY    0.343                 20.081  2       
+makeMusic/howLong/n8302                                      NET DELAY            0.000                 20.081  2       
+makeMusic/howLong/add_157_5/CI1->makeMusic/howLong/add_157_5/CO1
+                                          SLICE_R2C12C       CIN1_TO_COUT1_DELAY  0.277                 20.358  2       
+makeMusic/howLong/n5841                                      NET DELAY            0.000                 20.358  2       
+makeMusic/howLong/add_157_7/CI0->makeMusic/howLong/add_157_7/CO0
+                                          SLICE_R2C12D       CIN0_TO_COUT0_DELAY  0.277                 20.635  2       
+makeMusic/howLong/n8308                                      NET DELAY            0.000                 20.635  2       
+makeMusic/howLong/add_157_7/CI1->makeMusic/howLong/add_157_7/CO1
+                                          SLICE_R2C12D       CIN1_TO_COUT1_DELAY  0.277                 20.912  2       
+makeMusic/howLong/n5843                                      NET DELAY            1.216                 22.128  2       
+makeMusic/howLong/add_157_9/D0->makeMusic/howLong/add_157_9/S0
+                                          SLICE_R2C13A       D0_TO_F0_DELAY       0.449                 22.577  1       
+makeMusic/howLong/THRESHOLD_31__N_133[23]
+                                                             NET DELAY            3.675                 26.252  1       
+makeMusic/howLong/sub_14_sub_3_add_2_13/B1->makeMusic/howLong/sub_14_sub_3_add_2_13/CO1
+                                          SLICE_R4C12C       B1_TO_COUT1_DELAY    0.357                 26.609  2       
+makeMusic/howLong/n5932                                      NET DELAY            0.000                 26.609  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI0->makeMusic/howLong/sub_14_sub_3_add_2_15/CO0
+                                          SLICE_R4C12D       CIN0_TO_COUT0_DELAY  0.277                 26.886  2       
+makeMusic/howLong/n8317                                      NET DELAY            0.000                 26.886  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI1->makeMusic/howLong/sub_14_sub_3_add_2_15/CO1
+                                          SLICE_R4C12D       CIN1_TO_COUT1_DELAY  0.277                 27.163  2       
+makeMusic/howLong/n5934                                      NET DELAY            0.555                 27.718  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI0->makeMusic/howLong/sub_14_sub_3_add_2_17/CO0
+                                          SLICE_R4C13A       CIN0_TO_COUT0_DELAY  0.277                 27.995  2       
+makeMusic/howLong/n8323                                      NET DELAY            0.000                 27.995  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI1->makeMusic/howLong/sub_14_sub_3_add_2_17/CO1
+                                          SLICE_R4C13A       CIN1_TO_COUT1_DELAY  0.277                 28.272  2       
+makeMusic/howLong/n5936                                      NET DELAY            0.000                 28.272  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI0->makeMusic/howLong/sub_14_sub_3_add_2_19/CO0
+                                          SLICE_R4C13B       CIN0_TO_COUT0_DELAY  0.277                 28.549  2       
+makeMusic/howLong/n8329                                      NET DELAY            0.000                 28.549  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI1->makeMusic/howLong/sub_14_sub_3_add_2_19/CO1
+                                          SLICE_R4C13B       CIN1_TO_COUT1_DELAY  0.277                 28.826  2       
+makeMusic/howLong/n5938                                      NET DELAY            0.661                 29.487  2       
+makeMusic/howLong/sub_14_sub_3_add_2_21/D0->makeMusic/howLong/sub_14_sub_3_add_2_21/S0
+                                          SLICE_R4C13C       D0_TO_F0_DELAY       0.449                 29.936  1       
+makeMusic/howLong/THRESHOLD[30]                              NET DELAY            3.146                 33.082  1       
+makeMusic/howLong/i10_4_lut/C->makeMusic/howLong/i10_4_lut/Z
+                                          SLICE_R5C13B       A0_TO_F0_DELAY       0.449                 33.531  1       
+makeMusic/howLong/n42                                        NET DELAY            2.763                 36.294  1       
+makeMusic/howLong/i27_4_lut/C->makeMusic/howLong/i27_4_lut/Z
+                                          SLICE_R5C11A       D1_TO_F1_DELAY       0.449                 36.743  2       
+makeMusic/howLong/n59                                        NET DELAY            2.551                 39.294  2       
+makeMusic/howLong/i2622_4_lut/B->makeMusic/howLong/i2622_4_lut/Z
+                                          SLICE_R5C11B       A1_TO_F1_DELAY       0.449                 39.743  17      
+makeMusic/howLong/counter_31__N_293 ( LSR )
+                                                             NET DELAY            3.331                 43.074  17      
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT           0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  50      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY            5.499                 47.165  50      
+                                                             Uncertainty          0.000                 47.165  
+                                                             Setup time           0.529                 46.636  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Required Time                                                                                           46.636  
+Arrival Time                                                                                           -43.073  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                     3.562  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/dur_i0_i7/Q  (SLICE_R8C12A)
+Path End         : {makeMusic/howLong/counter_113__i7/SR   makeMusic/howLong/counter_113__i8/SR}  (SLICE_R6C11A)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 18
+Delay Ratio      : 69.7% (route), 30.3% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 3.641 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  50      
+makeMusic/howLong/int_osc                                    NET DELAY            5.499                  5.499  50      
+
+
+Data Path
+
+makeMusic/dur_i0_i7/CK->makeMusic/dur_i0_i7/Q
+                                          SLICE_R8C12A       CLK_TO_Q1_DELAY      1.388                  6.887  3       
+makeMusic/howLong/dur[7]                                     NET DELAY            3.979                 10.866  3       
+makeMusic/howLong/mult_127/A7->makeMusic/howLong/mult_127/O8
+                                          DSP_DSP_R1C6       A_TO_O_DELAY         4.523                 15.389  1       
+makeMusic/howLong/n982[8]                                    NET DELAY            4.349                 19.738  1       
+makeMusic/howLong/add_157_5/C0->makeMusic/howLong/add_157_5/CO0
+                                          SLICE_R2C12C       C0_TO_COUT0_DELAY    0.343                 20.081  2       
+makeMusic/howLong/n8302                                      NET DELAY            0.000                 20.081  2       
+makeMusic/howLong/add_157_5/CI1->makeMusic/howLong/add_157_5/CO1
+                                          SLICE_R2C12C       CIN1_TO_COUT1_DELAY  0.277                 20.358  2       
+makeMusic/howLong/n5841                                      NET DELAY            0.000                 20.358  2       
+makeMusic/howLong/add_157_7/CI0->makeMusic/howLong/add_157_7/CO0
+                                          SLICE_R2C12D       CIN0_TO_COUT0_DELAY  0.277                 20.635  2       
+makeMusic/howLong/n8308                                      NET DELAY            0.000                 20.635  2       
+makeMusic/howLong/add_157_7/CI1->makeMusic/howLong/add_157_7/CO1
+                                          SLICE_R2C12D       CIN1_TO_COUT1_DELAY  0.277                 20.912  2       
+makeMusic/howLong/n5843                                      NET DELAY            1.216                 22.128  2       
+makeMusic/howLong/add_157_9/D0->makeMusic/howLong/add_157_9/S0
+                                          SLICE_R2C13A       D0_TO_F0_DELAY       0.449                 22.577  1       
+makeMusic/howLong/THRESHOLD_31__N_133[23]
+                                                             NET DELAY            3.675                 26.252  1       
+makeMusic/howLong/sub_14_sub_3_add_2_13/B1->makeMusic/howLong/sub_14_sub_3_add_2_13/CO1
+                                          SLICE_R4C12C       B1_TO_COUT1_DELAY    0.357                 26.609  2       
+makeMusic/howLong/n5932                                      NET DELAY            0.000                 26.609  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI0->makeMusic/howLong/sub_14_sub_3_add_2_15/CO0
+                                          SLICE_R4C12D       CIN0_TO_COUT0_DELAY  0.277                 26.886  2       
+makeMusic/howLong/n8317                                      NET DELAY            0.000                 26.886  2       
+makeMusic/howLong/sub_14_sub_3_add_2_15/CI1->makeMusic/howLong/sub_14_sub_3_add_2_15/CO1
+                                          SLICE_R4C12D       CIN1_TO_COUT1_DELAY  0.277                 27.163  2       
+makeMusic/howLong/n5934                                      NET DELAY            0.555                 27.718  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI0->makeMusic/howLong/sub_14_sub_3_add_2_17/CO0
+                                          SLICE_R4C13A       CIN0_TO_COUT0_DELAY  0.277                 27.995  2       
+makeMusic/howLong/n8323                                      NET DELAY            0.000                 27.995  2       
+makeMusic/howLong/sub_14_sub_3_add_2_17/CI1->makeMusic/howLong/sub_14_sub_3_add_2_17/CO1
+                                          SLICE_R4C13A       CIN1_TO_COUT1_DELAY  0.277                 28.272  2       
+makeMusic/howLong/n5936                                      NET DELAY            0.000                 28.272  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI0->makeMusic/howLong/sub_14_sub_3_add_2_19/CO0
+                                          SLICE_R4C13B       CIN0_TO_COUT0_DELAY  0.277                 28.549  2       
+makeMusic/howLong/n8329                                      NET DELAY            0.000                 28.549  2       
+makeMusic/howLong/sub_14_sub_3_add_2_19/CI1->makeMusic/howLong/sub_14_sub_3_add_2_19/CO1
+                                          SLICE_R4C13B       CIN1_TO_COUT1_DELAY  0.277                 28.826  2       
+makeMusic/howLong/n5938                                      NET DELAY            0.661                 29.487  2       
+makeMusic/howLong/sub_14_sub_3_add_2_21/D0->makeMusic/howLong/sub_14_sub_3_add_2_21/S0
+                                          SLICE_R4C13C       D0_TO_F0_DELAY       0.449                 29.936  1       
+makeMusic/howLong/THRESHOLD[30]                              NET DELAY            3.146                 33.082  1       
+makeMusic/howLong/i10_4_lut/C->makeMusic/howLong/i10_4_lut/Z
+                                          SLICE_R5C13B       A0_TO_F0_DELAY       0.449                 33.531  1       
+makeMusic/howLong/n42                                        NET DELAY            2.763                 36.294  1       
+makeMusic/howLong/i27_4_lut/C->makeMusic/howLong/i27_4_lut/Z
+                                          SLICE_R5C11A       D1_TO_F1_DELAY       0.449                 36.743  2       
+makeMusic/howLong/n59                                        NET DELAY            2.551                 39.294  2       
+makeMusic/howLong/i2622_4_lut/B->makeMusic/howLong/i2622_4_lut/Z
+                                          SLICE_R5C11B       A1_TO_F1_DELAY       0.449                 39.743  17      
+makeMusic/howLong/counter_31__N_293 ( LSR )
+                                                             NET DELAY            3.252                 42.995  17      
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT           0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  50      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY            5.499                 47.165  50      
+                                                             Uncertainty          0.000                 47.165  
+                                                             Setup time           0.529                 46.636  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Required Time                                                                                           46.636  
+Arrival Time                                                                                           -42.994  
+----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                     3.641  
+
+
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
                     End of Detailed Report for timing paths 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
@@ -203,6 +1222,464 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
                     Detailed Report for timing paths 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/state_i2/Q  (SLICE_R13C11C)
+Path End         : makeMusic/dur_i0_i4/D  (SLICE_R13C12B)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc                                    NET DELAY        3.035                  3.035  51      
+
+
+Data Path
+
+makeMusic/state_i2/CK->makeMusic/state_i2/Q
+                                          SLICE_R13C11C      CLK_TO_Q0_DELAY  0.766                  3.801  24      
+makeMusic/state[2]                                           NET DELAY        0.701                  4.502  24      
+makeMusic/mux_81_i5_4_lut/D->makeMusic/mux_81_i5_4_lut/Z
+                                          SLICE_R13C12B      D1_TO_F1_DELAY   0.248                  4.750  1       
+makeMusic/n619[4] ( DI1 )                                    NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/state_i1/Q  (SLICE_R12C11A)
+Path End         : makeMusic/state_i1/D  (SLICE_R12C11A)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+
+
+Data Path
+
+makeMusic/state_i1/CK->makeMusic/state_i1/Q
+                                          SLICE_R12C11A      CLK_TO_Q1_DELAY  0.766                  3.801  25      
+makeMusic/state[1]                                           NET DELAY        0.701                  4.502  25      
+makeMusic/i733_2_lut_3_lut/C->makeMusic/i733_2_lut_3_lut/Z
+                                          SLICE_R12C11A      D1_TO_F1_DELAY   0.248                  4.750  1       
+makeMusic/n3 ( DI1 )                                         NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/dur_i0_i7/Q  (SLICE_R8C12A)
+Path End         : makeMusic/dur_i0_i7/D  (SLICE_R8C12A)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+
+
+Data Path
+
+makeMusic/dur_i0_i7/CK->makeMusic/dur_i0_i7/Q
+                                          SLICE_R8C12A       CLK_TO_Q1_DELAY  0.766                  3.801  3       
+makeMusic/howLong/dur[7]                                     NET DELAY        0.701                  4.502  3       
+i2630_2_lut/D->i2630_2_lut/Z              SLICE_R8C12A       D1_TO_F1_DELAY   0.248                  4.750  1       
+makeMusic/n8_adj_3 ( DI1 )                                   NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/dur_i0_i5/Q  (SLICE_R8C12B)
+Path End         : makeMusic/dur_i0_i5/D  (SLICE_R8C12B)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+
+
+Data Path
+
+makeMusic/dur_i0_i5/CK->makeMusic/dur_i0_i5/Q
+                                          SLICE_R8C12B       CLK_TO_Q1_DELAY  0.766                  3.801  3       
+makeMusic/howLong/dur[5]                                     NET DELAY        0.701                  4.502  3       
+i2626_2_lut/D->i2626_2_lut/Z              SLICE_R8C12B       D1_TO_F1_DELAY   0.248                  4.750  1       
+makeMusic/n8_adj_1 ( DI1 )                                   NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/state_i0/Q  (SLICE_R12C12A)
+Path End         : makeMusic/en_c/D  (SLICE_R13C11C)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc                                    NET DELAY        3.035                  3.035  51      
+
+
+Data Path
+
+makeMusic/state_i0/CK->makeMusic/state_i0/Q
+                                          SLICE_R12C12A      CLK_TO_Q0_DELAY  0.766                  3.801  37      
+makeMusic/state[0]                                           NET DELAY        0.701                  4.502  37      
+makeMusic/i2_2_lut_3_lut/A->makeMusic/i2_2_lut_3_lut/Z
+                                          SLICE_R13C11C      D1_TO_F1_DELAY   0.248                  4.750  1       
+makeMusic/en_N_98 ( DI1 )                                    NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/counter_112__i0/Q  (SLICE_R12C12D)
+Path End         : makeMusic/counter_112__i0/D  (SLICE_R12C12D)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+
+
+Data Path
+
+makeMusic/counter_112__i0/CK->makeMusic/counter_112__i0/Q
+                                          SLICE_R12C12D      CLK_TO_Q0_DELAY  0.766                  3.801  3       
+makeMusic/counter[0]                                         NET DELAY        0.701                  4.502  3       
+makeMusic.i1_2_lut/D->makeMusic.i1_2_lut/Z
+                                          SLICE_R12C12D      D0_TO_F0_DELAY   0.248                  4.750  1       
+makeMusic/n6406 ( DI0 )                                      NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/counter_112__i1/Q  (SLICE_R12C12D)
+Path End         : makeMusic/counter_112__i1/D  (SLICE_R12C12D)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+
+
+Data Path
+
+makeMusic/counter_112__i1/CK->makeMusic/counter_112__i1/Q
+                                          SLICE_R12C12D      CLK_TO_Q1_DELAY  0.766                  3.801  2       
+makeMusic/counter[1]                                         NET DELAY        0.701                  4.502  2       
+makeMusic/i1301_3_lut/A->makeMusic/i1301_3_lut/Z
+                                          SLICE_R12C12D      D1_TO_F1_DELAY   0.248                  4.750  1       
+makeMusic/n13[1] ( DI1 )                                     NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/state_i2/Q  (SLICE_R13C11C)
+Path End         : makeMusic/dur_i0_i1/D  (SLICE_R13C12C)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc                                    NET DELAY        3.035                  3.035  51      
+
+
+Data Path
+
+makeMusic/state_i2/CK->makeMusic/state_i2/Q
+                                          SLICE_R13C11C      CLK_TO_Q0_DELAY  0.766                  3.801  24      
+makeMusic/state[2]                                           NET DELAY        0.701                  4.502  24      
+makeMusic/mux_81_i2_4_lut/D->makeMusic/mux_81_i2_4_lut/Z
+                                          SLICE_R13C12C      D1_TO_F1_DELAY   0.248                  4.750  1       
+makeMusic/n619[1] ( DI1 )                                    NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/state_i0/Q  (SLICE_R12C12A)
+Path End         : makeMusic/makingMusic_c/D  (SLICE_R12C12A)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+
+
+Data Path
+
+makeMusic/state_i0/CK->makeMusic/state_i0/Q
+                                          SLICE_R12C12A      CLK_TO_Q0_DELAY  0.766                  3.801  37      
+makeMusic/state[0]                                           NET DELAY        0.701                  4.502  37      
+makeMusic/i760_2_lut_3_lut/C->makeMusic/i760_2_lut_3_lut/Z
+                                          SLICE_R12C12A      D1_TO_F1_DELAY   0.248                  4.750  1       
+makeMusic/n5284 ( DI1 )                                      NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : makeMusic/pitch/counter_115__i12/Q  (SLICE_R12C7C)
+Path End         : makeMusic/pitch/counter_115__i12/D  (SLICE_R12C7C)
+Source Clock     : int_osc (R)
+Destination Clock: int_osc (R)
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.882 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+
+
+Data Path
+
+makeMusic/pitch/counter_115__i12/CK->makeMusic/pitch/counter_115__i12/Q
+                                          SLICE_R12C7C       CLK_TO_Q1_DELAY  0.766                  3.801  2       
+makeMusic/pitch/counter[12]                                  NET DELAY        0.868                  4.669  2       
+makeMusic/pitch/counter_115_add_4_13/C1->makeMusic/pitch/counter_115_add_4_13/S1
+                                          SLICE_R12C7C       C1_TO_F1_DELAY   0.248                  4.917  1       
+makeMusic/pitch/n133[12] ( DI1 )                             NET DELAY        0.000                  4.917  1       
+
+
+Destination Clock Path
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  51      
+makeMusic/howLong/int_osc ( CLK )                            NET DELAY        3.035                  3.035  51      
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.917  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.882  
+
+
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
                     End of Detailed Report for timing paths 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 

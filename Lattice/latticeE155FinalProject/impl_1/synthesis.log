@@ -5,10 +5,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Nov 28 20:39:30 2022
+Thu Dec  1 18:12:25 2022
 
 
-Command Line:  C:\lscc\radiant\3.2\ispfpga\bin\nt64\synthesis.exe -f latticeE155FinalProject_impl_1_lattice.synproj -gui -msgset C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/promote.xml 
+Command Line:  C:\lscc\radiant\3.2\ispfpga\bin\nt64\synthesis.exe -f latticeE155FinalProject_impl_1_lattice.synproj -gui -msgset C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/promote.xml 
 
 Synthesis options:
 The -a option is iCE40UP.
@@ -67,15 +67,15 @@ ROM style = auto
 RAM style = auto
 The -comp option is FALSE.
 The -syn option is FALSE.
--path C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject (searchpath added)
--path C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/impl_1 (searchpath added)
+-path C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject (searchpath added)
+-path C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/impl_1 (searchpath added)
 -path C:/lscc/radiant/3.2/ispfpga/ice40tp/data (searchpath added)
 Mixed language design
 Verilog design file = C:/lscc/radiant/3.2/ip/pmi/pmi_iCE40UP.v
-Verilog design file = C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv
+Verilog design file = C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv
 VHDL library = pmi
 VHDL design file = C:/lscc/radiant/3.2/ip/pmi/pmi_iCE40UP.vhd
-WARNING - synthesis: Unexpected file name extension for Verilog file c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv.
+WARNING - synthesis: Unexpected file name extension for Verilog file c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv.
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
 Compile design.
 Compile Design Begin
@@ -113,23 +113,32 @@ INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp_be.v(49): analyzing incl
 INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(16): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v. VERI-1328
 INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v(45): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
 INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(17): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_dsp.v. VERI-1328
-Analyzing Verilog file c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv. VERI-1482
+Analyzing Verilog file c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv. VERI-1482
 Analyzing VHDL file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd. VHDL-1481
 Analyzing VHDL file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd
 
 INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd(4): analyzing package components. VHDL-1014
-INFO - synthesis: The default VHDL library search path is now "C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/impl_1". VHDL-1504
+INFO - synthesis: The default VHDL library search path is now "C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/impl_1". VHDL-1504
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): top
-INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(6): compiling module top. VERI-1018
-INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(56): compiling module MCU_spi. VERI-1018
-INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(72): compiling module make_signals. VERI-1018
-INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(94): compiling module tune. VERI-1018
-INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(172): compiling module duration. VERI-1018
-WARNING - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(181): expression size 36 truncated to fit in target size 32. VERI-1209
-INFO - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(210): compiling module freqGenerator. VERI-1018
-WARNING - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(219): expression size 36 truncated to fit in target size 32. VERI-1209
-WARNING - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(146): expression size 32 truncated to fit in target size 2. VERI-1209
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(6): compiling module top. VERI-1018
+INFO - synthesis: C:/lscc/radiant/3.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(61): compiling module MCU_spi. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(77): compiling module make_signals. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(104): compiling module allTonesToFreq. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(124): compiling module toneToFreq. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(153): compiling module allDurMCU2Durs. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(173): compiling module durMCUtoDuration. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(203): compiling module tune. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(307): compiling module duration. VERI-1018
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(318): expression size 128 truncated to fit in target size 32. VERI-1209
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(356): compiling module freqGenerator. VERI-1018
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(365): expression size 128 truncated to fit in target size 32. VERI-1209
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(264): expression size 10 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(268): expression size 10 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(272): expression size 10 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(276): expression size 10 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(277): expression size 32 truncated to fit in target size 2. VERI-1209
                                                          
 
 
@@ -154,72 +163,62 @@ WARNING - synthesis: c:/users/afascetti/desktop/micropsfinalproject/e155finalpro
                                                          
 
 
-INFO - synthesis: Extracted state machine for register '\makeMusic/state' with one-hot encoding
-State machine has 4 reachable states with original encodings of:
-
- 00 
-
- 01 
-
- 10 
-
- 11 
-
-original encoding -> new encoding (one-hot encoding)
-
- 00 -> 0001
-
- 01 -> 0010
-
- 10 -> 0100
-
- 11 -> 1000
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(40): Register start is stuck at One. VDB-5014
+WARNING - synthesis: I/O Port clk 's net has no driver and is unused.
 
 
 
+Mapped 8 multiplier(s)
 
-Mapped 3 multiplier(s)
 
-
+######## Missing driver on net n4938. Patching with GND.
+######## Missing driver on net n5080. Patching with GND.
+######## Missing driver on net n4980. Patching with GND.
+######## Missing driver on net n4959. Patching with GND.
+WARNING - synthesis: I/O Port clk 's net has no driver and is unused.
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(279): Register \makeMusic/dur_i0_i0 is stuck at Zero. VDB-5013
 INFO - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 186 of 5280 (3 % )
-CCU2 => 60
-FD1P3XZ => 186
+Number of register bits => 162 of 5280 (3 % )
+CCU2 => 64
+FD1P3XZ => 162
+HSOSC_CORE => 1
 IB => 3
+INV => 1
 IOL_B => 1
-LUT4 => 124
-MAC16 => 3
+LUT4 => 142
+MAC16 => 2
 OB => 1
 ################### End Area Report ##################
-Number of odd-length carry chains : 2
-Number of even-length carry chains : 3
+Number of odd-length carry chains : 1
+Number of even-length carry chains : 4
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 2
-  Net : int_osc_c, loads : 0
+Number of Clocks: 3
+  Net : flattenedMCUout_39__N_41, loads : 0
+  Net : int_osc, loads : 0
   Net : sck_c, loads : 0
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : flattenedMCUout_47__N_49, loads : 49
-  Net : makeMusic/howLong/done, loads : 33
-  Net : makeMusic/pitch/n1447, loads : 32
-  Net : makeMusic/freq_9__N_96, loads : 21
-  Net : makeMusic/n313, loads : 20
-  Net : makeMusic/n312, loads : 13
-  Net : makeMusic/n1469, loads : 10
-  Net : makeMusic/n1431, loads : 8
-  Net : makeMusic/pitch/threshold_31__N_246[26], loads : 8
-  Net : start, loads : 7
+  Net : makeMusic/n5264, loads : 33
+  Net : makeMusic/state[0], loads : 33
+  Net : makeMusic/howLong/counter_31__N_293, loads : 33
+  Net : makeMusic/pitch/n5282, loads : 32
+  Net : makeMusic/state[1], loads : 21
+  Net : makeMusic/state[2], loads : 20
+  Net : makeMusic/n5, loads : 16
+  Net : makeMusic/n5265, loads : 12
+  Net : makeMusic/pitch/threshold_31__N_326[31], loads : 11
+  Net : flattenedMCUout[39], loads : 9
 ################### End Clock Report ##################
 
-Peak Memory Usage: 108 MB
+Peak Memory Usage: 350 MB
 
 --------------------------------------------------------------
-Total CPU Time: 1 secs 
-Total REAL Time: 5 secs 
+Total CPU Time: 13 secs 
+Total REAL Time: 18 secs 
 --------------------------------------------------------------

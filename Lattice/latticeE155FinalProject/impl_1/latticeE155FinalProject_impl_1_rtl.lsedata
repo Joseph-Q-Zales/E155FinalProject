@@ -1,13 +1,15 @@
 <top name = "top"  library = "work"  arch = ""  entry = "Verilog">
 
 <clocks>
+    <clockitem name = "ce"  type = "port" />
     <clockitem name = "sck"  type = "port" />
-    <clockitem name = "clk"  type = "port" />
+    <clockitem name = "int_osc"  type = "net" />
+    <clockitem name = "flattenedMCUout_39__N_41"  type = "net" />
 </clocks>
 
 <!--
     //=============================================================
-    //  Number of Clocks processed: 2
+    //  Number of Clocks processed: 3
     //
     //  If a clock cannot be found in the top level pins section,
     //  that means it is an internal clock.

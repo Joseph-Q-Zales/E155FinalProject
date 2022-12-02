@@ -6,13 +6,13 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Mon Nov 28 20:40:38 2022
+Thu Dec  1 18:13:31 2022
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+--------------------+
 | Port Name | Pin/Bank | Buffer Type  | Site  | Properties         |
 +-----------+----------+--------------+-------+--------------------+
-| clk       | 4/2      | LVCMOS33_IN  | PL10A | PULL:100K          |
+| ce        | 35/0     | LVCMOS33_IN  | PR13B | PULL:100K          |
 | pwm       | 13/1     | LVCMOS33_OUT | PL20A | DRIVE:8mA PULL:NA  |
 | sck       | 28/0     | LVCMOS33_IN  | PR18A | PULL:100K          |
 | sdi       | 42/0     | LVCMOS33_IN  | PR9A  | PULL:100K          |
@@ -24,7 +24,6 @@ Vccio by Bank:
 +------+-------+
 | 0    | 3.3V  |
 | 1    | 3.3V  |
-| 2    | 3.3V  |
 +------+-------+
 
 Pinout by Pin Number:
@@ -33,7 +32,7 @@ Pinout by Pin Number:
 +----------+---------------------+------------+--------------+-------+------------------+
 | 2/2      |     unused, PULL:UP |            |              | PL9A  |                  |
 | 3/2      |     unused, PULL:UP |            |              | PL10B |                  |
-| 4/2      | clk                 | LOCATED    | LVCMOS33_IN  | PL10A |                  |
+| 4/2      |     unused, PULL:UP |            |              | PL10A |                  |
 | 6/1      |     unused, PULL:UP |            |              | PL14B |                  |
 | 9/1      |     unused, PULL:UP |            |              | PL16A |                  |
 | 10/1     |     unused, PULL:UP |            |              | PL17A |                  |
@@ -56,7 +55,7 @@ Pinout by Pin Number:
 | 31/0     |     unused, PULL:UP |            |              | PR17B |                  |
 | 32/0     |     unused, PULL:UP |            |              | PR17A |                  |
 | 34/0     |     unused, PULL:UP |            |              | PR14B |                  |
-| 35/0     |     unused, PULL:UP |            |              | PR13B | GPLL_IN/PCLKT0_1 |
+| 35/0     | ce                  |            | LVCMOS33_IN  | PR13B | GPLL_IN/PCLKT0_1 |
 | 36/0     |     unused, PULL:UP |            |              | PR10B |                  |
 | 37/0     |     unused, PULL:UP |            |              | PR14A | PCLKT0_0         |
 | 38/0     |     unused, PULL:UP |            |              | PR9B  |                  |
@@ -92,7 +91,7 @@ Pinout by Pin Number:
 
 Locate Constraints for each Pin: 
 
-ldc_set_location -site {4} [ get_ports {clk} ]
+ldc_set_location -site {35} [ get_ports {ce} ]
 ldc_set_location -site {13} [ get_ports {pwm} ]
 ldc_set_location -site {28} [ get_ports {sck} ]
 ldc_set_location -site {42} [ get_ports {sdi} ]
@@ -103,5 +102,5 @@ ldc_set_location -site {42} [ get_ports {sdi} ]
 
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Mon Nov 28 20:40:38 2022
+Thu Dec  1 18:13:31 2022
 

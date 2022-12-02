@@ -36,13 +36,13 @@
 
 -use_io_insertion 1
 -resolve_mixed_drivers 0
--path "C:/lscc/radiant/3.2/ispfpga/ice40tp/data" "C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/impl_1" "C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject"
+-path "C:/lscc/radiant/3.2/ispfpga/ice40tp/data" "C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/impl_1" "C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject"
 -ver "C:/lscc/radiant/3.2/ip/pmi/pmi_iCE40UP.v"
 -lib pmi -vhd "C:/lscc/radiant/3.2/ip/pmi/pmi_iCE40UP.vhd"
--sver "C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv"
+-sver "C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv"
 
 
--path "C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/Lattice/latticeE155FinalProject"
+-path "C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject"
 -top top
 -udb "latticeE155FinalProject_impl_1_rtl.udb"
 -output_hdl "latticeE155FinalProject_impl_1.vm"

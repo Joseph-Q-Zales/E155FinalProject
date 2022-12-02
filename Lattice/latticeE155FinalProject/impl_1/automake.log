@@ -14,6 +14,10 @@ Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
 Performance Grade:   High-Performance_1.2V
+WARNING - bitgen: Unable to find the instance/port 'clk' in the constraint 'ldc_set_location -site {4} [get_ports clk]'
+
+WARNING - bitgen: In the constraint 'ldc_set_location -site {4} [get_ports clk]', the locate object is not specified
+
 Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
 
 
@@ -38,8 +42,8 @@ Preference Summary:
 
 
 Creating bit map...
-Saving bit stream in "C:\Users\afascetti\Desktop\MicroPsFinalProject\E155FinalProject\Lattice\latticeE155FinalProject\impl_1\latticeE155FinalProject_impl_1.bin".
-INFO - Bitstream authenticated.
+Saving bit stream in "C:\Users\jzales\Desktop\E155FinalProject\E155FinalProject\Lattice\latticeE155FinalProject\impl_1\latticeE155FinalProject_impl_1.bin".
+    <postMsg mid="1009992" type="Info" dynamic="1" navigation="0" arg0="Bitstream authenticated."  />
 Bitstream generation complete!
 
 Total CPU Time: 0 secs 
@@ -50,7 +54,7 @@ Peak Memory Usage: 113 MB
 ibisgen "latticeE155FinalProject_impl_1.udb" "C:/lscc/radiant/3.2/cae_library/ibis/iCE40UP.ibs"
 IBIS Models Generator: Lattice Radiant Software (64-bit) 3.2.0.18.0
 
-Mon Nov 28 20:40:49 2022
+Thu Dec  1 18:13:40 2022
 
 Loading latticeE155FinalProject_impl_1.udb ...
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
@@ -64,16 +68,17 @@ Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
 Performance Grade:   High-Performance_1.2V
+    <postMsg mid="77001032" type="Warning" dynamic="2" navigation="0" arg0="clk" arg1="ldc_set_location -site {4} [get_ports clk]"  />
+    <postMsg mid="77001031" type="Warning" dynamic="1" navigation="0" arg0="ldc_set_location -site {4} [get_ports clk]"  />
 Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
 
 Created design models.
 
 
-Generating: C:\Users\afascetti\Desktop\MicroPsFinalProject\E155FinalProject\Lattice\latticeE155FinalProject\impl_1\IBIS\latticeE155FinalProject_impl_1.ibs
+Generating: C:\Users\jzales\Desktop\E155FinalProject\E155FinalProject\Lattice\latticeE155FinalProject\impl_1\IBIS\latticeE155FinalProject_impl_1.ibs
 
 
-INFO - Design IBIS models are generated for board level analysis.
-
+    <postMsg mid="1191031" type="Info" dynamic="0" navigation="0"  />
 
 backanno "latticeE155FinalProject_impl_1.udb"  -o "latticeE155FinalProject_impl_1_vo.vo"      -sp "High-Performance_1.2V"  -w -neg
 backanno: version Radiant Software (64-bit) 3.2.0.18.0
