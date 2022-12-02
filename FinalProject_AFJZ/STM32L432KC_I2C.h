@@ -35,6 +35,6 @@ void sendI2C(char address, char send[], char nbytes);
 /* Reads a character (1 byte) over I2C.
  *    -- address: the address of the peripheral to send to over I2C
  *    -- nbytes: the amount of bytes to receive */
-char readI2C(char address, char nbytes);
+void readI2C(char address, char nbytes, char *reciev);
 
 #endif

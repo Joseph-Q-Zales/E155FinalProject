@@ -89,6 +89,9 @@ void initI2C() {
   I2C1->TIMINGR |= (0xF << I2C_TIMINGR_SCLH_Pos);
   I2C1->TIMINGR |= (0x13 << I2C_TIMINGR_SCLL_Pos);
 
+  // turn on autoend
+  I2C1 -> CR2 |= I2C_CR2_AUTOEND;
+
 
   // turning on the peripheral
   I2C1->CR1 |= I2C_CR1_PE;
@@ -150,7 +153,7 @@ void sendI2C(char address, char send[], char nbytes) {
     }
 
     // once it goes high, set the transfer register (TXDR) to be w
-    *((volatile char *) (&I2C1->TXDR)) = send[0]; // writing the sending character to DR
+    *((volatile char *) (&I2C1->TXDR)) = send[i]; // writing the sending character to DR
 
    }
 
@@ -159,15 +162,23 @@ void sendI2C(char address, char send[], char nbytes) {
 /* Reads a character (1 byte) over I2C.
  *    -- address: the address of the peripheral to send to over I2C
  *    -- nbytes: the amount of bytes to receive */
-char readI2C(char address, char nbytes) {
+readI2C(char address, char nbytes, char *reciev) {
   
   comInitI2C(address, nbytes, 1);
-  
-  // while RNXE is not equal to 1, wait
-  while (!(I2C1->ISR & I2C_ISR_RXNE));
 
-  char rec = (volatile char) I2C1->RXDR;
+  //while (!(I2C1->ISR & I2C_ISR_RXNE));
 
-  return rec;
+  // for loop going through entire send array
+  for(int i = 0; i < nbytes; i++) {
+    
+    if (i != 0) {
+      // while RXNE not equal to 1, wait
+      while (!(I2C1->ISR & I2C_ISR_RXNE));
+    }
+
+    // once it goes high, read RXDR and store in array
+    reciev[i] = (volatile char) I2C1->RXDR;
+
+   }
 
 }
