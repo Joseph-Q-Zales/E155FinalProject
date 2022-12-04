@@ -1,4 +1,4 @@
-`timescale 10ns/1ns
+//`timescale 10ns/1ns
 /////////////////////////////////////////////
 // makingNoise_tb
 // Tests the internal functions that set the output of the pwm
@@ -8,9 +8,9 @@ module duration_tb();
 
     logic clk, done;
     logic[7:0] dur;
-    logic[35:0] clockSpeed;
+    logic[127:0] clockSpeed;
 
-    assign clockSpeed = 20;
+    assign clockSpeed = 10;
 
     //assign dur = 10;
 
@@ -21,7 +21,6 @@ module duration_tb();
     end
 
      initial begin   
-     	#5;
  	dur = 10;
 	end
 

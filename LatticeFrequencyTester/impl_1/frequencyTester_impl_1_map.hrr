@@ -1,0 +1,8 @@
+---------------------------------------------------
+Report for cell tester
+   Instance path: tester
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         47        100.0
+                                 IOBUF	          1        100.0
+                                PFUREG	         33        100.0

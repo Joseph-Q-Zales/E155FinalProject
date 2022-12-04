@@ -1,0 +1,141 @@
+    Lattice Mapping Report File for Design Module 'frequencyTester_impl_1'
+
+Target Vendor:        LATTICE
+Target Device:        iCE40UP5KSG48
+Target Performance:   High-Performance_1.2V
+
+Mapper:    version Radiant Software (64-bit) 3.2.0.18.0
+Mapped on: Sat Dec  3 17:47:48 2022
+
+Design Information
+------------------
+
+Command line:   map -i frequencyTester_impl_1_syn.udb -pdc C:/Users/jzales/Deskt
+     op/E155FinalProject/E155FinalProject/LatticeFrequencyTester/FreqTester.pdc
+     -o frequencyTester_impl_1_map.udb -mp frequencyTester_impl_1.mrp -hierrpt
+     -gui
+
+Design Summary
+--------------
+
+   Number of slice registers:  33 out of  5280 (1%)
+   Number of I/O registers:      0 out of   117 (0%)
+   Number of LUT4s:            47 out of  5280 (1%)
+      Number of logic LUT4s:              13
+      Number of ripple logic:             17 (34 LUT4s)
+   Number of IO sites used:   1 out of 39 (3%)
+      Number of IO sites used for general PIO: 1
+      Number of IO sites used for I3C: 0 out of 2 (0%)
+      (note: If I3C is not used, its site can be used as general PIO)
+      Number of IO sites used for PIO+I3C: 1 out of 36 (3%)
+      Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
+      (note: If RGB LED drivers are not used, sites can be used as OD outputs,
+       see TN1288 iCE40 LED Driver Usage Guide)
+      Number of IO sites used for PIO+I3C+OD+RGB: 1 out of 39 (3%)
+   Number of DSPs:             0 out of 8 (0%)
+   Number of I2Cs:             0 out of 2 (0%)
+   Number of High Speed OSCs:  1 out of 1 (100%)
+   Number of Low Speed OSCs:   0 out of 1 (0%)
+   Number of RGB PWM:          0 out of 1 (0%)
+   Number of RGB Drivers:      0 out of 1 (0%)
+   Number of SCL FILTERs:      0 out of 2 (0%)
+   Number of SRAMs:            0 out of 4 (0%)
+   Number of WARMBOOTs:        0 out of 1 (0%)
+   Number of SPIs:             0 out of 2 (0%)
+   Number of EBRs:             0 out of 30 (0%)
+   Number of PLLs:             0 out of 1 (0%)
+   Number of Clocks:  1
+      Net int_osc: 18 loads, 18 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
+   Number of Clock Enables:  0
+   Number of LSRs:  1
+      Net n158: 17 loads, 17 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net n158: 18 loads
+      Net counter[0]: 2 loads
+      Net counter[15]: 2 loads
+      Net counter[17]: 2 loads
+      Net counter[18]: 2 loads
+      Net n186: 2 loads
+      Net n188: 2 loads
+      Net n692: 2 loads
+      Net oscil_c: 2 loads
+      Net VCC_net: 2 loads
+
+                                    Page 1
+
+
+
+
+
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+-------+-------+-----------+
+| IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
+|                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
++---------------------+-----------+-----------+-------+-------+-----------+
+| oscil               | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+
+Removed logic
+-------------
+
+Block i1 was optimized away.
+
+OSC Summary
+-----------
+
+OSC 1:                                 Pin/Node Value
+  OSC Instance Name:                            hf_osc
+  Power UP:                            NODE     VCC_net
+  Enable Signal:                                GND
+  OSC Output:                          NODE     int_osc
+  DIV Setting:                                  01
+
+ASIC Components
+---------------
+
+Instance Name: hf_osc
+         Type: HFOSC
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs
+   Total REAL Time: 0 secs
+   Peak Memory Usage: 55 MB
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 2
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995
+     AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent
+     Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems
+     All rights reserved.
+Copyright (c) 2002-2022 Lattice Semiconductor
+     Corporation,  All rights reserved.

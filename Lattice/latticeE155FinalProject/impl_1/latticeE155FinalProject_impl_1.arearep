@@ -1,151 +1,23 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  162 of 5280 (3.068%)
-I/O cells:      4
+Register bits:  34 of 5280 (0.644%)
+I/O cells:      1
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        64          100.0
-                            FD1P3XZ       162          100.0
+                               CCU2        17          100.0
+                            FD1P3XZ        34          100.0
                          HSOSC_CORE         1          100.0
-                                 IB         3          100.0
-                                INV         1          100.0
-                              IOL_B         1          100.0
-                               LUT4       142          100.0
-                              MAC16         2          100.0
+                               LUT4        12          100.0
                                  OB         1          100.0
 SUB MODULES
-                            MCU_spi         1
-                     allDurMCU2Durs         1
-                     allTonesToFreq         1
-                   durMCUtoDuration         1
-                durMCUtoDuration_U0         1
-                durMCUtoDuration_U1         1
-                durMCUtoDuration_U2         1
-                           duration         1
                       freqGenerator         1
-                         toneToFreq         1
-                      toneToFreq_U3         1
-                      toneToFreq_U4         1
-                      toneToFreq_U5         1
-                               tune         1
-                              TOTAL       391
-----------------------------------------------------------------------
-Report for cell allTonesToFreq.v1
-Instance Path : aT2F
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4        33           23.2
-SUB MODULES
-                         toneToFreq         1
-                      toneToFreq_U3         1
-                      toneToFreq_U4         1
-                      toneToFreq_U5         1
-                              TOTAL        37
-----------------------------------------------------------------------
-Report for cell toneToFreq.v1
-Instance Path : aT2F.t2F3
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         8            5.6
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell toneToFreq_U3.v1
-Instance Path : aT2F.t2F2
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         8            5.6
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell toneToFreq_U4.v1
-Instance Path : aT2F.t2F1
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         9            6.3
-                              TOTAL         9
-----------------------------------------------------------------------
-Report for cell toneToFreq_U5.v1
-Instance Path : aT2F.t2F0
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         8            5.6
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell tune.v1
-Instance Path : makeMusic
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                                FA2        64          100.0
-                            FD1P3XZ        89           54.9
-                               LUT4       101           71.1
-                              MAC16         2          100.0
-SUB MODULES
-                           duration         1
-                      freqGenerator         1
-                              TOTAL       258
+                              TOTAL        66
 ----------------------------------------------------------------------
 Report for cell freqGenerator.v1
-Instance Path : makeMusic.pitch
+Instance Path : freqer
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        27           42.2
-                            FD1P3XZ        33           20.4
-                               LUT4        22           15.5
-                              TOTAL        82
-----------------------------------------------------------------------
-Report for cell duration.v1
-Instance Path : makeMusic.howLong
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                                FA2        37           57.8
-                            FD1P3XZ        33           20.4
-                               LUT4        18           12.7
-                              MAC16         2          100.0
-                              TOTAL        90
-----------------------------------------------------------------------
-Report for cell MCU_spi.v1
-Instance Path : spi
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3XZ        39           24.1
-                              IOL_B         1          100.0
-                              TOTAL        40
-----------------------------------------------------------------------
-Report for cell allDurMCU2Durs.v1
-Instance Path : ad2ds
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         4            2.8
-SUB MODULES
-                   durMCUtoDuration         1
-                durMCUtoDuration_U0         1
-                durMCUtoDuration_U1         1
-                durMCUtoDuration_U2         1
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell durMCUtoDuration.v1
-Instance Path : ad2ds.d2d3
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         1            0.7
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell durMCUtoDuration_U0.v1
-Instance Path : ad2ds.d2d2
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         1            0.7
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell durMCUtoDuration_U1.v1
-Instance Path : ad2ds.d2d1
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         1            0.7
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell durMCUtoDuration_U2.v1
-Instance Path : ad2ds.d2d0
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         1            0.7
-                              TOTAL         1
+                                FA2        17          100.0
+                            FD1P3XZ        34          100.0
+                               LUT4        12          100.0
+                              TOTAL        63

@@ -1,0 +1,12 @@
+----------------------------------------------------------------------
+Report for cell tester.TECH
+Register bits:  33 of 5280 (0.625%)
+I/O cells:      1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        17          100.0
+                            FD1P3XZ        33          100.0
+                         HSOSC_CORE         1          100.0
+                               LUT4        12          100.0
+                                 OB         1          100.0
+                              TOTAL        64
