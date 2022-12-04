@@ -123,8 +123,10 @@ void comInitI2C(char address, char nbyts, uint16_t RdWr) {
     I2C1->CR2 &= ~(I2C_CR2_RD_WRN);
   }
 
-  // set NBYTES (numb bytes to send)
 
+  I2C1->CR2 &= ~(I2C_CR2_NBYTES_Msk);
+
+  // set NBYTES (numb bytes to send)
   I2C1->CR2 |= _VAL2FLD(I2C_CR2_NBYTES, nbyts);
 
     // enables the start bit
@@ -133,7 +135,7 @@ void comInitI2C(char address, char nbyts, uint16_t RdWr) {
 
 }
 
-/* Transmits a character (1 byte) over I2C.
+/* Transmits characters over I2C.
  *    -- address: the address of the peripheral to send to over I2C
  *    -- send: the character received over I2C 
  *    -- nbytes: the number of bytes being sent*/
@@ -159,7 +161,7 @@ void sendI2C(char address, char send[], char nbytes) {
 
 }
 
-/* Reads a character (1 byte) over I2C.
+/* Reads characters over I2C.
  *    -- address: the address of the peripheral to send to over I2C
  *    -- nbytes: the amount of bytes to receive */
 readI2C(char address, char nbytes, char *reciev) {
@@ -180,5 +182,40 @@ readI2C(char address, char nbytes, char *reciev) {
     reciev[i] = (volatile char) I2C1->RXDR;
 
    }
+
+///* initializes the controller communication on MCU
+//*     -- address: the address of the peripheral to send to
+//*     -- nbyts: number of byts to send the peripheral
+//*     -- RdWr: set to 0 for writing, 1 for reading
+//*/
+//void comInitI2Cr(char address, char nbyts, uint16_t RdWr) {
+
+//  // 7 bit addressing mode
+//  I2C1->CR2 &= ~(I2C_CR2_ADD10);
+
+//  // master only sends 7 bits followed by r/w
+//  I2C1->CR2 |= (I2C_CR2_HEAD10R);
+  
+//  // set slave address to send to 0x00 (the general call address for the PN532)
+//  I2C1->CR2 &= ~(I2C_CR2_SADD_Msk);
+
+//  I2C1->CR2 |= (address << 1);
+
+//  // set transfer direction (RD_WRN)
+//  if(RdWr) { // if RdWr is a 1, we are reading
+//    I2C1->CR2 |= (I2C_CR2_RD_WRN);
+//  }
+//  else { // sets to 0 if a write transfer
+//    I2C1->CR2 &= ~(I2C_CR2_RD_WRN);
+//  }
+
+//  // set NBYTES (numb bytes to send)
+//  I2C1->CR2 |= _VAL2FLD(I2C_CR2_NBYTES, nbyts);
+
+//    // enables the start bit
+//  //I2C1->CR2 |= (I2C_CR2_START);
+//  I2C1 -> CR2 |= (1 << 13);
+
+//}
 
 }
