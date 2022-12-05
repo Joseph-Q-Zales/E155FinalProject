@@ -1,23 +1,46 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  34 of 5280 (0.644%)
+Register bits:  117 of 5280 (2.216%)
 I/O cells:      1
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        17          100.0
-                            FD1P3XZ        34          100.0
+                               CCU2        51          100.0
+                            FD1P3XZ       117          100.0
                          HSOSC_CORE         1          100.0
-                               LUT4        12          100.0
+                               LUT4        65          100.0
                                  OB         1          100.0
 SUB MODULES
+                           duration         1
                       freqGenerator         1
-                              TOTAL        66
+                               tune         1
+                              TOTAL       238
 ----------------------------------------------------------------------
-Report for cell freqGenerator.v1
-Instance Path : freqer
+Report for cell tune.v1
+Instance Path : tuner
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        17          100.0
-                            FD1P3XZ        34          100.0
-                               LUT4        12          100.0
-                              TOTAL        63
+                                FA2        51          100.0
+                            FD1P3XZ       117          100.0
+                               LUT4        52           80.0
+SUB MODULES
+                           duration         1
+                      freqGenerator         1
+                              TOTAL       222
+----------------------------------------------------------------------
+Report for cell freqGenerator.v1
+Instance Path : tuner.pitch
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        17           33.3
+                            FD1P3XZ        33           28.2
+                               LUT4        18           27.7
+                              TOTAL        68
+----------------------------------------------------------------------
+Report for cell duration.v1
+Instance Path : tuner.howLong
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        17           33.3
+                            FD1P3XZ        33           28.2
+                               LUT4        11           16.9
+                              TOTAL        61

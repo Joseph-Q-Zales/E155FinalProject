@@ -3,16 +3,34 @@ Report for cell top
    Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         47        100.0
+                                  LUT4	        169        100.0
                                  IOBUF	          1        100.0
-                                PFUREG	         34        100.0
+                                PFUREG	        117        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                         freqGenerator	          1        97.9
+                                  tune	          1        91.1
 ---------------------------------------------------
-Report for cell freqGenerator
-   Instance path: top/freqer
+Report for cell tune
+   Instance path: top/tuner
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         46        97.9
-                                PFUREG	         34        100.0
+                                  LUT4	        154        91.1
+                                PFUREG	        117        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                              duration	          1        26.6
+                         freqGenerator	          1        30.8
+---------------------------------------------------
+Report for cell freqGenerator
+   Instance path: top/tuner/pitch
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         52        30.8
+                                PFUREG	         33        28.2
+---------------------------------------------------
+Report for cell duration
+   Instance path: top/tuner/howLong
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         45        26.6
+                                PFUREG	         33        28.2

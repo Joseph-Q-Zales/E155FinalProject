@@ -1,6 +1,6 @@
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Sat Dec  3 16:54:06 2022
+Sun Dec  4 17:47:30 2022
 
 Command Line: par -w -n 1 -t 1 -s 1 -cores 1 -exp parPathBased=ON \
 	latticeE155FinalProject_impl_1_map.udb latticeE155FinalProject_impl_1.udb 
@@ -9,7 +9,7 @@ Command Line: par -w -n 1 -t 1 -s 1 -cores 1 -exp parPathBased=ON \
 Level/       Number       Worst        Timing       Worst        Timing       Run          Run
 Cost [udb]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            26.048       0            1.715        0            09           Completed
+5_1   *      0            22.386       0            1.715        0            09           Completed
 
 * : Design saved.
 
@@ -18,7 +18,7 @@ Total (real) run time for 1-seed: 9 secs
 par done!
 
 Lattice Place and Route Report for Design "latticeE155FinalProject_impl_1_map.udb"
-Sat Dec  3 16:54:06 2022
+Sun Dec  4 17:47:30 2022
 
 PAR: Place And Route Radiant Software (64-bit) 3.2.0.18.0.
 Command Line: par -w -t 1 -cores 1 -exp parPathBased=ON \
@@ -77,13 +77,13 @@ WARNING - par: Top module port 'clk' does not connect to anything.
 WARNING - par: Top module port 'sck' does not connect to anything.
 WARNING - par: Top module port 'sdi' does not connect to anything.
 WARNING - par: Top module port 'ce' does not connect to anything.
-Number of Signals: 113
-Number of Connections: 215
+Number of Signals: 380
+Number of Connections: 785
 Device utilization summary:
 
-   SLICE (est.)      27/2640          1% used
-     LUT             47/5280         <1% used
-     REG             34/5280         <1% used
+   SLICE (est.)      94/2640          3% used
+     LUT            169/5280          3% used
+     REG            117/5280          2% used
    PIO                1/56            1% used
                       1/36            2% bonded
    IOLOGIC            0/56            0% used
@@ -116,10 +116,10 @@ Starting Placer Phase 1. CPU time: 0 secs , REAL time: 4 secs
 ..  ..
 ....................
 
-Placer score = 7380.
+Placer score = 18163.
 
 Device SLICE utilization summary after final SLICE packing:
-   SLICE             26/2640         <1% used
+   SLICE             91/2640          3% used
 
 WARNING - par: Unable to find the instance/port 'clk' in the constraint 'ldc_set_location -site {4} [get_ports clk]'
 
@@ -133,19 +133,19 @@ WARNING - par: Unable to find the instance/port 'sdi' in the constraint 'ldc_set
 
 WARNING - par: In the constraint 'ldc_set_location -site {42} [get_ports sdi]', the locate object is not specified
 
-Finished Placer Phase 1. CPU time: 4 secs , REAL time: 8 secs 
+Finished Placer Phase 1. CPU time: 5 secs , REAL time: 8 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  15233
-Finished Placer Phase 2.  CPU time: 4 secs , REAL time: 8 secs 
+Placer score =  35494
+Finished Placer Phase 2.  CPU time: 5 secs , REAL time: 8 secs 
 
 
 ------------------ Clock Report ------------------
 
 Global Clocks :
-  PRIMARY "int_osc" from comp "hf_osc" on site "HFOSC_R1C32", clk load = 18, ce load = 0, sr load = 0
+  PRIMARY "int_osc" from comp "hf_osc" on site "HFOSC_R1C32", clk load = 65, ce load = 0, sr load = 0
 
   PRIMARY  : 1 out of 8 (12%)
 
@@ -167,7 +167,7 @@ I/O Bank Usage Summary:
 | 2        | 0 / 8 (  0%)  | OFF        |            |            |
 +----------+---------------+------------+------------+------------+
 
-Total Placer CPU time: 4 secs , REAL time: 8 secs 
+Total Placer CPU time: 5 secs , REAL time: 8 secs 
 
 Writing design to file latticeE155FinalProject_impl_1_par.dir/5_1.udb ...
 
@@ -184,7 +184,7 @@ WARNING - par: Unable to find the instance/port 'sdi' in the constraint 'ldc_set
 WARNING - par: In the constraint 'ldc_set_location -site {42} [get_ports sdi]', the locate object is not specified
 
 
-Start NBR router at 16:54:14 12/03/22
+Start NBR router at 17:47:38 12/04/22
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -202,39 +202,39 @@ Note: NBR uses a different method to calculate timing slacks. The
 Starting routing resource preassignment
 Preassignment Summary:
 --------------------------------------------------------------------------------
-63 connections routed with dedicated routing resources
+204 connections routed with dedicated routing resources
 1 global clock signals routed
-81 connections routed (of 214 total) (37.85%)
+269 connections routed (of 777 total) (34.62%)
 ---------------------------------------------------------
 Clock routing summary:
 Primary clocks (1 used out of 8 available):
 #4  Signal "int_osc"
-       Clock   loads: 18    out of    18 routed (100.00%)
+       Clock   loads: 65    out of    65 routed (100.00%)
 ---------------------------------------------------------
 --------------------------------------------------------------------------------
 Completed routing resource preassignment
 
-Start NBR section for initial routing at 16:54:14 12/03/22
+Start NBR section for initial routing at 17:47:39 12/04/22
 Level 4, iteration 1
-3(0.00%) conflicts; 133(62.15%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 27.051ns/0.000ns; real time: 0 secs 
+7(0.00%) conflicts; 508(65.38%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 24.208ns/0.000ns; real time: 0 secs 
 Level 4, iteration 2
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 27.051ns/0.000ns; real time: 0 secs 
+Estimated worst slack/total negative slack<setup>: 24.208ns/0.000ns; real time: 0 secs 
 
 Info: Initial congestion level at 75.00% usage is 0
 Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 16:54:15 12/03/22
+Start NBR section for normal routing at 17:47:39 12/04/22
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 27.051ns/0.000ns; real time: 0 secs 
+Estimated worst slack/total negative slack<setup>: 24.208ns/0.000ns; real time: 0 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 16:54:15 12/03/22
+Start NBR section for setup/hold timing optimization with effort level 3 at 17:47:39 12/04/22
 
 Starting full timing analysis...
 
-Start NBR section for post-routing at 16:54:15 12/03/22
+Start NBR section for post-routing at 17:47:39 12/04/22
 
 End NBR router with 0 unrouted connection
 
@@ -243,7 +243,7 @@ Starting full timing analysis...
 NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
-  Estimated worst slack<setup> : 26.048ns
+  Estimated worst slack<setup> : 22.386ns
   Estimated worst slack<hold > : 1.715ns
   Timing score<setup> : 0
   Timing score<hold > : 0
@@ -255,7 +255,7 @@ NBR Summary
 Total CPU time 0 secs 
 Total REAL time: 0 secs 
 Completely routed.
-End of route.  214 routed (100.00%); 0 unrouted.
+End of route.  777 routed (100.00%); 0 unrouted.
 
 Writing design to file latticeE155FinalProject_impl_1_par.dir/5_1.udb ...
 
@@ -265,15 +265,15 @@ All signals are completely routed.
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 26.048
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 22.386
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
 PAR_SUMMARY::Worst  slack<hold /<ns>> = 1.715
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  Time: 5 secs 
+Total CPU  Time: 6 secs 
 Total REAL Time: 9 secs 
-Peak Memory Usage: 107.97 MB
+Peak Memory Usage: 114.36 MB
 
 
 par done!

@@ -18,8 +18,7 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>../../impl_1/frequencyTester_impl_1.bin</File>
-			<FileTime>12/03/22 17:37:25</FileTime>
-			<JedecChecksum>0x9254</JedecChecksum>
+			<FileTime>12/04/22 16:20:58</FileTime>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>
@@ -93,6 +92,7 @@
 		<OperationOverride>No Override</OperationOverride>
 		<StartTAP>TLR</StartTAP>
 		<EndTAP>TLR</EndTAP>
+		<DisableCheckBoard value="TRUE"/>
 		<VerifyUsercode value="FALSE"/>
 		<TCKDelay>1</TCKDelay>
 	</ProjectOptions>

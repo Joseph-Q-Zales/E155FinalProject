@@ -2,8 +2,8 @@
 // Verilog netlist produced by program backanno, Version Radiant Software (64-bit) 3.2.0.18.0
 
 // backanno -o latticeE155FinalProject_impl_1_vo.vo -sp High-Performance_1.2V -w -neg -gui latticeE155FinalProject_impl_1.udb 
-// Netlist created on Sat Dec  3 16:54:15 2022
-// Netlist written on Sat Dec  3 16:54:23 2022
+// Netlist created on Sun Dec  4 17:47:39 2022
+// Netlist written on Sun Dec  4 17:47:48 2022
 // Design is for device iCE40UP5K
 // Design is for package SG48
 // Design is for performance grade High-Performance_1.2V
@@ -13,199 +13,710 @@
 module top ( pwm, clk, sck, sdi, ce );
   input  clk, sck, sdi, ce;
   output pwm;
-  wire   \freqer.n133[26] , \freqer.n133[25] , \freqer.n631 , 
-         \freqer.counter[26] , \freqer.n154 , \freqer.counter[25] , 
-         \freqer.clkStrobe , int_osc, \freqer.n156 , \freqer.n133[24] , 
-         \freqer.n133[23] , \freqer.n628 , \freqer.counter[24] , \freqer.n152 , 
-         \freqer.counter[23] , \freqer.n133[22] , \freqer.n133[21] , 
-         \freqer.n625 , \freqer.counter[22] , \freqer.n150 , 
-         \freqer.counter[21] , \freqer.n133[20] , \freqer.n133[19] , 
-         \freqer.n622 , \freqer.counter[20] , \freqer.n148 , 
-         \freqer.counter[19] , \freqer.n133[18] , \freqer.n133[17] , 
-         \freqer.n619 , \freqer.counter[18] , \freqer.n146 , 
-         \freqer.counter[17] , \freqer.n133[16] , \freqer.n133[15] , 
-         \freqer.n616 , \freqer.counter[16] , \freqer.n144 , 
-         \freqer.counter[15] , \freqer.n133[14] , \freqer.n133[13] , 
-         \freqer.n613 , \freqer.counter[14] , \freqer.n142 , 
-         \freqer.counter[13] , \freqer.n133[31] , \freqer.n640 , \freqer.n160 , 
-         \freqer.counter[31] , \freqer.n133[30] , \freqer.n133[29] , 
-         \freqer.n637 , \freqer.counter[30] , \freqer.n158 , 
-         \freqer.counter[29] , \freqer.n133[12] , \freqer.n133[11] , 
-         \freqer.n610 , \freqer.counter[12] , \freqer.n140 , 
-         \freqer.counter[11] , \freqer.n133[10] , \freqer.n133[9] , 
-         \freqer.n607 , \freqer.counter[10] , \freqer.n138 , 
-         \freqer.counter[9] , \freqer.n133[8] , \freqer.n133[7] , 
-         \freqer.n604 , \freqer.counter[8] , \freqer.n136 , 
-         \freqer.counter[7] , \freqer.n133[6] , \freqer.n133[5] , 
-         \freqer.n601 , \freqer.counter[6] , \freqer.n134 , 
-         \freqer.counter[5] , \freqer.n133[4] , \freqer.n133[3] , 
-         \freqer.n598 , \freqer.counter[4] , \freqer.n132 , 
-         \freqer.counter[3] , \freqer.n133[2] , \freqer.n133[1] , 
-         \freqer.n595 , \freqer.counter[2] , \freqer.n130 , 
-         \freqer.counter[1] , \freqer.n133[0] , \freqer.n592 , 
-         \freqer.counter[0] , VCC_net, \freqer.n133[28] , \freqer.n133[27] , 
-         \freqer.n634 , \freqer.counter[28] , \freqer.counter[27] , 
-         \freqer.toneFreq_N_65 , \freqer.clkStrobe_N_66 , pwm_c, \freqer.n11 , 
-         \freqer.n7 , \freqer.n40 , \freqer.n45 , \freqer.n49 , \freqer.n43 , 
-         \freqer.n44 , \freqer.n41 , \freqer.n42 , \freqer.n50 ;
+  wire   \tuner.n133[6] , \tuner.n133[5] , \tuner.n2472 , \tuner.counter[6] , 
+         \tuner.n925 , \tuner.counter[5] , \tuner.n663 , int_osc, \tuner.n927 , 
+         \tuner.n133[4] , \tuner.n133[3] , \tuner.n2469 , \tuner.counter[4] , 
+         \tuner.n923 , \tuner.counter[3] , \tuner.n133[2] , \tuner.n133[1] , 
+         \tuner.n2466 , \tuner.counter[2] , \tuner.n921 , \tuner.counter[1] , 
+         \tuner.n133[0] , \tuner.n2463 , \tuner.counter[0] , \tuner.n373[5] , 
+         \tuner.n133[26] , \tuner.n133[25] , \tuner.n2502 , 
+         \tuner.counter[26] , \tuner.n945 , \tuner.counter[25] , \tuner.n947 , 
+         \tuner.n133[28] , \tuner.n133[27] , \tuner.n2505 , 
+         \tuner.counter[28] , \tuner.counter[27] , \tuner.n949 , 
+         \tuner.n133[30] , \tuner.n133[29] , \tuner.n2508 , 
+         \tuner.counter[30] , \tuner.counter[29] , \tuner.n951 , 
+         \tuner.n133[31] , \tuner.n2511 , \tuner.counter[31] , 
+         \tuner.n133[10] , \tuner.n133[9] , \tuner.n2478 , \tuner.counter[10] , 
+         \tuner.n929 , \tuner.counter[9] , \tuner.n931 , \tuner.n133[14] , 
+         \tuner.n133[13] , \tuner.n2484 , \tuner.counter[14] , \tuner.n933 , 
+         \tuner.counter[13] , \tuner.n935 , \tuner.n133[16] , \tuner.n133[15] , 
+         \tuner.n2487 , \tuner.counter[16] , \tuner.counter[15] , \tuner.n937 , 
+         \tuner.n133[18] , \tuner.n133[17] , \tuner.n2490 , 
+         \tuner.counter[18] , \tuner.counter[17] , \tuner.n939 , 
+         \tuner.n133[20] , \tuner.n133[19] , \tuner.n2493 , 
+         \tuner.counter[20] , \tuner.counter[19] , \tuner.n941 , 
+         \tuner.n133[22] , \tuner.n133[21] , \tuner.n2496 , 
+         \tuner.counter[22] , \tuner.counter[21] , \tuner.n943 , 
+         \tuner.n133[24] , \tuner.n133[23] , \tuner.n2499 , 
+         \tuner.counter[24] , \tuner.counter[23] , \tuner.n133[8] , 
+         \tuner.n133[7] , \tuner.n2475 , \tuner.counter[8] , 
+         \tuner.counter[7] , \tuner.n133[12] , \tuner.n133[11] , \tuner.n2481 , 
+         \tuner.counter[12] , \tuner.counter[11] , \tuner.pitch.n133[0] , 
+         \tuner.pitch.n2562 , \tuner.pitch.counter[0] , VCC_net, 
+         \tuner.pitch.counter_31__N_338 , \tuner.pitch.n855 , 
+         \tuner.pitch.n133[31] , \tuner.pitch.n2610 , \tuner.pitch.n885 , 
+         \tuner.pitch.counter[31] , \tuner.pitch.n133[30] , 
+         \tuner.pitch.n133[29] , \tuner.pitch.n2607 , 
+         \tuner.pitch.counter[30] , \tuner.pitch.n883 , 
+         \tuner.pitch.counter[29] , \tuner.pitch.n133[28] , 
+         \tuner.pitch.n133[27] , \tuner.pitch.n2604 , 
+         \tuner.pitch.counter[28] , \tuner.pitch.n881 , 
+         \tuner.pitch.counter[27] , \tuner.pitch.n133[26] , 
+         \tuner.pitch.n133[25] , \tuner.pitch.n2601 , 
+         \tuner.pitch.counter[26] , \tuner.pitch.n879 , 
+         \tuner.pitch.counter[25] , \tuner.pitch.n133[24] , 
+         \tuner.pitch.n133[23] , \tuner.pitch.n2598 , 
+         \tuner.pitch.counter[24] , \tuner.pitch.n877 , 
+         \tuner.pitch.counter[23] , \tuner.pitch.n133[22] , 
+         \tuner.pitch.n133[21] , \tuner.pitch.n2595 , 
+         \tuner.pitch.counter[22] , \tuner.pitch.n875 , 
+         \tuner.pitch.counter[21] , \tuner.pitch.n133[20] , 
+         \tuner.pitch.n133[19] , \tuner.pitch.n2592 , 
+         \tuner.pitch.counter[20] , \tuner.pitch.n873 , 
+         \tuner.pitch.counter[19] , \tuner.pitch.n133[18] , 
+         \tuner.pitch.n133[17] , \tuner.pitch.n2589 , 
+         \tuner.pitch.counter[18] , \tuner.pitch.n871 , 
+         \tuner.pitch.counter[17] , \tuner.pitch.n133[16] , 
+         \tuner.pitch.n133[15] , \tuner.pitch.n2586 , 
+         \tuner.pitch.counter[16] , \tuner.pitch.n869 , 
+         \tuner.pitch.counter[15] , \tuner.pitch.n133[14] , 
+         \tuner.pitch.n133[13] , \tuner.pitch.n2583 , 
+         \tuner.pitch.counter[14] , \tuner.pitch.n867 , 
+         \tuner.pitch.counter[13] , \tuner.pitch.n133[4] , 
+         \tuner.pitch.n133[3] , \tuner.pitch.n2568 , \tuner.pitch.counter[4] , 
+         \tuner.pitch.n857 , \tuner.pitch.counter[3] , \tuner.pitch.n859 , 
+         \tuner.pitch.n133[6] , \tuner.pitch.n133[5] , \tuner.pitch.n2571 , 
+         \tuner.pitch.counter[6] , \tuner.pitch.counter[5] , 
+         \tuner.pitch.n861 , \tuner.pitch.n133[8] , \tuner.pitch.n133[7] , 
+         \tuner.pitch.n2574 , \tuner.pitch.counter[8] , 
+         \tuner.pitch.counter[7] , \tuner.pitch.n863 , \tuner.pitch.n133[10] , 
+         \tuner.pitch.n133[9] , \tuner.pitch.n2577 , \tuner.pitch.counter[10] , 
+         \tuner.pitch.counter[9] , \tuner.pitch.n865 , \tuner.pitch.n133[12] , 
+         \tuner.pitch.n133[11] , \tuner.pitch.n2580 , 
+         \tuner.pitch.counter[12] , \tuner.pitch.counter[11] , 
+         \tuner.pitch.n133[2] , \tuner.pitch.n133[1] , \tuner.pitch.n2565 , 
+         \tuner.pitch.counter[2] , \tuner.pitch.counter[1] , 
+         \tuner.howLong.n133[31] , \tuner.howLong.n2559 , \tuner.howLong.n918 , 
+         \tuner.howLong.counter[31] , \tuner.howLong.counter_31__N_273 , 
+         \tuner.howLong.n133[30] , \tuner.howLong.n133[29] , 
+         \tuner.howLong.n2556 , \tuner.howLong.counter[30] , 
+         \tuner.howLong.n916 , \tuner.howLong.counter[29] , 
+         \tuner.howLong.n133[28] , \tuner.howLong.n133[27] , 
+         \tuner.howLong.n2553 , \tuner.howLong.counter[28] , 
+         \tuner.howLong.n914 , \tuner.howLong.counter[27] , 
+         \tuner.howLong.n133[26] , \tuner.howLong.n133[25] , 
+         \tuner.howLong.n2550 , \tuner.howLong.counter[26] , 
+         \tuner.howLong.n912 , \tuner.howLong.counter[25] , 
+         \tuner.howLong.n133[24] , \tuner.howLong.n133[23] , 
+         \tuner.howLong.n2547 , \tuner.howLong.counter[24] , 
+         \tuner.howLong.n910 , \tuner.howLong.counter[23] , 
+         \tuner.howLong.n133[22] , \tuner.howLong.n133[21] , 
+         \tuner.howLong.n2544 , \tuner.howLong.counter[22] , 
+         \tuner.howLong.n908 , \tuner.howLong.counter[21] , 
+         \tuner.howLong.n133[20] , \tuner.howLong.n133[19] , 
+         \tuner.howLong.n2541 , \tuner.howLong.counter[20] , 
+         \tuner.howLong.n906 , \tuner.howLong.counter[19] , 
+         \tuner.howLong.n133[18] , \tuner.howLong.n133[17] , 
+         \tuner.howLong.n2538 , \tuner.howLong.counter[18] , 
+         \tuner.howLong.n904 , \tuner.howLong.counter[17] , 
+         \tuner.howLong.n133[16] , \tuner.howLong.n133[15] , 
+         \tuner.howLong.n2535 , \tuner.howLong.counter[16] , 
+         \tuner.howLong.n902 , \tuner.howLong.counter[15] , 
+         \tuner.howLong.n133[14] , \tuner.howLong.n133[13] , 
+         \tuner.howLong.n2532 , \tuner.howLong.counter[14] , 
+         \tuner.howLong.n900 , \tuner.howLong.counter[13] , 
+         \tuner.howLong.n133[12] , \tuner.howLong.n133[11] , 
+         \tuner.howLong.n2529 , \tuner.howLong.counter[12] , 
+         \tuner.howLong.n898 , \tuner.howLong.counter[11] , 
+         \tuner.howLong.n133[10] , \tuner.howLong.n133[9] , 
+         \tuner.howLong.n2526 , \tuner.howLong.counter[10] , 
+         \tuner.howLong.n896 , \tuner.howLong.counter[9] , 
+         \tuner.howLong.n133[8] , \tuner.howLong.n133[7] , 
+         \tuner.howLong.n2523 , \tuner.howLong.counter[8] , 
+         \tuner.howLong.n894 , \tuner.howLong.counter[7] , 
+         \tuner.howLong.n133[6] , \tuner.howLong.n133[5] , 
+         \tuner.howLong.n2520 , \tuner.howLong.counter[6] , 
+         \tuner.howLong.n892 , \tuner.howLong.counter[5] , 
+         \tuner.howLong.n133[4] , \tuner.howLong.n133[3] , 
+         \tuner.howLong.n2517 , \tuner.howLong.counter[4] , 
+         \tuner.howLong.n890 , \tuner.howLong.counter[3] , 
+         \tuner.howLong.n133[2] , \tuner.howLong.n133[1] , 
+         \tuner.howLong.n2514 , \tuner.howLong.counter[2] , 
+         \tuner.howLong.n888 , \tuner.howLong.counter[1] , 
+         \tuner.howLong.n133[0] , \tuner.howLong.n2460 , 
+         \tuner.howLong.counter[0] , \tuner.n774 , \tuner.n777 , \state[2] , 
+         \state[0] , \state[1] , \tuner.n662 , \tuner.freqThreshold[9] , 
+         \tuner.freqThreshold[8] , n670, n683, \freqThreshold[0] , 
+         \freqThreshold[1] , n681, n682, \freqThreshold[3] , 
+         \freqThreshold[2] , n679, n680, \freqThreshold[5] , 
+         \freqThreshold[4] , n677, n678, \freqThreshold[10] , 
+         \freqThreshold[7] , n675, n676, \freqThreshold[12] , 
+         \freqThreshold[11] , n7, n674, \freqThreshold[14] , 
+         \freqThreshold[13] , \tuner.pitch.pwm_N_342 , \tuner.pitch.n63 , 
+         pwm_c, \tuner.n34 , \tuner.n48 , \tuner.n54 , \tuner.n52 , 
+         \tuner.n50 , \tuner.n51 , \tuner.n49 , \tuner.n58 , \tuner.n46 , 
+         \tuner.n53 , \tuner.n4 , \tuner.done , \tuner.n626 , \tuner.n780 , 
+         \tuner.pitch.n28 , \tuner.pitch.n32 , \tuner.pitch.n1274 , 
+         \tuner.pitch.n27 , \tuner.pitch.n28_adj_343 , \tuner.pitch.n23 , 
+         \tuner.pitch.n18 , \tuner.pitch.n17 , \tuner.pitch.n26 , 
+         \tuner.pitch.n29 , \freqThreshold[15] , \tuner.pitch.n16 , 
+         \tuner.pitch.n22 , \tuner.pitch.n21 , \tuner.pitch.n20 , 
+         \tuner.pitch.n19 , \tuner.howLong.n38 , \tuner.howLong.n28 , 
+         \tuner.howLong.n42 , \tuner.howLong.n36 , \tuner.howLong.n1528 , 
+         \tuner.howLong.n41 , \tuner.howLong.n40 , \tuner.howLong.n1358 , 
+         \tuner.howLong.n12 , \tuner.howLong.n39 , 
+         \tuner.howLong.counter_31__N_273$n0 , \tuner.nextstate[0] , 
+         \tuner.en_N_206 , \tuner.en , \tuner.nextstate[2] , \tuner.n1 , n673, 
+         \tuner.n3 ;
 
-  freqer_SLICE_0 \freqer.SLICE_0 ( .DI1(\freqer.n133[26] ), 
-    .DI0(\freqer.n133[25] ), .D1(\freqer.n631 ), .C1(\freqer.counter[26] ), 
-    .D0(\freqer.n154 ), .C0(\freqer.counter[25] ), .LSR(\freqer.clkStrobe ), 
-    .CLK(int_osc), .CIN0(\freqer.n154 ), .CIN1(\freqer.n631 ), 
-    .Q0(\freqer.counter[25] ), .Q1(\freqer.counter[26] ), 
-    .F0(\freqer.n133[25] ), .F1(\freqer.n133[26] ), .COUT1(\freqer.n156 ), 
-    .COUT0(\freqer.n631 ));
-  freqer_SLICE_1 \freqer.SLICE_1 ( .DI1(\freqer.n133[24] ), 
-    .DI0(\freqer.n133[23] ), .D1(\freqer.n628 ), .C1(\freqer.counter[24] ), 
-    .D0(\freqer.n152 ), .C0(\freqer.counter[23] ), .LSR(\freqer.clkStrobe ), 
-    .CLK(int_osc), .CIN0(\freqer.n152 ), .CIN1(\freqer.n628 ), 
-    .Q0(\freqer.counter[23] ), .Q1(\freqer.counter[24] ), 
-    .F0(\freqer.n133[23] ), .F1(\freqer.n133[24] ), .COUT1(\freqer.n154 ), 
-    .COUT0(\freqer.n628 ));
-  freqer_SLICE_2 \freqer.SLICE_2 ( .DI1(\freqer.n133[22] ), 
-    .DI0(\freqer.n133[21] ), .D1(\freqer.n625 ), .C1(\freqer.counter[22] ), 
-    .D0(\freqer.n150 ), .C0(\freqer.counter[21] ), .LSR(\freqer.clkStrobe ), 
-    .CLK(int_osc), .CIN0(\freqer.n150 ), .CIN1(\freqer.n625 ), 
-    .Q0(\freqer.counter[21] ), .Q1(\freqer.counter[22] ), 
-    .F0(\freqer.n133[21] ), .F1(\freqer.n133[22] ), .COUT1(\freqer.n152 ), 
-    .COUT0(\freqer.n625 ));
-  freqer_SLICE_3 \freqer.SLICE_3 ( .DI1(\freqer.n133[20] ), 
-    .DI0(\freqer.n133[19] ), .D1(\freqer.n622 ), .C1(\freqer.counter[20] ), 
-    .D0(\freqer.n148 ), .C0(\freqer.counter[19] ), .LSR(\freqer.clkStrobe ), 
-    .CLK(int_osc), .CIN0(\freqer.n148 ), .CIN1(\freqer.n622 ), 
-    .Q0(\freqer.counter[19] ), .Q1(\freqer.counter[20] ), 
-    .F0(\freqer.n133[19] ), .F1(\freqer.n133[20] ), .COUT1(\freqer.n150 ), 
-    .COUT0(\freqer.n622 ));
-  freqer_SLICE_4 \freqer.SLICE_4 ( .DI1(\freqer.n133[18] ), 
-    .DI0(\freqer.n133[17] ), .D1(\freqer.n619 ), .C1(\freqer.counter[18] ), 
-    .D0(\freqer.n146 ), .C0(\freqer.counter[17] ), .LSR(\freqer.clkStrobe ), 
-    .CLK(int_osc), .CIN0(\freqer.n146 ), .CIN1(\freqer.n619 ), 
-    .Q0(\freqer.counter[17] ), .Q1(\freqer.counter[18] ), 
-    .F0(\freqer.n133[17] ), .F1(\freqer.n133[18] ), .COUT1(\freqer.n148 ), 
-    .COUT0(\freqer.n619 ));
-  freqer_SLICE_5 \freqer.SLICE_5 ( .DI1(\freqer.n133[16] ), 
-    .DI0(\freqer.n133[15] ), .D1(\freqer.n616 ), .C1(\freqer.counter[16] ), 
-    .D0(\freqer.n144 ), .C0(\freqer.counter[15] ), .LSR(\freqer.clkStrobe ), 
-    .CLK(int_osc), .CIN0(\freqer.n144 ), .CIN1(\freqer.n616 ), 
-    .Q0(\freqer.counter[15] ), .Q1(\freqer.counter[16] ), 
-    .F0(\freqer.n133[15] ), .F1(\freqer.n133[16] ), .COUT1(\freqer.n146 ), 
-    .COUT0(\freqer.n616 ));
-  freqer_SLICE_6 \freqer.SLICE_6 ( .DI1(\freqer.n133[14] ), 
-    .DI0(\freqer.n133[13] ), .D1(\freqer.n613 ), .C1(\freqer.counter[14] ), 
-    .D0(\freqer.n142 ), .C0(\freqer.counter[13] ), .LSR(\freqer.clkStrobe ), 
-    .CLK(int_osc), .CIN0(\freqer.n142 ), .CIN1(\freqer.n613 ), 
-    .Q0(\freqer.counter[13] ), .Q1(\freqer.counter[14] ), 
-    .F0(\freqer.n133[13] ), .F1(\freqer.n133[14] ), .COUT1(\freqer.n144 ), 
-    .COUT0(\freqer.n613 ));
-  freqer_SLICE_7 \freqer.SLICE_7 ( .DI0(\freqer.n133[31] ), .D1(\freqer.n640 ), 
-    .D0(\freqer.n160 ), .C0(\freqer.counter[31] ), .LSR(\freqer.clkStrobe ), 
-    .CLK(int_osc), .CIN0(\freqer.n160 ), .CIN1(\freqer.n640 ), 
-    .Q0(\freqer.counter[31] ), .F0(\freqer.n133[31] ), .COUT0(\freqer.n640 ));
-  freqer_SLICE_8 \freqer.SLICE_8 ( .DI1(\freqer.n133[30] ), 
-    .DI0(\freqer.n133[29] ), .D1(\freqer.n637 ), .C1(\freqer.counter[30] ), 
-    .D0(\freqer.n158 ), .C0(\freqer.counter[29] ), .LSR(\freqer.clkStrobe ), 
-    .CLK(int_osc), .CIN0(\freqer.n158 ), .CIN1(\freqer.n637 ), 
-    .Q0(\freqer.counter[29] ), .Q1(\freqer.counter[30] ), 
-    .F0(\freqer.n133[29] ), .F1(\freqer.n133[30] ), .COUT1(\freqer.n160 ), 
-    .COUT0(\freqer.n637 ));
-  freqer_SLICE_9 \freqer.SLICE_9 ( .DI1(\freqer.n133[12] ), 
-    .DI0(\freqer.n133[11] ), .D1(\freqer.n610 ), .C1(\freqer.counter[12] ), 
-    .D0(\freqer.n140 ), .C0(\freqer.counter[11] ), .LSR(\freqer.clkStrobe ), 
-    .CLK(int_osc), .CIN0(\freqer.n140 ), .CIN1(\freqer.n610 ), 
-    .Q0(\freqer.counter[11] ), .Q1(\freqer.counter[12] ), 
-    .F0(\freqer.n133[11] ), .F1(\freqer.n133[12] ), .COUT1(\freqer.n142 ), 
-    .COUT0(\freqer.n610 ));
-  freqer_SLICE_10 \freqer.SLICE_10 ( .DI1(\freqer.n133[10] ), 
-    .DI0(\freqer.n133[9] ), .D1(\freqer.n607 ), .C1(\freqer.counter[10] ), 
-    .D0(\freqer.n138 ), .C0(\freqer.counter[9] ), .LSR(\freqer.clkStrobe ), 
-    .CLK(int_osc), .CIN0(\freqer.n138 ), .CIN1(\freqer.n607 ), 
-    .Q0(\freqer.counter[9] ), .Q1(\freqer.counter[10] ), .F0(\freqer.n133[9] ), 
-    .F1(\freqer.n133[10] ), .COUT1(\freqer.n140 ), .COUT0(\freqer.n607 ));
-  freqer_SLICE_11 \freqer.SLICE_11 ( .DI1(\freqer.n133[8] ), 
-    .DI0(\freqer.n133[7] ), .D1(\freqer.n604 ), .C1(\freqer.counter[8] ), 
-    .D0(\freqer.n136 ), .C0(\freqer.counter[7] ), .LSR(\freqer.clkStrobe ), 
-    .CLK(int_osc), .CIN0(\freqer.n136 ), .CIN1(\freqer.n604 ), 
-    .Q0(\freqer.counter[7] ), .Q1(\freqer.counter[8] ), .F0(\freqer.n133[7] ), 
-    .F1(\freqer.n133[8] ), .COUT1(\freqer.n138 ), .COUT0(\freqer.n604 ));
-  freqer_SLICE_12 \freqer.SLICE_12 ( .DI1(\freqer.n133[6] ), 
-    .DI0(\freqer.n133[5] ), .D1(\freqer.n601 ), .C1(\freqer.counter[6] ), 
-    .D0(\freqer.n134 ), .C0(\freqer.counter[5] ), .LSR(\freqer.clkStrobe ), 
-    .CLK(int_osc), .CIN0(\freqer.n134 ), .CIN1(\freqer.n601 ), 
-    .Q0(\freqer.counter[5] ), .Q1(\freqer.counter[6] ), .F0(\freqer.n133[5] ), 
-    .F1(\freqer.n133[6] ), .COUT1(\freqer.n136 ), .COUT0(\freqer.n601 ));
-  freqer_SLICE_13 \freqer.SLICE_13 ( .DI1(\freqer.n133[4] ), 
-    .DI0(\freqer.n133[3] ), .D1(\freqer.n598 ), .C1(\freqer.counter[4] ), 
-    .D0(\freqer.n132 ), .C0(\freqer.counter[3] ), .LSR(\freqer.clkStrobe ), 
-    .CLK(int_osc), .CIN0(\freqer.n132 ), .CIN1(\freqer.n598 ), 
-    .Q0(\freqer.counter[3] ), .Q1(\freqer.counter[4] ), .F0(\freqer.n133[3] ), 
-    .F1(\freqer.n133[4] ), .COUT1(\freqer.n134 ), .COUT0(\freqer.n598 ));
-  freqer_SLICE_14 \freqer.SLICE_14 ( .DI1(\freqer.n133[2] ), 
-    .DI0(\freqer.n133[1] ), .D1(\freqer.n595 ), .C1(\freqer.counter[2] ), 
-    .D0(\freqer.n130 ), .C0(\freqer.counter[1] ), .LSR(\freqer.clkStrobe ), 
-    .CLK(int_osc), .CIN0(\freqer.n130 ), .CIN1(\freqer.n595 ), 
-    .Q0(\freqer.counter[1] ), .Q1(\freqer.counter[2] ), .F0(\freqer.n133[1] ), 
-    .F1(\freqer.n133[2] ), .COUT1(\freqer.n132 ), .COUT0(\freqer.n595 ));
-  freqer_SLICE_15 \freqer.SLICE_15 ( .DI1(\freqer.n133[0] ), 
-    .D1(\freqer.n592 ), .C1(\freqer.counter[0] ), .B1(VCC_net), 
-    .LSR(\freqer.clkStrobe ), .CLK(int_osc), .CIN1(\freqer.n592 ), 
-    .Q1(\freqer.counter[0] ), .F1(\freqer.n133[0] ), .COUT1(\freqer.n130 ), 
-    .COUT0(\freqer.n592 ));
-  freqer_SLICE_16 \freqer.SLICE_16 ( .DI1(\freqer.n133[28] ), 
-    .DI0(\freqer.n133[27] ), .D1(\freqer.n634 ), .C1(\freqer.counter[28] ), 
-    .D0(\freqer.n156 ), .C0(\freqer.counter[27] ), .LSR(\freqer.clkStrobe ), 
-    .CLK(int_osc), .CIN0(\freqer.n156 ), .CIN1(\freqer.n634 ), 
-    .Q0(\freqer.counter[27] ), .Q1(\freqer.counter[28] ), 
-    .F0(\freqer.n133[27] ), .F1(\freqer.n133[28] ), .COUT1(\freqer.n158 ), 
-    .COUT0(\freqer.n634 ));
-  freqer_SLICE_17 \freqer.SLICE_17 ( .DI1(\freqer.toneFreq_N_65 ), 
-    .DI0(\freqer.clkStrobe_N_66 ), .D1(\freqer.clkStrobe ), .C1(pwm_c), 
-    .D0(\freqer.counter[3] ), .C0(\freqer.counter[9] ), .B0(\freqer.n11 ), 
-    .A0(\freqer.n7 ), .CLK(int_osc), .Q0(\freqer.clkStrobe ), .Q1(pwm_c), 
-    .F0(\freqer.clkStrobe_N_66 ), .F1(\freqer.toneFreq_N_65 ));
-  freqer_SLICE_19 \freqer.SLICE_19 ( .D0(\freqer.counter[23] ), 
-    .C0(\freqer.counter[24] ), .B0(\freqer.counter[15] ), 
-    .A0(\freqer.counter[27] ), .F0(\freqer.n40 ));
-  freqer_SLICE_20 \freqer.SLICE_20 ( .D1(\freqer.counter[1] ), 
-    .C1(\freqer.n45 ), .B1(\freqer.n40 ), .A1(\freqer.counter[29] ), 
-    .D0(\freqer.counter[30] ), .C0(\freqer.counter[22] ), 
-    .B0(\freqer.counter[19] ), .A0(\freqer.counter[5] ), .F0(\freqer.n45 ), 
-    .F1(\freqer.n49 ));
-  freqer_SLICE_21 \freqer.SLICE_21 ( .D1(\freqer.n43 ), .C1(\freqer.n44 ), 
-    .B1(\freqer.n41 ), .A1(\freqer.n42 ), .D0(\freqer.counter[2] ), 
-    .C0(\freqer.counter[4] ), .B0(\freqer.counter[16] ), 
-    .A0(\freqer.counter[17] ), .F0(\freqer.n44 ), .F1(\freqer.n50 ));
-  freqer_SLICE_23 \freqer.SLICE_23 ( .D1(\freqer.counter[6] ), 
-    .C1(\freqer.counter[10] ), .B1(\freqer.counter[26] ), 
-    .A1(\freqer.counter[25] ), .D0(\freqer.counter[7] ), 
-    .B0(\freqer.counter[14] ), .F0(\freqer.n7 ), .F1(\freqer.n43 ));
-  freqer_SLICE_24 \freqer.SLICE_24 ( .D0(\freqer.counter[11] ), 
-    .C0(\freqer.n50 ), .B0(\freqer.n49 ), .A0(\freqer.counter[13] ), 
-    .F0(\freqer.n11 ));
-  freqer_SLICE_25 \freqer.SLICE_25 ( .D0(\freqer.counter[28] ), 
-    .C0(\freqer.counter[20] ), .B0(\freqer.counter[18] ), 
-    .A0(\freqer.counter[12] ), .F0(\freqer.n41 ));
-  SLICE_27 SLICE_27( .F0(VCC_net));
-  freqer_SLICE_29 \freqer.SLICE_29 ( .D0(\freqer.counter[8] ), 
-    .C0(\freqer.counter[0] ), .B0(\freqer.counter[31] ), 
-    .A0(\freqer.counter[21] ), .F0(\freqer.n42 ));
-  hf_osc hf_osc( .CLKHFPU(VCC_net), .CLKHF(int_osc));
+  tuner_SLICE_0 \tuner.SLICE_0 ( .DI1(\tuner.n133[6] ), .DI0(\tuner.n133[5] ), 
+    .D1(\tuner.n2472 ), .C1(\tuner.counter[6] ), .D0(\tuner.n925 ), 
+    .C0(\tuner.counter[5] ), .CE(\tuner.n663 ), .CLK(int_osc), 
+    .CIN0(\tuner.n925 ), .CIN1(\tuner.n2472 ), .Q0(\tuner.counter[5] ), 
+    .Q1(\tuner.counter[6] ), .F0(\tuner.n133[5] ), .F1(\tuner.n133[6] ), 
+    .COUT1(\tuner.n927 ), .COUT0(\tuner.n2472 ));
+  tuner_SLICE_1 \tuner.SLICE_1 ( .DI1(\tuner.n133[4] ), .DI0(\tuner.n133[3] ), 
+    .D1(\tuner.n2469 ), .C1(\tuner.counter[4] ), .D0(\tuner.n923 ), 
+    .C0(\tuner.counter[3] ), .CE(\tuner.n663 ), .CLK(int_osc), 
+    .CIN0(\tuner.n923 ), .CIN1(\tuner.n2469 ), .Q0(\tuner.counter[3] ), 
+    .Q1(\tuner.counter[4] ), .F0(\tuner.n133[3] ), .F1(\tuner.n133[4] ), 
+    .COUT1(\tuner.n925 ), .COUT0(\tuner.n2469 ));
+  tuner_SLICE_2 \tuner.SLICE_2 ( .DI1(\tuner.n133[2] ), .DI0(\tuner.n133[1] ), 
+    .D1(\tuner.n2466 ), .C1(\tuner.counter[2] ), .D0(\tuner.n921 ), 
+    .C0(\tuner.counter[1] ), .CE(\tuner.n663 ), .CLK(int_osc), 
+    .CIN0(\tuner.n921 ), .CIN1(\tuner.n2466 ), .Q0(\tuner.counter[1] ), 
+    .Q1(\tuner.counter[2] ), .F0(\tuner.n133[1] ), .F1(\tuner.n133[2] ), 
+    .COUT1(\tuner.n923 ), .COUT0(\tuner.n2466 ));
+  tuner_SLICE_3 \tuner.SLICE_3 ( .DI1(\tuner.n133[0] ), .D1(\tuner.n2463 ), 
+    .C1(\tuner.counter[0] ), .B1(\tuner.n373[5] ), .CE(\tuner.n663 ), 
+    .CLK(int_osc), .CIN1(\tuner.n2463 ), .Q1(\tuner.counter[0] ), 
+    .F1(\tuner.n133[0] ), .COUT1(\tuner.n921 ), .COUT0(\tuner.n2463 ));
+  tuner_SLICE_4 \tuner.SLICE_4 ( .DI1(\tuner.n133[26] ), 
+    .DI0(\tuner.n133[25] ), .D1(\tuner.n2502 ), .C1(\tuner.counter[26] ), 
+    .D0(\tuner.n945 ), .C0(\tuner.counter[25] ), .CE(\tuner.n663 ), 
+    .CLK(int_osc), .CIN0(\tuner.n945 ), .CIN1(\tuner.n2502 ), 
+    .Q0(\tuner.counter[25] ), .Q1(\tuner.counter[26] ), .F0(\tuner.n133[25] ), 
+    .F1(\tuner.n133[26] ), .COUT1(\tuner.n947 ), .COUT0(\tuner.n2502 ));
+  tuner_SLICE_5 \tuner.SLICE_5 ( .DI1(\tuner.n133[28] ), 
+    .DI0(\tuner.n133[27] ), .D1(\tuner.n2505 ), .C1(\tuner.counter[28] ), 
+    .D0(\tuner.n947 ), .C0(\tuner.counter[27] ), .CE(\tuner.n663 ), 
+    .CLK(int_osc), .CIN0(\tuner.n947 ), .CIN1(\tuner.n2505 ), 
+    .Q0(\tuner.counter[27] ), .Q1(\tuner.counter[28] ), .F0(\tuner.n133[27] ), 
+    .F1(\tuner.n133[28] ), .COUT1(\tuner.n949 ), .COUT0(\tuner.n2505 ));
+  tuner_SLICE_6 \tuner.SLICE_6 ( .DI1(\tuner.n133[30] ), 
+    .DI0(\tuner.n133[29] ), .D1(\tuner.n2508 ), .C1(\tuner.counter[30] ), 
+    .D0(\tuner.n949 ), .C0(\tuner.counter[29] ), .CE(\tuner.n663 ), 
+    .CLK(int_osc), .CIN0(\tuner.n949 ), .CIN1(\tuner.n2508 ), 
+    .Q0(\tuner.counter[29] ), .Q1(\tuner.counter[30] ), .F0(\tuner.n133[29] ), 
+    .F1(\tuner.n133[30] ), .COUT1(\tuner.n951 ), .COUT0(\tuner.n2508 ));
+  tuner_SLICE_7 \tuner.SLICE_7 ( .DI0(\tuner.n133[31] ), .D1(\tuner.n2511 ), 
+    .D0(\tuner.n951 ), .C0(\tuner.counter[31] ), .CE(\tuner.n663 ), 
+    .CLK(int_osc), .CIN0(\tuner.n951 ), .CIN1(\tuner.n2511 ), 
+    .Q0(\tuner.counter[31] ), .F0(\tuner.n133[31] ), .COUT0(\tuner.n2511 ));
+  tuner_SLICE_8 \tuner.SLICE_8 ( .DI1(\tuner.n133[10] ), .DI0(\tuner.n133[9] ), 
+    .D1(\tuner.n2478 ), .C1(\tuner.counter[10] ), .D0(\tuner.n929 ), 
+    .C0(\tuner.counter[9] ), .CE(\tuner.n663 ), .CLK(int_osc), 
+    .CIN0(\tuner.n929 ), .CIN1(\tuner.n2478 ), .Q0(\tuner.counter[9] ), 
+    .Q1(\tuner.counter[10] ), .F0(\tuner.n133[9] ), .F1(\tuner.n133[10] ), 
+    .COUT1(\tuner.n931 ), .COUT0(\tuner.n2478 ));
+  tuner_SLICE_9 \tuner.SLICE_9 ( .DI1(\tuner.n133[14] ), 
+    .DI0(\tuner.n133[13] ), .D1(\tuner.n2484 ), .C1(\tuner.counter[14] ), 
+    .D0(\tuner.n933 ), .C0(\tuner.counter[13] ), .CE(\tuner.n663 ), 
+    .CLK(int_osc), .CIN0(\tuner.n933 ), .CIN1(\tuner.n2484 ), 
+    .Q0(\tuner.counter[13] ), .Q1(\tuner.counter[14] ), .F0(\tuner.n133[13] ), 
+    .F1(\tuner.n133[14] ), .COUT1(\tuner.n935 ), .COUT0(\tuner.n2484 ));
+  tuner_SLICE_10 \tuner.SLICE_10 ( .DI1(\tuner.n133[16] ), 
+    .DI0(\tuner.n133[15] ), .D1(\tuner.n2487 ), .C1(\tuner.counter[16] ), 
+    .D0(\tuner.n935 ), .C0(\tuner.counter[15] ), .CE(\tuner.n663 ), 
+    .CLK(int_osc), .CIN0(\tuner.n935 ), .CIN1(\tuner.n2487 ), 
+    .Q0(\tuner.counter[15] ), .Q1(\tuner.counter[16] ), .F0(\tuner.n133[15] ), 
+    .F1(\tuner.n133[16] ), .COUT1(\tuner.n937 ), .COUT0(\tuner.n2487 ));
+  tuner_SLICE_11 \tuner.SLICE_11 ( .DI1(\tuner.n133[18] ), 
+    .DI0(\tuner.n133[17] ), .D1(\tuner.n2490 ), .C1(\tuner.counter[18] ), 
+    .D0(\tuner.n937 ), .C0(\tuner.counter[17] ), .CE(\tuner.n663 ), 
+    .CLK(int_osc), .CIN0(\tuner.n937 ), .CIN1(\tuner.n2490 ), 
+    .Q0(\tuner.counter[17] ), .Q1(\tuner.counter[18] ), .F0(\tuner.n133[17] ), 
+    .F1(\tuner.n133[18] ), .COUT1(\tuner.n939 ), .COUT0(\tuner.n2490 ));
+  tuner_SLICE_12 \tuner.SLICE_12 ( .DI1(\tuner.n133[20] ), 
+    .DI0(\tuner.n133[19] ), .D1(\tuner.n2493 ), .C1(\tuner.counter[20] ), 
+    .D0(\tuner.n939 ), .C0(\tuner.counter[19] ), .CE(\tuner.n663 ), 
+    .CLK(int_osc), .CIN0(\tuner.n939 ), .CIN1(\tuner.n2493 ), 
+    .Q0(\tuner.counter[19] ), .Q1(\tuner.counter[20] ), .F0(\tuner.n133[19] ), 
+    .F1(\tuner.n133[20] ), .COUT1(\tuner.n941 ), .COUT0(\tuner.n2493 ));
+  tuner_SLICE_13 \tuner.SLICE_13 ( .DI1(\tuner.n133[22] ), 
+    .DI0(\tuner.n133[21] ), .D1(\tuner.n2496 ), .C1(\tuner.counter[22] ), 
+    .D0(\tuner.n941 ), .C0(\tuner.counter[21] ), .CE(\tuner.n663 ), 
+    .CLK(int_osc), .CIN0(\tuner.n941 ), .CIN1(\tuner.n2496 ), 
+    .Q0(\tuner.counter[21] ), .Q1(\tuner.counter[22] ), .F0(\tuner.n133[21] ), 
+    .F1(\tuner.n133[22] ), .COUT1(\tuner.n943 ), .COUT0(\tuner.n2496 ));
+  tuner_SLICE_14 \tuner.SLICE_14 ( .DI1(\tuner.n133[24] ), 
+    .DI0(\tuner.n133[23] ), .D1(\tuner.n2499 ), .C1(\tuner.counter[24] ), 
+    .D0(\tuner.n943 ), .C0(\tuner.counter[23] ), .CE(\tuner.n663 ), 
+    .CLK(int_osc), .CIN0(\tuner.n943 ), .CIN1(\tuner.n2499 ), 
+    .Q0(\tuner.counter[23] ), .Q1(\tuner.counter[24] ), .F0(\tuner.n133[23] ), 
+    .F1(\tuner.n133[24] ), .COUT1(\tuner.n945 ), .COUT0(\tuner.n2499 ));
+  tuner_SLICE_15 \tuner.SLICE_15 ( .DI1(\tuner.n133[8] ), 
+    .DI0(\tuner.n133[7] ), .D1(\tuner.n2475 ), .C1(\tuner.counter[8] ), 
+    .D0(\tuner.n927 ), .C0(\tuner.counter[7] ), .CE(\tuner.n663 ), 
+    .CLK(int_osc), .CIN0(\tuner.n927 ), .CIN1(\tuner.n2475 ), 
+    .Q0(\tuner.counter[7] ), .Q1(\tuner.counter[8] ), .F0(\tuner.n133[7] ), 
+    .F1(\tuner.n133[8] ), .COUT1(\tuner.n929 ), .COUT0(\tuner.n2475 ));
+  tuner_SLICE_16 \tuner.SLICE_16 ( .DI1(\tuner.n133[12] ), 
+    .DI0(\tuner.n133[11] ), .D1(\tuner.n2481 ), .C1(\tuner.counter[12] ), 
+    .D0(\tuner.n931 ), .C0(\tuner.counter[11] ), .CE(\tuner.n663 ), 
+    .CLK(int_osc), .CIN0(\tuner.n931 ), .CIN1(\tuner.n2481 ), 
+    .Q0(\tuner.counter[11] ), .Q1(\tuner.counter[12] ), .F0(\tuner.n133[11] ), 
+    .F1(\tuner.n133[12] ), .COUT1(\tuner.n933 ), .COUT0(\tuner.n2481 ));
+  tuner_pitch_SLICE_17 \tuner.pitch.SLICE_17 ( .DI1(\tuner.pitch.n133[0] ), 
+    .D1(\tuner.pitch.n2562 ), .C1(\tuner.pitch.counter[0] ), .B1(VCC_net), 
+    .LSR(\tuner.pitch.counter_31__N_338 ), .CLK(int_osc), 
+    .CIN1(\tuner.pitch.n2562 ), .Q1(\tuner.pitch.counter[0] ), 
+    .F1(\tuner.pitch.n133[0] ), .COUT1(\tuner.pitch.n855 ), 
+    .COUT0(\tuner.pitch.n2562 ));
+  tuner_pitch_SLICE_18 \tuner.pitch.SLICE_18 ( .DI0(\tuner.pitch.n133[31] ), 
+    .D1(\tuner.pitch.n2610 ), .D0(\tuner.pitch.n885 ), 
+    .C0(\tuner.pitch.counter[31] ), .LSR(\tuner.pitch.counter_31__N_338 ), 
+    .CLK(int_osc), .CIN0(\tuner.pitch.n885 ), .CIN1(\tuner.pitch.n2610 ), 
+    .Q0(\tuner.pitch.counter[31] ), .F0(\tuner.pitch.n133[31] ), 
+    .COUT0(\tuner.pitch.n2610 ));
+  tuner_pitch_SLICE_19 \tuner.pitch.SLICE_19 ( .DI1(\tuner.pitch.n133[30] ), 
+    .DI0(\tuner.pitch.n133[29] ), .D1(\tuner.pitch.n2607 ), 
+    .C1(\tuner.pitch.counter[30] ), .D0(\tuner.pitch.n883 ), 
+    .C0(\tuner.pitch.counter[29] ), .LSR(\tuner.pitch.counter_31__N_338 ), 
+    .CLK(int_osc), .CIN0(\tuner.pitch.n883 ), .CIN1(\tuner.pitch.n2607 ), 
+    .Q0(\tuner.pitch.counter[29] ), .Q1(\tuner.pitch.counter[30] ), 
+    .F0(\tuner.pitch.n133[29] ), .F1(\tuner.pitch.n133[30] ), 
+    .COUT1(\tuner.pitch.n885 ), .COUT0(\tuner.pitch.n2607 ));
+  tuner_pitch_SLICE_20 \tuner.pitch.SLICE_20 ( .DI1(\tuner.pitch.n133[28] ), 
+    .DI0(\tuner.pitch.n133[27] ), .D1(\tuner.pitch.n2604 ), 
+    .C1(\tuner.pitch.counter[28] ), .D0(\tuner.pitch.n881 ), 
+    .C0(\tuner.pitch.counter[27] ), .LSR(\tuner.pitch.counter_31__N_338 ), 
+    .CLK(int_osc), .CIN0(\tuner.pitch.n881 ), .CIN1(\tuner.pitch.n2604 ), 
+    .Q0(\tuner.pitch.counter[27] ), .Q1(\tuner.pitch.counter[28] ), 
+    .F0(\tuner.pitch.n133[27] ), .F1(\tuner.pitch.n133[28] ), 
+    .COUT1(\tuner.pitch.n883 ), .COUT0(\tuner.pitch.n2604 ));
+  tuner_pitch_SLICE_21 \tuner.pitch.SLICE_21 ( .DI1(\tuner.pitch.n133[26] ), 
+    .DI0(\tuner.pitch.n133[25] ), .D1(\tuner.pitch.n2601 ), 
+    .C1(\tuner.pitch.counter[26] ), .D0(\tuner.pitch.n879 ), 
+    .C0(\tuner.pitch.counter[25] ), .LSR(\tuner.pitch.counter_31__N_338 ), 
+    .CLK(int_osc), .CIN0(\tuner.pitch.n879 ), .CIN1(\tuner.pitch.n2601 ), 
+    .Q0(\tuner.pitch.counter[25] ), .Q1(\tuner.pitch.counter[26] ), 
+    .F0(\tuner.pitch.n133[25] ), .F1(\tuner.pitch.n133[26] ), 
+    .COUT1(\tuner.pitch.n881 ), .COUT0(\tuner.pitch.n2601 ));
+  tuner_pitch_SLICE_22 \tuner.pitch.SLICE_22 ( .DI1(\tuner.pitch.n133[24] ), 
+    .DI0(\tuner.pitch.n133[23] ), .D1(\tuner.pitch.n2598 ), 
+    .C1(\tuner.pitch.counter[24] ), .D0(\tuner.pitch.n877 ), 
+    .C0(\tuner.pitch.counter[23] ), .LSR(\tuner.pitch.counter_31__N_338 ), 
+    .CLK(int_osc), .CIN0(\tuner.pitch.n877 ), .CIN1(\tuner.pitch.n2598 ), 
+    .Q0(\tuner.pitch.counter[23] ), .Q1(\tuner.pitch.counter[24] ), 
+    .F0(\tuner.pitch.n133[23] ), .F1(\tuner.pitch.n133[24] ), 
+    .COUT1(\tuner.pitch.n879 ), .COUT0(\tuner.pitch.n2598 ));
+  tuner_pitch_SLICE_23 \tuner.pitch.SLICE_23 ( .DI1(\tuner.pitch.n133[22] ), 
+    .DI0(\tuner.pitch.n133[21] ), .D1(\tuner.pitch.n2595 ), 
+    .C1(\tuner.pitch.counter[22] ), .D0(\tuner.pitch.n875 ), 
+    .C0(\tuner.pitch.counter[21] ), .LSR(\tuner.pitch.counter_31__N_338 ), 
+    .CLK(int_osc), .CIN0(\tuner.pitch.n875 ), .CIN1(\tuner.pitch.n2595 ), 
+    .Q0(\tuner.pitch.counter[21] ), .Q1(\tuner.pitch.counter[22] ), 
+    .F0(\tuner.pitch.n133[21] ), .F1(\tuner.pitch.n133[22] ), 
+    .COUT1(\tuner.pitch.n877 ), .COUT0(\tuner.pitch.n2595 ));
+  tuner_pitch_SLICE_24 \tuner.pitch.SLICE_24 ( .DI1(\tuner.pitch.n133[20] ), 
+    .DI0(\tuner.pitch.n133[19] ), .D1(\tuner.pitch.n2592 ), 
+    .C1(\tuner.pitch.counter[20] ), .D0(\tuner.pitch.n873 ), 
+    .C0(\tuner.pitch.counter[19] ), .LSR(\tuner.pitch.counter_31__N_338 ), 
+    .CLK(int_osc), .CIN0(\tuner.pitch.n873 ), .CIN1(\tuner.pitch.n2592 ), 
+    .Q0(\tuner.pitch.counter[19] ), .Q1(\tuner.pitch.counter[20] ), 
+    .F0(\tuner.pitch.n133[19] ), .F1(\tuner.pitch.n133[20] ), 
+    .COUT1(\tuner.pitch.n875 ), .COUT0(\tuner.pitch.n2592 ));
+  tuner_pitch_SLICE_25 \tuner.pitch.SLICE_25 ( .DI1(\tuner.pitch.n133[18] ), 
+    .DI0(\tuner.pitch.n133[17] ), .D1(\tuner.pitch.n2589 ), 
+    .C1(\tuner.pitch.counter[18] ), .D0(\tuner.pitch.n871 ), 
+    .C0(\tuner.pitch.counter[17] ), .LSR(\tuner.pitch.counter_31__N_338 ), 
+    .CLK(int_osc), .CIN0(\tuner.pitch.n871 ), .CIN1(\tuner.pitch.n2589 ), 
+    .Q0(\tuner.pitch.counter[17] ), .Q1(\tuner.pitch.counter[18] ), 
+    .F0(\tuner.pitch.n133[17] ), .F1(\tuner.pitch.n133[18] ), 
+    .COUT1(\tuner.pitch.n873 ), .COUT0(\tuner.pitch.n2589 ));
+  tuner_pitch_SLICE_26 \tuner.pitch.SLICE_26 ( .DI1(\tuner.pitch.n133[16] ), 
+    .DI0(\tuner.pitch.n133[15] ), .D1(\tuner.pitch.n2586 ), 
+    .C1(\tuner.pitch.counter[16] ), .D0(\tuner.pitch.n869 ), 
+    .C0(\tuner.pitch.counter[15] ), .LSR(\tuner.pitch.counter_31__N_338 ), 
+    .CLK(int_osc), .CIN0(\tuner.pitch.n869 ), .CIN1(\tuner.pitch.n2586 ), 
+    .Q0(\tuner.pitch.counter[15] ), .Q1(\tuner.pitch.counter[16] ), 
+    .F0(\tuner.pitch.n133[15] ), .F1(\tuner.pitch.n133[16] ), 
+    .COUT1(\tuner.pitch.n871 ), .COUT0(\tuner.pitch.n2586 ));
+  tuner_pitch_SLICE_27 \tuner.pitch.SLICE_27 ( .DI1(\tuner.pitch.n133[14] ), 
+    .DI0(\tuner.pitch.n133[13] ), .D1(\tuner.pitch.n2583 ), 
+    .C1(\tuner.pitch.counter[14] ), .D0(\tuner.pitch.n867 ), 
+    .C0(\tuner.pitch.counter[13] ), .LSR(\tuner.pitch.counter_31__N_338 ), 
+    .CLK(int_osc), .CIN0(\tuner.pitch.n867 ), .CIN1(\tuner.pitch.n2583 ), 
+    .Q0(\tuner.pitch.counter[13] ), .Q1(\tuner.pitch.counter[14] ), 
+    .F0(\tuner.pitch.n133[13] ), .F1(\tuner.pitch.n133[14] ), 
+    .COUT1(\tuner.pitch.n869 ), .COUT0(\tuner.pitch.n2583 ));
+  tuner_pitch_SLICE_28 \tuner.pitch.SLICE_28 ( .DI1(\tuner.pitch.n133[4] ), 
+    .DI0(\tuner.pitch.n133[3] ), .D1(\tuner.pitch.n2568 ), 
+    .C1(\tuner.pitch.counter[4] ), .D0(\tuner.pitch.n857 ), 
+    .C0(\tuner.pitch.counter[3] ), .LSR(\tuner.pitch.counter_31__N_338 ), 
+    .CLK(int_osc), .CIN0(\tuner.pitch.n857 ), .CIN1(\tuner.pitch.n2568 ), 
+    .Q0(\tuner.pitch.counter[3] ), .Q1(\tuner.pitch.counter[4] ), 
+    .F0(\tuner.pitch.n133[3] ), .F1(\tuner.pitch.n133[4] ), 
+    .COUT1(\tuner.pitch.n859 ), .COUT0(\tuner.pitch.n2568 ));
+  tuner_pitch_SLICE_29 \tuner.pitch.SLICE_29 ( .DI1(\tuner.pitch.n133[6] ), 
+    .DI0(\tuner.pitch.n133[5] ), .D1(\tuner.pitch.n2571 ), 
+    .C1(\tuner.pitch.counter[6] ), .D0(\tuner.pitch.n859 ), 
+    .C0(\tuner.pitch.counter[5] ), .LSR(\tuner.pitch.counter_31__N_338 ), 
+    .CLK(int_osc), .CIN0(\tuner.pitch.n859 ), .CIN1(\tuner.pitch.n2571 ), 
+    .Q0(\tuner.pitch.counter[5] ), .Q1(\tuner.pitch.counter[6] ), 
+    .F0(\tuner.pitch.n133[5] ), .F1(\tuner.pitch.n133[6] ), 
+    .COUT1(\tuner.pitch.n861 ), .COUT0(\tuner.pitch.n2571 ));
+  tuner_pitch_SLICE_30 \tuner.pitch.SLICE_30 ( .DI1(\tuner.pitch.n133[8] ), 
+    .DI0(\tuner.pitch.n133[7] ), .D1(\tuner.pitch.n2574 ), 
+    .C1(\tuner.pitch.counter[8] ), .D0(\tuner.pitch.n861 ), 
+    .C0(\tuner.pitch.counter[7] ), .LSR(\tuner.pitch.counter_31__N_338 ), 
+    .CLK(int_osc), .CIN0(\tuner.pitch.n861 ), .CIN1(\tuner.pitch.n2574 ), 
+    .Q0(\tuner.pitch.counter[7] ), .Q1(\tuner.pitch.counter[8] ), 
+    .F0(\tuner.pitch.n133[7] ), .F1(\tuner.pitch.n133[8] ), 
+    .COUT1(\tuner.pitch.n863 ), .COUT0(\tuner.pitch.n2574 ));
+  tuner_pitch_SLICE_31 \tuner.pitch.SLICE_31 ( .DI1(\tuner.pitch.n133[10] ), 
+    .DI0(\tuner.pitch.n133[9] ), .D1(\tuner.pitch.n2577 ), 
+    .C1(\tuner.pitch.counter[10] ), .D0(\tuner.pitch.n863 ), 
+    .C0(\tuner.pitch.counter[9] ), .LSR(\tuner.pitch.counter_31__N_338 ), 
+    .CLK(int_osc), .CIN0(\tuner.pitch.n863 ), .CIN1(\tuner.pitch.n2577 ), 
+    .Q0(\tuner.pitch.counter[9] ), .Q1(\tuner.pitch.counter[10] ), 
+    .F0(\tuner.pitch.n133[9] ), .F1(\tuner.pitch.n133[10] ), 
+    .COUT1(\tuner.pitch.n865 ), .COUT0(\tuner.pitch.n2577 ));
+  tuner_pitch_SLICE_32 \tuner.pitch.SLICE_32 ( .DI1(\tuner.pitch.n133[12] ), 
+    .DI0(\tuner.pitch.n133[11] ), .D1(\tuner.pitch.n2580 ), 
+    .C1(\tuner.pitch.counter[12] ), .D0(\tuner.pitch.n865 ), 
+    .C0(\tuner.pitch.counter[11] ), .LSR(\tuner.pitch.counter_31__N_338 ), 
+    .CLK(int_osc), .CIN0(\tuner.pitch.n865 ), .CIN1(\tuner.pitch.n2580 ), 
+    .Q0(\tuner.pitch.counter[11] ), .Q1(\tuner.pitch.counter[12] ), 
+    .F0(\tuner.pitch.n133[11] ), .F1(\tuner.pitch.n133[12] ), 
+    .COUT1(\tuner.pitch.n867 ), .COUT0(\tuner.pitch.n2580 ));
+  tuner_pitch_SLICE_33 \tuner.pitch.SLICE_33 ( .DI1(\tuner.pitch.n133[2] ), 
+    .DI0(\tuner.pitch.n133[1] ), .D1(\tuner.pitch.n2565 ), 
+    .C1(\tuner.pitch.counter[2] ), .D0(\tuner.pitch.n855 ), 
+    .C0(\tuner.pitch.counter[1] ), .LSR(\tuner.pitch.counter_31__N_338 ), 
+    .CLK(int_osc), .CIN0(\tuner.pitch.n855 ), .CIN1(\tuner.pitch.n2565 ), 
+    .Q0(\tuner.pitch.counter[1] ), .Q1(\tuner.pitch.counter[2] ), 
+    .F0(\tuner.pitch.n133[1] ), .F1(\tuner.pitch.n133[2] ), 
+    .COUT1(\tuner.pitch.n857 ), .COUT0(\tuner.pitch.n2565 ));
+  tuner_howLong_SLICE_34 \tuner.howLong.SLICE_34 ( 
+    .DI0(\tuner.howLong.n133[31] ), .D1(\tuner.howLong.n2559 ), 
+    .D0(\tuner.howLong.n918 ), .C0(\tuner.howLong.counter[31] ), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN0(\tuner.howLong.n918 ), .CIN1(\tuner.howLong.n2559 ), 
+    .Q0(\tuner.howLong.counter[31] ), .F0(\tuner.howLong.n133[31] ), 
+    .COUT0(\tuner.howLong.n2559 ));
+  tuner_howLong_SLICE_35 \tuner.howLong.SLICE_35 ( 
+    .DI1(\tuner.howLong.n133[30] ), .DI0(\tuner.howLong.n133[29] ), 
+    .D1(\tuner.howLong.n2556 ), .C1(\tuner.howLong.counter[30] ), 
+    .D0(\tuner.howLong.n916 ), .C0(\tuner.howLong.counter[29] ), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN0(\tuner.howLong.n916 ), .CIN1(\tuner.howLong.n2556 ), 
+    .Q0(\tuner.howLong.counter[29] ), .Q1(\tuner.howLong.counter[30] ), 
+    .F0(\tuner.howLong.n133[29] ), .F1(\tuner.howLong.n133[30] ), 
+    .COUT1(\tuner.howLong.n918 ), .COUT0(\tuner.howLong.n2556 ));
+  tuner_howLong_SLICE_36 \tuner.howLong.SLICE_36 ( 
+    .DI1(\tuner.howLong.n133[28] ), .DI0(\tuner.howLong.n133[27] ), 
+    .D1(\tuner.howLong.n2553 ), .C1(\tuner.howLong.counter[28] ), 
+    .D0(\tuner.howLong.n914 ), .C0(\tuner.howLong.counter[27] ), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN0(\tuner.howLong.n914 ), .CIN1(\tuner.howLong.n2553 ), 
+    .Q0(\tuner.howLong.counter[27] ), .Q1(\tuner.howLong.counter[28] ), 
+    .F0(\tuner.howLong.n133[27] ), .F1(\tuner.howLong.n133[28] ), 
+    .COUT1(\tuner.howLong.n916 ), .COUT0(\tuner.howLong.n2553 ));
+  tuner_howLong_SLICE_37 \tuner.howLong.SLICE_37 ( 
+    .DI1(\tuner.howLong.n133[26] ), .DI0(\tuner.howLong.n133[25] ), 
+    .D1(\tuner.howLong.n2550 ), .C1(\tuner.howLong.counter[26] ), 
+    .D0(\tuner.howLong.n912 ), .C0(\tuner.howLong.counter[25] ), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN0(\tuner.howLong.n912 ), .CIN1(\tuner.howLong.n2550 ), 
+    .Q0(\tuner.howLong.counter[25] ), .Q1(\tuner.howLong.counter[26] ), 
+    .F0(\tuner.howLong.n133[25] ), .F1(\tuner.howLong.n133[26] ), 
+    .COUT1(\tuner.howLong.n914 ), .COUT0(\tuner.howLong.n2550 ));
+  tuner_howLong_SLICE_38 \tuner.howLong.SLICE_38 ( 
+    .DI1(\tuner.howLong.n133[24] ), .DI0(\tuner.howLong.n133[23] ), 
+    .D1(\tuner.howLong.n2547 ), .C1(\tuner.howLong.counter[24] ), 
+    .D0(\tuner.howLong.n910 ), .C0(\tuner.howLong.counter[23] ), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN0(\tuner.howLong.n910 ), .CIN1(\tuner.howLong.n2547 ), 
+    .Q0(\tuner.howLong.counter[23] ), .Q1(\tuner.howLong.counter[24] ), 
+    .F0(\tuner.howLong.n133[23] ), .F1(\tuner.howLong.n133[24] ), 
+    .COUT1(\tuner.howLong.n912 ), .COUT0(\tuner.howLong.n2547 ));
+  tuner_howLong_SLICE_39 \tuner.howLong.SLICE_39 ( 
+    .DI1(\tuner.howLong.n133[22] ), .DI0(\tuner.howLong.n133[21] ), 
+    .D1(\tuner.howLong.n2544 ), .C1(\tuner.howLong.counter[22] ), 
+    .D0(\tuner.howLong.n908 ), .C0(\tuner.howLong.counter[21] ), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN0(\tuner.howLong.n908 ), .CIN1(\tuner.howLong.n2544 ), 
+    .Q0(\tuner.howLong.counter[21] ), .Q1(\tuner.howLong.counter[22] ), 
+    .F0(\tuner.howLong.n133[21] ), .F1(\tuner.howLong.n133[22] ), 
+    .COUT1(\tuner.howLong.n910 ), .COUT0(\tuner.howLong.n2544 ));
+  tuner_howLong_SLICE_40 \tuner.howLong.SLICE_40 ( 
+    .DI1(\tuner.howLong.n133[20] ), .DI0(\tuner.howLong.n133[19] ), 
+    .D1(\tuner.howLong.n2541 ), .C1(\tuner.howLong.counter[20] ), 
+    .D0(\tuner.howLong.n906 ), .C0(\tuner.howLong.counter[19] ), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN0(\tuner.howLong.n906 ), .CIN1(\tuner.howLong.n2541 ), 
+    .Q0(\tuner.howLong.counter[19] ), .Q1(\tuner.howLong.counter[20] ), 
+    .F0(\tuner.howLong.n133[19] ), .F1(\tuner.howLong.n133[20] ), 
+    .COUT1(\tuner.howLong.n908 ), .COUT0(\tuner.howLong.n2541 ));
+  tuner_howLong_SLICE_41 \tuner.howLong.SLICE_41 ( 
+    .DI1(\tuner.howLong.n133[18] ), .DI0(\tuner.howLong.n133[17] ), 
+    .D1(\tuner.howLong.n2538 ), .C1(\tuner.howLong.counter[18] ), 
+    .D0(\tuner.howLong.n904 ), .C0(\tuner.howLong.counter[17] ), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN0(\tuner.howLong.n904 ), .CIN1(\tuner.howLong.n2538 ), 
+    .Q0(\tuner.howLong.counter[17] ), .Q1(\tuner.howLong.counter[18] ), 
+    .F0(\tuner.howLong.n133[17] ), .F1(\tuner.howLong.n133[18] ), 
+    .COUT1(\tuner.howLong.n906 ), .COUT0(\tuner.howLong.n2538 ));
+  tuner_howLong_SLICE_42 \tuner.howLong.SLICE_42 ( 
+    .DI1(\tuner.howLong.n133[16] ), .DI0(\tuner.howLong.n133[15] ), 
+    .D1(\tuner.howLong.n2535 ), .C1(\tuner.howLong.counter[16] ), 
+    .D0(\tuner.howLong.n902 ), .C0(\tuner.howLong.counter[15] ), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN0(\tuner.howLong.n902 ), .CIN1(\tuner.howLong.n2535 ), 
+    .Q0(\tuner.howLong.counter[15] ), .Q1(\tuner.howLong.counter[16] ), 
+    .F0(\tuner.howLong.n133[15] ), .F1(\tuner.howLong.n133[16] ), 
+    .COUT1(\tuner.howLong.n904 ), .COUT0(\tuner.howLong.n2535 ));
+  tuner_howLong_SLICE_43 \tuner.howLong.SLICE_43 ( 
+    .DI1(\tuner.howLong.n133[14] ), .DI0(\tuner.howLong.n133[13] ), 
+    .D1(\tuner.howLong.n2532 ), .C1(\tuner.howLong.counter[14] ), 
+    .D0(\tuner.howLong.n900 ), .C0(\tuner.howLong.counter[13] ), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN0(\tuner.howLong.n900 ), .CIN1(\tuner.howLong.n2532 ), 
+    .Q0(\tuner.howLong.counter[13] ), .Q1(\tuner.howLong.counter[14] ), 
+    .F0(\tuner.howLong.n133[13] ), .F1(\tuner.howLong.n133[14] ), 
+    .COUT1(\tuner.howLong.n902 ), .COUT0(\tuner.howLong.n2532 ));
+  tuner_howLong_SLICE_44 \tuner.howLong.SLICE_44 ( 
+    .DI1(\tuner.howLong.n133[12] ), .DI0(\tuner.howLong.n133[11] ), 
+    .D1(\tuner.howLong.n2529 ), .C1(\tuner.howLong.counter[12] ), 
+    .D0(\tuner.howLong.n898 ), .C0(\tuner.howLong.counter[11] ), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN0(\tuner.howLong.n898 ), .CIN1(\tuner.howLong.n2529 ), 
+    .Q0(\tuner.howLong.counter[11] ), .Q1(\tuner.howLong.counter[12] ), 
+    .F0(\tuner.howLong.n133[11] ), .F1(\tuner.howLong.n133[12] ), 
+    .COUT1(\tuner.howLong.n900 ), .COUT0(\tuner.howLong.n2529 ));
+  tuner_howLong_SLICE_45 \tuner.howLong.SLICE_45 ( 
+    .DI1(\tuner.howLong.n133[10] ), .DI0(\tuner.howLong.n133[9] ), 
+    .D1(\tuner.howLong.n2526 ), .C1(\tuner.howLong.counter[10] ), 
+    .D0(\tuner.howLong.n896 ), .C0(\tuner.howLong.counter[9] ), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN0(\tuner.howLong.n896 ), .CIN1(\tuner.howLong.n2526 ), 
+    .Q0(\tuner.howLong.counter[9] ), .Q1(\tuner.howLong.counter[10] ), 
+    .F0(\tuner.howLong.n133[9] ), .F1(\tuner.howLong.n133[10] ), 
+    .COUT1(\tuner.howLong.n898 ), .COUT0(\tuner.howLong.n2526 ));
+  tuner_howLong_SLICE_46 \tuner.howLong.SLICE_46 ( 
+    .DI1(\tuner.howLong.n133[8] ), .DI0(\tuner.howLong.n133[7] ), 
+    .D1(\tuner.howLong.n2523 ), .C1(\tuner.howLong.counter[8] ), 
+    .D0(\tuner.howLong.n894 ), .C0(\tuner.howLong.counter[7] ), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN0(\tuner.howLong.n894 ), .CIN1(\tuner.howLong.n2523 ), 
+    .Q0(\tuner.howLong.counter[7] ), .Q1(\tuner.howLong.counter[8] ), 
+    .F0(\tuner.howLong.n133[7] ), .F1(\tuner.howLong.n133[8] ), 
+    .COUT1(\tuner.howLong.n896 ), .COUT0(\tuner.howLong.n2523 ));
+  tuner_howLong_SLICE_47 \tuner.howLong.SLICE_47 ( 
+    .DI1(\tuner.howLong.n133[6] ), .DI0(\tuner.howLong.n133[5] ), 
+    .D1(\tuner.howLong.n2520 ), .C1(\tuner.howLong.counter[6] ), 
+    .D0(\tuner.howLong.n892 ), .C0(\tuner.howLong.counter[5] ), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN0(\tuner.howLong.n892 ), .CIN1(\tuner.howLong.n2520 ), 
+    .Q0(\tuner.howLong.counter[5] ), .Q1(\tuner.howLong.counter[6] ), 
+    .F0(\tuner.howLong.n133[5] ), .F1(\tuner.howLong.n133[6] ), 
+    .COUT1(\tuner.howLong.n894 ), .COUT0(\tuner.howLong.n2520 ));
+  tuner_howLong_SLICE_48 \tuner.howLong.SLICE_48 ( 
+    .DI1(\tuner.howLong.n133[4] ), .DI0(\tuner.howLong.n133[3] ), 
+    .D1(\tuner.howLong.n2517 ), .C1(\tuner.howLong.counter[4] ), 
+    .D0(\tuner.howLong.n890 ), .C0(\tuner.howLong.counter[3] ), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN0(\tuner.howLong.n890 ), .CIN1(\tuner.howLong.n2517 ), 
+    .Q0(\tuner.howLong.counter[3] ), .Q1(\tuner.howLong.counter[4] ), 
+    .F0(\tuner.howLong.n133[3] ), .F1(\tuner.howLong.n133[4] ), 
+    .COUT1(\tuner.howLong.n892 ), .COUT0(\tuner.howLong.n2517 ));
+  tuner_howLong_SLICE_49 \tuner.howLong.SLICE_49 ( 
+    .DI1(\tuner.howLong.n133[2] ), .DI0(\tuner.howLong.n133[1] ), 
+    .D1(\tuner.howLong.n2514 ), .C1(\tuner.howLong.counter[2] ), 
+    .D0(\tuner.howLong.n888 ), .C0(\tuner.howLong.counter[1] ), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN0(\tuner.howLong.n888 ), .CIN1(\tuner.howLong.n2514 ), 
+    .Q0(\tuner.howLong.counter[1] ), .Q1(\tuner.howLong.counter[2] ), 
+    .F0(\tuner.howLong.n133[1] ), .F1(\tuner.howLong.n133[2] ), 
+    .COUT1(\tuner.howLong.n890 ), .COUT0(\tuner.howLong.n2514 ));
+  tuner_howLong_SLICE_50 \tuner.howLong.SLICE_50 ( 
+    .DI1(\tuner.howLong.n133[0] ), .D1(\tuner.howLong.n2460 ), 
+    .C1(\tuner.howLong.counter[0] ), .B1(VCC_net), 
+    .LSR(\tuner.howLong.counter_31__N_273 ), .CLK(int_osc), 
+    .CIN1(\tuner.howLong.n2460 ), .Q1(\tuner.howLong.counter[0] ), 
+    .F1(\tuner.howLong.n133[0] ), .COUT1(\tuner.howLong.n888 ), 
+    .COUT0(\tuner.howLong.n2460 ));
+  tuner_SLICE_53 \tuner.SLICE_53 ( .DI1(\tuner.n774 ), .DI0(\tuner.n777 ), 
+    .D1(\state[2] ), .C1(\state[0] ), .B1(\state[1] ), .D0(\state[0] ), 
+    .C0(\state[2] ), .A0(\state[1] ), .CE(\tuner.n662 ), .CLK(int_osc), 
+    .Q0(\tuner.freqThreshold[9] ), .Q1(\tuner.freqThreshold[8] ), 
+    .F0(\tuner.n777 ), .F1(\tuner.n774 ));
+  SLICE_56 SLICE_56( .DI1(n670), .DI0(n683), .D1(\state[2] ), .C1(\state[0] ), 
+    .B1(\state[1] ), .A1(\freqThreshold[0] ), .D0(\state[0] ), .C0(\state[2] ), 
+    .B0(\freqThreshold[1] ), .A0(\state[1] ), .CLK(int_osc), 
+    .Q0(\freqThreshold[1] ), .Q1(\freqThreshold[0] ), .F0(n683), .F1(n670));
+  SLICE_57 SLICE_57( .DI1(n681), .DI0(n682), .D1(\state[2] ), .C1(\state[0] ), 
+    .B1(\state[1] ), .A1(\freqThreshold[3] ), .D0(\freqThreshold[2] ), 
+    .C0(\state[2] ), .B0(\state[0] ), .A0(\state[1] ), .CLK(int_osc), 
+    .Q0(\freqThreshold[2] ), .Q1(\freqThreshold[3] ), .F0(n682), .F1(n681));
+  SLICE_59 SLICE_59( .DI1(n679), .DI0(n680), .D1(\state[2] ), .C1(\state[0] ), 
+    .B1(\state[1] ), .A1(\freqThreshold[5] ), .D0(\freqThreshold[4] ), 
+    .C0(\state[2] ), .B0(\state[0] ), .A0(\state[1] ), .CLK(int_osc), 
+    .Q0(\freqThreshold[4] ), .Q1(\freqThreshold[5] ), .F0(n680), .F1(n679));
+  SLICE_61 SLICE_61( .DI1(n677), .DI0(n678), .D1(\state[2] ), .C1(\state[0] ), 
+    .B1(\state[1] ), .A1(\freqThreshold[10] ), .D0(\state[0] ), 
+    .C0(\state[2] ), .B0(\freqThreshold[7] ), .A0(\state[1] ), .CLK(int_osc), 
+    .Q0(\freqThreshold[7] ), .Q1(\freqThreshold[10] ), .F0(n678), .F1(n677));
+  SLICE_63 SLICE_63( .DI1(n675), .DI0(n676), .D1(\state[2] ), .C1(\state[0] ), 
+    .B1(\state[1] ), .A1(\freqThreshold[12] ), .D0(\state[0] ), 
+    .C0(\state[2] ), .B0(\freqThreshold[11] ), .A0(\state[1] ), .CLK(int_osc), 
+    .Q0(\freqThreshold[11] ), .Q1(\freqThreshold[12] ), .F0(n676), .F1(n675));
+  SLICE_65 SLICE_65( .DI1(n7), .DI0(n674), .D1(\state[2] ), .C1(\state[0] ), 
+    .B1(\state[1] ), .A1(\freqThreshold[14] ), .D0(\state[0] ), 
+    .C0(\state[2] ), .B0(\freqThreshold[13] ), .A0(\state[1] ), .CLK(int_osc), 
+    .Q0(\freqThreshold[13] ), .Q1(\freqThreshold[14] ), .F0(n674), .F1(n7));
+  tuner_pitch_SLICE_69 \tuner.pitch.SLICE_69 ( .DI0(\tuner.pitch.pwm_N_342 ), 
+    .D0(\tuner.pitch.n63 ), .C0(pwm_c), .CLK(int_osc), .Q0(pwm_c), 
+    .F0(\tuner.pitch.pwm_N_342 ));
+  tuner_SLICE_72 \tuner.SLICE_72 ( .D1(\tuner.counter[11] ), .C1(\tuner.n34 ), 
+    .B1(\tuner.counter[21] ), .A1(\tuner.n48 ), .D0(\tuner.counter[26] ), 
+    .C0(\tuner.counter[25] ), .F0(\tuner.n34 ), .F1(\tuner.n54 ));
+  tuner_SLICE_74 \tuner.SLICE_74 ( .D1(\tuner.counter[7] ), 
+    .C1(\tuner.counter[22] ), .B1(\tuner.counter[19] ), 
+    .A1(\tuner.counter[14] ), .D0(\tuner.counter[23] ), 
+    .C0(\tuner.counter[15] ), .B0(\tuner.counter[13] ), 
+    .A0(\tuner.counter[29] ), .F0(\tuner.n52 ), .F1(\tuner.n50 ));
+  tuner_SLICE_75 \tuner.SLICE_75 ( .D1(\tuner.n51 ), .C1(\tuner.n49 ), 
+    .B1(\tuner.n50 ), .A1(\tuner.n52 ), .D0(\tuner.counter[30] ), 
+    .C0(\tuner.counter[27] ), .B0(\tuner.counter[2] ), .A0(\tuner.counter[8] ), 
+    .F0(\tuner.n49 ), .F1(\tuner.n58 ));
+  tuner_SLICE_76 \tuner.SLICE_76 ( .D1(\tuner.counter[3] ), .C1(\tuner.n46 ), 
+    .B1(\tuner.counter[31] ), .D0(\tuner.counter[4] ), 
+    .C0(\tuner.counter[18] ), .B0(\tuner.counter[16] ), 
+    .A0(\tuner.counter[28] ), .F0(\tuner.n46 ), .F1(\tuner.n53 ));
+  tuner_SLICE_78 \tuner.SLICE_78 ( .D1(\tuner.counter[1] ), .C1(\tuner.n4 ), 
+    .B1(\tuner.done ), .A1(\tuner.n626 ), .D0(\tuner.n58 ), .C0(\tuner.n54 ), 
+    .B0(\tuner.n53 ), .A0(\tuner.counter[0] ), .F0(\tuner.n4 ), 
+    .F1(\tuner.n780 ));
+  tuner_pitch_SLICE_80 \tuner.pitch.SLICE_80 ( .D0(\tuner.pitch.counter[22] ), 
+    .C0(\tuner.pitch.counter[26] ), .B0(\tuner.pitch.counter[25] ), 
+    .A0(\tuner.pitch.counter[28] ), .F0(\tuner.pitch.n28 ));
+  tuner_pitch_SLICE_81 \tuner.pitch.SLICE_81 ( .D1(\tuner.pitch.n32 ), 
+    .C1(\tuner.pitch.n1274 ), .B1(\tuner.pitch.n27 ), .A1(\tuner.pitch.n28 ), 
+    .D0(\tuner.pitch.n28_adj_343 ), .C0(\tuner.pitch.n23 ), 
+    .B0(\tuner.pitch.n18 ), .A0(\tuner.pitch.n17 ), .F0(\tuner.pitch.n1274 ), 
+    .F1(\tuner.pitch.n63 ));
+  tuner_pitch_SLICE_82 \tuner.pitch.SLICE_82 ( .D1(\tuner.pitch.n26 ), 
+    .C1(\tuner.pitch.n29 ), .B1(\tuner.pitch.counter[23] ), 
+    .A1(\tuner.pitch.counter[27] ), .D0(\tuner.pitch.counter[19] ), 
+    .C0(\tuner.pitch.counter[21] ), .B0(\tuner.pitch.counter[30] ), 
+    .A0(\tuner.pitch.counter[29] ), .F0(\tuner.pitch.n29 ), 
+    .F1(\tuner.pitch.n32 ));
+  tuner_pitch_SLICE_85 \tuner.pitch.SLICE_85 ( .D1(\freqThreshold[15] ), 
+    .C1(\tuner.pitch.n16 ), .A1(\tuner.pitch.counter[15] ), 
+    .D0(\tuner.pitch.counter[8] ), .C0(\tuner.freqThreshold[8] ), 
+    .B0(\tuner.pitch.counter[0] ), .A0(\freqThreshold[0] ), 
+    .F0(\tuner.pitch.n16 ), .F1(\tuner.pitch.n23 ));
+  tuner_pitch_SLICE_86 \tuner.pitch.SLICE_86 ( .D1(\tuner.pitch.counter[13] ), 
+    .C1(\tuner.pitch.counter[14] ), .B1(\freqThreshold[14] ), 
+    .A1(\freqThreshold[13] ), .D0(\freqThreshold[11] ), 
+    .C0(\tuner.pitch.counter[7] ), .B0(\tuner.pitch.counter[11] ), 
+    .A0(\freqThreshold[7] ), .F0(\tuner.pitch.n22 ), .F1(\tuner.pitch.n21 ));
+  tuner_pitch_SLICE_87 \tuner.pitch.SLICE_87 ( .D1(\tuner.pitch.n20 ), 
+    .C1(\tuner.pitch.n19 ), .B1(\tuner.pitch.n21 ), .A1(\tuner.pitch.n22 ), 
+    .D0(\tuner.freqThreshold[9] ), .C0(\tuner.pitch.counter[9] ), 
+    .B0(\tuner.pitch.counter[10] ), .A0(\freqThreshold[10] ), 
+    .F0(\tuner.pitch.n19 ), .F1(\tuner.pitch.n28_adj_343 ));
+  tuner_howLong_SLICE_88 \tuner.howLong.SLICE_88 ( .D1(\tuner.howLong.n38 ), 
+    .C1(\tuner.howLong.n28 ), .B1(\tuner.howLong.counter[25] ), 
+    .A1(\tuner.howLong.counter[26] ), .D0(\tuner.howLong.counter[1] ), 
+    .C0(\tuner.howLong.counter[4] ), .F0(\tuner.howLong.n28 ), 
+    .F1(\tuner.howLong.n42 ));
+  tuner_howLong_SLICE_90 \tuner.howLong.SLICE_90 ( 
+    .D0(\tuner.howLong.counter[2] ), .C0(\tuner.howLong.counter[11] ), 
+    .B0(\tuner.howLong.counter[8] ), .A0(\tuner.howLong.counter[16] ), 
+    .F0(\tuner.howLong.n36 ));
+  tuner_howLong_SLICE_91 \tuner.howLong.SLICE_91 ( 
+    .D1(\tuner.howLong.counter[0] ), .C1(\tuner.howLong.n1528 ), 
+    .B1(\tuner.howLong.n36 ), .A1(\tuner.howLong.counter[28] ), 
+    .D0(\tuner.howLong.counter[24] ), .C0(\tuner.howLong.counter[22] ), 
+    .B0(\tuner.howLong.counter[13] ), .A0(\tuner.howLong.counter[9] ), 
+    .F0(\tuner.howLong.n1528 ), .F1(\tuner.howLong.n41 ));
+  tuner_howLong_SLICE_92 \tuner.howLong.SLICE_92 ( 
+    .D0(\tuner.howLong.counter[3] ), .C0(\tuner.howLong.counter[23] ), 
+    .B0(\tuner.howLong.counter[29] ), .A0(\tuner.howLong.counter[31] ), 
+    .F0(\tuner.howLong.n40 ));
+  tuner_howLong_SLICE_93 \tuner.howLong.SLICE_93 ( 
+    .D1(\tuner.howLong.counter[10] ), .C1(\tuner.howLong.n1358 ), 
+    .B1(\tuner.howLong.n12 ), .A1(\tuner.howLong.counter[21] ), 
+    .D0(\tuner.howLong.n41 ), .C0(\tuner.howLong.n42 ), 
+    .B0(\tuner.howLong.n40 ), .A0(\tuner.howLong.n39 ), 
+    .F0(\tuner.howLong.n1358 ), .F1(\tuner.howLong.counter_31__N_273 ));
+  tuner_howLong_SLICE_94 \tuner.howLong.SLICE_94 ( 
+    .DI1(\tuner.howLong.counter_31__N_273$n0 ), .D1(\tuner.howLong.n1358 ), 
+    .C1(\tuner.howLong.n12 ), .B1(\tuner.howLong.counter[10] ), 
+    .A1(\tuner.howLong.counter[21] ), .D0(\tuner.howLong.counter[12] ), 
+    .C0(\tuner.howLong.counter[18] ), .B0(\tuner.howLong.counter[19] ), 
+    .A0(\tuner.howLong.counter[17] ), .CLK(int_osc), .Q1(\tuner.done ), 
+    .F0(\tuner.howLong.n12 ), .F1(\tuner.howLong.counter_31__N_273$n0 ));
+  tuner_SLICE_96 \tuner.SLICE_96 ( .DI1(\tuner.nextstate[0] ), .D1(\state[2] ), 
+    .C1(\state[0] ), .B1(\state[1] ), .A1(\tuner.done ), .D0(\state[0] ), 
+    .C0(\state[2] ), .A0(\state[1] ), .CLK(int_osc), .Q1(\state[0] ), 
+    .F0(\tuner.n663 ), .F1(\tuner.nextstate[0] ));
+  tuner_SLICE_97 \tuner.SLICE_97 ( .DI1(\tuner.en_N_206 ), .D1(\state[2] ), 
+    .C1(\state[0] ), .B1(\state[1] ), .D0(\state[0] ), .C0(\state[2] ), 
+    .A0(\state[1] ), .CLK(int_osc), .Q1(\tuner.en ), .F0(\tuner.n662 ), 
+    .F1(\tuner.en_N_206 ));
+  tuner_SLICE_99 \tuner.SLICE_99 ( .D0(\tuner.counter[20] ), 
+    .C0(\tuner.counter[10] ), .B0(\tuner.counter[5] ), .A0(\tuner.counter[6] ), 
+    .F0(\tuner.n51 ));
+  tuner_pitch_SLICE_102 \tuner.pitch.SLICE_102 ( .C0(\tuner.pitch.n63 ), 
+    .A0(\tuner.en ), .F0(\tuner.pitch.counter_31__N_338 ));
+  tuner_pitch_SLICE_103 \tuner.pitch.SLICE_103 ( .D0(\tuner.pitch.counter[6] ), 
+    .C0(\tuner.pitch.counter[18] ), .B0(\tuner.pitch.counter[17] ), 
+    .A0(\tuner.pitch.counter[20] ), .F0(\tuner.pitch.n27 ));
+  tuner_pitch_SLICE_104 \tuner.pitch.SLICE_104 ( .D0(\freqThreshold[2] ), 
+    .C0(\tuner.pitch.counter[4] ), .B0(\freqThreshold[4] ), 
+    .A0(\tuner.pitch.counter[2] ), .F0(\tuner.pitch.n17 ));
+  tuner_pitch_SLICE_105 \tuner.pitch.SLICE_105 ( .D0(\freqThreshold[1] ), 
+    .C0(\tuner.pitch.counter[12] ), .B0(\freqThreshold[12] ), 
+    .A0(\tuner.pitch.counter[1] ), .F0(\tuner.pitch.n18 ));
+  tuner_pitch_SLICE_106 \tuner.pitch.SLICE_106 ( .D0(\freqThreshold[3] ), 
+    .C0(\tuner.pitch.counter[3] ), .B0(\freqThreshold[5] ), 
+    .A0(\tuner.pitch.counter[5] ), .F0(\tuner.pitch.n20 ));
+  tuner_SLICE_107 \tuner.SLICE_107 ( .DI1(\tuner.nextstate[2] ), 
+    .D1(\state[2] ), .C1(\tuner.n780 ), .B1(\state[1] ), .A1(\tuner.n1 ), 
+    .D0(\state[0] ), .C0(\state[2] ), .A0(\state[1] ), .CLK(int_osc), 
+    .Q1(\state[2] ), .F0(\tuner.n373[5] ), .F1(\tuner.nextstate[2] ));
+  SLICE_108 SLICE_108( .F0(VCC_net));
+  tuner_SLICE_109 \tuner.SLICE_109 ( .DI1(n673), .D1(\state[2] ), 
+    .C1(\state[0] ), .B1(\state[1] ), .A1(\freqThreshold[15] ), 
+    .D0(\state[0] ), .B0(\tuner.done ), .CLK(int_osc), 
+    .Q1(\freqThreshold[15] ), .F0(\tuner.n1 ), .F1(n673));
+  tuner_SLICE_110 \tuner.SLICE_110 ( .D0(\tuner.counter[24] ), 
+    .C0(\tuner.counter[12] ), .B0(\tuner.counter[9] ), 
+    .A0(\tuner.counter[17] ), .F0(\tuner.n48 ));
+  tuner_SLICE_112 \tuner.SLICE_112 ( .DI1(\tuner.n3 ), .D1(\state[0] ), 
+    .C1(\state[1] ), .B1(\tuner.done ), .C0(\state[0] ), .B0(\state[1] ), 
+    .LSR(\state[2] ), .CLK(int_osc), .Q1(\state[1] ), .F0(\tuner.n626 ), 
+    .F1(\tuner.n3 ));
+  tuner_pitch_SLICE_113 \tuner.pitch.SLICE_113 ( 
+    .D0(\tuner.pitch.counter[24] ), .C0(\tuner.pitch.counter[16] ), 
+    .B0(\tuner.pitch.counter[31] ), .F0(\tuner.pitch.n26 ));
+  tuner_howLong_SLICE_115 \tuner.howLong.SLICE_115 ( 
+    .D1(\tuner.howLong.counter[5] ), .C1(\tuner.howLong.counter[6] ), 
+    .B1(\tuner.howLong.counter[15] ), .A1(\tuner.howLong.counter[20] ), 
+    .D0(\tuner.howLong.counter[27] ), .C0(\tuner.howLong.counter[30] ), 
+    .B0(\tuner.howLong.counter[14] ), .A0(\tuner.howLong.counter[7] ), 
+    .F0(\tuner.howLong.n38 ), .F1(\tuner.howLong.n39 ));
+  hf_osc hf_osc( .CLKHFPU(VCC_net), .CLKHFEN(VCC_net), .CLKHF(int_osc));
   pwm pwm_I( .PADDO(pwm_c), .pwm(pwm));
 endmodule
 
-module freqer_SLICE_0 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1, 
+module tuner_SLICE_0 ( input DI1, DI0, D1, C1, D0, C0, CE, CLK, CIN0, CIN1, 
     output Q0, Q1, F0, F1, COUT1, COUT0 );
-  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
 
-  fa2 \freqer/counter_7_add_4_27 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+  fa2 \tuner/counter_89_add_4_7 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
     .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
     .S1(F1), .CO0(COUT0), .CO1(COUT1));
   gnd DRIVEGND( .PWR0(GNDI));
-  ffsre2 \freqer/counter_7__i25 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q0));
-  vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/counter_7__i26 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q1));
+  ffsre2 \tuner/counter_89__i5 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+  ffsre2 \tuner/counter_89__i6 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
 
   specify
     (D1 => F1) = (0:0:0,0:0:0);
@@ -220,7 +731,7 @@ module freqer_SLICE_0 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1,
     (CIN1 => COUT1) = (0:0:0,0:0:0);
     $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
     $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
-    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
   endspecify
 
 endmodule
@@ -246,24 +757,111 @@ module ffsre2 ( input D0, SP, CK, LSR, output Q );
   defparam INST01.SRMODE = "CE_OVER_LSR";
 endmodule
 
+module tuner_SLICE_1 ( input DI1, DI0, D1, C1, D0, C0, CE, CLK, CIN0, CIN1, 
+    output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  fa2 \tuner/counter_89_add_4_5 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/counter_89__i3 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+  ffsre2 \tuner/counter_89__i4 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module tuner_SLICE_2 ( input DI1, DI0, D1, C1, D0, C0, CE, CLK, CIN0, CIN1, 
+    output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  fa2 \tuner/counter_89_add_4_3 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/counter_89__i1 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+  ffsre2 \tuner/counter_89__i2 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module tuner_SLICE_3 ( input DI1, D1, C1, B1, CE, CLK, CIN1, output Q1, F1, 
+    COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, CE_dly;
+
+  fa2 \tuner/counter_89_add_4_1 ( .A0(GNDI), .B0(GNDI), .C0(GNDI), .D0(VCCI), 
+    .A1(GNDI), .B1(B1), .C1(C1), .D1(D1), .CI0(VCCI), .CI1(CIN1), .S0(), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/counter_89__i0 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (B1 => COUT1) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
 module vcc ( output PWR1 );
 
   VHI INST1( .Z(PWR1));
 endmodule
 
-module freqer_SLICE_1 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1, 
+module tuner_SLICE_4 ( input DI1, DI0, D1, C1, D0, C0, CE, CLK, CIN0, CIN1, 
     output Q0, Q1, F0, F1, COUT1, COUT0 );
-  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
 
-  fa2 \freqer/counter_7_add_4_25 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+  fa2 \tuner/counter_89_add_4_27 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
     .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
     .S1(F1), .CO0(COUT0), .CO1(COUT1));
   gnd DRIVEGND( .PWR0(GNDI));
-  ffsre2 \freqer/counter_7__i23 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q0));
-  vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/counter_7__i24 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q1));
+  ffsre2 \tuner/counter_89__i25 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+  ffsre2 \tuner/counter_89__i26 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
 
   specify
     (D1 => F1) = (0:0:0,0:0:0);
@@ -278,24 +876,23 @@ module freqer_SLICE_1 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1,
     (CIN1 => COUT1) = (0:0:0,0:0:0);
     $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
     $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
-    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
   endspecify
 
 endmodule
 
-module freqer_SLICE_2 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1, 
+module tuner_SLICE_5 ( input DI1, DI0, D1, C1, D0, C0, CE, CLK, CIN0, CIN1, 
     output Q0, Q1, F0, F1, COUT1, COUT0 );
-  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
 
-  fa2 \freqer/counter_7_add_4_23 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+  fa2 \tuner/counter_89_add_4_29 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
     .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
     .S1(F1), .CO0(COUT0), .CO1(COUT1));
   gnd DRIVEGND( .PWR0(GNDI));
-  ffsre2 \freqer/counter_7__i21 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q0));
-  vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/counter_7__i22 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q1));
+  ffsre2 \tuner/counter_89__i27 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+  ffsre2 \tuner/counter_89__i28 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
 
   specify
     (D1 => F1) = (0:0:0,0:0:0);
@@ -310,24 +907,23 @@ module freqer_SLICE_2 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1,
     (CIN1 => COUT1) = (0:0:0,0:0:0);
     $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
     $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
-    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
   endspecify
 
 endmodule
 
-module freqer_SLICE_3 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1, 
+module tuner_SLICE_6 ( input DI1, DI0, D1, C1, D0, C0, CE, CLK, CIN0, CIN1, 
     output Q0, Q1, F0, F1, COUT1, COUT0 );
-  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
 
-  fa2 \freqer/counter_7_add_4_21 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+  fa2 \tuner/counter_89_add_4_31 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
     .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
     .S1(F1), .CO0(COUT0), .CO1(COUT1));
   gnd DRIVEGND( .PWR0(GNDI));
-  ffsre2 \freqer/counter_7__i19 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q0));
-  vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/counter_7__i20 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q1));
+  ffsre2 \tuner/counter_89__i29 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+  ffsre2 \tuner/counter_89__i30 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
 
   specify
     (D1 => F1) = (0:0:0,0:0:0);
@@ -342,118 +938,21 @@ module freqer_SLICE_3 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1,
     (CIN1 => COUT1) = (0:0:0,0:0:0);
     $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
     $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
-    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
   endspecify
 
 endmodule
 
-module freqer_SLICE_4 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1, 
-    output Q0, Q1, F0, F1, COUT1, COUT0 );
-  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
-
-  fa2 \freqer/counter_7_add_4_19 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
-    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
-    .S1(F1), .CO0(COUT0), .CO1(COUT1));
-  gnd DRIVEGND( .PWR0(GNDI));
-  ffsre2 \freqer/counter_7__i17 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q0));
-  vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/counter_7__i18 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q1));
-
-  specify
-    (D1 => F1) = (0:0:0,0:0:0);
-    (C1 => F1) = (0:0:0,0:0:0);
-    (C1 => COUT1) = (0:0:0,0:0:0);
-    (D0 => F0) = (0:0:0,0:0:0);
-    (C0 => F0) = (0:0:0,0:0:0);
-    (C0 => COUT0) = (0:0:0,0:0:0);
-    (CLK => Q0) = (0:0:0,0:0:0);
-    (CLK => Q1) = (0:0:0,0:0:0);
-    (CIN0 => COUT0) = (0:0:0,0:0:0);
-    (CIN1 => COUT1) = (0:0:0,0:0:0);
-    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
-    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
-    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
-  endspecify
-
-endmodule
-
-module freqer_SLICE_5 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1, 
-    output Q0, Q1, F0, F1, COUT1, COUT0 );
-  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
-
-  fa2 \freqer/counter_7_add_4_17 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
-    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
-    .S1(F1), .CO0(COUT0), .CO1(COUT1));
-  gnd DRIVEGND( .PWR0(GNDI));
-  ffsre2 \freqer/counter_7__i15 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q0));
-  vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/counter_7__i16 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q1));
-
-  specify
-    (D1 => F1) = (0:0:0,0:0:0);
-    (C1 => F1) = (0:0:0,0:0:0);
-    (C1 => COUT1) = (0:0:0,0:0:0);
-    (D0 => F0) = (0:0:0,0:0:0);
-    (C0 => F0) = (0:0:0,0:0:0);
-    (C0 => COUT0) = (0:0:0,0:0:0);
-    (CLK => Q0) = (0:0:0,0:0:0);
-    (CLK => Q1) = (0:0:0,0:0:0);
-    (CIN0 => COUT0) = (0:0:0,0:0:0);
-    (CIN1 => COUT1) = (0:0:0,0:0:0);
-    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
-    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
-    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
-  endspecify
-
-endmodule
-
-module freqer_SLICE_6 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1, 
-    output Q0, Q1, F0, F1, COUT1, COUT0 );
-  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
-
-  fa2 \freqer/counter_7_add_4_15 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
-    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
-    .S1(F1), .CO0(COUT0), .CO1(COUT1));
-  gnd DRIVEGND( .PWR0(GNDI));
-  ffsre2 \freqer/counter_7__i13 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q0));
-  vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/counter_7__i14 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q1));
-
-  specify
-    (D1 => F1) = (0:0:0,0:0:0);
-    (C1 => F1) = (0:0:0,0:0:0);
-    (C1 => COUT1) = (0:0:0,0:0:0);
-    (D0 => F0) = (0:0:0,0:0:0);
-    (C0 => F0) = (0:0:0,0:0:0);
-    (C0 => COUT0) = (0:0:0,0:0:0);
-    (CLK => Q0) = (0:0:0,0:0:0);
-    (CLK => Q1) = (0:0:0,0:0:0);
-    (CIN0 => COUT0) = (0:0:0,0:0:0);
-    (CIN1 => COUT1) = (0:0:0,0:0:0);
-    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
-    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
-    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
-  endspecify
-
-endmodule
-
-module freqer_SLICE_7 ( input DI0, D1, D0, C0, LSR, CLK, CIN0, CIN1, output Q0, 
+module tuner_SLICE_7 ( input DI0, D1, D0, C0, CE, CLK, CIN0, CIN1, output Q0, 
     F0, COUT0 );
-  wire   GNDI, VCCI, DI0_dly, CLK_dly, LSR_dly;
+  wire   GNDI, DI0_dly, CLK_dly, CE_dly;
 
-  fa2 \freqer/counter_7_add_4_33 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+  fa2 \tuner/counter_89_add_4_33 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
     .A1(GNDI), .B1(GNDI), .C1(GNDI), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
     .S1(), .CO0(COUT0), .CO1());
   gnd DRIVEGND( .PWR0(GNDI));
-  ffsre2 \freqer/counter_7__i31 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q0));
-  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/counter_89__i31 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
 
   specify
     (D0 => F0) = (0:0:0,0:0:0);
@@ -462,24 +961,23 @@ module freqer_SLICE_7 ( input DI0, D1, D0, C0, LSR, CLK, CIN0, CIN1, output Q0,
     (CLK => Q0) = (0:0:0,0:0:0);
     (CIN0 => COUT0) = (0:0:0,0:0:0);
     $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
-    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
   endspecify
 
 endmodule
 
-module freqer_SLICE_8 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1, 
+module tuner_SLICE_8 ( input DI1, DI0, D1, C1, D0, C0, CE, CLK, CIN0, CIN1, 
     output Q0, Q1, F0, F1, COUT1, COUT0 );
-  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
 
-  fa2 \freqer/counter_7_add_4_31 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+  fa2 \tuner/counter_89_add_4_11 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
     .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
     .S1(F1), .CO0(COUT0), .CO1(COUT1));
   gnd DRIVEGND( .PWR0(GNDI));
-  ffsre2 \freqer/counter_7__i29 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q0));
-  vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/counter_7__i30 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q1));
+  ffsre2 \tuner/counter_89__i9 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+  ffsre2 \tuner/counter_89__i10 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
 
   specify
     (D1 => F1) = (0:0:0,0:0:0);
@@ -494,24 +992,23 @@ module freqer_SLICE_8 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1,
     (CIN1 => COUT1) = (0:0:0,0:0:0);
     $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
     $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
-    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
   endspecify
 
 endmodule
 
-module freqer_SLICE_9 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1, 
+module tuner_SLICE_9 ( input DI1, DI0, D1, C1, D0, C0, CE, CLK, CIN0, CIN1, 
     output Q0, Q1, F0, F1, COUT1, COUT0 );
-  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
 
-  fa2 \freqer/counter_7_add_4_13 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+  fa2 \tuner/counter_89_add_4_15 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
     .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
     .S1(F1), .CO0(COUT0), .CO1(COUT1));
   gnd DRIVEGND( .PWR0(GNDI));
-  ffsre2 \freqer/counter_7__i11 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q0));
-  vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/counter_7__i12 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q1));
+  ffsre2 \tuner/counter_89__i13 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+  ffsre2 \tuner/counter_89__i14 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
 
   specify
     (D1 => F1) = (0:0:0,0:0:0);
@@ -526,24 +1023,23 @@ module freqer_SLICE_9 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1,
     (CIN1 => COUT1) = (0:0:0,0:0:0);
     $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
     $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
-    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
   endspecify
 
 endmodule
 
-module freqer_SLICE_10 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1, 
+module tuner_SLICE_10 ( input DI1, DI0, D1, C1, D0, C0, CE, CLK, CIN0, CIN1, 
     output Q0, Q1, F0, F1, COUT1, COUT0 );
-  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
 
-  fa2 \freqer/counter_7_add_4_11 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+  fa2 \tuner/counter_89_add_4_17 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
     .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
     .S1(F1), .CO0(COUT0), .CO1(COUT1));
   gnd DRIVEGND( .PWR0(GNDI));
-  ffsre2 \freqer/counter_7__i9 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q0));
-  vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/counter_7__i10 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q1));
+  ffsre2 \tuner/counter_89__i15 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+  ffsre2 \tuner/counter_89__i16 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
 
   specify
     (D1 => F1) = (0:0:0,0:0:0);
@@ -558,24 +1054,23 @@ module freqer_SLICE_10 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1,
     (CIN1 => COUT1) = (0:0:0,0:0:0);
     $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
     $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
-    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
   endspecify
 
 endmodule
 
-module freqer_SLICE_11 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1, 
+module tuner_SLICE_11 ( input DI1, DI0, D1, C1, D0, C0, CE, CLK, CIN0, CIN1, 
     output Q0, Q1, F0, F1, COUT1, COUT0 );
-  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
 
-  fa2 \freqer/counter_7_add_4_9 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+  fa2 \tuner/counter_89_add_4_19 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
     .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
     .S1(F1), .CO0(COUT0), .CO1(COUT1));
   gnd DRIVEGND( .PWR0(GNDI));
-  ffsre2 \freqer/counter_7__i7 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q0));
-  vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/counter_7__i8 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q1));
+  ffsre2 \tuner/counter_89__i17 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+  ffsre2 \tuner/counter_89__i18 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
 
   specify
     (D1 => F1) = (0:0:0,0:0:0);
@@ -590,24 +1085,23 @@ module freqer_SLICE_11 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1,
     (CIN1 => COUT1) = (0:0:0,0:0:0);
     $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
     $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
-    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
   endspecify
 
 endmodule
 
-module freqer_SLICE_12 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1, 
+module tuner_SLICE_12 ( input DI1, DI0, D1, C1, D0, C0, CE, CLK, CIN0, CIN1, 
     output Q0, Q1, F0, F1, COUT1, COUT0 );
-  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
 
-  fa2 \freqer/counter_7_add_4_7 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+  fa2 \tuner/counter_89_add_4_21 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
     .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
     .S1(F1), .CO0(COUT0), .CO1(COUT1));
   gnd DRIVEGND( .PWR0(GNDI));
-  ffsre2 \freqer/counter_7__i5 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q0));
-  vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/counter_7__i6 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q1));
+  ffsre2 \tuner/counter_89__i19 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+  ffsre2 \tuner/counter_89__i20 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
 
   specify
     (D1 => F1) = (0:0:0,0:0:0);
@@ -622,24 +1116,23 @@ module freqer_SLICE_12 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1,
     (CIN1 => COUT1) = (0:0:0,0:0:0);
     $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
     $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
-    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
   endspecify
 
 endmodule
 
-module freqer_SLICE_13 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1, 
+module tuner_SLICE_13 ( input DI1, DI0, D1, C1, D0, C0, CE, CLK, CIN0, CIN1, 
     output Q0, Q1, F0, F1, COUT1, COUT0 );
-  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
 
-  fa2 \freqer/counter_7_add_4_5 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+  fa2 \tuner/counter_89_add_4_23 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
     .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
     .S1(F1), .CO0(COUT0), .CO1(COUT1));
   gnd DRIVEGND( .PWR0(GNDI));
-  ffsre2 \freqer/counter_7__i3 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q0));
-  vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/counter_7__i4 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q1));
+  ffsre2 \tuner/counter_89__i21 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+  ffsre2 \tuner/counter_89__i22 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
 
   specify
     (D1 => F1) = (0:0:0,0:0:0);
@@ -654,24 +1147,23 @@ module freqer_SLICE_13 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1,
     (CIN1 => COUT1) = (0:0:0,0:0:0);
     $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
     $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
-    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
   endspecify
 
 endmodule
 
-module freqer_SLICE_14 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1, 
+module tuner_SLICE_14 ( input DI1, DI0, D1, C1, D0, C0, CE, CLK, CIN0, CIN1, 
     output Q0, Q1, F0, F1, COUT1, COUT0 );
-  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
 
-  fa2 \freqer/counter_7_add_4_3 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+  fa2 \tuner/counter_89_add_4_25 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
     .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
     .S1(F1), .CO0(COUT0), .CO1(COUT1));
   gnd DRIVEGND( .PWR0(GNDI));
-  ffsre2 \freqer/counter_7__i1 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q0));
-  vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/counter_7__i2 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
-    .LSR(LSR_dly), .Q(Q1));
+  ffsre2 \tuner/counter_89__i23 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+  ffsre2 \tuner/counter_89__i24 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
 
   specify
     (D1 => F1) = (0:0:0,0:0:0);
@@ -686,21 +1178,83 @@ module freqer_SLICE_14 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1,
     (CIN1 => COUT1) = (0:0:0,0:0:0);
     $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
     $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
-    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
   endspecify
 
 endmodule
 
-module freqer_SLICE_15 ( input DI1, D1, C1, B1, LSR, CLK, CIN1, output Q1, F1, 
-    COUT1, COUT0 );
+module tuner_SLICE_15 ( input DI1, DI0, D1, C1, D0, C0, CE, CLK, CIN0, CIN1, 
+    output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  fa2 \tuner/counter_89_add_4_9 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/counter_89__i7 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+  ffsre2 \tuner/counter_89__i8 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module tuner_SLICE_16 ( input DI1, DI0, D1, C1, D0, C0, CE, CLK, CIN0, CIN1, 
+    output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  fa2 \tuner/counter_89_add_4_13 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/counter_89__i11 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+  ffsre2 \tuner/counter_89__i12 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_17 ( input DI1, D1, C1, B1, LSR, CLK, CIN1, output Q1, 
+    F1, COUT1, COUT0 );
   wire   GNDI, VCCI, DI1_dly, CLK_dly, LSR_dly;
 
-  fa2 \freqer/counter_7_add_4_1 ( .A0(GNDI), .B0(GNDI), .C0(GNDI), .D0(VCCI), 
-    .A1(GNDI), .B1(B1), .C1(C1), .D1(D1), .CI0(VCCI), .CI1(CIN1), .S0(), 
-    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  fa2 \tuner/pitch/counter_91_add_4_1 ( .A0(GNDI), .B0(GNDI), .C0(GNDI), 
+    .D0(VCCI), .A1(GNDI), .B1(B1), .C1(C1), .D1(D1), .CI0(VCCI), .CI1(CIN1), 
+    .S0(), .S1(F1), .CO0(COUT0), .CO1(COUT1));
   gnd DRIVEGND( .PWR0(GNDI));
   vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/counter_7__i0 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+  ffsre2 \tuner/pitch/counter_91__i0 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
     .LSR(LSR_dly), .Q(Q1));
 
   specify
@@ -717,18 +1271,42 @@ module freqer_SLICE_15 ( input DI1, D1, C1, B1, LSR, CLK, CIN1, output Q1, F1,
 
 endmodule
 
-module freqer_SLICE_16 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1, 
-    output Q0, Q1, F0, F1, COUT1, COUT0 );
-  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+module tuner_pitch_SLICE_18 ( input DI0, D1, D0, C0, LSR, CLK, CIN0, CIN1, 
+    output Q0, F0, COUT0 );
+  wire   GNDI, VCCI, DI0_dly, CLK_dly, LSR_dly;
 
-  fa2 \freqer/counter_7_add_4_29 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
-    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
-    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  fa2 \tuner/pitch/counter_91_add_4_33 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(GNDI), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(), .CO0(COUT0), .CO1());
   gnd DRIVEGND( .PWR0(GNDI));
-  ffsre2 \freqer/counter_7__i27 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+  ffsre2 \tuner/pitch/counter_91__i31 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
     .LSR(LSR_dly), .Q(Q0));
   vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/counter_7__i28 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_19 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/pitch/counter_91_add_4_31 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/pitch/counter_91__i29 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/pitch/counter_91__i30 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
     .LSR(LSR_dly), .Q(Q1));
 
   specify
@@ -749,23 +1327,1040 @@ module freqer_SLICE_16 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, CIN1,
 
 endmodule
 
-module freqer_SLICE_17 ( input DI1, DI0, D1, C1, D0, C0, B0, A0, CLK, output 
-    Q0, Q1, F0, F1 );
-  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly;
+module tuner_pitch_SLICE_20 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
 
-  lut4 \freqer/toneFreq_I_33_2_lut ( .A(GNDI), .B(GNDI), .C(C1), .D(D1), 
-    .Z(F1));
+  fa2 \tuner/pitch/counter_91_add_4_29 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
   gnd DRIVEGND( .PWR0(GNDI));
-  lut40001 \freqer/i4_4_lut_adj_35 ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
-  ffsre2 \freqer/toneFreq ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), 
-    .Q(Q1));
+  ffsre2 \tuner/pitch/counter_91__i27 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
   vcc DRIVEVCC( .PWR1(VCCI));
-  ffsre2 \freqer/clkStrobe_c ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+  ffsre2 \tuner/pitch/counter_91__i28 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_21 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/pitch/counter_91_add_4_27 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/pitch/counter_91__i25 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/pitch/counter_91__i26 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_22 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/pitch/counter_91_add_4_25 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/pitch/counter_91__i23 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/pitch/counter_91__i24 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_23 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/pitch/counter_91_add_4_23 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/pitch/counter_91__i21 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/pitch/counter_91__i22 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_24 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/pitch/counter_91_add_4_21 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/pitch/counter_91__i19 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/pitch/counter_91__i20 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_25 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/pitch/counter_91_add_4_19 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/pitch/counter_91__i17 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/pitch/counter_91__i18 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_26 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/pitch/counter_91_add_4_17 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/pitch/counter_91__i15 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/pitch/counter_91__i16 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_27 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/pitch/counter_91_add_4_15 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/pitch/counter_91__i13 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/pitch/counter_91__i14 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_28 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/pitch/counter_91_add_4_5 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/pitch/counter_91__i3 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/pitch/counter_91__i4 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_29 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/pitch/counter_91_add_4_7 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/pitch/counter_91__i5 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/pitch/counter_91__i6 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_30 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/pitch/counter_91_add_4_9 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/pitch/counter_91__i7 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/pitch/counter_91__i8 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_31 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/pitch/counter_91_add_4_11 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/pitch/counter_91__i9 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/pitch/counter_91__i10 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_32 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/pitch/counter_91_add_4_13 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/pitch/counter_91__i11 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/pitch/counter_91__i12 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_33 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/pitch/counter_91_add_4_3 ( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/pitch/counter_91__i1 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/pitch/counter_91__i2 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_34 ( input DI0, D1, D0, C0, LSR, CLK, CIN0, CIN1, 
+    output Q0, F0, COUT0 );
+  wire   GNDI, VCCI, DI0_dly, CLK_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_33 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(GNDI), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(), .CO0(COUT0), .CO1());
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/howLong/counter_90__i31 ( .D0(DI0_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_35 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_31 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/howLong/counter_90__i29 ( .D0(DI0_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/howLong/counter_90__i30 ( .D0(DI1_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_36 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_29 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/howLong/counter_90__i27 ( .D0(DI0_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/howLong/counter_90__i28 ( .D0(DI1_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_37 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_27 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/howLong/counter_90__i25 ( .D0(DI0_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/howLong/counter_90__i26 ( .D0(DI1_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_38 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_25 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/howLong/counter_90__i23 ( .D0(DI0_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/howLong/counter_90__i24 ( .D0(DI1_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_39 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_23 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/howLong/counter_90__i21 ( .D0(DI0_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/howLong/counter_90__i22 ( .D0(DI1_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_40 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_21 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/howLong/counter_90__i19 ( .D0(DI0_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/howLong/counter_90__i20 ( .D0(DI1_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_41 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_19 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/howLong/counter_90__i17 ( .D0(DI0_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/howLong/counter_90__i18 ( .D0(DI1_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_42 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_17 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/howLong/counter_90__i15 ( .D0(DI0_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/howLong/counter_90__i16 ( .D0(DI1_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_43 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_15 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/howLong/counter_90__i13 ( .D0(DI0_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/howLong/counter_90__i14 ( .D0(DI1_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_44 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_13 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/howLong/counter_90__i11 ( .D0(DI0_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/howLong/counter_90__i12 ( .D0(DI1_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_45 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_11 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/howLong/counter_90__i9 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/howLong/counter_90__i10 ( .D0(DI1_dly), .SP(VCCI), 
+    .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_46 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_9 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/howLong/counter_90__i7 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/howLong/counter_90__i8 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_47 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_7 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/howLong/counter_90__i5 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/howLong/counter_90__i6 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_48 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_5 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/howLong/counter_90__i3 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/howLong/counter_90__i4 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_49 ( input DI1, DI0, D1, C1, D0, C0, LSR, CLK, CIN0, 
+    CIN1, output Q0, Q1, F0, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_3 ( .A0(GNDI), .B0(GNDI), .C0(C0), 
+    .D0(D0), .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), 
+    .S0(F0), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/howLong/counter_90__i1 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/howLong/counter_90__i2 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_howLong_SLICE_50 ( input DI1, D1, C1, B1, LSR, CLK, CIN1, output 
+    Q1, F1, COUT1, COUT0 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, LSR_dly;
+
+  fa2 \tuner/howLong/counter_90_add_4_1 ( .A0(GNDI), .B0(GNDI), .C0(GNDI), 
+    .D0(VCCI), .A1(GNDI), .B1(B1), .C1(C1), .D1(D1), .CI0(VCCI), .CI1(CIN1), 
+    .S0(), .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre2 \tuner/howLong/counter_90__i0 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (B1 => COUT1) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module tuner_SLICE_53 ( input DI1, DI0, D1, C1, B1, D0, C0, A0, CE, CLK, 
+    output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut4 \tuner/i275_3_lut ( .A(GNDI), .B(B1), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40001 \tuner/i278_3_lut ( .A(A0), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  ffsre2 \tuner/freqThreshold__i8 ( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
+  ffsre2 \tuner/freqThreshold__i9 ( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
     .LSR(GNDI), .Q(Q0));
 
   specify
     (D1 => F1) = (0:0:0,0:0:0);
     (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module lut4 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0F0C") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40001 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFF50") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_56 ( input DI1, DI0, D1, C1, B1, A1, D0, C0, B0, A0, CLK, output 
+    Q0, Q1, F0, F1 );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly;
+
+  lut40002 i170_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40003 i183_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  ffsre2 \tuner/freqThreshold__i1 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/freqThreshold__i2 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
     (D0 => F0) = (0:0:0,0:0:0);
     (C0 => F0) = (0:0:0,0:0:0);
     (B0 => F0) = (0:0:0,0:0:0);
@@ -778,66 +2373,28 @@ module freqer_SLICE_17 ( input DI1, DI0, D1, C1, D0, C0, B0, A0, CLK, output
 
 endmodule
 
-module lut4 ( input A, B, C, D, output Z );
-
-  LUT4 #("0x0FF0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
-endmodule
-
-module lut40001 ( input A, B, C, D, output Z );
-
-  LUT4 #("0x2000") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
-endmodule
-
-module freqer_SLICE_19 ( input D0, C0, B0, A0, output F0 );
-
-  lut40002 \freqer/i14_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
-
-  specify
-    (D0 => F0) = (0:0:0,0:0:0);
-    (C0 => F0) = (0:0:0,0:0:0);
-    (B0 => F0) = (0:0:0,0:0:0);
-    (A0 => F0) = (0:0:0,0:0:0);
-  endspecify
-
-endmodule
-
 module lut40002 ( input A, B, C, D, output Z );
 
-  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
-endmodule
-
-module freqer_SLICE_20 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
-
-  lut40003 \freqer/i23_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
-  lut40004 \freqer/i19_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
-
-  specify
-    (D1 => F1) = (0:0:0,0:0:0);
-    (C1 => F1) = (0:0:0,0:0:0);
-    (B1 => F1) = (0:0:0,0:0:0);
-    (A1 => F1) = (0:0:0,0:0:0);
-    (D0 => F0) = (0:0:0,0:0:0);
-    (C0 => F0) = (0:0:0,0:0:0);
-    (B0 => F0) = (0:0:0,0:0:0);
-    (A0 => F0) = (0:0:0,0:0:0);
-  endspecify
-
+  LUT4 #("0xAB02") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
 endmodule
 
 module lut40003 ( input A, B, C, D, output Z );
 
-  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+  LUT4 #("0xC0D4") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
 endmodule
 
-module lut40004 ( input A, B, C, D, output Z );
+module SLICE_57 ( input DI1, DI0, D1, C1, B1, A1, D0, C0, B0, A0, CLK, output 
+    Q0, Q1, F0, F1 );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly;
 
-  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
-endmodule
-
-module freqer_SLICE_21 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
-
-  lut40005 \freqer/i24_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
-  lut40006 \freqer/i18_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  lut40004 i181_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40005 i182_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  ffsre2 \tuner/freqThreshold__i4 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/freqThreshold__i3 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
 
   specify
     (D1 => F1) = (0:0:0,0:0:0);
@@ -848,26 +2405,36 @@ module freqer_SLICE_21 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
     (C0 => F0) = (0:0:0,0:0:0);
     (B0 => F0) = (0:0:0,0:0:0);
     (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
   endspecify
 
 endmodule
 
+module lut40004 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xA8F2") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
 module lut40005 ( input A, B, C, D, output Z );
 
-  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+  LUT4 #("0xF110") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
 endmodule
 
-module lut40006 ( input A, B, C, D, output Z );
+module SLICE_59 ( input DI1, DI0, D1, C1, B1, A1, D0, C0, B0, A0, CLK, output 
+    Q0, Q1, F0, F1 );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly;
 
-  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
-endmodule
-
-module freqer_SLICE_23 ( input D1, C1, B1, A1, D0, B0, output F0, F1 );
-  wire   GNDI;
-
-  lut40007 \freqer/i17_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
-  lut40008 \freqer/i2_2_lut ( .A(GNDI), .B(B0), .C(GNDI), .D(D0), .Z(F0));
+  lut40002 i179_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40006 i180_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  ffsre2 \tuner/freqThreshold__i6 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
   gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/freqThreshold__i5 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
 
   specify
     (D1 => F1) = (0:0:0,0:0:0);
@@ -875,42 +2442,294 @@ module freqer_SLICE_23 ( input D1, C1, B1, A1, D0, B0, output F0, F1 );
     (B1 => F1) = (0:0:0,0:0:0);
     (A1 => F1) = (0:0:0,0:0:0);
     (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
     (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+  endspecify
+
+endmodule
+
+module lut40006 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xE302") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_61 ( input DI1, DI0, D1, C1, B1, A1, D0, C0, B0, A0, CLK, output 
+    Q0, Q1, F0, F1 );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly;
+
+  lut40007 i177_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40008 i178_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  ffsre2 \tuner/freqThreshold__i10 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/freqThreshold__i7 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
   endspecify
 
 endmodule
 
 module lut40007 ( input A, B, C, D, output Z );
 
-  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+  LUT4 #("0xA80E") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
 endmodule
 
 module lut40008 ( input A, B, C, D, output Z );
 
-  LUT4 #("0xCC00") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+  LUT4 #("0xCF84") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
 endmodule
 
-module freqer_SLICE_24 ( input D0, C0, B0, A0, output F0 );
+module SLICE_63 ( input DI1, DI0, D1, C1, B1, A1, D0, C0, B0, A0, CLK, output 
+    Q0, Q1, F0, F1 );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly;
 
-  lut40009 \freqer/i4_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  lut40007 i175_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40008 i176_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  ffsre2 \tuner/freqThreshold__i12 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/freqThreshold__i11 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
 
   specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
     (D0 => F0) = (0:0:0,0:0:0);
     (C0 => F0) = (0:0:0,0:0:0);
     (B0 => F0) = (0:0:0,0:0:0);
     (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+  endspecify
+
+endmodule
+
+module SLICE_65 ( input DI1, DI0, D1, C1, B1, A1, D0, C0, B0, A0, CLK, output 
+    Q0, Q1, F0, F1 );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly;
+
+  lut40009 i15_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40008 i174_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  ffsre2 \tuner/freqThreshold__i14 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/freqThreshold__i13 ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
   endspecify
 
 endmodule
 
 module lut40009 ( input A, B, C, D, output Z );
 
-  LUT4 #("0xFDFF") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+  LUT4 #("0xABFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
 endmodule
 
-module freqer_SLICE_25 ( input D0, C0, B0, A0, output F0 );
+module tuner_pitch_SLICE_69 ( input DI0, D0, C0, CLK, output Q0, F0 );
+  wire   GNDI, VCCI, DI0_dly, CLK_dly;
 
-  lut40010 \freqer/i15_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  lut40010 \tuner/pitch/i1_2_lut ( .A(GNDI), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/pitch/pwm ( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+  endspecify
+
+endmodule
+
+module lut40010 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xF00F") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_SLICE_72 ( input D1, C1, B1, A1, D0, C0, output F0, F1 );
+  wire   GNDI;
+
+  lut40011 \tuner/i24_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40012 \tuner/i4_2_lut ( .A(GNDI), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40011 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40012 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFF0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_SLICE_74 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40013 \tuner/i20_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40014 \tuner/i22_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40013 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40014 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_SLICE_75 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40015 \tuner/i28_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40016 \tuner/i19_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40015 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40016 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_SLICE_76 ( input D1, C1, B1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40017 \tuner/i23_3_lut ( .A(GNDI), .B(B1), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40018 \tuner/i16_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40017 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFC") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40018 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_SLICE_78 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40019 \tuner/i281_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40020 \tuner/i1_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40019 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xEAEE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40020 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFD") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_pitch_SLICE_80 ( input D0, C0, B0, A0, output F0 );
+
+  lut40021 \tuner/pitch/i11_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
 
   specify
     (D0 => F0) = (0:0:0,0:0:0);
@@ -921,15 +2740,521 @@ module freqer_SLICE_25 ( input D0, C0, B0, A0, output F0 );
 
 endmodule
 
-module lut40010 ( input A, B, C, D, output Z );
+module lut40021 ( input A, B, C, D, output Z );
 
   LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
 endmodule
 
-module SLICE_27 ( output F0 );
+module tuner_pitch_SLICE_81 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, 
+    F1 );
+
+  lut40022 \tuner/pitch/i1_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40023 \tuner/pitch/i14_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40022 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40023 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_pitch_SLICE_82 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, 
+    F1 );
+
+  lut40024 \tuner/pitch/i15_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40025 \tuner/pitch/i12_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40024 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40025 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_pitch_SLICE_85 ( input D1, C1, A1, D0, C0, B0, A0, output F0, F1 );
   wire   GNDI;
 
-  lut40011 i2( .A(GNDI), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  lut40026 \tuner/pitch/i8_3_lut ( .A(A1), .B(GNDI), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40027 \tuner/pitch/i1_4_lut_adj_5 ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40026 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xF5FA") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40027 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x6FF6") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_pitch_SLICE_86 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, 
+    F1 );
+
+  lut40028 \tuner/pitch/i6_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40029 \tuner/pitch/i7_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40028 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x7DBE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40029 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x7BDE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_pitch_SLICE_87 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, 
+    F1 );
+
+  lut40022 \tuner/pitch/i13_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40030 \tuner/pitch/i4_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40030 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x6FF6") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_howLong_SLICE_88 ( input D1, C1, B1, A1, D0, C0, output F0, F1 );
+  wire   GNDI;
+
+  lut40031 \tuner/howLong/i19_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40032 \tuner/howLong/i5_2_lut ( .A(GNDI), .B(GNDI), .C(C0), .D(D0), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40031 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40032 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFF0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_howLong_SLICE_90 ( input D0, C0, B0, A0, output F0 );
+
+  lut40033 \tuner/howLong/i13_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40033 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_howLong_SLICE_91 ( input D1, C1, B1, A1, D0, C0, B0, A0, output 
+    F0, F1 );
+
+  lut40034 \tuner/howLong/i18_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40035 \tuner/howLong/i779_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40034 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFEF") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40035 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x8000") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_howLong_SLICE_92 ( input D0, C0, B0, A0, output F0 );
+
+  lut40036 \tuner/howLong/i17_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40036 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_howLong_SLICE_93 ( input D1, C1, B1, A1, D0, C0, B0, A0, output 
+    F0, F1 );
+
+  lut40037 \tuner/howLong/i6_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40038 \tuner/howLong/i22_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40037 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0800") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40038 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_howLong_SLICE_94 ( input DI1, D1, C1, B1, A1, D0, C0, B0, A0, CLK, 
+    output Q1, F0, F1 );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly;
+
+  lut40039 \tuner.howLong.SLICE_94_K1 ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40040 \tuner/howLong/i5_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  ffsre2 \tuner/howLong/clkStrobe ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+  endspecify
+
+endmodule
+
+module lut40039 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0080") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40040 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x8000") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_SLICE_96 ( input DI1, D1, C1, B1, A1, D0, C0, A0, CLK, output Q1, 
+    F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly;
+
+  lut40041 \tuner/state_2__I_0_2_Mux_0_i7_4_lut ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40042 \tuner/i1000_3_lut ( .A(A0), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/state_i0 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+  endspecify
+
+endmodule
+
+module lut40041 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x025B") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40042 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xF0F5") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_SLICE_97 ( input DI1, D1, C1, B1, D0, C0, A0, CLK, output Q1, F0, 
+    F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly;
+
+  lut40043 \tuner/state_2__I_0_i5_3_lut ( .A(GNDI), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40044 \tuner/i1005_3_lut_3_lut ( .A(A0), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  ffsre2 \tuner/en_c ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+  endspecify
+
+endmodule
+
+module lut40043 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFC") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40044 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0F5A") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_SLICE_99 ( input D0, C0, B0, A0, output F0 );
+
+  lut40016 \tuner/i21_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_102 ( input C0, A0, output F0 );
+  wire   GNDI;
+
+  lut40045 \tuner/pitch/i996_2_lut ( .A(A0), .B(GNDI), .C(C0), .D(GNDI), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40045 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x5F5F") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_pitch_SLICE_103 ( input D0, C0, B0, A0, output F0 );
+
+  lut40021 \tuner/pitch/i10_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module tuner_pitch_SLICE_104 ( input D0, C0, B0, A0, output F0 );
+
+  lut40046 \tuner/pitch/i2_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40046 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x7DBE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_pitch_SLICE_105 ( input D0, C0, B0, A0, output F0 );
+
+  lut40047 \tuner/pitch/i3_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40047 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x7DBE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_pitch_SLICE_106 ( input D0, C0, B0, A0, output F0 );
+
+  lut40048 \tuner/pitch/i5_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40048 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x6FF6") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_SLICE_107 ( input DI1, D1, C1, B1, A1, D0, C0, A0, CLK, output Q1, 
+    F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly;
+
+  lut40049 \tuner/state_2__I_0_2_Mux_2_i7_4_lut ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40050 \tuner/i998_2_lut_3_lut ( .A(A0), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/state_i2 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+  endspecify
+
+endmodule
+
+module lut40049 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0F88") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40050 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0050") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_108 ( output F0 );
+  wire   GNDI;
+
+  lut40051 i2( .A(GNDI), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
   gnd DRIVEGND( .PWR0(GNDI));
 
   specify
@@ -937,14 +3262,43 @@ module SLICE_27 ( output F0 );
 
 endmodule
 
-module lut40011 ( input A, B, C, D, output Z );
+module lut40051 ( input A, B, C, D, output Z );
 
   LUT4 #("0xFFFF") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
 endmodule
 
-module freqer_SLICE_29 ( input D0, C0, B0, A0, output F0 );
+module tuner_SLICE_109 ( input DI1, D1, C1, B1, A1, D0, B0, CLK, output Q1, F0, 
+    F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly;
 
-  lut40012 \freqer/i16_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  lut40007 i173_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40052 \tuner/i255_2_lut ( .A(GNDI), .B(B0), .C(GNDI), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre2 \tuner/freqThreshold__i15 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+  endspecify
+
+endmodule
+
+module lut40052 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xCC00") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_SLICE_110 ( input D0, C0, B0, A0, output F0 );
+
+  lut40053 \tuner/i18_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
 
   specify
     (D0 => F0) = (0:0:0,0:0:0);
@@ -955,15 +3309,92 @@ module freqer_SLICE_29 ( input D0, C0, B0, A0, output F0 );
 
 endmodule
 
-module lut40012 ( input A, B, C, D, output Z );
+module lut40053 ( input A, B, C, D, output Z );
 
   LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
 endmodule
 
-module hf_osc ( input CLKHFPU, output CLKHF );
+module tuner_SLICE_112 ( input DI1, D1, C1, B1, C0, B0, LSR, CLK, output Q1, 
+    F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, LSR_dly;
+
+  lut40054 \tuner/i148_2_lut_3_lut ( .A(GNDI), .B(B1), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40055 \tuner/i1_2_lut ( .A(GNDI), .B(B0), .C(C0), .D(GNDI), .Z(F0));
+  ffsre2 \tuner/state_i1 ( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40054 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x3CF0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40055 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFCFC") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_pitch_SLICE_113 ( input D0, C0, B0, output F0 );
   wire   GNDI;
 
-  HSOSC_CORE_B hf_osc( .CLKHFPU(CLKHFPU), .CLKHFEN(GNDI), .TRIM9(GNDI), 
+  lut40056 \tuner/pitch/i9_3_lut ( .A(GNDI), .B(B0), .C(C0), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40056 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFC") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module tuner_howLong_SLICE_115 ( input D1, C1, B1, A1, D0, C0, B0, A0, output 
+    F0, F1 );
+
+  lut40011 \tuner/howLong/i16_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40057 \tuner/howLong/i15_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40057 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module hf_osc ( input CLKHFPU, CLKHFEN, output CLKHF );
+  wire   GNDI;
+
+  HSOSC_CORE_B hf_osc( .CLKHFPU(CLKHFPU), .CLKHFEN(CLKHFEN), .TRIM9(GNDI), 
     .TRIM8(GNDI), .TRIM7(GNDI), .TRIM6(GNDI), .TRIM5(GNDI), .TRIM4(GNDI), 
     .TRIM3(GNDI), .TRIM2(GNDI), .TRIM1(GNDI), .TRIM0(GNDI), .CLKHF(CLKHF));
   gnd DRIVEGND( .PWR0(GNDI));

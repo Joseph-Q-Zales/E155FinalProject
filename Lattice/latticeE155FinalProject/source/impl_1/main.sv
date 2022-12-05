@@ -13,22 +13,22 @@ module top(input  logic clk, // for simulation purposes, delete and make an inte
 	logic [3:0] tone0, tone1, tone2, tone3, durMCU0, durMCU1, durMCU2, durMCU3;
 	logic [7:0] repThreshold;
 	logic [9:0] freq0, freq1, freq2, freq3, dur0, dur1, dur2, dur3; // max frequency of 1023 with 10 bits
-	logic [31:0] freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3;
+	logic [31:0] freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3, durThresh0, durThresh1, durThresh2, durThresh3;
 	logic [9:0] dur; // CHANGE, just for now doing 600
 	logic song = 0;
 	logic int_osc;
 	logic start, makingMusic;
 	
-	logic[127:0] clockSpeed;
+	//logic[127:0] clockSpeed;
 
 	// clockspeed is 2.4MHz
 	//assign clockSpeed = 2400000000;
 
 	 // Internal high-speed oscillator (instantiates the 24 MHz clock)
-	//HSOSC #(.CLKHF_DIV(2'b01))
-	//	hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b0), .CLKHF(int_osc));
+	HSOSC #(.CLKHF_DIV(2'b01))
+		hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 	
-	assign int_osc = clk;
+	//assign int_osc = clk;
 	
 	// get signal data from MCU
     //MCU_spi spi(sck, sdi, newFlattenedMCUout);
@@ -38,15 +38,33 @@ module top(input  logic clk, // for simulation purposes, delete and make an inte
 	// decoder for the spi data to get the specific signals
 	//make_signals makingSignals(flattenedMCUout, tone0, tone1, tone2, tone3, durMCU0, durMCU1, durMCU2, durMCU3, repThreshold);
 	
-	// allTonesToFreq aT2F(tone0, tone1, tone2, tone3, freq0, freq1, freq2, freq3);
+	//allTonesToFreq aT2F(tone0, tone1, tone2, tone3, freq0, freq1, freq2, freq3);
 	//allTonesToFreqThreshold aT2FT(tone0, tone1, tone2, tone3, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3);
 	
 	//allDurMCU2Durs ad2ds(durMCU0, durMCU1, durMCU2, durMCU3, dur0, dur1, dur2, dur3);
-	
+	//allDurMCU2DursThresh aD2DT(durMCU0, durMCU1, durMCU2, durMCU3, durThresh0, durThresh1, durThresh2, durThresh3);
 	// FSM to create unique tune from signal data
 	// tune makeMusic(int_osc, start, freq0, freq1, freq2, freq3, dur0, dur1, dur2, dur3, repThreshold, clockSpeed, makingMusic, song);
-	//tune makeMusic(int_osc, start, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3, dur0, dur1, dur2, dur3, repThreshold, clockSpeed, makingMusic, song);
-	freqGenerator freqer(int_osc, 0'b1, 27272, song);
+	
+	assign freqThreshold0 = 27272; // 440hz
+	assign freqThreshold1 = 54544; // 698hz
+	assign freqThreshold2 = 27272; // 440hz
+	assign freqThreshold3 = 17191; // 698hz
+	
+	assign durThresh0 = 24000000;
+	assign durThresh1 = 24000000;
+	assign durThresh2 = 24000000;	assign durThresh3 = 24000000;
+	
+	assign repThreshold = 3;
+	
+	assign start = 1;
+
+	
+	
+	tune tuner(int_osc, start, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3,  durThresh0, durThresh1, durThresh2, durThresh3, repThreshold, makingMusic, song);
+	
+	//assign freqThreshold0 = 27272;
+	//freqGenerator freqer(int_osc, 0'b1, freqThreshold0, song);
 	assign pwm = song;
     
 endmodule
@@ -211,6 +229,54 @@ module allDurMCU2Durs(input logic[3:0] durMCU0,
 	
 endmodule
 
+//////
+//    module to decode all durMCUs into durations thresholds
+//////
+module allDurMCU2DursThresh(input logic[3:0] durMCU0,
+					input logic[3:0] durMCU1,
+					input logic[3:0] durMCU2,
+					input logic[3:0] durMCU3,
+					output logic[31:0] durThresh0,
+					output logic[31:0] durThresh1,
+					output logic[31:0] durThresh2,
+					output logic[31:0]durThresh3);
+					
+	durMCUtoDurationThreshold d2d0(durMCU0, durThresh0);
+	durMCUtoDurationThreshold d2d1(durMCU1, durThresh1);
+	durMCUtoDurationThreshold d2d2(durMCU2, durThresh2);
+	durMCUtoDurationThreshold d2d3(durMCU3, durThresh3);
+	
+endmodule
+
+
+//////
+//    module to decode durD into duration thresholds in ms
+//////
+module durMCUtoDurationThreshold(input logic[3:0] durMCU,
+					output logic[31:0] durThresh);
+
+	always_comb begin
+		case(durMCU)
+			0	:	durThresh = 24000000;	// whole note (1 second)
+			1	:	durThresh = 24000000;	// whole note (1 second)
+			2	:	durThresh = 24000000;	// whole note (1 second)
+			3	: 	durThresh = 24000000;	// whole note (1 second)
+			4	:	durThresh = 24000000;	// whole note (1 second)
+			5	:	durThresh = 12000000;	// half note  (0.5 seconds)
+			6 	:	durThresh = 12000000;  // half note  (0.5 seconds)
+			7	: 	durThresh = 12000000;  // half note  (0.5 seconds)
+			8	:	durThresh = 12000000;	// half note  (0.5 seconds)
+			9	:	durThresh = 12000000;	// half note  (0.5 seconds)
+			10	:	durThresh = 12000000;	// half note  (0.5 seconds)
+			11	:	durThresh = 6000000;	// quarter note (0.25 seconds)
+			12	:	durThresh = 6000000;  // quarter note (0.25 seconds)
+			13	:	durThresh = 6000000;	// quarter note (0.25 seconds)
+			14	:	durThresh = 6000000;	// quarter note (0.25 seconds)
+			15 	: 	durThresh = 6000000;  // quarter note (0.25 seconds)
+			default : durThresh = 6000000; // default: quarter note (0.25 seconds)
+		endcase
+	end			
+endmodule
 
 //////
 //    module to decode durD into duration in ms
@@ -269,18 +335,18 @@ module tune(input logic int_osc,
 				input logic[31:0] freqThreshold1,
 				input logic[31:0] freqThreshold2,
 				input logic[31:0] freqThreshold3,
-				input logic[9:0] dur0,
-				input logic[9:0] dur1,
-				input logic[9:0] dur2,
-				input logic[9:0] dur3,
+				input logic[31:0] durThreshold0,
+				input logic[31:0] durThreshold1,
+				input logic[31:0] durThreshold2,
+				input logic[31:0] durThreshold3,
 				input logic[7:0] repThreshold,
-				input logic[127:0] clockSpeed,
 				output logic makingMusic,
 				output logic song);
 				
 	logic done, en, rep;
-	logic[1:0] threshold, counter;
-	logic[7:0] dur;
+	logic[1:0] threshold;
+	logic[31:0] counter;
+	logic[31:0] durThreshold;
 	logic[31:0] freqThreshold;
 	
 	// assign repeat
@@ -289,7 +355,7 @@ module tune(input logic int_osc,
 	
 		
 	// instantiate dur and freq modules
-	duration howLong(int_osc, dur, clockSpeed, done);
+	duration howLong(int_osc, durThreshold, done);
 	freqGenerator pitch(int_osc, en, freqThreshold, toneFreq);
 	
 	// state and next state definitions
@@ -324,19 +390,19 @@ module tune(input logic int_osc,
 	always_ff @(posedge int_osc) begin
 		if (state == note0) begin
 			freqThreshold <= freqThreshold0;
-			dur <= dur0;
+			durThreshold <= durThreshold0;
 		end
 		else if (state == note1) begin
 			freqThreshold <= freqThreshold1;
-			dur <= dur1;
+			durThreshold <= durThreshold1;
 		end
 		else if (state == note2) begin
 			freqThreshold <= freqThreshold2;
-			dur <= dur2;
+			durThreshold <= durThreshold2;
 		end
 		else if (state == note3) begin
 			freqThreshold <= freqThreshold3;
-			dur <= dur3;
+			durThreshold <= durThreshold3;
 			counter <= counter + 1;
 		end
 	end
@@ -368,8 +434,7 @@ endmodule
 //    takes in a unique duration value in ms, outputs a flag when that duration has elapsed
 /////
 module duration(input logic int_osc,
-				input logic[7:0] dur,
-				input logic[127:0] clockSpeed,
+				input logic[31:0] durThreshold,
 				output logic done);
 				
 	logic[31:0] counter = 0;
@@ -378,12 +443,12 @@ module duration(input logic int_osc,
  	
 	
 	// calculate THRESHOLD based on dur
-	assign THRESHOLD = dur*clockSpeed - 1;
+	//assign THRESHOLD = dur*clockSpeed - 1;
 	
 
 	// strobe counter (modified from E155 L02 on 9/1/22)
 	always_ff @(posedge int_osc) begin
-		if(counter == THRESHOLD) begin
+		if(counter == durThreshold) begin
 			 	counter <= 0;
 				clkStrobe <= 1;
 		end
@@ -417,41 +482,77 @@ endmodule
 //    takes in a unique frequency value, creates a strobe clock at that frequency
 /////
 module freqGenerator(input logic int_osc,
-					input logic en,
+					input logic on,
 					input logic[31:0] freqThreshold,
-					output logic toneFre);
-	logic clkStrobe = 0;
+					output logic pwm);
+	
 	logic[31:0] counter = 0;
 	
-	// threshold value is calculated from freq
-	// assign freqThreshold = ((1/freq)*clockSpeed)/2 - 1;
-	
-	// strobe counter (modified from E155 L02 on 9/1/22)
 	always_ff @(posedge int_osc) begin
-		if (clkStrobe) counter <= 0;
+		if (counter == freqThreshold || (!on)) counter <= 0;
 		else counter <= counter + 1;
 	end
-	// always_ff @(posedge int_osc) begin
-	// 	if(!en)		begin 
-	// 			counter <= 0;
-	// 			toneFreq <= 0;
-	// 	end				
-	// 	else if(clkStrobe) 	begin
-	// 			counter <= 0;
-	// 	end
-	// 	else 	counter <= counter + 1;
-	// end
-	
-	// strobe generation (modified from E155 L02 on 9/1/22)
 	always_ff @(posedge int_osc) begin
-		if (counter == freqThreshold) clkStrobe <= 1;
-		else clkStrobe <= 0;
+		if (counter == freqThreshold) pwm <= ~pwm;
 	end
-	
-	//always_ff @(posedge int_osc) begin
-	//	if(clkStrobe) toneFreq <= ~toneFreq;
-	//end
-	
+
 endmodule
+
+module tester(output logic oscil);
+	// 24MHz		
+		// Internal high-speed oscillator (instantiates the 48 MHz clock)
+	HSOSC #(.CLKHF_DIV(2'b01))
+		hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
+	
+	logic[31:0] counter = 0;
+	logic[31:0] THRESHOLD = 15305;
+	
+
+	always_ff @(posedge int_osc) begin
+		if (counter == THRESHOLD) counter <= 0;
+		else counter <= counter + 1;
+	end
+	always_ff @(posedge int_osc) begin
+		if (counter == THRESHOLD) oscil <= ~oscil;
+	end
+
+endmodule
+// module freqGenerator(input logic int_osc,
+// 					input logic en,
+// 					input logic[31:0] freqThreshold,
+// 					output logic toneFreq);
+// 	logic clkStrobe = 0;
+// 	logic[31:0] counter = 0;
+	
+// 	// threshold value is calculated from freq
+// 	// assign freqThreshold = ((1/freq)*clockSpeed)/2 - 1;
+	
+// 	// strobe counter (modified from E155 L02 on 9/1/22)
+// 	always_ff @(posedge int_osc) begin
+// 		if (clkStrobe) counter <= 0;
+// 		else counter <= counter + 1;
+// 	end
+// 	// always_ff @(posedge int_osc) begin
+// 	// 	if(!en)		begin 
+// 	// 			counter <= 0;
+// 	// 			toneFreq <= 0;
+// 	// 	end				
+// 	// 	else if(clkStrobe) 	begin
+// 	// 			counter <= 0;
+// 	// 	end
+// 	// 	else 	counter <= counter + 1;
+// 	// end
+	
+// 	// strobe generation (modified from E155 L02 on 9/1/22)
+// 	always_ff @(posedge int_osc) begin
+// 		if (counter == freqThreshold) clkStrobe <= 1;
+// 		else clkStrobe <= 0;
+// 	end
+	
+// 	//always_ff @(posedge int_osc) begin
+// 	//	if(clkStrobe) toneFreq <= ~toneFreq;
+// 	//end
+	
+// endmodule
 
 

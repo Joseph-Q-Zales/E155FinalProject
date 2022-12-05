@@ -7,6 +7,6 @@ I/O cells:      1
                                CCU2        17          100.0
                             FD1P3XZ        33          100.0
                          HSOSC_CORE         1          100.0
-                               LUT4        12          100.0
+                               LUT4        13          100.0
                                  OB         1          100.0
-                              TOTAL        64
+                              TOTAL        65

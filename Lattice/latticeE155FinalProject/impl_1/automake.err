@@ -11,3 +11,8 @@ ERROR - c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/lattic
 ERROR - c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(255): net makingMusic is constantly driven from multiple places at instance makingMusic_2, on port q. VDB-1000
 ERROR - c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(439): net toneFreq is constantly driven from multiple places at instance toneFreq_2, on port q. VDB-1000
 ERROR - c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(439): net toneFreq is constantly driven from multiple places at instance toneFreq_2, on port q. VDB-1000
+ERROR - Could not resolve blackbox module 'freqGenerator' in device iCE40UP5K.
+ERROR - Could not resolve blackbox module 'freqGenerator' in device iCE40UP5K.
+ERROR - Could not resolve blackbox module 'freqGenerator' in device iCE40UP5K.
+ERROR - Could not resolve blackbox module 'freqGenerator' in device iCE40UP5K.
+ERROR - Could not resolve blackbox module 'freqGenerator' in device iCE40UP5K.

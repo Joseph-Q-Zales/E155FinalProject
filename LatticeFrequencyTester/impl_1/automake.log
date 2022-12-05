@@ -50,7 +50,7 @@ Peak Memory Usage: 109 MB
 ibisgen "frequencyTester_impl_1.udb" "C:/lscc/radiant/3.2/cae_library/ibis/iCE40UP.ibs"
 IBIS Models Generator: Lattice Radiant Software (64-bit) 3.2.0.18.0
 
-Sat Dec  3 17:48:05 2022
+Sun Dec  4 16:20:58 2022
 
 Loading frequencyTester_impl_1.udb ...
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.

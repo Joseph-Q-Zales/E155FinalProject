@@ -47,7 +47,7 @@ Target Device:        iCE40UP5KSG48
 Target Performance:   High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 3.2.0.18.0
-Mapped on: Sat Dec  3 16:54:06 2022
+Mapped on: Sun Dec  4 17:47:30 2022
 
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
@@ -58,11 +58,12 @@ Command line:   map -i latticeE155FinalProject_impl_1_syn.udb -pdc C:/Users/jzal
      latticeE155FinalProject_impl_1.mrp -hierrpt -gui
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of slice registers:  34 out of  5280 (1%)
+   Number of slice registers: 117 out of  5280 (2%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:            47 out of  5280 (1%)
-      Number of logic LUT4s:              13
-      Number of ripple logic:             17 (34 LUT4s)
+   Number of LUT4s:           169 out of  5280 (3%)
+      Number of logic LUT4s:              66
+      Number of replicated LUT4s:          1
+      Number of ripple logic:             51 (102 LUT4s)
    Number of IO sites used:   1 out of 39 (3%)
       Number of IO sites used for general PIO: 1
       Number of IO sites used for I3C: 0 out of 2 (0%)
@@ -85,22 +86,27 @@ Command line:   map -i latticeE155FinalProject_impl_1_syn.udb -pdc C:/Users/jzal
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
-      Net int_osc: 19 loads, 19 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
-   Number of Clock Enables:  0
-   Number of LSRs:  1
-      Net freqer.clkStrobe: 17 loads, 17 SLICEs
+      Net int_osc: 72 loads, 72 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
+   Number of Clock Enables:  3
+      Net VCC_net: 1 loads, 0 SLICEs
+      Net tuner.n663: 17 loads, 17 SLICEs
+      Net tuner.n662: 2 loads, 2 SLICEs
+   Number of LSRs:  3
+      Net state[2]: 1 loads, 1 SLICEs
+      Net tuner.pitch.counter_31__N_338: 17 loads, 17 SLICEs
+      Net tuner.howLong.counter_31__N_273: 17 loads, 17 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net freqer.clkStrobe: 18 loads
-      Net freqer.counter[15]: 2 loads
-      Net freqer.counter[22]: 2 loads
-      Net freqer.counter[23]: 2 loads
-      Net freqer.counter[24]: 2 loads
-      Net freqer.counter[27]: 2 loads
-      Net freqer.counter[30]: 2 loads
-      Net freqer.counter[31]: 2 loads
-      Net pwm_c: 2 loads
-      Net VCC_net: 2 loads
+      Net state[0]: 23 loads
+      Net state[1]: 23 loads
+      Net state[2]: 22 loads
+      Net tuner.howLong.counter_31__N_273: 17 loads
 
+      Net tuner.n663: 17 loads
+      Net tuner.pitch.counter_31__N_338: 17 loads
+      Net tuner.done: 4 loads
+      Net VCC_net: 4 loads
+      Net tuner.howLong.counter[10]: 3 loads
+      Net tuner.howLong.counter[21]: 3 loads
 
 
 
@@ -145,7 +151,7 @@ OSC Summary
 OSC 1:                                 Pin/Node Value
   OSC Instance Name:                            hf_osc
   Power UP:                            NODE     VCC_net
-  Enable Signal:                                GND
+  Enable Signal:                       NODE     VCC_net
   OSC Output:                          NODE     int_osc
   DIV Setting:                                  01
 
@@ -159,12 +165,64 @@ Instance Name: hf_osc
 
 
 
+
+
 <A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
 -------------------------
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 55 MB
+   Peak Memory Usage: 58 MB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Dec  3 17:47:43 2022
+Sun Dec  4 16:20:37 2022
 
 
 Command Line:  C:\lscc\radiant\3.2\ispfpga\bin\nt64\synthesis.exe -f frequencyTester_impl_1_lattice.synproj -gui -msgset C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/LatticeFrequencyTester/promote.xml 
@@ -122,6 +122,7 @@ INFO - synthesis: The default VHDL library search path is now "C:/Users/jzales/D
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): tester
 INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/latticefrequencytester/source/impl_1/freqtester.sv(2): compiling module tester. VERI-1018
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/latticefrequencytester/source/impl_1/freqtester.sv(9): using initial value of THRESHOLD since it is never assigned. VERI-1220
 INFO - synthesis: C:/lscc/radiant/3.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
                                                          
 
@@ -147,6 +148,8 @@ INFO - synthesis: C:/lscc/radiant/3.2/ispfpga/../cae_library/synthesis/verilog/i
                                                          
 
 
+WARNING - synthesis: Initial value found on net gnd_2 will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pwr_2 will be ignored due to unrecognized driver type
 
 
 
@@ -156,7 +159,7 @@ Number of register bits => 33 of 5280 (0 % )
 CCU2 => 17
 FD1P3XZ => 33
 HSOSC_CORE => 1
-LUT4 => 12
+LUT4 => 13
 OB => 1
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
@@ -170,7 +173,7 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n158, loads : 33
+  Net : n161, loads : 33
   Net : oscil_c, loads : 2
   Net : counter[31], loads : 2
   Net : counter[30], loads : 2

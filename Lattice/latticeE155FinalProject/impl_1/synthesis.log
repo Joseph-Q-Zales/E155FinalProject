@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Dec  3 16:54:01 2022
+Sun Dec  4 17:47:24 2022
 
 
 Command Line:  C:\lscc\radiant\3.2\ispfpga\bin\nt64\synthesis.exe -f latticeE155FinalProject_impl_1_lattice.synproj -gui -msgset C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/promote.xml 
@@ -114,7 +114,6 @@ INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(16): analyzing includ
 INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v(45): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
 INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(17): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_dsp.v. VERI-1328
 Analyzing Verilog file c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv. VERI-1482
-WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(49): invalid size of integer constant literal. VERI-1864
 Analyzing VHDL file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd. VHDL-1481
 Analyzing VHDL file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd
 
@@ -124,8 +123,9 @@ Top module language type = Verilog.
 Top module name (Verilog, mixed language): top
 INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(6): compiling module top. VERI-1018
 INFO - synthesis: C:/lscc/radiant/3.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
-INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(419): compiling module freqGenerator. VERI-1018
-WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(49): actual bit length 32 differs from formal bit length 1 for port en. VERI-1330
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(332): compiling module tune. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(436): compiling module duration. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(484): compiling module freqGenerator. VERI-1018
                                                          
 
 
@@ -150,6 +150,7 @@ WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/l
                                                          
 
 
+WARNING - synthesis: Initial value found on net song will be ignored due to unrecognized driver type
 WARNING - synthesis: I/O Port clk 's net has no driver and is unused.
 WARNING - synthesis: I/O Port sck 's net has no driver and is unused.
 WARNING - synthesis: I/O Port sdi 's net has no driver and is unused.
@@ -157,21 +158,70 @@ WARNING - synthesis: I/O Port ce 's net has no driver and is unused.
 
 
 
+WARNING - synthesis: Bit 31 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \tuner/durThreshold is stuck at One
+WARNING - synthesis: Bit 23 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \tuner/durThreshold is stuck at One
+WARNING - synthesis: Bit 21 of Register \tuner/durThreshold is stuck at One
+WARNING - synthesis: Bit 20 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \tuner/durThreshold is stuck at One
+WARNING - synthesis: Bit 18 of Register \tuner/durThreshold is stuck at One
+WARNING - synthesis: Bit 17 of Register \tuner/durThreshold is stuck at One
+WARNING - synthesis: Bit 16 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \tuner/durThreshold is stuck at One
+WARNING - synthesis: Bit 12 of Register \tuner/durThreshold is stuck at One
+WARNING - synthesis: Bit 11 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \tuner/durThreshold is stuck at One
+WARNING - synthesis: Bit 9 of Register \tuner/durThreshold is stuck at One
+WARNING - synthesis: Bit 8 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \tuner/durThreshold is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \tuner/freqThreshold is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \tuner/freqThreshold is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \tuner/freqThreshold is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \tuner/freqThreshold is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \tuner/freqThreshold is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \tuner/freqThreshold is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \tuner/freqThreshold is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \tuner/freqThreshold is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \tuner/freqThreshold is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \tuner/freqThreshold is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \tuner/freqThreshold is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \tuner/freqThreshold is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \tuner/freqThreshold is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \tuner/freqThreshold is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \tuner/freqThreshold is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \tuner/freqThreshold is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \tuner/freqThreshold is stuck at Zero
 WARNING - synthesis: I/O Port clk 's net has no driver and is unused.
 WARNING - synthesis: I/O Port sck 's net has no driver and is unused.
 WARNING - synthesis: I/O Port sdi 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ce 's net has no driver and is unused.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 34 of 5280 (0 % )
-CCU2 => 17
-FD1P3XZ => 34
+Number of register bits => 117 of 5280 (2 % )
+CCU2 => 51
+FD1P3XZ => 117
 HSOSC_CORE => 1
-LUT4 => 12
+LUT4 => 65
 OB => 1
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
-Number of even-length carry chains : 1
+Number of even-length carry chains : 3
 
 ################### Begin Clock Report ######################
 Clock Nets
@@ -181,19 +231,19 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : freqer/clkStrobe, loads : 33
-  Net : freqer/counter[0], loads : 2
-  Net : freqer/counter[31], loads : 2
-  Net : freqer/counter[27], loads : 2
-  Net : freqer/counter[15], loads : 2
-  Net : freqer/counter[24], loads : 2
-  Net : freqer/counter[23], loads : 2
-  Net : freqer/counter[30], loads : 2
-  Net : freqer/counter[22], loads : 2
-  Net : freqer/counter[19], loads : 2
+  Net : tuner/howLong/counter_31__N_273, loads : 33
+  Net : tuner/n663, loads : 32
+  Net : tuner/pitch/counter_31__N_338, loads : 32
+  Net : tuner/state[1], loads : 22
+  Net : tuner/state[0], loads : 22
+  Net : tuner/state[2], loads : 21
+  Net : tuner/howLong/done, loads : 3
+  Net : tuner/n925, loads : 2
+  Net : tuner/n2472, loads : 2
+  Net : tuner/counter[5], loads : 2
 ################### End Clock Report ##################
 
-Peak Memory Usage: 82 MB
+Peak Memory Usage: 84 MB
 
 --------------------------------------------------------------
 Total CPU Time: 1 secs 

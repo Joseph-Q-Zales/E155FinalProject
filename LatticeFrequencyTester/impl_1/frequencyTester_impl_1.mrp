@@ -5,7 +5,7 @@ Target Device:        iCE40UP5KSG48
 Target Performance:   High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 3.2.0.18.0
-Mapped on: Sat Dec  3 17:47:48 2022
+Mapped on: Sun Dec  4 16:20:42 2022
 
 Design Information
 ------------------
@@ -20,8 +20,8 @@ Design Summary
 
    Number of slice registers:  33 out of  5280 (1%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:            47 out of  5280 (1%)
-      Number of logic LUT4s:              13
+   Number of LUT4s:            48 out of  5280 (1%)
+      Number of logic LUT4s:              14
       Number of ripple logic:             17 (34 LUT4s)
    Number of IO sites used:   1 out of 39 (3%)
       Number of IO sites used for general PIO: 1
@@ -46,20 +46,20 @@ Design Summary
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
       Net int_osc: 18 loads, 18 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
-   Number of Clock Enables:  0
+   Number of Clock Enables:  1
+      Net VCC_net: 1 loads, 0 SLICEs
    Number of LSRs:  1
-      Net n158: 17 loads, 17 SLICEs
+      Net n161: 17 loads, 17 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net n158: 18 loads
+      Net n161: 18 loads
+      Net VCC_net: 3 loads
       Net counter[0]: 2 loads
-      Net counter[15]: 2 loads
-      Net counter[17]: 2 loads
-      Net counter[18]: 2 loads
-      Net n186: 2 loads
-      Net n188: 2 loads
-      Net n692: 2 loads
-      Net oscil_c: 2 loads
-      Net VCC_net: 2 loads
+      Net counter[27]: 2 loads
+      Net counter[29]: 2 loads
+      Net counter[30]: 2 loads
+      Net n207: 2 loads
+      Net n209: 2 loads
+      Net n726: 2 loads
 
                                     Page 1
 
@@ -67,6 +67,9 @@ Design Summary
 
 
 
+Design Summary (cont)
+---------------------
+      Net oscil_c: 2 loads
 
 
 
@@ -100,7 +103,7 @@ OSC Summary
 OSC 1:                                 Pin/Node Value
   OSC Instance Name:                            hf_osc
   Power UP:                            NODE     VCC_net
-  Enable Signal:                                GND
+  Enable Signal:                       NODE     VCC_net
   OSC Output:                          NODE     int_osc
   DIV Setting:                                  01
 
@@ -116,9 +119,6 @@ Run Time and Memory Usage
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 55 MB
-
-
-
 
 
 

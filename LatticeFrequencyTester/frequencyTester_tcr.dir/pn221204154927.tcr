@@ -1,0 +1,34 @@
+#Start recording tcl command: 12/3/2022 17:32:35
+#Project Location: C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/LatticeFrequencyTester; Project name: frequencyTester
+C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject
+latticeE155FinalProject
+#Start recording tcl command: 12/4/2022 15:49:27
+#Project Location: C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject; Project name: latticeE155FinalProject
+prj_create -name "frequencyTester" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_save 
+prj_add_source "C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/LatticeFrequencyTester/source/impl_1/FreqTester.sv"
+launch_programmer_prj "C:/lscc/radiant/3.2"
+prj_add_source "C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/LatticeFrequencyTester/FreqTester.pdc"
+prj_enable_source "C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/LatticeFrequencyTester/FreqTester.pdc"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/3.2"
+prj_run PAR -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_save 
+prj_close
+prj_open "C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/latticeE155FinalProject.rdf"
+#Stop recording: 12/4/2022 15:49:27

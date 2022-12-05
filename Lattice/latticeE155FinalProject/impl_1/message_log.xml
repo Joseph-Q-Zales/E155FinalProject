@@ -531,13 +531,6 @@
             <Navigation>17</Navigation>
         </Message>
         <Message>
-            <ID>35901864</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(49): </Dynamic>
-            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
-            <Navigation>49</Navigation>
-        </Message>
-        <Message>
             <ID>35921014</ID>
             <Severity>1</Severity>
             <Dynamic>c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd(4): </Dynamic>
@@ -570,20 +563,31 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(419): </Dynamic>
-            <Dynamic>freqGenerator</Dynamic>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(332): </Dynamic>
+            <Dynamic>tune</Dynamic>
             <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
-            <Navigation>419</Navigation>
+            <Navigation>332</Navigation>
         </Message>
         <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(49): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>1</Dynamic>
-            <Dynamic>en</Dynamic>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(436): </Dynamic>
+            <Dynamic>duration</Dynamic>
             <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
-            <Navigation>49</Navigation>
+            <Navigation>436</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(484): </Dynamic>
+            <Dynamic>freqGenerator</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>484</Navigation>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>song</Dynamic>
         </Message>
         <Message>
             <ID>35002028</ID>
@@ -604,6 +608,300 @@
             <ID>35002028</ID>
             <Severity>16</Severity>
             <Dynamic>ce</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>31</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>30</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>29</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>28</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>27</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>26</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>25</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>16</Severity>
+            <Dynamic>24</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>23</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>16</Severity>
+            <Dynamic>22</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>16</Severity>
+            <Dynamic>21</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>20</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>16</Severity>
+            <Dynamic>19</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>16</Severity>
+            <Dynamic>18</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>16</Severity>
+            <Dynamic>17</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>16</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>15</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>14</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>16</Severity>
+            <Dynamic>13</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>16</Severity>
+            <Dynamic>12</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>11</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>16</Severity>
+            <Dynamic>10</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>16</Severity>
+            <Dynamic>9</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>8</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>7</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>6</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>5</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>4</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>3</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>2</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>1</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>0</Dynamic>
+            <Dynamic>\tuner/durThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>31</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>30</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>29</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>28</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>27</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>26</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>25</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>24</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>23</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>22</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>21</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>20</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>19</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>18</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>17</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>16</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>6</Dynamic>
+            <Dynamic>\tuner/freqThreshold</Dynamic>
         </Message>
         <Message>
             <ID>35002028</ID>
@@ -668,6 +966,11 @@
             <Dynamic>bitgen: In the constraint 'ldc_set_location -site {42} [get_ports sdi]', the locate object is not specified</Dynamic>
             <Navigation>WARNING</Navigation>
             <Navigation>bitgen: In the constraint 'ldc_set_location -site {42} [get_ports sdi]', the locate object is not specified</Navigation>
+        </Message>
+        <Message>
+            <ID>1009992</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
         </Message>
         <Message>
             <ID>77001032</ID>
