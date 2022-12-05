@@ -54,7 +54,7 @@ module top(input  logic clk, // for simulation purposes, delete and make an inte
 	assign durThresh0 = 24000000;
 	assign durThresh1 = 24000000;
 	assign durThresh2 = 24000000;	assign durThresh3 = 24000000;
-	
+	 
 	assign repThreshold = 3;
 	
 	assign start = 1;

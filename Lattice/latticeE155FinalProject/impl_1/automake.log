@@ -1,4 +1,12 @@
 
+STA Runtime and Peak Memory Usage :
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 93 MB
+
+ 0.619294s wall, 0.484375s user + 0.093750s system = 0.578125s CPU (93.4%)
+
+
 tmcheck -par "latticeE155FinalProject_impl_1.par" 
 
 bitgen -w "latticeE155FinalProject_impl_1.udb" -f "latticeE155FinalProject_impl_1.t2b" 
@@ -56,13 +64,13 @@ Bitstream generation complete!
 
 Total CPU Time: 0 secs 
 Total REAL Time: 7 secs 
-Peak Memory Usage: 111 MB
+Peak Memory Usage: 110 MB
 
 
 ibisgen "latticeE155FinalProject_impl_1.udb" "C:/lscc/radiant/3.2/cae_library/ibis/iCE40UP.ibs"
 IBIS Models Generator: Lattice Radiant Software (64-bit) 3.2.0.18.0
 
-Sun Dec  4 17:47:47 2022
+Sun Dec  4 18:04:52 2022
 
 Loading latticeE155FinalProject_impl_1.udb ...
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
