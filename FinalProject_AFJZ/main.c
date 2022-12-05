@@ -190,22 +190,22 @@ int main(void) {
   char pdchk = 0xB5; // data checksum, tfi + all data + pdchk = 0x...00
 
   char diagnose[11] = {front[0], front[1], front[2], pl, plchk, tfi, 0x00, 0x00, 0x77, pdchk, postamble};
-  char reciev[12] = {0};
+  char reciev[13] = {0};
 
   //pl = 0x02;
   //plchk = 0xFE;
   //pdchk = 0x2A;
   
   //char getfv[9] = {front[0], front[1], front[2], pl, plchk, tfi, 0x02, pdchk, postamble};
-  //char reci[9] = {0};
+  //char reci[14] = {0};
 
 
-  //pl = 0x02;
-  //plchk = 0xFE;
-  //pdchk = 0xA6;
+  pl = 0x02;
+  plchk = 0xFE;
+  pdchk = 0xA6;
   
-  //char tgget[9] = {front[0], front[1], front[2], pl, plchk, tfi, 0x86, pdchk, postamble};
-  //char rec[15] = {0};
+  char tgget[9] = {front[0], front[1], front[2], pl, plchk, tfi, 0x86, pdchk, postamble};
+  char rec[15] = {0};
 
 
 
@@ -217,8 +217,8 @@ int main(void) {
 
 
     // testing diagnose command
-    sendI2C((0x48 >> 1), diagnose, 11);
-    delay_millis(TIM2, 5);
+    //sendI2C((0x48 >> 1), diagnose, 11);
+    //delay_millis(TIM2, 5);
 
     // if communication line works, should recieve back: 
     // 01, front, length (4), lchk, tfi (D5), data (01, 00, 78), pdchk, postamble
@@ -226,8 +226,8 @@ int main(void) {
     // BUT INSTEAD GETTING
     // 01, 00, 00, FF, 00, FF, 00, 00, 00, 77, B5, 00
 
-    readI2C((0x48 >> 1), 12, reciev);  // EXPECT BACK 12 bytes
-    delay_millis(TIM2, 5);
+    //readI2C((0x48 >> 1), 13, reciev);  // EXPECT BACK 12 bytes
+    //delay_millis(TIM2, 5);
 
 
     // testing getFirmwareVersion command
@@ -238,20 +238,20 @@ int main(void) {
     // 01, front, length (4), lchk, tfi (D5), data (01, 00, 78), pdchk, postamble
     // 01, 00, 00, FF, 06, FA, D5, 01, 32, 01, 06, 07, EA, 00
 
-    //readI2C((0x48 >> 1), 9, reci); // EXPECT BACK 14 bytes
+    //readI2C((0x48 >> 1), 14, reci); // EXPECT BACK 14 bytes
     //delay_millis(TIM2, 5);
 
 
     // testing TgGetData
-    //sendI2C((0x48 >> 1), tgget, 11);
-    //delay_millis(TIM2, 5);
+    sendI2C((0x48 >> 1), tgget, 9);
+    delay_millis(TIM2, 5);
 
     // if TgGetData works, should recieve back: 
     // 01, front, length (4), lchk, tfi (D5), data (87, 00 or 01, 4 bytes), pdchk, postamble
     // 01, 00, 00, FF, 07, F9, D5, 87, 00/01, xx, xx, xx, xx, CHECKSUM, 00
 
-    //readI2C((0x48 >> 1), 15, rec);   // EXPECT BACK 15 bytes
-    //delay_millis(TIM2, 5);
+    readI2C((0x48 >> 1), 15, rec);   // EXPECT BACK 15 bytes
+    delay_millis(TIM2, 5);
 
 
     
