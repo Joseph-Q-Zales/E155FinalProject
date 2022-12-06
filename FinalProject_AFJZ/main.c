@@ -189,23 +189,74 @@ int main(void) {
   char tfi = 0xD4; // D4 = host to PN532, D5 = PN543 to host
   char pdchk = 0xB5; // data checksum, tfi + all data + pdchk = 0x...00
 
-  char diagnose[11] = {front[0], front[1], front[2], pl, plchk, tfi, 0x00, 0x00, 0x77, pdchk, postamble};
-  char reciev[13] = {0};
+  //char diagnose[11] = {front[0], front[1], front[2], pl, plchk, tfi, 0x00, 0x00, 0x77, pdchk, postamble};
+  //char reciev[16] = {0};
 
   //pl = 0x02;
   //plchk = 0xFE;
   //pdchk = 0x2A;
   
   //char getfv[9] = {front[0], front[1], front[2], pl, plchk, tfi, 0x02, pdchk, postamble};
-  //char reci[14] = {0};
+  //char reci[24] = {0};
 
 
-  pl = 0x02;
-  plchk = 0xFE;
-  pdchk = 0xA6;
+
+  //pl = 0x04;
+  //plchk = 0xFC;
+  //pdchk = 0x7F;
+
+  //char resetP35[11] = {front[0], front[1], front[2], pl, plchk, tfi, 0x0E, 0x9F, 0x00, pdchk, postamble};
+  //char recievT[16] = {0};
+
+
+  //pl = 0x04;
+  //plchk = 0xFC;
+  //pdchk = 0xE1;
   
-  char tgget[9] = {front[0], front[1], front[2], pl, plchk, tfi, 0x86, pdchk, postamble};
-  char rec[15] = {0};
+  //char ilpt[11] = {front[0], front[1], front[2], pl, plchk, tfi, 0x4A, 0x01, 0x00, pdchk, postamble};
+  //char recL[24] = {0};
+
+
+  //pl = 0x02;
+  //plchk = 0xFE;
+  //pdchk = 0x28;
+  
+  char getGS[9] = {front[0], front[1], front[2], pl, plchk, tfi, 0x04, pdchk, postamble};
+  char recTes[24] = {0};
+
+
+  //pl = 0x02;
+  //plchk = 0xFE;
+  //pdchk = 0xA6;
+  
+  //char tgget[9] = {front[0], front[1], front[2], pl, plchk, tfi, 0x86, pdchk, postamble};
+  //char rec[12] = {0};
+
+
+ // for(int i=0; i<3; i++) {
+    
+    // testing resetP53 command
+ //   sendI2C((0x48 >> 1), resetP35, 11);
+//    delay_millis(TIM2, 5);
+
+ //   readI2C((0x48 >> 1), 16, recievT);  // EXPECT BACK 12 bytes
+ //   delay_millis(TIM2, 5);
+
+
+ // }
+
+  // set IRQ pin as an output and drive it to be 0
+  //pinMode(I2C_IRQ, GPIO_OUTPUT);
+  pinMode(I2C_reset, GPIO_OUTPUT);
+
+  digitalWrite(I2C_IRQ, PIO_HIGH);
+  digitalWrite(I2C_IRQ, PIO_LOW);
+  delay_millis(TIM2, 1);
+  digitalWrite(I2C_IRQ, PIO_HIGH);
+  delay_millis(TIM2, 1);
+
+  //digitalWrite(I2C_IRQ, PIO_LOW);
+
 
 
 
@@ -226,7 +277,18 @@ int main(void) {
     // BUT INSTEAD GETTING
     // 01, 00, 00, FF, 00, FF, 00, 00, 00, 77, B5, 00
 
-    //readI2C((0x48 >> 1), 13, reciev);  // EXPECT BACK 12 bytes
+    //readI2C((0x48 >> 1), 16, reciev);  // EXPECT BACK 12 bytes
+    //delay_millis(TIM2, 5);
+
+
+
+
+
+    // testing resetP53 command
+    //sendI2C((0x48 >> 1), resetP35, 11);
+    //delay_millis(TIM2, 5);
+
+    //readI2C((0x48 >> 1), 16, recievT);  // EXPECT BACK 12 bytes
     //delay_millis(TIM2, 5);
 
 
@@ -238,21 +300,44 @@ int main(void) {
     // 01, front, length (4), lchk, tfi (D5), data (01, 00, 78), pdchk, postamble
     // 01, 00, 00, FF, 06, FA, D5, 01, 32, 01, 06, 07, EA, 00
 
-    //readI2C((0x48 >> 1), 14, reci); // EXPECT BACK 14 bytes
+    //readI2C((0x48 >> 1), 24, reci); // EXPECT BACK 14 bytes
     //delay_millis(TIM2, 5);
 
 
     // testing TgGetData
-    sendI2C((0x48 >> 1), tgget, 9);
-    delay_millis(TIM2, 5);
+    //sendI2C((0x48 >> 1), tgget, 9);
+    //delay_millis(TIM2, 5);
 
     // if TgGetData works, should recieve back: 
     // 01, front, length (4), lchk, tfi (D5), data (87, 00 or 01, 4 bytes), pdchk, postamble
     // 01, 00, 00, FF, 07, F9, D5, 87, 00/01, xx, xx, xx, xx, CHECKSUM, 00
 
-    readI2C((0x48 >> 1), 15, rec);   // EXPECT BACK 15 bytes
+    //readI2C((0x48 >> 1), 12, rec);   // EXPECT BACK 15 bytes
+    //delay_millis(TIM2, 5);
+
+
+    // testing InListPassiveTarget
+    //sendI2C((0x48 >> 1), ilpt, 11);
+    //delay_millis(TIM2, 5);
+
+    // if InListPassiveTarget works, should recieve back: 
+    // 01, front, length (4 or 12), lchk, tfi (D5), data (4B, 01, 00 or 01, ), pdchk, postamble
+    // 
+
+    //readI2C((0x48 >> 1), 24, recL);   // EXPECT BACK 12 bytes or 24
+    //delay_millis(TIM2, 5);
+
+
+    // testing getGeneralStatus
+    sendI2C((0x48 >> 1), getGS, 9);
     delay_millis(TIM2, 5);
 
+    // if InListPassiveTarget works, should recieve back: 
+    // 01, front, length (4 or 12), lchk, tfi (D5), data (4B, 01, 00 or 01, ), pdchk, postamble
+    // 
+
+    readI2C((0x48 >> 1), 24, recTes);   // EXPECT BACK 12 bytes or 24
+    delay_millis(TIM2, 5);
 
     
     // wait while the IRQ bit remains high
