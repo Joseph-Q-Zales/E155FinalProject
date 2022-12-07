@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Dec  4 18:04:29 2022
+Tue Dec  6 23:45:00 2022
 
 
 Command Line:  C:\lscc\radiant\3.2\ispfpga\bin\nt64\synthesis.exe -f latticeE155FinalProject_impl_1_lattice.synproj -gui -msgset C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/promote.xml 
@@ -123,9 +123,17 @@ Top module language type = Verilog.
 Top module name (Verilog, mixed language): top
 INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(6): compiling module top. VERI-1018
 INFO - synthesis: C:/lscc/radiant/3.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
-INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(332): compiling module tune. VERI-1018
-INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(436): compiling module duration. VERI-1018
-INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(484): compiling module freqGenerator. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(85): compiling module MCU_spi. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(321): compiling module enables. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(101): compiling module make_signals. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(176): compiling module allTonesToFreqThreshold. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(195): compiling module toneToFreqThreshold. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(243): compiling module allDurMCU2DursThresh. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(263): compiling module durMCUtoDurationThreshold. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(340): compiling module tune. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(448): compiling module duration. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(496): compiling module freqGenerator. VERI-1018
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(417): expression size 32 truncated to fit in target size 2. VERI-1209
                                                          
 
 
@@ -150,100 +158,188 @@ INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/latt
                                                          
 
 
-WARNING - synthesis: Initial value found on net song will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[31] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[30] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[29] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[28] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[27] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[26] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[25] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[24] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[23] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[22] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[21] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[20] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[19] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[18] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[17] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[16] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold0[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[31] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[30] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[29] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[28] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[27] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[26] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[25] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[24] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[23] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[22] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[21] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[20] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[19] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[18] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[17] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[16] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold1[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[31] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[30] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[29] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[28] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[27] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[26] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[25] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[24] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[23] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[22] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[21] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[20] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[19] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[18] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[17] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[16] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold2[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[31] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[30] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[29] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[28] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[27] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[26] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[25] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[24] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[23] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[22] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[21] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[20] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[19] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[18] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[17] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[16] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net freqThreshold3[0] will be ignored due to unrecognized driver type
 WARNING - synthesis: I/O Port clk 's net has no driver and is unused.
-WARNING - synthesis: I/O Port sck 's net has no driver and is unused.
-WARNING - synthesis: I/O Port sdi 's net has no driver and is unused.
-WARNING - synthesis: I/O Port ce 's net has no driver and is unused.
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(332): Register \enabler/start is stuck at One. VDB-5014
 
 
 
-WARNING - synthesis: Bit 31 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 30 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 29 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 28 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 27 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 26 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 25 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 24 of Register \tuner/durThreshold is stuck at One
-WARNING - synthesis: Bit 23 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 22 of Register \tuner/durThreshold is stuck at One
-WARNING - synthesis: Bit 21 of Register \tuner/durThreshold is stuck at One
-WARNING - synthesis: Bit 20 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 19 of Register \tuner/durThreshold is stuck at One
-WARNING - synthesis: Bit 18 of Register \tuner/durThreshold is stuck at One
-WARNING - synthesis: Bit 17 of Register \tuner/durThreshold is stuck at One
-WARNING - synthesis: Bit 16 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 15 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 14 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 13 of Register \tuner/durThreshold is stuck at One
-WARNING - synthesis: Bit 12 of Register \tuner/durThreshold is stuck at One
-WARNING - synthesis: Bit 11 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 10 of Register \tuner/durThreshold is stuck at One
-WARNING - synthesis: Bit 9 of Register \tuner/durThreshold is stuck at One
-WARNING - synthesis: Bit 8 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 7 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 6 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 5 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 4 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 3 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 2 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 1 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \tuner/durThreshold is stuck at Zero
-WARNING - synthesis: Bit 31 of Register \tuner/freqThreshold is stuck at Zero
-WARNING - synthesis: Bit 30 of Register \tuner/freqThreshold is stuck at Zero
-WARNING - synthesis: Bit 29 of Register \tuner/freqThreshold is stuck at Zero
-WARNING - synthesis: Bit 28 of Register \tuner/freqThreshold is stuck at Zero
-WARNING - synthesis: Bit 27 of Register \tuner/freqThreshold is stuck at Zero
-WARNING - synthesis: Bit 26 of Register \tuner/freqThreshold is stuck at Zero
-WARNING - synthesis: Bit 25 of Register \tuner/freqThreshold is stuck at Zero
-WARNING - synthesis: Bit 24 of Register \tuner/freqThreshold is stuck at Zero
-WARNING - synthesis: Bit 23 of Register \tuner/freqThreshold is stuck at Zero
-WARNING - synthesis: Bit 22 of Register \tuner/freqThreshold is stuck at Zero
-WARNING - synthesis: Bit 21 of Register \tuner/freqThreshold is stuck at Zero
-WARNING - synthesis: Bit 20 of Register \tuner/freqThreshold is stuck at Zero
-WARNING - synthesis: Bit 19 of Register \tuner/freqThreshold is stuck at Zero
-WARNING - synthesis: Bit 18 of Register \tuner/freqThreshold is stuck at Zero
-WARNING - synthesis: Bit 17 of Register \tuner/freqThreshold is stuck at Zero
-WARNING - synthesis: Bit 16 of Register \tuner/freqThreshold is stuck at Zero
-WARNING - synthesis: Bit 6 of Register \tuner/freqThreshold is stuck at Zero
+######## Missing driver on net n1719. Patching with GND.
+######## Missing driver on net n1820. Patching with GND.
+######## Missing driver on net n1921. Patching with GND.
+######## Missing driver on net n2172. Patching with GND.
 WARNING - synthesis: I/O Port clk 's net has no driver and is unused.
-WARNING - synthesis: I/O Port sck 's net has no driver and is unused.
-WARNING - synthesis: I/O Port sdi 's net has no driver and is unused.
-WARNING - synthesis: I/O Port ce 's net has no driver and is unused.
+WARNING - synthesis: Bit 5 of Register \tuner/state is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \tuner/state is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \tuner/state is stuck at Zero
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(411): Register \tuner/durThreshold_i0_i0 is stuck at Zero. VDB-5013
+Duplicate register/latch removal. \tuner/durThreshold_i0_i19 is a one-to-one match with \tuner/durThreshold_i0_i10.
+INFO - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 117 of 5280 (2 % )
-CCU2 => 51
-FD1P3XZ => 117
+Number of register bits => 179 of 5280 (3 % )
+CCU2 => 34
+FD1P3XZ => 179
 HSOSC_CORE => 1
-LUT4 => 65
-OB => 1
+IB => 3
+INV => 1
+IOL_B => 1
+LUT4 => 211
+OB => 2
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
-Number of even-length carry chains : 3
+Number of even-length carry chains : 2
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 1
+Number of Clocks: 3
   Net : int_osc, loads : 0
+  Net : sck_c, loads : 0
+  Net : flattenedMCUout_39__N_41, loads : 0
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : tuner/howLong/counter_31__N_273, loads : 33
-  Net : tuner/n663, loads : 32
-  Net : tuner/pitch/counter_31__N_338, loads : 32
-  Net : tuner/state[1], loads : 22
-  Net : tuner/state[0], loads : 22
-  Net : tuner/state[2], loads : 21
-  Net : tuner/howLong/done, loads : 3
-  Net : tuner/n925, loads : 2
-  Net : tuner/n2472, loads : 2
-  Net : tuner/counter[5], loads : 2
+  Net : tuner/state[0], loads : 53
+  Net : tuner/state[1], loads : 37
+  Net : tuner/state[2], loads : 34
+  Net : tuner/n2476, loads : 33
+  Net : tuner/howLong/counter_31__N_268, loads : 33
+  Net : tuner/pitch/counter_31__N_333, loads : 32
+  Net : tuner/n2480, loads : 29
+  Net : tuner/n11, loads : 26
+  Net : enabler/flattenedMCUout[39], loads : 15
+  Net : enabler/flattenedMCUout[38], loads : 15
 ################### End Clock Report ##################
 
-Peak Memory Usage: 84 MB
+Peak Memory Usage: 101 MB
 
 --------------------------------------------------------------
 Total CPU Time: 1 secs 

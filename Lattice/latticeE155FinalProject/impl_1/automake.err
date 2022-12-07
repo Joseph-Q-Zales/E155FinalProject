@@ -16,3 +16,8 @@ ERROR - Could not resolve blackbox module 'freqGenerator' in device iCE40UP5K.
 ERROR - Could not resolve blackbox module 'freqGenerator' in device iCE40UP5K.
 ERROR - Could not resolve blackbox module 'freqGenerator' in device iCE40UP5K.
 ERROR - Could not resolve blackbox module 'freqGenerator' in device iCE40UP5K.
+ERROR - c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(382): net counter[31] is constantly driven from multiple places at instance counter_2, on port q[31]. VDB-1000
+ERROR - c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(382): net counter[31] is constantly driven from multiple places at instance counter_2, on port q[31]. VDB-1000
+ERROR - The port [start] has an invalid combination of IO settings according to the device specifications. Check the IO settings and correct the errors.
+ERROR - The port [start] has an invalid combination of IO settings according to the device specifications. Check the IO settings and correct the errors.
+ERROR - The port [start] has an invalid combination of IO settings according to the device specifications. Check the IO settings and correct the errors.

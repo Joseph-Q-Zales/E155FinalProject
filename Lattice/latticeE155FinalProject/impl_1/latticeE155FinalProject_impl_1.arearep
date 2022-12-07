@@ -1,46 +1,148 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  117 of 5280 (2.216%)
-I/O cells:      1
+Register bits:  179 of 5280 (3.390%)
+I/O cells:      5
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        51          100.0
-                            FD1P3XZ       117          100.0
+                               CCU2        34          100.0
+                            FD1P3XZ       179          100.0
                          HSOSC_CORE         1          100.0
-                               LUT4        65          100.0
-                                 OB         1          100.0
+                                 IB         3          100.0
+                                INV         1          100.0
+                              IOL_B         1          100.0
+                               LUT4       211          100.0
+                                 OB         2          100.0
 SUB MODULES
+                            MCU_spi         1
+               allDurMCU2DursThresh         1
+            allTonesToFreqThreshold         1
+          durMCUtoDurationThreshold         1
+       durMCUtoDurationThreshold_U3         1
+       durMCUtoDurationThreshold_U4         1
                            duration         1
+                            enables         1
                       freqGenerator         1
+                toneToFreqThreshold         1
+             toneToFreqThreshold_U0         1
+             toneToFreqThreshold_U1         1
+             toneToFreqThreshold_U2         1
                                tune         1
-                              TOTAL       238
+                              TOTAL       446
 ----------------------------------------------------------------------
 Report for cell tune.v1
 Instance Path : tuner
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        51          100.0
-                            FD1P3XZ       117          100.0
-                               LUT4        52           80.0
+                                FA2        34          100.0
+                            FD1P3XZ       106           59.2
+                               LUT4       108           51.2
 SUB MODULES
                            duration         1
                       freqGenerator         1
-                              TOTAL       222
+                              TOTAL       250
 ----------------------------------------------------------------------
 Report for cell freqGenerator.v1
 Instance Path : tuner.pitch
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        17           33.3
-                            FD1P3XZ        33           28.2
-                               LUT4        18           27.7
-                              TOTAL        68
+                                FA2        17           50.0
+                            FD1P3XZ        33           18.4
+                               LUT4        17            8.1
+                              TOTAL        67
 ----------------------------------------------------------------------
 Report for cell duration.v1
 Instance Path : tuner.howLong
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        17           33.3
-                            FD1P3XZ        33           28.2
-                               LUT4        11           16.9
-                              TOTAL        61
+                                FA2        17           50.0
+                            FD1P3XZ        33           18.4
+                               LUT4        16            7.6
+                              TOTAL        66
+----------------------------------------------------------------------
+Report for cell enables.v1
+Instance Path : enabler
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        34           19.0
+                               LUT4        15            7.1
+                              TOTAL        49
+----------------------------------------------------------------------
+Report for cell allTonesToFreqThreshold.v1
+Instance Path : aT2FT
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        60           28.4
+SUB MODULES
+                toneToFreqThreshold         1
+             toneToFreqThreshold_U0         1
+             toneToFreqThreshold_U1         1
+             toneToFreqThreshold_U2         1
+                              TOTAL        64
+----------------------------------------------------------------------
+Report for cell toneToFreqThreshold.v1
+Instance Path : aT2FT.t2F3
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        16            7.6
+                              TOTAL        16
+----------------------------------------------------------------------
+Report for cell toneToFreqThreshold_U0.v1
+Instance Path : aT2FT.t2F2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        15            7.1
+                              TOTAL        15
+----------------------------------------------------------------------
+Report for cell toneToFreqThreshold_U1.v1
+Instance Path : aT2FT.t2F1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        16            7.6
+                              TOTAL        16
+----------------------------------------------------------------------
+Report for cell toneToFreqThreshold_U2.v1
+Instance Path : aT2FT.t2F0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        13            6.2
+                              TOTAL        13
+----------------------------------------------------------------------
+Report for cell allDurMCU2DursThresh.v1
+Instance Path : aD2DT
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        12            5.7
+SUB MODULES
+          durMCUtoDurationThreshold         1
+       durMCUtoDurationThreshold_U3         1
+       durMCUtoDurationThreshold_U4         1
+                              TOTAL        15
+----------------------------------------------------------------------
+Report for cell durMCUtoDurationThreshold.v1
+Instance Path : aD2DT.d2d3
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         4            1.9
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell durMCUtoDurationThreshold_U3.v1
+Instance Path : aD2DT.d2d2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         4            1.9
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell durMCUtoDurationThreshold_U4.v1
+Instance Path : aD2DT.d2d1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         4            1.9
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell MCU_spi.v1
+Instance Path : spi
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        39           21.8
+                              IOL_B         1          100.0
+                              TOTAL        40

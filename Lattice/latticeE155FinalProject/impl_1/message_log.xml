@@ -15,24 +15,33 @@
         <Message>
             <ID>77001032</ID>
             <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-            <Dynamic>ldc_set_location -site {28} [get_ports sck]</Dynamic>
+            <Dynamic>clk</Dynamic>
+            <Dynamic>ldc_set_location -site {4} [get_ports clk]</Dynamic>
         </Message>
         <Message>
             <ID>77001031</ID>
             <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {28} [get_ports sck]</Dynamic>
+            <Dynamic>ldc_set_location -site {4} [get_ports clk]</Dynamic>
         </Message>
         <Message>
-            <ID>77001032</ID>
+            <ID>71003020</ID>
             <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-            <Dynamic>ldc_set_location -site {42} [get_ports sdi]</Dynamic>
+            <Dynamic>clk</Dynamic>
         </Message>
         <Message>
-            <ID>77001031</ID>
+            <ID>71003020</ID>
             <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {42} [get_ports sdi]</Dynamic>
+            <Dynamic>clk</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>clk</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>clk</Dynamic>
         </Message>
         <Message>
             <ID>77001032</ID>
@@ -48,108 +57,6 @@
         <Message>
             <ID>77001032</ID>
             <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-            <Dynamic>ldc_set_location -site {28} [get_ports sck]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001031</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {28} [get_ports sck]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001032</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-            <Dynamic>ldc_set_location -site {42} [get_ports sdi]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001031</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {42} [get_ports sdi]</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>ce</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>ce</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>ce</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>ce</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001032</ID>
-            <Severity>16</Severity>
             <Dynamic>clk</Dynamic>
             <Dynamic>ldc_set_location -site {4} [get_ports clk]</Dynamic>
         </Message>
@@ -157,103 +64,6 @@
             <ID>77001031</ID>
             <Severity>16</Severity>
             <Dynamic>ldc_set_location -site {4} [get_ports clk]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001032</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-            <Dynamic>ldc_set_location -site {28} [get_ports sck]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001031</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {28} [get_ports sck]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001032</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-            <Dynamic>ldc_set_location -site {42} [get_ports sdi]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001031</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {42} [get_ports sdi]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001032</ID>
-            <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
-            <Dynamic>ldc_set_location -site {4} [get_ports clk]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001031</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {4} [get_ports clk]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001032</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-            <Dynamic>ldc_set_location -site {28} [get_ports sck]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001031</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {28} [get_ports sck]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001032</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-            <Dynamic>ldc_set_location -site {42} [get_ports sdi]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001031</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {42} [get_ports sdi]</Dynamic>
-        </Message>
-    </Task>
-    <Task name="Map">
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>ce</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>ce</Dynamic>
         </Message>
     </Task>
     <Task name="Synthesis">
@@ -563,31 +373,591 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(332): </Dynamic>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(85): </Dynamic>
+            <Dynamic>MCU_spi</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>85</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(321): </Dynamic>
+            <Dynamic>enables</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>321</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(101): </Dynamic>
+            <Dynamic>make_signals</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>101</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(176): </Dynamic>
+            <Dynamic>allTonesToFreqThreshold</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>176</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(195): </Dynamic>
+            <Dynamic>toneToFreqThreshold</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>195</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(243): </Dynamic>
+            <Dynamic>allDurMCU2DursThresh</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>243</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(263): </Dynamic>
+            <Dynamic>durMCUtoDurationThreshold</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>263</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(340): </Dynamic>
             <Dynamic>tune</Dynamic>
             <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
-            <Navigation>332</Navigation>
+            <Navigation>340</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(436): </Dynamic>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(448): </Dynamic>
             <Dynamic>duration</Dynamic>
             <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
-            <Navigation>436</Navigation>
+            <Navigation>448</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(484): </Dynamic>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(496): </Dynamic>
             <Dynamic>freqGenerator</Dynamic>
             <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
-            <Navigation>484</Navigation>
+            <Navigation>496</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(417): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>2</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>417</Navigation>
         </Message>
         <Message>
             <ID>35001771</ID>
             <Severity>16</Severity>
-            <Dynamic>song</Dynamic>
+            <Dynamic>freqThreshold0[31]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[30]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[29]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[28]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[27]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[26]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[25]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[24]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[23]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[22]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[21]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[20]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[19]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[18]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[17]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[16]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[15]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[14]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[13]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[12]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[11]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[10]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[9]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[8]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[7]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[6]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[5]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[4]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[3]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[1]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold0[0]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[31]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[30]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[29]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[28]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[27]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[26]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[25]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[24]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[23]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[22]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[21]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[20]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[19]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[18]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[17]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[16]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[15]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[14]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[13]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[12]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[11]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[10]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[9]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[8]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[7]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[6]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[5]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[4]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[3]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[1]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold1[0]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[31]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[30]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[29]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[28]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[27]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[26]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[25]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[24]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[23]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[22]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[21]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[20]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[19]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[18]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[17]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[16]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[15]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[14]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[13]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[12]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[11]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[10]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[9]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[8]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[7]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[6]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[5]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[4]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[3]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[1]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold2[0]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold3[31]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold3[30]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold3[29]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>freqThreshold3[28]</Dynamic>
         </Message>
         <Message>
             <ID>35002028</ID>
@@ -595,336 +965,68 @@
             <Dynamic>clk</Dynamic>
         </Message>
         <Message>
-            <ID>35002028</ID>
+            <ID>35935014</ID>
             <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(332): </Dynamic>
+            <Dynamic>\enabler/start</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>332</Navigation>
         </Message>
         <Message>
             <ID>35002028</ID>
             <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>16</Severity>
-            <Dynamic>ce</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>31</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>30</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>29</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>28</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>27</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>26</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>25</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>16</Severity>
-            <Dynamic>24</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>23</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>16</Severity>
-            <Dynamic>22</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>16</Severity>
-            <Dynamic>21</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>20</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>16</Severity>
-            <Dynamic>19</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>16</Severity>
-            <Dynamic>18</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>16</Severity>
-            <Dynamic>17</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>16</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>15</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>14</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>16</Severity>
-            <Dynamic>13</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>16</Severity>
-            <Dynamic>12</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>11</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>16</Severity>
-            <Dynamic>10</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>16</Severity>
-            <Dynamic>9</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>8</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>7</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>6</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
+            <Dynamic>clk</Dynamic>
         </Message>
         <Message>
             <ID>35001747</ID>
             <Severity>16</Severity>
             <Dynamic>5</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
+            <Dynamic>\tuner/state</Dynamic>
         </Message>
         <Message>
             <ID>35001747</ID>
             <Severity>16</Severity>
             <Dynamic>4</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
+            <Dynamic>\tuner/state</Dynamic>
         </Message>
         <Message>
             <ID>35001747</ID>
             <Severity>16</Severity>
             <Dynamic>3</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
+            <Dynamic>\tuner/state</Dynamic>
         </Message>
         <Message>
-            <ID>35001747</ID>
+            <ID>35935013</ID>
             <Severity>16</Severity>
-            <Dynamic>2</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(411): </Dynamic>
+            <Dynamic>\tuner/durThreshold_i0_i0</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>411</Navigation>
         </Message>
         <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>1</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>0</Dynamic>
-            <Dynamic>\tuner/durThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>31</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>30</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>29</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>28</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>27</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>26</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>25</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>24</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>23</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>22</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>21</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>20</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>19</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>18</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>17</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>16</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>16</Severity>
-            <Dynamic>6</Dynamic>
-            <Dynamic>\tuner/freqThreshold</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>16</Severity>
-            <Dynamic>clk</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002028</ID>
-            <Severity>16</Severity>
-            <Dynamic>ce</Dynamic>
+            <ID>35002039</ID>
+            <Severity>1</Severity>
         </Message>
     </Task>
     <Task name="Export">
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Dynamic>
+            <Dynamic>6</Dynamic>
+            <Dynamic>No port matched 'start'.</Dynamic>
+            <Navigation>C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Dynamic>
+            <Dynamic>7</Dynamic>
+            <Dynamic>No port matched 'start'.</Dynamic>
+            <Navigation>C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Navigation>
+            <Navigation>7</Navigation>
+        </Message>
         <Message>
             <ID>1009991</ID>
             <Severity>16</Severity>
@@ -938,34 +1040,6 @@
             <Dynamic>bitgen: In the constraint 'ldc_set_location -site {4} [get_ports clk]', the locate object is not specified</Dynamic>
             <Navigation>WARNING</Navigation>
             <Navigation>bitgen: In the constraint 'ldc_set_location -site {4} [get_ports clk]', the locate object is not specified</Navigation>
-        </Message>
-        <Message>
-            <ID>1009991</ID>
-            <Severity>16</Severity>
-            <Dynamic>bitgen: Unable to find the instance/port 'sck' in the constraint 'ldc_set_location -site {28} [get_ports sck]'</Dynamic>
-            <Navigation>WARNING</Navigation>
-            <Navigation>bitgen: Unable to find the instance/port 'sck' in the constraint 'ldc_set_location -site {28} [get_ports sck]'</Navigation>
-        </Message>
-        <Message>
-            <ID>1009991</ID>
-            <Severity>16</Severity>
-            <Dynamic>bitgen: In the constraint 'ldc_set_location -site {28} [get_ports sck]', the locate object is not specified</Dynamic>
-            <Navigation>WARNING</Navigation>
-            <Navigation>bitgen: In the constraint 'ldc_set_location -site {28} [get_ports sck]', the locate object is not specified</Navigation>
-        </Message>
-        <Message>
-            <ID>1009991</ID>
-            <Severity>16</Severity>
-            <Dynamic>bitgen: Unable to find the instance/port 'sdi' in the constraint 'ldc_set_location -site {42} [get_ports sdi]'</Dynamic>
-            <Navigation>WARNING</Navigation>
-            <Navigation>bitgen: Unable to find the instance/port 'sdi' in the constraint 'ldc_set_location -site {42} [get_ports sdi]'</Navigation>
-        </Message>
-        <Message>
-            <ID>1009991</ID>
-            <Severity>16</Severity>
-            <Dynamic>bitgen: In the constraint 'ldc_set_location -site {42} [get_ports sdi]', the locate object is not specified</Dynamic>
-            <Navigation>WARNING</Navigation>
-            <Navigation>bitgen: In the constraint 'ldc_set_location -site {42} [get_ports sdi]', the locate object is not specified</Navigation>
         </Message>
         <Message>
             <ID>1009992</ID>
@@ -984,30 +1058,84 @@
             <Dynamic>ldc_set_location -site {4} [get_ports clk]</Dynamic>
         </Message>
         <Message>
-            <ID>77001032</ID>
-            <Severity>16</Severity>
-            <Dynamic>sck</Dynamic>
-            <Dynamic>ldc_set_location -site {28} [get_ports sck]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001031</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {28} [get_ports sck]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001032</ID>
-            <Severity>16</Severity>
-            <Dynamic>sdi</Dynamic>
-            <Dynamic>ldc_set_location -site {42} [get_ports sdi]</Dynamic>
-        </Message>
-        <Message>
-            <ID>77001031</ID>
-            <Severity>16</Severity>
-            <Dynamic>ldc_set_location -site {42} [get_ports sdi]</Dynamic>
-        </Message>
-        <Message>
             <ID>1191031</ID>
             <Severity>1</Severity>
+        </Message>
+    </Task>
+    <Task name="Map">
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Dynamic>
+            <Dynamic>6</Dynamic>
+            <Dynamic>No port matched 'start'.</Dynamic>
+            <Navigation>C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Dynamic>
+            <Dynamic>7</Dynamic>
+            <Dynamic>No port matched 'start'.</Dynamic>
+            <Navigation>C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/pins_spi.pdc</Navigation>
+            <Navigation>7</Navigation>
+        </Message>
+        <Message>
+            <ID>1027013</ID>
+            <Severity>16</Severity>
+            <Dynamic>port</Dynamic>
+            <Dynamic>start</Dynamic>
+        </Message>
+        <Message>
+            <ID>1014301</ID>
+            <Severity>16</Severity>
+            <Dynamic>start</Dynamic>
+            <Dynamic>ldc_set_location -site {10} [get_ports start]</Dynamic>
+        </Message>
+        <Message>
+            <ID>1027013</ID>
+            <Severity>16</Severity>
+            <Dynamic>port</Dynamic>
+            <Dynamic>start</Dynamic>
+        </Message>
+        <Message>
+            <ID>1014301</ID>
+            <Severity>16</Severity>
+            <Dynamic>start</Dynamic>
+            <Dynamic>ldc_set_port -iobuf {DRIVE=NA} [get_ports start]</Dynamic>
+        </Message>
+        <Message>
+            <ID>1011001</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_location -site {10} [get_ports start]</Dynamic>
+        </Message>
+        <Message>
+            <ID>1011001</ID>
+            <Severity>16</Severity>
+            <Dynamic>ldc_set_port -iobuf {DRIVE=NA} [get_ports start]</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>clk</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>clk</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003005</ID>
+            <Severity>16</Severity>
+            <Dynamic>ce</Dynamic>
+            <Dynamic>36</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003005</ID>
+            <Severity>16</Severity>
+            <Dynamic>sck</Dynamic>
+            <Dynamic>28</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

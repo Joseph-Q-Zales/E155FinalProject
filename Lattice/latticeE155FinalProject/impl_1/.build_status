@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BuildStatus>
     <Strategy name="Strategy1">
-        <Milestone name="Export" build_result="2" build_time="1670205892">
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1670205892"/>
-            <Task name="IBIS" build_result="2" update_result="0" update_time="1670205892"/>
-            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1670205893"/>
+        <Milestone name="Export" build_result="2" build_time="1670399122">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1670399122"/>
+            <Task name="IBIS" build_result="2" update_result="0" update_time="1670399122"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1670399123"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1670205875">
-            <Task name="Map" build_result="2" update_result="0" update_time="1670205875"/>
+        <Milestone name="Map" build_result="2" build_time="1670399106">
+            <Task name="Map" build_result="2" update_result="0" update_time="1670399106"/>
             <Task name="MapTrace" build_result="0" update_result="2" update_time="1667680406"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1670205884">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1670205884"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1670205885"/>
+        <Milestone name="PAR" build_result="2" build_time="1670399114">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1670399114"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1670399115"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1670205874">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1670205874"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1670205885"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1670399106">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1670399106"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1670399115"/>
             <Task name="SynTrace" build_result="0" update_result="2" update_time="1667080327"/>
             <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1667080327"/>
         </Milestone>
@@ -28,17 +28,17 @@
             <Task name="PIODRC" build_result="0" update_result="2" update_time="1667079139"/>
             <Task name="DEC" build_result="0" update_result="2" update_time="1667079139"/>
         </Milestone>
-        <Report name="IBIS/latticeE155FinalProject_impl_1.ibs" last_build_time="1670205892" last_build_size="45055"/>
-        <Report name="latticeE155FinalProject_impl_1.bgn" last_build_time="1670205892" last_build_size="1101"/>
-        <Report name="latticeE155FinalProject_impl_1.bin" last_build_time="1670205892" last_build_size="104156"/>
+        <Report name="IBIS/latticeE155FinalProject_impl_1.ibs" last_build_time="1670399122" last_build_size="54033"/>
+        <Report name="latticeE155FinalProject_impl_1.bgn" last_build_time="1670399122" last_build_size="1101"/>
+        <Report name="latticeE155FinalProject_impl_1.bin" last_build_time="1670399122" last_build_size="104156"/>
         <Report name="latticeE155FinalProject_impl_1.lsedata" last_build_time="0" last_build_size="0"/>
-        <Report name="latticeE155FinalProject_impl_1.twr.html" last_build_time="1670205885" last_build_size="354764"/>
-        <Report name="latticeE155FinalProject_impl_1.udb" last_build_time="1670205884" last_build_size="26417"/>
-        <Report name="latticeE155FinalProject_impl_1_map.udb" last_build_time="1670205875" last_build_size="17079"/>
-        <Report name="latticeE155FinalProject_impl_1_rtl.udb" last_build_time="1670205874" last_build_size="19348"/>
-        <Report name="latticeE155FinalProject_impl_1_syn.udb" last_build_time="1670205874" last_build_size="11373"/>
-        <Report name="latticeE155FinalProject_impl_1_vo.sdf" last_build_time="1670205893" last_build_size="146220"/>
-        <Report name="latticeE155FinalProject_impl_1_vo.vo" last_build_time="1670205893" last_build_size="142520"/>
+        <Report name="latticeE155FinalProject_impl_1.twr.html" last_build_time="1670399115" last_build_size="158481"/>
+        <Report name="latticeE155FinalProject_impl_1.udb" last_build_time="1670399114" last_build_size="50126"/>
+        <Report name="latticeE155FinalProject_impl_1_map.udb" last_build_time="1670399106" last_build_size="31402"/>
+        <Report name="latticeE155FinalProject_impl_1_rtl.udb" last_build_time="1670399105" last_build_size="32780"/>
+        <Report name="latticeE155FinalProject_impl_1_syn.udb" last_build_time="1670399106" last_build_size="23850"/>
+        <Report name="latticeE155FinalProject_impl_1_vo.sdf" last_build_time="1670399123" last_build_size="257348"/>
+        <Report name="latticeE155FinalProject_impl_1_vo.vo" last_build_time="1670399123" last_build_size="257882"/>
     </Strategy>
 </BuildStatus>
-      
+        

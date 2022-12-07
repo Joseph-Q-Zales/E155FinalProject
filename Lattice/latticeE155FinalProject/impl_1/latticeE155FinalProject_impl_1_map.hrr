@@ -3,34 +3,120 @@ Report for cell top
    Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        169        100.0
-                                 IOBUF	          1        100.0
-                                PFUREG	        117        100.0
+                                 IOLGC	       1.00        100.0
+                                  LUT4	        354        100.0
+                                 IOREG	          1        100.0
+                                 IOBUF	          5        100.0
+                                PFUREG	        179        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                                  tune	          1        91.1
+                               MCU_spi	          1         0.0
+                  allDurMCU2DursThresh	          1         3.4
+               allTonesToFreqThreshold	          1        16.9
+                               enables	          1         4.2
+                                  tune	          1        49.2
 ---------------------------------------------------
 Report for cell tune
    Instance path: top/tuner
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        154        91.1
-                                PFUREG	        117        100.0
+                                  LUT4	        174        49.2
+                                PFUREG	        106        59.2
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                              duration	          1        26.6
-                         freqGenerator	          1        30.8
+                              duration	          1        14.1
+                         freqGenerator	          1        14.4
 ---------------------------------------------------
 Report for cell freqGenerator
    Instance path: top/tuner/pitch
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         52        30.8
-                                PFUREG	         33        28.2
+                                  LUT4	         51        14.4
+                                PFUREG	         33        18.4
 ---------------------------------------------------
 Report for cell duration
    Instance path: top/tuner/howLong
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         45        26.6
-                                PFUREG	         33        28.2
+                                  LUT4	         50        14.1
+                                PFUREG	         33        18.4
+---------------------------------------------------
+Report for cell enables
+   Instance path: top/enabler
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         15         4.2
+                                PFUREG	         34        19.0
+---------------------------------------------------
+Report for cell allTonesToFreqThreshold
+   Instance path: top/aT2FT
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         60        16.9
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                   toneToFreqThreshold	          1         4.5
+                toneToFreqThreshold_U0	          1         4.2
+                toneToFreqThreshold_U1	          1         4.5
+                toneToFreqThreshold_U2	          1         3.7
+---------------------------------------------------
+Report for cell toneToFreqThreshold
+   Instance path: top/aT2FT/t2F3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         16         4.5
+---------------------------------------------------
+Report for cell toneToFreqThreshold_U0
+   Instance path: top/aT2FT/t2F2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         15         4.2
+---------------------------------------------------
+Report for cell toneToFreqThreshold_U1
+   Instance path: top/aT2FT/t2F1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         16         4.5
+---------------------------------------------------
+Report for cell toneToFreqThreshold_U2
+   Instance path: top/aT2FT/t2F0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         13         3.7
+---------------------------------------------------
+Report for cell allDurMCU2DursThresh
+   Instance path: top/aD2DT
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         12         3.4
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+             durMCUtoDurationThreshold	          1         1.1
+          durMCUtoDurationThreshold_U3	          1         1.1
+          durMCUtoDurationThreshold_U4	          1         1.1
+---------------------------------------------------
+Report for cell durMCUtoDurationThreshold
+   Instance path: top/aD2DT/d2d3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         1.1
+---------------------------------------------------
+Report for cell durMCUtoDurationThreshold_U3
+   Instance path: top/aD2DT/d2d2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         1.1
+---------------------------------------------------
+Report for cell durMCUtoDurationThreshold_U4
+   Instance path: top/aD2DT/d2d1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         1.1
+---------------------------------------------------
+Report for cell MCU_spi
+   Instance path: top/spi
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	       1.00        100.0
+                                 IOREG	          1        100.0
+                                PFUREG	         39        21.8

@@ -7,17 +7,24 @@ module top(input  logic clk, // for simulation purposes, delete and make an inte
            input  logic sck, 
            input  logic sdi,
 		   input  logic ce,
-           output logic pwm);
+		   //input logic start,
+           output logic pwm,
+		   output logic makingMusic);
                     
     logic [39:0] flattenedMCUout, newFlattenedMCUout;
 	logic [3:0] tone0, tone1, tone2, tone3, durMCU0, durMCU1, durMCU2, durMCU3;
 	logic [7:0] repThreshold;
 	logic [9:0] freq0, freq1, freq2, freq3, dur0, dur1, dur2, dur3; // max frequency of 1023 with 10 bits
-	logic [31:0] freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3, durThresh0, durThresh1, durThresh2, durThresh3;
+	logic [31:0] freqThreshold0 = 0;
+	logic [31:0] freqThreshold1 = 0;
+	logic [31:0] freqThreshold2 = 0;
+	logic [31:0] freqThreshold3 = 0;	
+	logic [31:0] durThresh0, durThresh1, durThresh2, durThresh3;
 	logic [9:0] dur; // CHANGE, just for now doing 600
-	logic song = 0;
+	logic song;
 	logic int_osc;
-	logic start, makingMusic;
+	//logic makingMusic;
+	logic start;
 	
 	//logic[127:0] clockSpeed;
 
@@ -31,37 +38,38 @@ module top(input  logic clk, // for simulation purposes, delete and make an inte
 	//assign int_osc = clk;
 	
 	// get signal data from MCU
-    //MCU_spi spi(sck, sdi, newFlattenedMCUout);
+    MCU_spi spi(sck, sdi, newFlattenedMCUout);
 	
-	//enables enabler(ce, makingMusic, newFlattenedMCUout, start, flattenedMCUout);
+	enables enabler(ce, makingMusic, newFlattenedMCUout, start, flattenedMCUout);
 	
 	// decoder for the spi data to get the specific signals
-	//make_signals makingSignals(flattenedMCUout, tone0, tone1, tone2, tone3, durMCU0, durMCU1, durMCU2, durMCU3, repThreshold);
+	make_signals makingSignals(flattenedMCUout, tone0, tone1, tone2, tone3, durMCU0, durMCU1, durMCU2, durMCU3, repThreshold);
 	
 	//allTonesToFreq aT2F(tone0, tone1, tone2, tone3, freq0, freq1, freq2, freq3);
-	//allTonesToFreqThreshold aT2FT(tone0, tone1, tone2, tone3, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3);
+	allTonesToFreqThreshold aT2FT(tone0, tone1, tone2, tone3, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3);
 	
 	//allDurMCU2Durs ad2ds(durMCU0, durMCU1, durMCU2, durMCU3, dur0, dur1, dur2, dur3);
-	//allDurMCU2DursThresh aD2DT(durMCU0, durMCU1, durMCU2, durMCU3, durThresh0, durThresh1, durThresh2, durThresh3);
+	allDurMCU2DursThresh aD2DT(durMCU0, durMCU1, durMCU2, durMCU3, durThresh0, durThresh1, durThresh2, durThresh3);
 	// FSM to create unique tune from signal data
 	// tune makeMusic(int_osc, start, freq0, freq1, freq2, freq3, dur0, dur1, dur2, dur3, repThreshold, clockSpeed, makingMusic, song);
 	
-	assign freqThreshold0 = 27272; // 440hz
-	assign freqThreshold1 = 54544; // 698hz
-	assign freqThreshold2 = 27272; // 440hz
-	assign freqThreshold3 = 17191; // 698hz
+	//assign freqThreshold0 = 27272; // 440hz
+	//assign freqThreshold1 = 54544; // 698hz
+	//assign freqThreshold2 = 36363; // E4
+	//assign freqThreshold3 = 17191; // 698hz
 	
-	assign durThresh0 = 24000000;
-	assign durThresh1 = 24000000;
-	assign durThresh2 = 24000000;	assign durThresh3 = 24000000;
+	//assign durThresh0 = 24000000;
+	//assign durThresh1 = 24000000;
+	//assign durThresh2 = 24000000;
+	//assign durThresh3 = 24000000;
 	 
-	assign repThreshold = 3;
+	//assign repThreshold = 2;
 	
-	assign start = 1;
+	//assign start = 1;
 
 	
 	
-	tune tuner(int_osc, start, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3,  durThresh0, durThresh1, durThresh2, durThresh3, repThreshold, makingMusic, song);
+	 tune tuner(int_osc, start, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3,  durThresh0, durThresh1, durThresh2, durThresh3, repThreshold, makingMusic, song);
 	
 	//assign freqThreshold0 = 27272;
 	//freqGenerator freqer(int_osc, 0'b1, freqThreshold0, song);
@@ -343,9 +351,9 @@ module tune(input logic int_osc,
 				output logic makingMusic,
 				output logic song);
 				
-	logic done, en, rep;
+	logic done, en, rep, stopCountFlag;
 	logic[1:0] threshold;
-	logic[31:0] counter;
+	logic[1:0] counter = 0;
 	logic[31:0] durThreshold;
 	logic[31:0] freqThreshold;
 	
@@ -359,18 +367,13 @@ module tune(input logic int_osc,
 	freqGenerator pitch(int_osc, en, freqThreshold, toneFreq);
 	
 	// state and next state definitions
-	typedef enum logic[2:0] {idle, note0, note1, note2, note3, complete} statetype;
+	typedef enum logic[5:0] {idle, note0, note1, note2, note3, complete} statetype;
 	statetype state, nextstate;
 	
 	// state register
 	always_ff @(posedge int_osc) begin
 		state <= nextstate;
 	end
-	//always_ff @(posedge int_osc) begin
-	//	if(start) 	state <= note0;
-	//	else 		state <= nextstate;
-	//end
-	
 	
 	// only play music when we aren't in the idle state
 	always_ff @(posedge int_osc) begin
@@ -403,7 +406,16 @@ module tune(input logic int_osc,
 		else if (state == note3) begin
 			freqThreshold <= freqThreshold3;
 			durThreshold <= durThreshold3;
+			//counter <= counter + 1;
+		end
+	end
+	
+	always_ff @(posedge int_osc) begin
+		if (state == idle) counter <= 0;
+		else if (state == note0) stopCountFlag <= 0;
+		else if((state == note3) && !stopCountFlag) begin
 			counter <= counter + 1;
+			stopCountFlag <= 1;
 		end
 	end
 	

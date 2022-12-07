@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 3.2.0.18.0
 
-Sun Dec  4 18:04:45 2022
+Tue Dec  6 23:45:15 2022
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -91,7 +91,7 @@ Clock Domain Crossing
 
 3.1.1  Constraint Coverage
 ---------------------------
-Constraint Coverage: 99.7106%
+Constraint Coverage: 62.7889%
 
 3.1.2  Timing Errors
 ---------------------
@@ -107,17 +107,25 @@ Total Negative Slack: 0.000 ns (setup), 0.000 ns (hold)
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-tuner/counter_89__i31/D                  |   22.387 ns 
-tuner/counter_89__i30/D                  |   23.219 ns 
-tuner/counter_89__i29/D                  |   23.496 ns 
-tuner/counter_89__i28/D                  |   23.773 ns 
-tuner/counter_89__i27/D                  |   24.050 ns 
-tuner/counter_89__i26/D                  |   24.327 ns 
-tuner/counter_89__i25/D                  |   24.604 ns 
-tuner/counter_89__i24/D                  |   24.881 ns 
-tuner/counter_89__i23/D                  |   25.158 ns 
-{tuner/howLong/counter_90__i21/SR   tuner/howLong/counter_90__i22/SR}              
-                                         |   25.396 ns 
+{tuner/howLong/counter_85__i5/SR   tuner/howLong/counter_85__i6/SR}              
+                                         |   25.846 ns 
+{tuner/howLong/counter_85__i15/SR   tuner/howLong/counter_85__i16/SR}              
+                                         |   25.846 ns 
+{tuner/howLong/counter_85__i17/SR   tuner/howLong/counter_85__i18/SR}              
+                                         |   25.846 ns 
+{tuner/howLong/counter_85__i19/SR   tuner/howLong/counter_85__i20/SR}              
+                                         |   25.846 ns 
+{tuner/howLong/counter_85__i21/SR   tuner/howLong/counter_85__i22/SR}              
+                                         |   25.846 ns 
+{tuner/howLong/counter_85__i23/SR   tuner/howLong/counter_85__i24/SR}              
+                                         |   25.846 ns 
+{tuner/howLong/counter_85__i25/SR   tuner/howLong/counter_85__i26/SR}              
+                                         |   25.846 ns 
+{tuner/howLong/counter_85__i27/SR   tuner/howLong/counter_85__i28/SR}              
+                                         |   25.846 ns 
+{tuner/howLong/counter_85__i29/SR   tuner/howLong/counter_85__i30/SR}              
+                                         |   25.846 ns 
+tuner/howLong/counter_85__i31/SR         |   25.846 ns 
 -------------------------------------------------------
                                          |             
 Setup # of endpoints with negative slack:|           0 
@@ -130,16 +138,16 @@ Setup # of endpoints with negative slack:|           0
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-tuner/state_i1/D                         |    1.715 ns 
-tuner/freqThreshold__i15/D               |    1.715 ns 
-tuner/state_i2/D                         |    1.715 ns 
-tuner/state_i0/D                         |    1.715 ns 
-tuner/freqThreshold__i5/D                |    1.715 ns 
-tuner/freqThreshold__i3/D                |    1.715 ns 
-tuner/counter_89__i3/D                   |    1.882 ns 
-tuner/counter_89__i4/D                   |    1.882 ns 
-tuner/counter_89__i5/D                   |    1.882 ns 
-tuner/counter_89__i6/D                   |    1.882 ns 
+tuner/durThreshold_i0_i21/D              |    1.715 ns 
+tuner/durThreshold_i0_i22/D              |    1.715 ns 
+tuner/durThreshold_i0_i17/D              |    1.715 ns 
+tuner/durThreshold_i0_i20/D              |    1.715 ns 
+tuner/durThreshold_i0_i16/D              |    1.715 ns 
+tuner/durThreshold_i0_i12/D              |    1.715 ns 
+tuner/durThreshold_i0_i13/D              |    1.715 ns 
+tuner/durThreshold_i0_i9/D               |    1.715 ns 
+tuner/durThreshold_i0_i11/D              |    1.715 ns 
+tuner/durThreshold_i0_i8/D               |    1.715 ns 
 -------------------------------------------------------
                                          |             
 Hold # of endpoints with negative slack: |           0 
@@ -176,24 +184,41 @@ create_generated_clock,
 ...
 
 -------------------------------------------------------------------
-     Listing 5 Start or End Points      |           Type           
+     Listing 6 Start or End Points      |           Type           
 -------------------------------------------------------------------
-clk                                     |                     input
-sck                                     |                     input
-sdi                                     |                     input
 ce                                      |                     input
+sdi                                     |                     input
+sck                                     |                     input
+clk                                     |                     input
+makingMusic                             |                    output
 pwm                                     |                    output
 -------------------------------------------------------------------
                                         |                          
-Number of I/O ports without constraint  |                         5
+Number of I/O ports without constraint  |                         6
                                         |                          
 -------------------------------------------------------------------
 
 Registers without clock definition
 Define the clock for these registers.
---------------------------------------------------
-There is no instance satisfying reporting criteria
-
+-------------------------------------------------------------------
+         Listing 10 Instance(s)         |           Type           
+-------------------------------------------------------------------
+enabler/flattenedMCUout__i29            |                  No Clock
+enabler/flattenedMCUout__i25            |                  No Clock
+enabler/flattenedMCUout__i31            |                  No Clock
+enabler/flattenedMCUout__i34            |                  No Clock
+enabler/flattenedMCUout__i27            |                  No Clock
+enabler/flattenedMCUout__i13            |                  No Clock
+enabler/flattenedMCUout__i17            |                  No Clock
+enabler/flattenedMCUout__i15            |                  No Clock
+enabler/flattenedMCUout__i23            |                  No Clock
+enabler/flattenedMCUout__i19            |                  No Clock
+-------------------------------------------------------------------
+                                        |                          
+Number of registers without clock defin |                          
+ition                                   |                       216
+                                        |                          
+-------------------------------------------------------------------
 
 ==============================================
 4  DETAILED REPORT
@@ -215,1216 +240,550 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/state_i1/Q  (SLICE_R21C7A)
-Path End         : tuner/counter_89__i31/D  (SLICE_R22C7A)
+Path Begin       : tuner/howLong/counter_85__i9/Q  (SLICE_R14C9B)
+Path End         : {tuner/howLong/counter_85__i5/SR   tuner/howLong/counter_85__i6/SR}  (SLICE_R14C8D)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 34
-Delay Ratio      : 42.5% (route), 57.5% (logic)
+Logic Level      : 5
+Delay Ratio      : 79.0% (route), 21.0% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 41.666 ns 
-Path Slack       : 22.386 ns  (Passed)
+Path Slack       : 25.845 ns  (Passed)
 
 
 Source Clock Path
-Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  66      
-tuner/howLong/int_osc                                        NET DELAY            5.499                  5.499  66      
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  62      
+tuner/howLong/int_osc                                        NET DELAY        5.499                  5.499  62      
 
 
 Data Path
 
-tuner/state_i1/CK->tuner/state_i1/Q       SLICE_R21C7A       CLK_TO_Q1_DELAY      1.388                  6.887  23      
-tuner/state[1]                                               NET DELAY            2.141                  9.028  23      
-tuner/i998_2_lut_3_lut/C->tuner/i998_2_lut_3_lut/Z
-                                          SLICE_R21C6B       A0_TO_F0_DELAY       0.449                  9.477  1       
-tuner/n373[5]                                                NET DELAY            3.080                 12.557  1       
-tuner/counter_89_add_4_1/B1->tuner/counter_89_add_4_1/CO1
-                                          SLICE_R22C3A       B1_TO_COUT1_DELAY    0.357                 12.914  2       
-tuner/n921                                                   NET DELAY            0.000                 12.914  2       
-tuner/counter_89_add_4_3/CI0->tuner/counter_89_add_4_3/CO0
-                                          SLICE_R22C3B       CIN0_TO_COUT0_DELAY  0.277                 13.191  2       
-tuner/n2466                                                  NET DELAY            0.000                 13.191  2       
-tuner/counter_89_add_4_3/CI1->tuner/counter_89_add_4_3/CO1
-                                          SLICE_R22C3B       CIN1_TO_COUT1_DELAY  0.277                 13.468  2       
-tuner/n923                                                   NET DELAY            0.000                 13.468  2       
-tuner/counter_89_add_4_5/CI0->tuner/counter_89_add_4_5/CO0
-                                          SLICE_R22C3C       CIN0_TO_COUT0_DELAY  0.277                 13.745  2       
-tuner/n2469                                                  NET DELAY            0.000                 13.745  2       
-tuner/counter_89_add_4_5/CI1->tuner/counter_89_add_4_5/CO1
-                                          SLICE_R22C3C       CIN1_TO_COUT1_DELAY  0.277                 14.022  2       
-tuner/n925                                                   NET DELAY            0.000                 14.022  2       
-tuner/counter_89_add_4_7/CI0->tuner/counter_89_add_4_7/CO0
-                                          SLICE_R22C3D       CIN0_TO_COUT0_DELAY  0.277                 14.299  2       
-tuner/n2472                                                  NET DELAY            0.000                 14.299  2       
-tuner/counter_89_add_4_7/CI1->tuner/counter_89_add_4_7/CO1
-                                          SLICE_R22C3D       CIN1_TO_COUT1_DELAY  0.277                 14.576  2       
-tuner/n927                                                   NET DELAY            0.555                 15.131  2       
-tuner/counter_89_add_4_9/CI0->tuner/counter_89_add_4_9/CO0
-                                          SLICE_R22C4A       CIN0_TO_COUT0_DELAY  0.277                 15.408  2       
-tuner/n2475                                                  NET DELAY            0.000                 15.408  2       
-tuner/counter_89_add_4_9/CI1->tuner/counter_89_add_4_9/CO1
-                                          SLICE_R22C4A       CIN1_TO_COUT1_DELAY  0.277                 15.685  2       
-tuner/n929                                                   NET DELAY            0.000                 15.685  2       
-tuner/counter_89_add_4_11/CI0->tuner/counter_89_add_4_11/CO0
-                                          SLICE_R22C4B       CIN0_TO_COUT0_DELAY  0.277                 15.962  2       
-tuner/n2478                                                  NET DELAY            0.000                 15.962  2       
-tuner/counter_89_add_4_11/CI1->tuner/counter_89_add_4_11/CO1
-                                          SLICE_R22C4B       CIN1_TO_COUT1_DELAY  0.277                 16.239  2       
-tuner/n931                                                   NET DELAY            0.000                 16.239  2       
-tuner/counter_89_add_4_13/CI0->tuner/counter_89_add_4_13/CO0
-                                          SLICE_R22C4C       CIN0_TO_COUT0_DELAY  0.277                 16.516  2       
-tuner/n2481                                                  NET DELAY            0.000                 16.516  2       
-tuner/counter_89_add_4_13/CI1->tuner/counter_89_add_4_13/CO1
-                                          SLICE_R22C4C       CIN1_TO_COUT1_DELAY  0.277                 16.793  2       
-tuner/n933                                                   NET DELAY            0.000                 16.793  2       
-tuner/counter_89_add_4_15/CI0->tuner/counter_89_add_4_15/CO0
-                                          SLICE_R22C4D       CIN0_TO_COUT0_DELAY  0.277                 17.070  2       
-tuner/n2484                                                  NET DELAY            0.000                 17.070  2       
-tuner/counter_89_add_4_15/CI1->tuner/counter_89_add_4_15/CO1
-                                          SLICE_R22C4D       CIN1_TO_COUT1_DELAY  0.277                 17.347  2       
-tuner/n935                                                   NET DELAY            0.555                 17.902  2       
-tuner/counter_89_add_4_17/CI0->tuner/counter_89_add_4_17/CO0
-                                          SLICE_R22C5A       CIN0_TO_COUT0_DELAY  0.277                 18.179  2       
-tuner/n2487                                                  NET DELAY            0.000                 18.179  2       
-tuner/counter_89_add_4_17/CI1->tuner/counter_89_add_4_17/CO1
-                                          SLICE_R22C5A       CIN1_TO_COUT1_DELAY  0.277                 18.456  2       
-tuner/n937                                                   NET DELAY            0.000                 18.456  2       
-tuner/counter_89_add_4_19/CI0->tuner/counter_89_add_4_19/CO0
-                                          SLICE_R22C5B       CIN0_TO_COUT0_DELAY  0.277                 18.733  2       
-tuner/n2490                                                  NET DELAY            0.000                 18.733  2       
-tuner/counter_89_add_4_19/CI1->tuner/counter_89_add_4_19/CO1
-                                          SLICE_R22C5B       CIN1_TO_COUT1_DELAY  0.277                 19.010  2       
-tuner/n939                                                   NET DELAY            0.000                 19.010  2       
-tuner/counter_89_add_4_21/CI0->tuner/counter_89_add_4_21/CO0
-                                          SLICE_R22C5C       CIN0_TO_COUT0_DELAY  0.277                 19.287  2       
-tuner/n2493                                                  NET DELAY            0.000                 19.287  2       
-tuner/counter_89_add_4_21/CI1->tuner/counter_89_add_4_21/CO1
-                                          SLICE_R22C5C       CIN1_TO_COUT1_DELAY  0.277                 19.564  2       
-tuner/n941                                                   NET DELAY            0.000                 19.564  2       
-tuner/counter_89_add_4_23/CI0->tuner/counter_89_add_4_23/CO0
-                                          SLICE_R22C5D       CIN0_TO_COUT0_DELAY  0.277                 19.841  2       
-tuner/n2496                                                  NET DELAY            0.000                 19.841  2       
-tuner/counter_89_add_4_23/CI1->tuner/counter_89_add_4_23/CO1
-                                          SLICE_R22C5D       CIN1_TO_COUT1_DELAY  0.277                 20.118  2       
-tuner/n943                                                   NET DELAY            0.555                 20.673  2       
-tuner/counter_89_add_4_25/CI0->tuner/counter_89_add_4_25/CO0
-                                          SLICE_R22C6A       CIN0_TO_COUT0_DELAY  0.277                 20.950  2       
-tuner/n2499                                                  NET DELAY            0.000                 20.950  2       
-tuner/counter_89_add_4_25/CI1->tuner/counter_89_add_4_25/CO1
-                                          SLICE_R22C6A       CIN1_TO_COUT1_DELAY  0.277                 21.227  2       
-tuner/n945                                                   NET DELAY            0.000                 21.227  2       
-tuner/counter_89_add_4_27/CI0->tuner/counter_89_add_4_27/CO0
-                                          SLICE_R22C6B       CIN0_TO_COUT0_DELAY  0.277                 21.504  2       
-tuner/n2502                                                  NET DELAY            0.000                 21.504  2       
-tuner/counter_89_add_4_27/CI1->tuner/counter_89_add_4_27/CO1
-                                          SLICE_R22C6B       CIN1_TO_COUT1_DELAY  0.277                 21.781  2       
-tuner/n947                                                   NET DELAY            0.000                 21.781  2       
-tuner/counter_89_add_4_29/CI0->tuner/counter_89_add_4_29/CO0
-                                          SLICE_R22C6C       CIN0_TO_COUT0_DELAY  0.277                 22.058  2       
-tuner/n2505                                                  NET DELAY            0.000                 22.058  2       
-tuner/counter_89_add_4_29/CI1->tuner/counter_89_add_4_29/CO1
-                                          SLICE_R22C6C       CIN1_TO_COUT1_DELAY  0.277                 22.335  2       
-tuner/n949                                                   NET DELAY            0.000                 22.335  2       
-tuner/counter_89_add_4_31/CI0->tuner/counter_89_add_4_31/CO0
-                                          SLICE_R22C6D       CIN0_TO_COUT0_DELAY  0.277                 22.612  2       
-tuner/n2508                                                  NET DELAY            0.000                 22.612  2       
-tuner/counter_89_add_4_31/CI1->tuner/counter_89_add_4_31/CO1
-                                          SLICE_R22C6D       CIN1_TO_COUT1_DELAY  0.277                 22.889  2       
-tuner/n951                                                   NET DELAY            1.216                 24.105  2       
-tuner/counter_89_add_4_33/D0->tuner/counter_89_add_4_33/S0
-                                          SLICE_R22C7A       D0_TO_F0_DELAY       0.476                 24.581  1       
-tuner/n133[31] ( DI0 )                                       NET DELAY            0.000                 24.581  1       
+tuner/howLong/counter_85__i9/CK->tuner/howLong/counter_85__i9/Q
+                                          SLICE_R14C9B       CLK_TO_Q0_DELAY  1.388                  6.887  2       
+tuner/howLong/counter[9]                                     NET DELAY        2.617                  9.504  2       
+tuner/howLong/i5_4_lut/A->tuner/howLong/i5_4_lut/Z
+                                          SLICE_R15C12A      C0_TO_F0_DELAY   0.449                  9.953  1       
+tuner/howLong/n22                                            NET DELAY        2.551                 12.504  1       
+tuner/howLong/i14_4_lut/D->tuner/howLong/i14_4_lut/Z
+                                          SLICE_R16C11B      A1_TO_F1_DELAY   0.449                 12.953  1       
+tuner/howLong/n31                                            NET DELAY        2.763                 15.716  1       
+tuner/howLong/i16_4_lut/A->tuner/howLong/i16_4_lut/Z
+                                          SLICE_R15C11B      D0_TO_F0_DELAY   0.476                 16.192  2       
+tuner/howLong/n3764                                          NET DELAY        0.304                 16.496  2       
+tuner/howLong/i3529_4_lut/B->tuner/howLong/i3529_4_lut/Z
+                                          SLICE_R15C11B      C1_TO_F1_DELAY   0.449                 16.945  17      
+tuner/howLong/counter_31__N_268 ( LSR )                      NET DELAY        3.846                 20.791  17      
 
 
 Destination Clock Path
 
-                                                             CONSTRAINT           0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  66      
-tuner/howLong/int_osc ( CLK )                                NET DELAY            5.499                 47.165  66      
-                                                             Uncertainty          0.000                 47.165  
-                                                             Setup time           0.198                 46.967  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Required Time                                                                                           46.967  
-Arrival Time                                                                                           -24.580  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                    22.386  
+                                                             CONSTRAINT       0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  62      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        5.499                 47.165  62      
+                                                             Uncertainty      0.000                 47.165  
+                                                             Setup time       0.529                 46.636  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       46.636  
+Arrival Time                                                                                       -20.790  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                25.845  
 
 
 
 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/state_i1/Q  (SLICE_R21C7A)
-Path End         : tuner/counter_89__i30/D  (SLICE_R22C6D)
+Path Begin       : tuner/howLong/counter_85__i9/Q  (SLICE_R14C9B)
+Path End         : {tuner/howLong/counter_85__i15/SR   tuner/howLong/counter_85__i16/SR}  (SLICE_R14C10A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 33
-Delay Ratio      : 41.4% (route), 58.6% (logic)
+Logic Level      : 5
+Delay Ratio      : 79.0% (route), 21.0% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 41.666 ns 
-Path Slack       : 23.218 ns  (Passed)
+Path Slack       : 25.845 ns  (Passed)
 
 
 Source Clock Path
-Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  66      
-tuner/howLong/int_osc                                        NET DELAY            5.499                  5.499  66      
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  62      
+tuner/howLong/int_osc                                        NET DELAY        5.499                  5.499  62      
 
 
 Data Path
 
-tuner/state_i1/CK->tuner/state_i1/Q       SLICE_R21C7A       CLK_TO_Q1_DELAY      1.388                  6.887  23      
-tuner/state[1]                                               NET DELAY            2.141                  9.028  23      
-tuner/i998_2_lut_3_lut/C->tuner/i998_2_lut_3_lut/Z
-                                          SLICE_R21C6B       A0_TO_F0_DELAY       0.449                  9.477  1       
-tuner/n373[5]                                                NET DELAY            3.080                 12.557  1       
-tuner/counter_89_add_4_1/B1->tuner/counter_89_add_4_1/CO1
-                                          SLICE_R22C3A       B1_TO_COUT1_DELAY    0.357                 12.914  2       
-tuner/n921                                                   NET DELAY            0.000                 12.914  2       
-tuner/counter_89_add_4_3/CI0->tuner/counter_89_add_4_3/CO0
-                                          SLICE_R22C3B       CIN0_TO_COUT0_DELAY  0.277                 13.191  2       
-tuner/n2466                                                  NET DELAY            0.000                 13.191  2       
-tuner/counter_89_add_4_3/CI1->tuner/counter_89_add_4_3/CO1
-                                          SLICE_R22C3B       CIN1_TO_COUT1_DELAY  0.277                 13.468  2       
-tuner/n923                                                   NET DELAY            0.000                 13.468  2       
-tuner/counter_89_add_4_5/CI0->tuner/counter_89_add_4_5/CO0
-                                          SLICE_R22C3C       CIN0_TO_COUT0_DELAY  0.277                 13.745  2       
-tuner/n2469                                                  NET DELAY            0.000                 13.745  2       
-tuner/counter_89_add_4_5/CI1->tuner/counter_89_add_4_5/CO1
-                                          SLICE_R22C3C       CIN1_TO_COUT1_DELAY  0.277                 14.022  2       
-tuner/n925                                                   NET DELAY            0.000                 14.022  2       
-tuner/counter_89_add_4_7/CI0->tuner/counter_89_add_4_7/CO0
-                                          SLICE_R22C3D       CIN0_TO_COUT0_DELAY  0.277                 14.299  2       
-tuner/n2472                                                  NET DELAY            0.000                 14.299  2       
-tuner/counter_89_add_4_7/CI1->tuner/counter_89_add_4_7/CO1
-                                          SLICE_R22C3D       CIN1_TO_COUT1_DELAY  0.277                 14.576  2       
-tuner/n927                                                   NET DELAY            0.555                 15.131  2       
-tuner/counter_89_add_4_9/CI0->tuner/counter_89_add_4_9/CO0
-                                          SLICE_R22C4A       CIN0_TO_COUT0_DELAY  0.277                 15.408  2       
-tuner/n2475                                                  NET DELAY            0.000                 15.408  2       
-tuner/counter_89_add_4_9/CI1->tuner/counter_89_add_4_9/CO1
-                                          SLICE_R22C4A       CIN1_TO_COUT1_DELAY  0.277                 15.685  2       
-tuner/n929                                                   NET DELAY            0.000                 15.685  2       
-tuner/counter_89_add_4_11/CI0->tuner/counter_89_add_4_11/CO0
-                                          SLICE_R22C4B       CIN0_TO_COUT0_DELAY  0.277                 15.962  2       
-tuner/n2478                                                  NET DELAY            0.000                 15.962  2       
-tuner/counter_89_add_4_11/CI1->tuner/counter_89_add_4_11/CO1
-                                          SLICE_R22C4B       CIN1_TO_COUT1_DELAY  0.277                 16.239  2       
-tuner/n931                                                   NET DELAY            0.000                 16.239  2       
-tuner/counter_89_add_4_13/CI0->tuner/counter_89_add_4_13/CO0
-                                          SLICE_R22C4C       CIN0_TO_COUT0_DELAY  0.277                 16.516  2       
-tuner/n2481                                                  NET DELAY            0.000                 16.516  2       
-tuner/counter_89_add_4_13/CI1->tuner/counter_89_add_4_13/CO1
-                                          SLICE_R22C4C       CIN1_TO_COUT1_DELAY  0.277                 16.793  2       
-tuner/n933                                                   NET DELAY            0.000                 16.793  2       
-tuner/counter_89_add_4_15/CI0->tuner/counter_89_add_4_15/CO0
-                                          SLICE_R22C4D       CIN0_TO_COUT0_DELAY  0.277                 17.070  2       
-tuner/n2484                                                  NET DELAY            0.000                 17.070  2       
-tuner/counter_89_add_4_15/CI1->tuner/counter_89_add_4_15/CO1
-                                          SLICE_R22C4D       CIN1_TO_COUT1_DELAY  0.277                 17.347  2       
-tuner/n935                                                   NET DELAY            0.555                 17.902  2       
-tuner/counter_89_add_4_17/CI0->tuner/counter_89_add_4_17/CO0
-                                          SLICE_R22C5A       CIN0_TO_COUT0_DELAY  0.277                 18.179  2       
-tuner/n2487                                                  NET DELAY            0.000                 18.179  2       
-tuner/counter_89_add_4_17/CI1->tuner/counter_89_add_4_17/CO1
-                                          SLICE_R22C5A       CIN1_TO_COUT1_DELAY  0.277                 18.456  2       
-tuner/n937                                                   NET DELAY            0.000                 18.456  2       
-tuner/counter_89_add_4_19/CI0->tuner/counter_89_add_4_19/CO0
-                                          SLICE_R22C5B       CIN0_TO_COUT0_DELAY  0.277                 18.733  2       
-tuner/n2490                                                  NET DELAY            0.000                 18.733  2       
-tuner/counter_89_add_4_19/CI1->tuner/counter_89_add_4_19/CO1
-                                          SLICE_R22C5B       CIN1_TO_COUT1_DELAY  0.277                 19.010  2       
-tuner/n939                                                   NET DELAY            0.000                 19.010  2       
-tuner/counter_89_add_4_21/CI0->tuner/counter_89_add_4_21/CO0
-                                          SLICE_R22C5C       CIN0_TO_COUT0_DELAY  0.277                 19.287  2       
-tuner/n2493                                                  NET DELAY            0.000                 19.287  2       
-tuner/counter_89_add_4_21/CI1->tuner/counter_89_add_4_21/CO1
-                                          SLICE_R22C5C       CIN1_TO_COUT1_DELAY  0.277                 19.564  2       
-tuner/n941                                                   NET DELAY            0.000                 19.564  2       
-tuner/counter_89_add_4_23/CI0->tuner/counter_89_add_4_23/CO0
-                                          SLICE_R22C5D       CIN0_TO_COUT0_DELAY  0.277                 19.841  2       
-tuner/n2496                                                  NET DELAY            0.000                 19.841  2       
-tuner/counter_89_add_4_23/CI1->tuner/counter_89_add_4_23/CO1
-                                          SLICE_R22C5D       CIN1_TO_COUT1_DELAY  0.277                 20.118  2       
-tuner/n943                                                   NET DELAY            0.555                 20.673  2       
-tuner/counter_89_add_4_25/CI0->tuner/counter_89_add_4_25/CO0
-                                          SLICE_R22C6A       CIN0_TO_COUT0_DELAY  0.277                 20.950  2       
-tuner/n2499                                                  NET DELAY            0.000                 20.950  2       
-tuner/counter_89_add_4_25/CI1->tuner/counter_89_add_4_25/CO1
-                                          SLICE_R22C6A       CIN1_TO_COUT1_DELAY  0.277                 21.227  2       
-tuner/n945                                                   NET DELAY            0.000                 21.227  2       
-tuner/counter_89_add_4_27/CI0->tuner/counter_89_add_4_27/CO0
-                                          SLICE_R22C6B       CIN0_TO_COUT0_DELAY  0.277                 21.504  2       
-tuner/n2502                                                  NET DELAY            0.000                 21.504  2       
-tuner/counter_89_add_4_27/CI1->tuner/counter_89_add_4_27/CO1
-                                          SLICE_R22C6B       CIN1_TO_COUT1_DELAY  0.277                 21.781  2       
-tuner/n947                                                   NET DELAY            0.000                 21.781  2       
-tuner/counter_89_add_4_29/CI0->tuner/counter_89_add_4_29/CO0
-                                          SLICE_R22C6C       CIN0_TO_COUT0_DELAY  0.277                 22.058  2       
-tuner/n2505                                                  NET DELAY            0.000                 22.058  2       
-tuner/counter_89_add_4_29/CI1->tuner/counter_89_add_4_29/CO1
-                                          SLICE_R22C6C       CIN1_TO_COUT1_DELAY  0.277                 22.335  2       
-tuner/n949                                                   NET DELAY            0.000                 22.335  2       
-tuner/counter_89_add_4_31/CI0->tuner/counter_89_add_4_31/CO0
-                                          SLICE_R22C6D       CIN0_TO_COUT0_DELAY  0.277                 22.612  2       
-tuner/n2508                                                  NET DELAY            0.661                 23.273  2       
-tuner/counter_89_add_4_31/D1->tuner/counter_89_add_4_31/S1
-                                          SLICE_R22C6D       D1_TO_F1_DELAY       0.476                 23.749  1       
-tuner/n133[30] ( DI1 )                                       NET DELAY            0.000                 23.749  1       
+tuner/howLong/counter_85__i9/CK->tuner/howLong/counter_85__i9/Q
+                                          SLICE_R14C9B       CLK_TO_Q0_DELAY  1.388                  6.887  2       
+tuner/howLong/counter[9]                                     NET DELAY        2.617                  9.504  2       
+tuner/howLong/i5_4_lut/A->tuner/howLong/i5_4_lut/Z
+                                          SLICE_R15C12A      C0_TO_F0_DELAY   0.449                  9.953  1       
+tuner/howLong/n22                                            NET DELAY        2.551                 12.504  1       
+tuner/howLong/i14_4_lut/D->tuner/howLong/i14_4_lut/Z
+                                          SLICE_R16C11B      A1_TO_F1_DELAY   0.449                 12.953  1       
+tuner/howLong/n31                                            NET DELAY        2.763                 15.716  1       
+tuner/howLong/i16_4_lut/A->tuner/howLong/i16_4_lut/Z
+                                          SLICE_R15C11B      D0_TO_F0_DELAY   0.476                 16.192  2       
+tuner/howLong/n3764                                          NET DELAY        0.304                 16.496  2       
+tuner/howLong/i3529_4_lut/B->tuner/howLong/i3529_4_lut/Z
+                                          SLICE_R15C11B      C1_TO_F1_DELAY   0.449                 16.945  17      
+tuner/howLong/counter_31__N_268 ( LSR )                      NET DELAY        3.846                 20.791  17      
 
 
 Destination Clock Path
 
-                                                             CONSTRAINT           0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  66      
-tuner/howLong/int_osc ( CLK )                                NET DELAY            5.499                 47.165  66      
-                                                             Uncertainty          0.000                 47.165  
-                                                             Setup time           0.198                 46.967  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Required Time                                                                                           46.967  
-Arrival Time                                                                                           -23.748  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                    23.218  
+                                                             CONSTRAINT       0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  62      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        5.499                 47.165  62      
+                                                             Uncertainty      0.000                 47.165  
+                                                             Setup time       0.529                 46.636  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       46.636  
+Arrival Time                                                                                       -20.790  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                25.845  
 
 
 
 
 ++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/state_i1/Q  (SLICE_R21C7A)
-Path End         : tuner/counter_89__i29/D  (SLICE_R22C6D)
+Path Begin       : tuner/howLong/counter_85__i9/Q  (SLICE_R14C9B)
+Path End         : {tuner/howLong/counter_85__i17/SR   tuner/howLong/counter_85__i18/SR}  (SLICE_R14C10B)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 32
-Delay Ratio      : 42.0% (route), 58.0% (logic)
+Logic Level      : 5
+Delay Ratio      : 79.0% (route), 21.0% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 41.666 ns 
-Path Slack       : 23.495 ns  (Passed)
+Path Slack       : 25.845 ns  (Passed)
 
 
 Source Clock Path
-Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  66      
-tuner/howLong/int_osc                                        NET DELAY            5.499                  5.499  66      
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  62      
+tuner/howLong/int_osc                                        NET DELAY        5.499                  5.499  62      
 
 
 Data Path
 
-tuner/state_i1/CK->tuner/state_i1/Q       SLICE_R21C7A       CLK_TO_Q1_DELAY      1.388                  6.887  23      
-tuner/state[1]                                               NET DELAY            2.141                  9.028  23      
-tuner/i998_2_lut_3_lut/C->tuner/i998_2_lut_3_lut/Z
-                                          SLICE_R21C6B       A0_TO_F0_DELAY       0.449                  9.477  1       
-tuner/n373[5]                                                NET DELAY            3.080                 12.557  1       
-tuner/counter_89_add_4_1/B1->tuner/counter_89_add_4_1/CO1
-                                          SLICE_R22C3A       B1_TO_COUT1_DELAY    0.357                 12.914  2       
-tuner/n921                                                   NET DELAY            0.000                 12.914  2       
-tuner/counter_89_add_4_3/CI0->tuner/counter_89_add_4_3/CO0
-                                          SLICE_R22C3B       CIN0_TO_COUT0_DELAY  0.277                 13.191  2       
-tuner/n2466                                                  NET DELAY            0.000                 13.191  2       
-tuner/counter_89_add_4_3/CI1->tuner/counter_89_add_4_3/CO1
-                                          SLICE_R22C3B       CIN1_TO_COUT1_DELAY  0.277                 13.468  2       
-tuner/n923                                                   NET DELAY            0.000                 13.468  2       
-tuner/counter_89_add_4_5/CI0->tuner/counter_89_add_4_5/CO0
-                                          SLICE_R22C3C       CIN0_TO_COUT0_DELAY  0.277                 13.745  2       
-tuner/n2469                                                  NET DELAY            0.000                 13.745  2       
-tuner/counter_89_add_4_5/CI1->tuner/counter_89_add_4_5/CO1
-                                          SLICE_R22C3C       CIN1_TO_COUT1_DELAY  0.277                 14.022  2       
-tuner/n925                                                   NET DELAY            0.000                 14.022  2       
-tuner/counter_89_add_4_7/CI0->tuner/counter_89_add_4_7/CO0
-                                          SLICE_R22C3D       CIN0_TO_COUT0_DELAY  0.277                 14.299  2       
-tuner/n2472                                                  NET DELAY            0.000                 14.299  2       
-tuner/counter_89_add_4_7/CI1->tuner/counter_89_add_4_7/CO1
-                                          SLICE_R22C3D       CIN1_TO_COUT1_DELAY  0.277                 14.576  2       
-tuner/n927                                                   NET DELAY            0.555                 15.131  2       
-tuner/counter_89_add_4_9/CI0->tuner/counter_89_add_4_9/CO0
-                                          SLICE_R22C4A       CIN0_TO_COUT0_DELAY  0.277                 15.408  2       
-tuner/n2475                                                  NET DELAY            0.000                 15.408  2       
-tuner/counter_89_add_4_9/CI1->tuner/counter_89_add_4_9/CO1
-                                          SLICE_R22C4A       CIN1_TO_COUT1_DELAY  0.277                 15.685  2       
-tuner/n929                                                   NET DELAY            0.000                 15.685  2       
-tuner/counter_89_add_4_11/CI0->tuner/counter_89_add_4_11/CO0
-                                          SLICE_R22C4B       CIN0_TO_COUT0_DELAY  0.277                 15.962  2       
-tuner/n2478                                                  NET DELAY            0.000                 15.962  2       
-tuner/counter_89_add_4_11/CI1->tuner/counter_89_add_4_11/CO1
-                                          SLICE_R22C4B       CIN1_TO_COUT1_DELAY  0.277                 16.239  2       
-tuner/n931                                                   NET DELAY            0.000                 16.239  2       
-tuner/counter_89_add_4_13/CI0->tuner/counter_89_add_4_13/CO0
-                                          SLICE_R22C4C       CIN0_TO_COUT0_DELAY  0.277                 16.516  2       
-tuner/n2481                                                  NET DELAY            0.000                 16.516  2       
-tuner/counter_89_add_4_13/CI1->tuner/counter_89_add_4_13/CO1
-                                          SLICE_R22C4C       CIN1_TO_COUT1_DELAY  0.277                 16.793  2       
-tuner/n933                                                   NET DELAY            0.000                 16.793  2       
-tuner/counter_89_add_4_15/CI0->tuner/counter_89_add_4_15/CO0
-                                          SLICE_R22C4D       CIN0_TO_COUT0_DELAY  0.277                 17.070  2       
-tuner/n2484                                                  NET DELAY            0.000                 17.070  2       
-tuner/counter_89_add_4_15/CI1->tuner/counter_89_add_4_15/CO1
-                                          SLICE_R22C4D       CIN1_TO_COUT1_DELAY  0.277                 17.347  2       
-tuner/n935                                                   NET DELAY            0.555                 17.902  2       
-tuner/counter_89_add_4_17/CI0->tuner/counter_89_add_4_17/CO0
-                                          SLICE_R22C5A       CIN0_TO_COUT0_DELAY  0.277                 18.179  2       
-tuner/n2487                                                  NET DELAY            0.000                 18.179  2       
-tuner/counter_89_add_4_17/CI1->tuner/counter_89_add_4_17/CO1
-                                          SLICE_R22C5A       CIN1_TO_COUT1_DELAY  0.277                 18.456  2       
-tuner/n937                                                   NET DELAY            0.000                 18.456  2       
-tuner/counter_89_add_4_19/CI0->tuner/counter_89_add_4_19/CO0
-                                          SLICE_R22C5B       CIN0_TO_COUT0_DELAY  0.277                 18.733  2       
-tuner/n2490                                                  NET DELAY            0.000                 18.733  2       
-tuner/counter_89_add_4_19/CI1->tuner/counter_89_add_4_19/CO1
-                                          SLICE_R22C5B       CIN1_TO_COUT1_DELAY  0.277                 19.010  2       
-tuner/n939                                                   NET DELAY            0.000                 19.010  2       
-tuner/counter_89_add_4_21/CI0->tuner/counter_89_add_4_21/CO0
-                                          SLICE_R22C5C       CIN0_TO_COUT0_DELAY  0.277                 19.287  2       
-tuner/n2493                                                  NET DELAY            0.000                 19.287  2       
-tuner/counter_89_add_4_21/CI1->tuner/counter_89_add_4_21/CO1
-                                          SLICE_R22C5C       CIN1_TO_COUT1_DELAY  0.277                 19.564  2       
-tuner/n941                                                   NET DELAY            0.000                 19.564  2       
-tuner/counter_89_add_4_23/CI0->tuner/counter_89_add_4_23/CO0
-                                          SLICE_R22C5D       CIN0_TO_COUT0_DELAY  0.277                 19.841  2       
-tuner/n2496                                                  NET DELAY            0.000                 19.841  2       
-tuner/counter_89_add_4_23/CI1->tuner/counter_89_add_4_23/CO1
-                                          SLICE_R22C5D       CIN1_TO_COUT1_DELAY  0.277                 20.118  2       
-tuner/n943                                                   NET DELAY            0.555                 20.673  2       
-tuner/counter_89_add_4_25/CI0->tuner/counter_89_add_4_25/CO0
-                                          SLICE_R22C6A       CIN0_TO_COUT0_DELAY  0.277                 20.950  2       
-tuner/n2499                                                  NET DELAY            0.000                 20.950  2       
-tuner/counter_89_add_4_25/CI1->tuner/counter_89_add_4_25/CO1
-                                          SLICE_R22C6A       CIN1_TO_COUT1_DELAY  0.277                 21.227  2       
-tuner/n945                                                   NET DELAY            0.000                 21.227  2       
-tuner/counter_89_add_4_27/CI0->tuner/counter_89_add_4_27/CO0
-                                          SLICE_R22C6B       CIN0_TO_COUT0_DELAY  0.277                 21.504  2       
-tuner/n2502                                                  NET DELAY            0.000                 21.504  2       
-tuner/counter_89_add_4_27/CI1->tuner/counter_89_add_4_27/CO1
-                                          SLICE_R22C6B       CIN1_TO_COUT1_DELAY  0.277                 21.781  2       
-tuner/n947                                                   NET DELAY            0.000                 21.781  2       
-tuner/counter_89_add_4_29/CI0->tuner/counter_89_add_4_29/CO0
-                                          SLICE_R22C6C       CIN0_TO_COUT0_DELAY  0.277                 22.058  2       
-tuner/n2505                                                  NET DELAY            0.000                 22.058  2       
-tuner/counter_89_add_4_29/CI1->tuner/counter_89_add_4_29/CO1
-                                          SLICE_R22C6C       CIN1_TO_COUT1_DELAY  0.277                 22.335  2       
-tuner/n949                                                   NET DELAY            0.661                 22.996  2       
-tuner/counter_89_add_4_31/D0->tuner/counter_89_add_4_31/S0
-                                          SLICE_R22C6D       D0_TO_F0_DELAY       0.476                 23.472  1       
-tuner/n133[29] ( DI0 )                                       NET DELAY            0.000                 23.472  1       
+tuner/howLong/counter_85__i9/CK->tuner/howLong/counter_85__i9/Q
+                                          SLICE_R14C9B       CLK_TO_Q0_DELAY  1.388                  6.887  2       
+tuner/howLong/counter[9]                                     NET DELAY        2.617                  9.504  2       
+tuner/howLong/i5_4_lut/A->tuner/howLong/i5_4_lut/Z
+                                          SLICE_R15C12A      C0_TO_F0_DELAY   0.449                  9.953  1       
+tuner/howLong/n22                                            NET DELAY        2.551                 12.504  1       
+tuner/howLong/i14_4_lut/D->tuner/howLong/i14_4_lut/Z
+                                          SLICE_R16C11B      A1_TO_F1_DELAY   0.449                 12.953  1       
+tuner/howLong/n31                                            NET DELAY        2.763                 15.716  1       
+tuner/howLong/i16_4_lut/A->tuner/howLong/i16_4_lut/Z
+                                          SLICE_R15C11B      D0_TO_F0_DELAY   0.476                 16.192  2       
+tuner/howLong/n3764                                          NET DELAY        0.304                 16.496  2       
+tuner/howLong/i3529_4_lut/B->tuner/howLong/i3529_4_lut/Z
+                                          SLICE_R15C11B      C1_TO_F1_DELAY   0.449                 16.945  17      
+tuner/howLong/counter_31__N_268 ( LSR )                      NET DELAY        3.846                 20.791  17      
 
 
 Destination Clock Path
 
-                                                             CONSTRAINT           0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  66      
-tuner/howLong/int_osc ( CLK )                                NET DELAY            5.499                 47.165  66      
-                                                             Uncertainty          0.000                 47.165  
-                                                             Setup time           0.198                 46.967  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Required Time                                                                                           46.967  
-Arrival Time                                                                                           -23.471  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                    23.495  
+                                                             CONSTRAINT       0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  62      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        5.499                 47.165  62      
+                                                             Uncertainty      0.000                 47.165  
+                                                             Setup time       0.529                 46.636  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       46.636  
+Arrival Time                                                                                       -20.790  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                25.845  
 
 
 
 
 ++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/state_i1/Q  (SLICE_R21C7A)
-Path End         : tuner/counter_89__i28/D  (SLICE_R22C6C)
+Path Begin       : tuner/howLong/counter_85__i9/Q  (SLICE_R14C9B)
+Path End         : {tuner/howLong/counter_85__i19/SR   tuner/howLong/counter_85__i20/SR}  (SLICE_R14C10C)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 31
-Delay Ratio      : 42.6% (route), 57.4% (logic)
+Logic Level      : 5
+Delay Ratio      : 79.0% (route), 21.0% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 41.666 ns 
-Path Slack       : 23.772 ns  (Passed)
+Path Slack       : 25.845 ns  (Passed)
 
 
 Source Clock Path
-Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  66      
-tuner/howLong/int_osc                                        NET DELAY            5.499                  5.499  66      
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  62      
+tuner/howLong/int_osc                                        NET DELAY        5.499                  5.499  62      
 
 
 Data Path
 
-tuner/state_i1/CK->tuner/state_i1/Q       SLICE_R21C7A       CLK_TO_Q1_DELAY      1.388                  6.887  23      
-tuner/state[1]                                               NET DELAY            2.141                  9.028  23      
-tuner/i998_2_lut_3_lut/C->tuner/i998_2_lut_3_lut/Z
-                                          SLICE_R21C6B       A0_TO_F0_DELAY       0.449                  9.477  1       
-tuner/n373[5]                                                NET DELAY            3.080                 12.557  1       
-tuner/counter_89_add_4_1/B1->tuner/counter_89_add_4_1/CO1
-                                          SLICE_R22C3A       B1_TO_COUT1_DELAY    0.357                 12.914  2       
-tuner/n921                                                   NET DELAY            0.000                 12.914  2       
-tuner/counter_89_add_4_3/CI0->tuner/counter_89_add_4_3/CO0
-                                          SLICE_R22C3B       CIN0_TO_COUT0_DELAY  0.277                 13.191  2       
-tuner/n2466                                                  NET DELAY            0.000                 13.191  2       
-tuner/counter_89_add_4_3/CI1->tuner/counter_89_add_4_3/CO1
-                                          SLICE_R22C3B       CIN1_TO_COUT1_DELAY  0.277                 13.468  2       
-tuner/n923                                                   NET DELAY            0.000                 13.468  2       
-tuner/counter_89_add_4_5/CI0->tuner/counter_89_add_4_5/CO0
-                                          SLICE_R22C3C       CIN0_TO_COUT0_DELAY  0.277                 13.745  2       
-tuner/n2469                                                  NET DELAY            0.000                 13.745  2       
-tuner/counter_89_add_4_5/CI1->tuner/counter_89_add_4_5/CO1
-                                          SLICE_R22C3C       CIN1_TO_COUT1_DELAY  0.277                 14.022  2       
-tuner/n925                                                   NET DELAY            0.000                 14.022  2       
-tuner/counter_89_add_4_7/CI0->tuner/counter_89_add_4_7/CO0
-                                          SLICE_R22C3D       CIN0_TO_COUT0_DELAY  0.277                 14.299  2       
-tuner/n2472                                                  NET DELAY            0.000                 14.299  2       
-tuner/counter_89_add_4_7/CI1->tuner/counter_89_add_4_7/CO1
-                                          SLICE_R22C3D       CIN1_TO_COUT1_DELAY  0.277                 14.576  2       
-tuner/n927                                                   NET DELAY            0.555                 15.131  2       
-tuner/counter_89_add_4_9/CI0->tuner/counter_89_add_4_9/CO0
-                                          SLICE_R22C4A       CIN0_TO_COUT0_DELAY  0.277                 15.408  2       
-tuner/n2475                                                  NET DELAY            0.000                 15.408  2       
-tuner/counter_89_add_4_9/CI1->tuner/counter_89_add_4_9/CO1
-                                          SLICE_R22C4A       CIN1_TO_COUT1_DELAY  0.277                 15.685  2       
-tuner/n929                                                   NET DELAY            0.000                 15.685  2       
-tuner/counter_89_add_4_11/CI0->tuner/counter_89_add_4_11/CO0
-                                          SLICE_R22C4B       CIN0_TO_COUT0_DELAY  0.277                 15.962  2       
-tuner/n2478                                                  NET DELAY            0.000                 15.962  2       
-tuner/counter_89_add_4_11/CI1->tuner/counter_89_add_4_11/CO1
-                                          SLICE_R22C4B       CIN1_TO_COUT1_DELAY  0.277                 16.239  2       
-tuner/n931                                                   NET DELAY            0.000                 16.239  2       
-tuner/counter_89_add_4_13/CI0->tuner/counter_89_add_4_13/CO0
-                                          SLICE_R22C4C       CIN0_TO_COUT0_DELAY  0.277                 16.516  2       
-tuner/n2481                                                  NET DELAY            0.000                 16.516  2       
-tuner/counter_89_add_4_13/CI1->tuner/counter_89_add_4_13/CO1
-                                          SLICE_R22C4C       CIN1_TO_COUT1_DELAY  0.277                 16.793  2       
-tuner/n933                                                   NET DELAY            0.000                 16.793  2       
-tuner/counter_89_add_4_15/CI0->tuner/counter_89_add_4_15/CO0
-                                          SLICE_R22C4D       CIN0_TO_COUT0_DELAY  0.277                 17.070  2       
-tuner/n2484                                                  NET DELAY            0.000                 17.070  2       
-tuner/counter_89_add_4_15/CI1->tuner/counter_89_add_4_15/CO1
-                                          SLICE_R22C4D       CIN1_TO_COUT1_DELAY  0.277                 17.347  2       
-tuner/n935                                                   NET DELAY            0.555                 17.902  2       
-tuner/counter_89_add_4_17/CI0->tuner/counter_89_add_4_17/CO0
-                                          SLICE_R22C5A       CIN0_TO_COUT0_DELAY  0.277                 18.179  2       
-tuner/n2487                                                  NET DELAY            0.000                 18.179  2       
-tuner/counter_89_add_4_17/CI1->tuner/counter_89_add_4_17/CO1
-                                          SLICE_R22C5A       CIN1_TO_COUT1_DELAY  0.277                 18.456  2       
-tuner/n937                                                   NET DELAY            0.000                 18.456  2       
-tuner/counter_89_add_4_19/CI0->tuner/counter_89_add_4_19/CO0
-                                          SLICE_R22C5B       CIN0_TO_COUT0_DELAY  0.277                 18.733  2       
-tuner/n2490                                                  NET DELAY            0.000                 18.733  2       
-tuner/counter_89_add_4_19/CI1->tuner/counter_89_add_4_19/CO1
-                                          SLICE_R22C5B       CIN1_TO_COUT1_DELAY  0.277                 19.010  2       
-tuner/n939                                                   NET DELAY            0.000                 19.010  2       
-tuner/counter_89_add_4_21/CI0->tuner/counter_89_add_4_21/CO0
-                                          SLICE_R22C5C       CIN0_TO_COUT0_DELAY  0.277                 19.287  2       
-tuner/n2493                                                  NET DELAY            0.000                 19.287  2       
-tuner/counter_89_add_4_21/CI1->tuner/counter_89_add_4_21/CO1
-                                          SLICE_R22C5C       CIN1_TO_COUT1_DELAY  0.277                 19.564  2       
-tuner/n941                                                   NET DELAY            0.000                 19.564  2       
-tuner/counter_89_add_4_23/CI0->tuner/counter_89_add_4_23/CO0
-                                          SLICE_R22C5D       CIN0_TO_COUT0_DELAY  0.277                 19.841  2       
-tuner/n2496                                                  NET DELAY            0.000                 19.841  2       
-tuner/counter_89_add_4_23/CI1->tuner/counter_89_add_4_23/CO1
-                                          SLICE_R22C5D       CIN1_TO_COUT1_DELAY  0.277                 20.118  2       
-tuner/n943                                                   NET DELAY            0.555                 20.673  2       
-tuner/counter_89_add_4_25/CI0->tuner/counter_89_add_4_25/CO0
-                                          SLICE_R22C6A       CIN0_TO_COUT0_DELAY  0.277                 20.950  2       
-tuner/n2499                                                  NET DELAY            0.000                 20.950  2       
-tuner/counter_89_add_4_25/CI1->tuner/counter_89_add_4_25/CO1
-                                          SLICE_R22C6A       CIN1_TO_COUT1_DELAY  0.277                 21.227  2       
-tuner/n945                                                   NET DELAY            0.000                 21.227  2       
-tuner/counter_89_add_4_27/CI0->tuner/counter_89_add_4_27/CO0
-                                          SLICE_R22C6B       CIN0_TO_COUT0_DELAY  0.277                 21.504  2       
-tuner/n2502                                                  NET DELAY            0.000                 21.504  2       
-tuner/counter_89_add_4_27/CI1->tuner/counter_89_add_4_27/CO1
-                                          SLICE_R22C6B       CIN1_TO_COUT1_DELAY  0.277                 21.781  2       
-tuner/n947                                                   NET DELAY            0.000                 21.781  2       
-tuner/counter_89_add_4_29/CI0->tuner/counter_89_add_4_29/CO0
-                                          SLICE_R22C6C       CIN0_TO_COUT0_DELAY  0.277                 22.058  2       
-tuner/n2505                                                  NET DELAY            0.661                 22.719  2       
-tuner/counter_89_add_4_29/D1->tuner/counter_89_add_4_29/S1
-                                          SLICE_R22C6C       D1_TO_F1_DELAY       0.476                 23.195  1       
-tuner/n133[28] ( DI1 )                                       NET DELAY            0.000                 23.195  1       
+tuner/howLong/counter_85__i9/CK->tuner/howLong/counter_85__i9/Q
+                                          SLICE_R14C9B       CLK_TO_Q0_DELAY  1.388                  6.887  2       
+tuner/howLong/counter[9]                                     NET DELAY        2.617                  9.504  2       
+tuner/howLong/i5_4_lut/A->tuner/howLong/i5_4_lut/Z
+                                          SLICE_R15C12A      C0_TO_F0_DELAY   0.449                  9.953  1       
+tuner/howLong/n22                                            NET DELAY        2.551                 12.504  1       
+tuner/howLong/i14_4_lut/D->tuner/howLong/i14_4_lut/Z
+                                          SLICE_R16C11B      A1_TO_F1_DELAY   0.449                 12.953  1       
+tuner/howLong/n31                                            NET DELAY        2.763                 15.716  1       
+tuner/howLong/i16_4_lut/A->tuner/howLong/i16_4_lut/Z
+                                          SLICE_R15C11B      D0_TO_F0_DELAY   0.476                 16.192  2       
+tuner/howLong/n3764                                          NET DELAY        0.304                 16.496  2       
+tuner/howLong/i3529_4_lut/B->tuner/howLong/i3529_4_lut/Z
+                                          SLICE_R15C11B      C1_TO_F1_DELAY   0.449                 16.945  17      
+tuner/howLong/counter_31__N_268 ( LSR )                      NET DELAY        3.846                 20.791  17      
 
 
 Destination Clock Path
 
-                                                             CONSTRAINT           0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  66      
-tuner/howLong/int_osc ( CLK )                                NET DELAY            5.499                 47.165  66      
-                                                             Uncertainty          0.000                 47.165  
-                                                             Setup time           0.198                 46.967  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Required Time                                                                                           46.967  
-Arrival Time                                                                                           -23.194  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                    23.772  
+                                                             CONSTRAINT       0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  62      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        5.499                 47.165  62      
+                                                             Uncertainty      0.000                 47.165  
+                                                             Setup time       0.529                 46.636  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       46.636  
+Arrival Time                                                                                       -20.790  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                25.845  
 
 
 
 
 ++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/state_i1/Q  (SLICE_R21C7A)
-Path End         : tuner/counter_89__i27/D  (SLICE_R22C6C)
+Path Begin       : tuner/howLong/counter_85__i9/Q  (SLICE_R14C9B)
+Path End         : {tuner/howLong/counter_85__i21/SR   tuner/howLong/counter_85__i22/SR}  (SLICE_R14C10D)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 30
-Delay Ratio      : 43.3% (route), 56.7% (logic)
+Logic Level      : 5
+Delay Ratio      : 79.0% (route), 21.0% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 41.666 ns 
-Path Slack       : 24.049 ns  (Passed)
+Path Slack       : 25.845 ns  (Passed)
 
 
 Source Clock Path
-Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  66      
-tuner/howLong/int_osc                                        NET DELAY            5.499                  5.499  66      
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  62      
+tuner/howLong/int_osc                                        NET DELAY        5.499                  5.499  62      
 
 
 Data Path
 
-tuner/state_i1/CK->tuner/state_i1/Q       SLICE_R21C7A       CLK_TO_Q1_DELAY      1.388                  6.887  23      
-tuner/state[1]                                               NET DELAY            2.141                  9.028  23      
-tuner/i998_2_lut_3_lut/C->tuner/i998_2_lut_3_lut/Z
-                                          SLICE_R21C6B       A0_TO_F0_DELAY       0.449                  9.477  1       
-tuner/n373[5]                                                NET DELAY            3.080                 12.557  1       
-tuner/counter_89_add_4_1/B1->tuner/counter_89_add_4_1/CO1
-                                          SLICE_R22C3A       B1_TO_COUT1_DELAY    0.357                 12.914  2       
-tuner/n921                                                   NET DELAY            0.000                 12.914  2       
-tuner/counter_89_add_4_3/CI0->tuner/counter_89_add_4_3/CO0
-                                          SLICE_R22C3B       CIN0_TO_COUT0_DELAY  0.277                 13.191  2       
-tuner/n2466                                                  NET DELAY            0.000                 13.191  2       
-tuner/counter_89_add_4_3/CI1->tuner/counter_89_add_4_3/CO1
-                                          SLICE_R22C3B       CIN1_TO_COUT1_DELAY  0.277                 13.468  2       
-tuner/n923                                                   NET DELAY            0.000                 13.468  2       
-tuner/counter_89_add_4_5/CI0->tuner/counter_89_add_4_5/CO0
-                                          SLICE_R22C3C       CIN0_TO_COUT0_DELAY  0.277                 13.745  2       
-tuner/n2469                                                  NET DELAY            0.000                 13.745  2       
-tuner/counter_89_add_4_5/CI1->tuner/counter_89_add_4_5/CO1
-                                          SLICE_R22C3C       CIN1_TO_COUT1_DELAY  0.277                 14.022  2       
-tuner/n925                                                   NET DELAY            0.000                 14.022  2       
-tuner/counter_89_add_4_7/CI0->tuner/counter_89_add_4_7/CO0
-                                          SLICE_R22C3D       CIN0_TO_COUT0_DELAY  0.277                 14.299  2       
-tuner/n2472                                                  NET DELAY            0.000                 14.299  2       
-tuner/counter_89_add_4_7/CI1->tuner/counter_89_add_4_7/CO1
-                                          SLICE_R22C3D       CIN1_TO_COUT1_DELAY  0.277                 14.576  2       
-tuner/n927                                                   NET DELAY            0.555                 15.131  2       
-tuner/counter_89_add_4_9/CI0->tuner/counter_89_add_4_9/CO0
-                                          SLICE_R22C4A       CIN0_TO_COUT0_DELAY  0.277                 15.408  2       
-tuner/n2475                                                  NET DELAY            0.000                 15.408  2       
-tuner/counter_89_add_4_9/CI1->tuner/counter_89_add_4_9/CO1
-                                          SLICE_R22C4A       CIN1_TO_COUT1_DELAY  0.277                 15.685  2       
-tuner/n929                                                   NET DELAY            0.000                 15.685  2       
-tuner/counter_89_add_4_11/CI0->tuner/counter_89_add_4_11/CO0
-                                          SLICE_R22C4B       CIN0_TO_COUT0_DELAY  0.277                 15.962  2       
-tuner/n2478                                                  NET DELAY            0.000                 15.962  2       
-tuner/counter_89_add_4_11/CI1->tuner/counter_89_add_4_11/CO1
-                                          SLICE_R22C4B       CIN1_TO_COUT1_DELAY  0.277                 16.239  2       
-tuner/n931                                                   NET DELAY            0.000                 16.239  2       
-tuner/counter_89_add_4_13/CI0->tuner/counter_89_add_4_13/CO0
-                                          SLICE_R22C4C       CIN0_TO_COUT0_DELAY  0.277                 16.516  2       
-tuner/n2481                                                  NET DELAY            0.000                 16.516  2       
-tuner/counter_89_add_4_13/CI1->tuner/counter_89_add_4_13/CO1
-                                          SLICE_R22C4C       CIN1_TO_COUT1_DELAY  0.277                 16.793  2       
-tuner/n933                                                   NET DELAY            0.000                 16.793  2       
-tuner/counter_89_add_4_15/CI0->tuner/counter_89_add_4_15/CO0
-                                          SLICE_R22C4D       CIN0_TO_COUT0_DELAY  0.277                 17.070  2       
-tuner/n2484                                                  NET DELAY            0.000                 17.070  2       
-tuner/counter_89_add_4_15/CI1->tuner/counter_89_add_4_15/CO1
-                                          SLICE_R22C4D       CIN1_TO_COUT1_DELAY  0.277                 17.347  2       
-tuner/n935                                                   NET DELAY            0.555                 17.902  2       
-tuner/counter_89_add_4_17/CI0->tuner/counter_89_add_4_17/CO0
-                                          SLICE_R22C5A       CIN0_TO_COUT0_DELAY  0.277                 18.179  2       
-tuner/n2487                                                  NET DELAY            0.000                 18.179  2       
-tuner/counter_89_add_4_17/CI1->tuner/counter_89_add_4_17/CO1
-                                          SLICE_R22C5A       CIN1_TO_COUT1_DELAY  0.277                 18.456  2       
-tuner/n937                                                   NET DELAY            0.000                 18.456  2       
-tuner/counter_89_add_4_19/CI0->tuner/counter_89_add_4_19/CO0
-                                          SLICE_R22C5B       CIN0_TO_COUT0_DELAY  0.277                 18.733  2       
-tuner/n2490                                                  NET DELAY            0.000                 18.733  2       
-tuner/counter_89_add_4_19/CI1->tuner/counter_89_add_4_19/CO1
-                                          SLICE_R22C5B       CIN1_TO_COUT1_DELAY  0.277                 19.010  2       
-tuner/n939                                                   NET DELAY            0.000                 19.010  2       
-tuner/counter_89_add_4_21/CI0->tuner/counter_89_add_4_21/CO0
-                                          SLICE_R22C5C       CIN0_TO_COUT0_DELAY  0.277                 19.287  2       
-tuner/n2493                                                  NET DELAY            0.000                 19.287  2       
-tuner/counter_89_add_4_21/CI1->tuner/counter_89_add_4_21/CO1
-                                          SLICE_R22C5C       CIN1_TO_COUT1_DELAY  0.277                 19.564  2       
-tuner/n941                                                   NET DELAY            0.000                 19.564  2       
-tuner/counter_89_add_4_23/CI0->tuner/counter_89_add_4_23/CO0
-                                          SLICE_R22C5D       CIN0_TO_COUT0_DELAY  0.277                 19.841  2       
-tuner/n2496                                                  NET DELAY            0.000                 19.841  2       
-tuner/counter_89_add_4_23/CI1->tuner/counter_89_add_4_23/CO1
-                                          SLICE_R22C5D       CIN1_TO_COUT1_DELAY  0.277                 20.118  2       
-tuner/n943                                                   NET DELAY            0.555                 20.673  2       
-tuner/counter_89_add_4_25/CI0->tuner/counter_89_add_4_25/CO0
-                                          SLICE_R22C6A       CIN0_TO_COUT0_DELAY  0.277                 20.950  2       
-tuner/n2499                                                  NET DELAY            0.000                 20.950  2       
-tuner/counter_89_add_4_25/CI1->tuner/counter_89_add_4_25/CO1
-                                          SLICE_R22C6A       CIN1_TO_COUT1_DELAY  0.277                 21.227  2       
-tuner/n945                                                   NET DELAY            0.000                 21.227  2       
-tuner/counter_89_add_4_27/CI0->tuner/counter_89_add_4_27/CO0
-                                          SLICE_R22C6B       CIN0_TO_COUT0_DELAY  0.277                 21.504  2       
-tuner/n2502                                                  NET DELAY            0.000                 21.504  2       
-tuner/counter_89_add_4_27/CI1->tuner/counter_89_add_4_27/CO1
-                                          SLICE_R22C6B       CIN1_TO_COUT1_DELAY  0.277                 21.781  2       
-tuner/n947                                                   NET DELAY            0.661                 22.442  2       
-tuner/counter_89_add_4_29/D0->tuner/counter_89_add_4_29/S0
-                                          SLICE_R22C6C       D0_TO_F0_DELAY       0.476                 22.918  1       
-tuner/n133[27] ( DI0 )                                       NET DELAY            0.000                 22.918  1       
+tuner/howLong/counter_85__i9/CK->tuner/howLong/counter_85__i9/Q
+                                          SLICE_R14C9B       CLK_TO_Q0_DELAY  1.388                  6.887  2       
+tuner/howLong/counter[9]                                     NET DELAY        2.617                  9.504  2       
+tuner/howLong/i5_4_lut/A->tuner/howLong/i5_4_lut/Z
+                                          SLICE_R15C12A      C0_TO_F0_DELAY   0.449                  9.953  1       
+tuner/howLong/n22                                            NET DELAY        2.551                 12.504  1       
+tuner/howLong/i14_4_lut/D->tuner/howLong/i14_4_lut/Z
+                                          SLICE_R16C11B      A1_TO_F1_DELAY   0.449                 12.953  1       
+tuner/howLong/n31                                            NET DELAY        2.763                 15.716  1       
+tuner/howLong/i16_4_lut/A->tuner/howLong/i16_4_lut/Z
+                                          SLICE_R15C11B      D0_TO_F0_DELAY   0.476                 16.192  2       
+tuner/howLong/n3764                                          NET DELAY        0.304                 16.496  2       
+tuner/howLong/i3529_4_lut/B->tuner/howLong/i3529_4_lut/Z
+                                          SLICE_R15C11B      C1_TO_F1_DELAY   0.449                 16.945  17      
+tuner/howLong/counter_31__N_268 ( LSR )                      NET DELAY        3.846                 20.791  17      
 
 
 Destination Clock Path
 
-                                                             CONSTRAINT           0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  66      
-tuner/howLong/int_osc ( CLK )                                NET DELAY            5.499                 47.165  66      
-                                                             Uncertainty          0.000                 47.165  
-                                                             Setup time           0.198                 46.967  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Required Time                                                                                           46.967  
-Arrival Time                                                                                           -22.917  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                    24.049  
+                                                             CONSTRAINT       0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  62      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        5.499                 47.165  62      
+                                                             Uncertainty      0.000                 47.165  
+                                                             Setup time       0.529                 46.636  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       46.636  
+Arrival Time                                                                                       -20.790  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                25.845  
 
 
 
 
 ++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/state_i1/Q  (SLICE_R21C7A)
-Path End         : tuner/counter_89__i26/D  (SLICE_R22C6B)
+Path Begin       : tuner/howLong/counter_85__i9/Q  (SLICE_R14C9B)
+Path End         : {tuner/howLong/counter_85__i23/SR   tuner/howLong/counter_85__i24/SR}  (SLICE_R14C11A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 29
-Delay Ratio      : 44.0% (route), 56.0% (logic)
+Logic Level      : 5
+Delay Ratio      : 79.0% (route), 21.0% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 41.666 ns 
-Path Slack       : 24.326 ns  (Passed)
+Path Slack       : 25.845 ns  (Passed)
 
 
 Source Clock Path
-Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  66      
-tuner/howLong/int_osc                                        NET DELAY            5.499                  5.499  66      
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  62      
+tuner/howLong/int_osc                                        NET DELAY        5.499                  5.499  62      
 
 
 Data Path
 
-tuner/state_i1/CK->tuner/state_i1/Q       SLICE_R21C7A       CLK_TO_Q1_DELAY      1.388                  6.887  23      
-tuner/state[1]                                               NET DELAY            2.141                  9.028  23      
-tuner/i998_2_lut_3_lut/C->tuner/i998_2_lut_3_lut/Z
-                                          SLICE_R21C6B       A0_TO_F0_DELAY       0.449                  9.477  1       
-tuner/n373[5]                                                NET DELAY            3.080                 12.557  1       
-tuner/counter_89_add_4_1/B1->tuner/counter_89_add_4_1/CO1
-                                          SLICE_R22C3A       B1_TO_COUT1_DELAY    0.357                 12.914  2       
-tuner/n921                                                   NET DELAY            0.000                 12.914  2       
-tuner/counter_89_add_4_3/CI0->tuner/counter_89_add_4_3/CO0
-                                          SLICE_R22C3B       CIN0_TO_COUT0_DELAY  0.277                 13.191  2       
-tuner/n2466                                                  NET DELAY            0.000                 13.191  2       
-tuner/counter_89_add_4_3/CI1->tuner/counter_89_add_4_3/CO1
-                                          SLICE_R22C3B       CIN1_TO_COUT1_DELAY  0.277                 13.468  2       
-tuner/n923                                                   NET DELAY            0.000                 13.468  2       
-tuner/counter_89_add_4_5/CI0->tuner/counter_89_add_4_5/CO0
-                                          SLICE_R22C3C       CIN0_TO_COUT0_DELAY  0.277                 13.745  2       
-tuner/n2469                                                  NET DELAY            0.000                 13.745  2       
-tuner/counter_89_add_4_5/CI1->tuner/counter_89_add_4_5/CO1
-                                          SLICE_R22C3C       CIN1_TO_COUT1_DELAY  0.277                 14.022  2       
-tuner/n925                                                   NET DELAY            0.000                 14.022  2       
-tuner/counter_89_add_4_7/CI0->tuner/counter_89_add_4_7/CO0
-                                          SLICE_R22C3D       CIN0_TO_COUT0_DELAY  0.277                 14.299  2       
-tuner/n2472                                                  NET DELAY            0.000                 14.299  2       
-tuner/counter_89_add_4_7/CI1->tuner/counter_89_add_4_7/CO1
-                                          SLICE_R22C3D       CIN1_TO_COUT1_DELAY  0.277                 14.576  2       
-tuner/n927                                                   NET DELAY            0.555                 15.131  2       
-tuner/counter_89_add_4_9/CI0->tuner/counter_89_add_4_9/CO0
-                                          SLICE_R22C4A       CIN0_TO_COUT0_DELAY  0.277                 15.408  2       
-tuner/n2475                                                  NET DELAY            0.000                 15.408  2       
-tuner/counter_89_add_4_9/CI1->tuner/counter_89_add_4_9/CO1
-                                          SLICE_R22C4A       CIN1_TO_COUT1_DELAY  0.277                 15.685  2       
-tuner/n929                                                   NET DELAY            0.000                 15.685  2       
-tuner/counter_89_add_4_11/CI0->tuner/counter_89_add_4_11/CO0
-                                          SLICE_R22C4B       CIN0_TO_COUT0_DELAY  0.277                 15.962  2       
-tuner/n2478                                                  NET DELAY            0.000                 15.962  2       
-tuner/counter_89_add_4_11/CI1->tuner/counter_89_add_4_11/CO1
-                                          SLICE_R22C4B       CIN1_TO_COUT1_DELAY  0.277                 16.239  2       
-tuner/n931                                                   NET DELAY            0.000                 16.239  2       
-tuner/counter_89_add_4_13/CI0->tuner/counter_89_add_4_13/CO0
-                                          SLICE_R22C4C       CIN0_TO_COUT0_DELAY  0.277                 16.516  2       
-tuner/n2481                                                  NET DELAY            0.000                 16.516  2       
-tuner/counter_89_add_4_13/CI1->tuner/counter_89_add_4_13/CO1
-                                          SLICE_R22C4C       CIN1_TO_COUT1_DELAY  0.277                 16.793  2       
-tuner/n933                                                   NET DELAY            0.000                 16.793  2       
-tuner/counter_89_add_4_15/CI0->tuner/counter_89_add_4_15/CO0
-                                          SLICE_R22C4D       CIN0_TO_COUT0_DELAY  0.277                 17.070  2       
-tuner/n2484                                                  NET DELAY            0.000                 17.070  2       
-tuner/counter_89_add_4_15/CI1->tuner/counter_89_add_4_15/CO1
-                                          SLICE_R22C4D       CIN1_TO_COUT1_DELAY  0.277                 17.347  2       
-tuner/n935                                                   NET DELAY            0.555                 17.902  2       
-tuner/counter_89_add_4_17/CI0->tuner/counter_89_add_4_17/CO0
-                                          SLICE_R22C5A       CIN0_TO_COUT0_DELAY  0.277                 18.179  2       
-tuner/n2487                                                  NET DELAY            0.000                 18.179  2       
-tuner/counter_89_add_4_17/CI1->tuner/counter_89_add_4_17/CO1
-                                          SLICE_R22C5A       CIN1_TO_COUT1_DELAY  0.277                 18.456  2       
-tuner/n937                                                   NET DELAY            0.000                 18.456  2       
-tuner/counter_89_add_4_19/CI0->tuner/counter_89_add_4_19/CO0
-                                          SLICE_R22C5B       CIN0_TO_COUT0_DELAY  0.277                 18.733  2       
-tuner/n2490                                                  NET DELAY            0.000                 18.733  2       
-tuner/counter_89_add_4_19/CI1->tuner/counter_89_add_4_19/CO1
-                                          SLICE_R22C5B       CIN1_TO_COUT1_DELAY  0.277                 19.010  2       
-tuner/n939                                                   NET DELAY            0.000                 19.010  2       
-tuner/counter_89_add_4_21/CI0->tuner/counter_89_add_4_21/CO0
-                                          SLICE_R22C5C       CIN0_TO_COUT0_DELAY  0.277                 19.287  2       
-tuner/n2493                                                  NET DELAY            0.000                 19.287  2       
-tuner/counter_89_add_4_21/CI1->tuner/counter_89_add_4_21/CO1
-                                          SLICE_R22C5C       CIN1_TO_COUT1_DELAY  0.277                 19.564  2       
-tuner/n941                                                   NET DELAY            0.000                 19.564  2       
-tuner/counter_89_add_4_23/CI0->tuner/counter_89_add_4_23/CO0
-                                          SLICE_R22C5D       CIN0_TO_COUT0_DELAY  0.277                 19.841  2       
-tuner/n2496                                                  NET DELAY            0.000                 19.841  2       
-tuner/counter_89_add_4_23/CI1->tuner/counter_89_add_4_23/CO1
-                                          SLICE_R22C5D       CIN1_TO_COUT1_DELAY  0.277                 20.118  2       
-tuner/n943                                                   NET DELAY            0.555                 20.673  2       
-tuner/counter_89_add_4_25/CI0->tuner/counter_89_add_4_25/CO0
-                                          SLICE_R22C6A       CIN0_TO_COUT0_DELAY  0.277                 20.950  2       
-tuner/n2499                                                  NET DELAY            0.000                 20.950  2       
-tuner/counter_89_add_4_25/CI1->tuner/counter_89_add_4_25/CO1
-                                          SLICE_R22C6A       CIN1_TO_COUT1_DELAY  0.277                 21.227  2       
-tuner/n945                                                   NET DELAY            0.000                 21.227  2       
-tuner/counter_89_add_4_27/CI0->tuner/counter_89_add_4_27/CO0
-                                          SLICE_R22C6B       CIN0_TO_COUT0_DELAY  0.277                 21.504  2       
-tuner/n2502                                                  NET DELAY            0.661                 22.165  2       
-tuner/counter_89_add_4_27/D1->tuner/counter_89_add_4_27/S1
-                                          SLICE_R22C6B       D1_TO_F1_DELAY       0.476                 22.641  1       
-tuner/n133[26] ( DI1 )                                       NET DELAY            0.000                 22.641  1       
+tuner/howLong/counter_85__i9/CK->tuner/howLong/counter_85__i9/Q
+                                          SLICE_R14C9B       CLK_TO_Q0_DELAY  1.388                  6.887  2       
+tuner/howLong/counter[9]                                     NET DELAY        2.617                  9.504  2       
+tuner/howLong/i5_4_lut/A->tuner/howLong/i5_4_lut/Z
+                                          SLICE_R15C12A      C0_TO_F0_DELAY   0.449                  9.953  1       
+tuner/howLong/n22                                            NET DELAY        2.551                 12.504  1       
+tuner/howLong/i14_4_lut/D->tuner/howLong/i14_4_lut/Z
+                                          SLICE_R16C11B      A1_TO_F1_DELAY   0.449                 12.953  1       
+tuner/howLong/n31                                            NET DELAY        2.763                 15.716  1       
+tuner/howLong/i16_4_lut/A->tuner/howLong/i16_4_lut/Z
+                                          SLICE_R15C11B      D0_TO_F0_DELAY   0.476                 16.192  2       
+tuner/howLong/n3764                                          NET DELAY        0.304                 16.496  2       
+tuner/howLong/i3529_4_lut/B->tuner/howLong/i3529_4_lut/Z
+                                          SLICE_R15C11B      C1_TO_F1_DELAY   0.449                 16.945  17      
+tuner/howLong/counter_31__N_268 ( LSR )                      NET DELAY        3.846                 20.791  17      
 
 
 Destination Clock Path
 
-                                                             CONSTRAINT           0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  66      
-tuner/howLong/int_osc ( CLK )                                NET DELAY            5.499                 47.165  66      
-                                                             Uncertainty          0.000                 47.165  
-                                                             Setup time           0.198                 46.967  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Required Time                                                                                           46.967  
-Arrival Time                                                                                           -22.640  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                    24.326  
+                                                             CONSTRAINT       0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  62      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        5.499                 47.165  62      
+                                                             Uncertainty      0.000                 47.165  
+                                                             Setup time       0.529                 46.636  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       46.636  
+Arrival Time                                                                                       -20.790  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                25.845  
 
 
 
 
 ++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/state_i1/Q  (SLICE_R21C7A)
-Path End         : tuner/counter_89__i25/D  (SLICE_R22C6B)
+Path Begin       : tuner/howLong/counter_85__i9/Q  (SLICE_R14C9B)
+Path End         : {tuner/howLong/counter_85__i25/SR   tuner/howLong/counter_85__i26/SR}  (SLICE_R14C11B)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 28
-Delay Ratio      : 44.7% (route), 55.3% (logic)
+Logic Level      : 5
+Delay Ratio      : 79.0% (route), 21.0% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 41.666 ns 
-Path Slack       : 24.603 ns  (Passed)
+Path Slack       : 25.845 ns  (Passed)
 
 
 Source Clock Path
-Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  66      
-tuner/howLong/int_osc                                        NET DELAY            5.499                  5.499  66      
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  62      
+tuner/howLong/int_osc                                        NET DELAY        5.499                  5.499  62      
 
 
 Data Path
 
-tuner/state_i1/CK->tuner/state_i1/Q       SLICE_R21C7A       CLK_TO_Q1_DELAY      1.388                  6.887  23      
-tuner/state[1]                                               NET DELAY            2.141                  9.028  23      
-tuner/i998_2_lut_3_lut/C->tuner/i998_2_lut_3_lut/Z
-                                          SLICE_R21C6B       A0_TO_F0_DELAY       0.449                  9.477  1       
-tuner/n373[5]                                                NET DELAY            3.080                 12.557  1       
-tuner/counter_89_add_4_1/B1->tuner/counter_89_add_4_1/CO1
-                                          SLICE_R22C3A       B1_TO_COUT1_DELAY    0.357                 12.914  2       
-tuner/n921                                                   NET DELAY            0.000                 12.914  2       
-tuner/counter_89_add_4_3/CI0->tuner/counter_89_add_4_3/CO0
-                                          SLICE_R22C3B       CIN0_TO_COUT0_DELAY  0.277                 13.191  2       
-tuner/n2466                                                  NET DELAY            0.000                 13.191  2       
-tuner/counter_89_add_4_3/CI1->tuner/counter_89_add_4_3/CO1
-                                          SLICE_R22C3B       CIN1_TO_COUT1_DELAY  0.277                 13.468  2       
-tuner/n923                                                   NET DELAY            0.000                 13.468  2       
-tuner/counter_89_add_4_5/CI0->tuner/counter_89_add_4_5/CO0
-                                          SLICE_R22C3C       CIN0_TO_COUT0_DELAY  0.277                 13.745  2       
-tuner/n2469                                                  NET DELAY            0.000                 13.745  2       
-tuner/counter_89_add_4_5/CI1->tuner/counter_89_add_4_5/CO1
-                                          SLICE_R22C3C       CIN1_TO_COUT1_DELAY  0.277                 14.022  2       
-tuner/n925                                                   NET DELAY            0.000                 14.022  2       
-tuner/counter_89_add_4_7/CI0->tuner/counter_89_add_4_7/CO0
-                                          SLICE_R22C3D       CIN0_TO_COUT0_DELAY  0.277                 14.299  2       
-tuner/n2472                                                  NET DELAY            0.000                 14.299  2       
-tuner/counter_89_add_4_7/CI1->tuner/counter_89_add_4_7/CO1
-                                          SLICE_R22C3D       CIN1_TO_COUT1_DELAY  0.277                 14.576  2       
-tuner/n927                                                   NET DELAY            0.555                 15.131  2       
-tuner/counter_89_add_4_9/CI0->tuner/counter_89_add_4_9/CO0
-                                          SLICE_R22C4A       CIN0_TO_COUT0_DELAY  0.277                 15.408  2       
-tuner/n2475                                                  NET DELAY            0.000                 15.408  2       
-tuner/counter_89_add_4_9/CI1->tuner/counter_89_add_4_9/CO1
-                                          SLICE_R22C4A       CIN1_TO_COUT1_DELAY  0.277                 15.685  2       
-tuner/n929                                                   NET DELAY            0.000                 15.685  2       
-tuner/counter_89_add_4_11/CI0->tuner/counter_89_add_4_11/CO0
-                                          SLICE_R22C4B       CIN0_TO_COUT0_DELAY  0.277                 15.962  2       
-tuner/n2478                                                  NET DELAY            0.000                 15.962  2       
-tuner/counter_89_add_4_11/CI1->tuner/counter_89_add_4_11/CO1
-                                          SLICE_R22C4B       CIN1_TO_COUT1_DELAY  0.277                 16.239  2       
-tuner/n931                                                   NET DELAY            0.000                 16.239  2       
-tuner/counter_89_add_4_13/CI0->tuner/counter_89_add_4_13/CO0
-                                          SLICE_R22C4C       CIN0_TO_COUT0_DELAY  0.277                 16.516  2       
-tuner/n2481                                                  NET DELAY            0.000                 16.516  2       
-tuner/counter_89_add_4_13/CI1->tuner/counter_89_add_4_13/CO1
-                                          SLICE_R22C4C       CIN1_TO_COUT1_DELAY  0.277                 16.793  2       
-tuner/n933                                                   NET DELAY            0.000                 16.793  2       
-tuner/counter_89_add_4_15/CI0->tuner/counter_89_add_4_15/CO0
-                                          SLICE_R22C4D       CIN0_TO_COUT0_DELAY  0.277                 17.070  2       
-tuner/n2484                                                  NET DELAY            0.000                 17.070  2       
-tuner/counter_89_add_4_15/CI1->tuner/counter_89_add_4_15/CO1
-                                          SLICE_R22C4D       CIN1_TO_COUT1_DELAY  0.277                 17.347  2       
-tuner/n935                                                   NET DELAY            0.555                 17.902  2       
-tuner/counter_89_add_4_17/CI0->tuner/counter_89_add_4_17/CO0
-                                          SLICE_R22C5A       CIN0_TO_COUT0_DELAY  0.277                 18.179  2       
-tuner/n2487                                                  NET DELAY            0.000                 18.179  2       
-tuner/counter_89_add_4_17/CI1->tuner/counter_89_add_4_17/CO1
-                                          SLICE_R22C5A       CIN1_TO_COUT1_DELAY  0.277                 18.456  2       
-tuner/n937                                                   NET DELAY            0.000                 18.456  2       
-tuner/counter_89_add_4_19/CI0->tuner/counter_89_add_4_19/CO0
-                                          SLICE_R22C5B       CIN0_TO_COUT0_DELAY  0.277                 18.733  2       
-tuner/n2490                                                  NET DELAY            0.000                 18.733  2       
-tuner/counter_89_add_4_19/CI1->tuner/counter_89_add_4_19/CO1
-                                          SLICE_R22C5B       CIN1_TO_COUT1_DELAY  0.277                 19.010  2       
-tuner/n939                                                   NET DELAY            0.000                 19.010  2       
-tuner/counter_89_add_4_21/CI0->tuner/counter_89_add_4_21/CO0
-                                          SLICE_R22C5C       CIN0_TO_COUT0_DELAY  0.277                 19.287  2       
-tuner/n2493                                                  NET DELAY            0.000                 19.287  2       
-tuner/counter_89_add_4_21/CI1->tuner/counter_89_add_4_21/CO1
-                                          SLICE_R22C5C       CIN1_TO_COUT1_DELAY  0.277                 19.564  2       
-tuner/n941                                                   NET DELAY            0.000                 19.564  2       
-tuner/counter_89_add_4_23/CI0->tuner/counter_89_add_4_23/CO0
-                                          SLICE_R22C5D       CIN0_TO_COUT0_DELAY  0.277                 19.841  2       
-tuner/n2496                                                  NET DELAY            0.000                 19.841  2       
-tuner/counter_89_add_4_23/CI1->tuner/counter_89_add_4_23/CO1
-                                          SLICE_R22C5D       CIN1_TO_COUT1_DELAY  0.277                 20.118  2       
-tuner/n943                                                   NET DELAY            0.555                 20.673  2       
-tuner/counter_89_add_4_25/CI0->tuner/counter_89_add_4_25/CO0
-                                          SLICE_R22C6A       CIN0_TO_COUT0_DELAY  0.277                 20.950  2       
-tuner/n2499                                                  NET DELAY            0.000                 20.950  2       
-tuner/counter_89_add_4_25/CI1->tuner/counter_89_add_4_25/CO1
-                                          SLICE_R22C6A       CIN1_TO_COUT1_DELAY  0.277                 21.227  2       
-tuner/n945                                                   NET DELAY            0.661                 21.888  2       
-tuner/counter_89_add_4_27/D0->tuner/counter_89_add_4_27/S0
-                                          SLICE_R22C6B       D0_TO_F0_DELAY       0.476                 22.364  1       
-tuner/n133[25] ( DI0 )                                       NET DELAY            0.000                 22.364  1       
+tuner/howLong/counter_85__i9/CK->tuner/howLong/counter_85__i9/Q
+                                          SLICE_R14C9B       CLK_TO_Q0_DELAY  1.388                  6.887  2       
+tuner/howLong/counter[9]                                     NET DELAY        2.617                  9.504  2       
+tuner/howLong/i5_4_lut/A->tuner/howLong/i5_4_lut/Z
+                                          SLICE_R15C12A      C0_TO_F0_DELAY   0.449                  9.953  1       
+tuner/howLong/n22                                            NET DELAY        2.551                 12.504  1       
+tuner/howLong/i14_4_lut/D->tuner/howLong/i14_4_lut/Z
+                                          SLICE_R16C11B      A1_TO_F1_DELAY   0.449                 12.953  1       
+tuner/howLong/n31                                            NET DELAY        2.763                 15.716  1       
+tuner/howLong/i16_4_lut/A->tuner/howLong/i16_4_lut/Z
+                                          SLICE_R15C11B      D0_TO_F0_DELAY   0.476                 16.192  2       
+tuner/howLong/n3764                                          NET DELAY        0.304                 16.496  2       
+tuner/howLong/i3529_4_lut/B->tuner/howLong/i3529_4_lut/Z
+                                          SLICE_R15C11B      C1_TO_F1_DELAY   0.449                 16.945  17      
+tuner/howLong/counter_31__N_268 ( LSR )                      NET DELAY        3.846                 20.791  17      
 
 
 Destination Clock Path
 
-                                                             CONSTRAINT           0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  66      
-tuner/howLong/int_osc ( CLK )                                NET DELAY            5.499                 47.165  66      
-                                                             Uncertainty          0.000                 47.165  
-                                                             Setup time           0.198                 46.967  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Required Time                                                                                           46.967  
-Arrival Time                                                                                           -22.363  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                    24.603  
+                                                             CONSTRAINT       0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  62      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        5.499                 47.165  62      
+                                                             Uncertainty      0.000                 47.165  
+                                                             Setup time       0.529                 46.636  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       46.636  
+Arrival Time                                                                                       -20.790  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                25.845  
 
 
 
 
 ++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/state_i1/Q  (SLICE_R21C7A)
-Path End         : tuner/counter_89__i24/D  (SLICE_R22C6A)
+Path Begin       : tuner/howLong/counter_85__i9/Q  (SLICE_R14C9B)
+Path End         : {tuner/howLong/counter_85__i27/SR   tuner/howLong/counter_85__i28/SR}  (SLICE_R14C11C)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 27
-Delay Ratio      : 45.5% (route), 54.5% (logic)
+Logic Level      : 5
+Delay Ratio      : 79.0% (route), 21.0% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 41.666 ns 
-Path Slack       : 24.880 ns  (Passed)
+Path Slack       : 25.845 ns  (Passed)
 
 
 Source Clock Path
-Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  66      
-tuner/howLong/int_osc                                        NET DELAY            5.499                  5.499  66      
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  62      
+tuner/howLong/int_osc                                        NET DELAY        5.499                  5.499  62      
 
 
 Data Path
 
-tuner/state_i1/CK->tuner/state_i1/Q       SLICE_R21C7A       CLK_TO_Q1_DELAY      1.388                  6.887  23      
-tuner/state[1]                                               NET DELAY            2.141                  9.028  23      
-tuner/i998_2_lut_3_lut/C->tuner/i998_2_lut_3_lut/Z
-                                          SLICE_R21C6B       A0_TO_F0_DELAY       0.449                  9.477  1       
-tuner/n373[5]                                                NET DELAY            3.080                 12.557  1       
-tuner/counter_89_add_4_1/B1->tuner/counter_89_add_4_1/CO1
-                                          SLICE_R22C3A       B1_TO_COUT1_DELAY    0.357                 12.914  2       
-tuner/n921                                                   NET DELAY            0.000                 12.914  2       
-tuner/counter_89_add_4_3/CI0->tuner/counter_89_add_4_3/CO0
-                                          SLICE_R22C3B       CIN0_TO_COUT0_DELAY  0.277                 13.191  2       
-tuner/n2466                                                  NET DELAY            0.000                 13.191  2       
-tuner/counter_89_add_4_3/CI1->tuner/counter_89_add_4_3/CO1
-                                          SLICE_R22C3B       CIN1_TO_COUT1_DELAY  0.277                 13.468  2       
-tuner/n923                                                   NET DELAY            0.000                 13.468  2       
-tuner/counter_89_add_4_5/CI0->tuner/counter_89_add_4_5/CO0
-                                          SLICE_R22C3C       CIN0_TO_COUT0_DELAY  0.277                 13.745  2       
-tuner/n2469                                                  NET DELAY            0.000                 13.745  2       
-tuner/counter_89_add_4_5/CI1->tuner/counter_89_add_4_5/CO1
-                                          SLICE_R22C3C       CIN1_TO_COUT1_DELAY  0.277                 14.022  2       
-tuner/n925                                                   NET DELAY            0.000                 14.022  2       
-tuner/counter_89_add_4_7/CI0->tuner/counter_89_add_4_7/CO0
-                                          SLICE_R22C3D       CIN0_TO_COUT0_DELAY  0.277                 14.299  2       
-tuner/n2472                                                  NET DELAY            0.000                 14.299  2       
-tuner/counter_89_add_4_7/CI1->tuner/counter_89_add_4_7/CO1
-                                          SLICE_R22C3D       CIN1_TO_COUT1_DELAY  0.277                 14.576  2       
-tuner/n927                                                   NET DELAY            0.555                 15.131  2       
-tuner/counter_89_add_4_9/CI0->tuner/counter_89_add_4_9/CO0
-                                          SLICE_R22C4A       CIN0_TO_COUT0_DELAY  0.277                 15.408  2       
-tuner/n2475                                                  NET DELAY            0.000                 15.408  2       
-tuner/counter_89_add_4_9/CI1->tuner/counter_89_add_4_9/CO1
-                                          SLICE_R22C4A       CIN1_TO_COUT1_DELAY  0.277                 15.685  2       
-tuner/n929                                                   NET DELAY            0.000                 15.685  2       
-tuner/counter_89_add_4_11/CI0->tuner/counter_89_add_4_11/CO0
-                                          SLICE_R22C4B       CIN0_TO_COUT0_DELAY  0.277                 15.962  2       
-tuner/n2478                                                  NET DELAY            0.000                 15.962  2       
-tuner/counter_89_add_4_11/CI1->tuner/counter_89_add_4_11/CO1
-                                          SLICE_R22C4B       CIN1_TO_COUT1_DELAY  0.277                 16.239  2       
-tuner/n931                                                   NET DELAY            0.000                 16.239  2       
-tuner/counter_89_add_4_13/CI0->tuner/counter_89_add_4_13/CO0
-                                          SLICE_R22C4C       CIN0_TO_COUT0_DELAY  0.277                 16.516  2       
-tuner/n2481                                                  NET DELAY            0.000                 16.516  2       
-tuner/counter_89_add_4_13/CI1->tuner/counter_89_add_4_13/CO1
-                                          SLICE_R22C4C       CIN1_TO_COUT1_DELAY  0.277                 16.793  2       
-tuner/n933                                                   NET DELAY            0.000                 16.793  2       
-tuner/counter_89_add_4_15/CI0->tuner/counter_89_add_4_15/CO0
-                                          SLICE_R22C4D       CIN0_TO_COUT0_DELAY  0.277                 17.070  2       
-tuner/n2484                                                  NET DELAY            0.000                 17.070  2       
-tuner/counter_89_add_4_15/CI1->tuner/counter_89_add_4_15/CO1
-                                          SLICE_R22C4D       CIN1_TO_COUT1_DELAY  0.277                 17.347  2       
-tuner/n935                                                   NET DELAY            0.555                 17.902  2       
-tuner/counter_89_add_4_17/CI0->tuner/counter_89_add_4_17/CO0
-                                          SLICE_R22C5A       CIN0_TO_COUT0_DELAY  0.277                 18.179  2       
-tuner/n2487                                                  NET DELAY            0.000                 18.179  2       
-tuner/counter_89_add_4_17/CI1->tuner/counter_89_add_4_17/CO1
-                                          SLICE_R22C5A       CIN1_TO_COUT1_DELAY  0.277                 18.456  2       
-tuner/n937                                                   NET DELAY            0.000                 18.456  2       
-tuner/counter_89_add_4_19/CI0->tuner/counter_89_add_4_19/CO0
-                                          SLICE_R22C5B       CIN0_TO_COUT0_DELAY  0.277                 18.733  2       
-tuner/n2490                                                  NET DELAY            0.000                 18.733  2       
-tuner/counter_89_add_4_19/CI1->tuner/counter_89_add_4_19/CO1
-                                          SLICE_R22C5B       CIN1_TO_COUT1_DELAY  0.277                 19.010  2       
-tuner/n939                                                   NET DELAY            0.000                 19.010  2       
-tuner/counter_89_add_4_21/CI0->tuner/counter_89_add_4_21/CO0
-                                          SLICE_R22C5C       CIN0_TO_COUT0_DELAY  0.277                 19.287  2       
-tuner/n2493                                                  NET DELAY            0.000                 19.287  2       
-tuner/counter_89_add_4_21/CI1->tuner/counter_89_add_4_21/CO1
-                                          SLICE_R22C5C       CIN1_TO_COUT1_DELAY  0.277                 19.564  2       
-tuner/n941                                                   NET DELAY            0.000                 19.564  2       
-tuner/counter_89_add_4_23/CI0->tuner/counter_89_add_4_23/CO0
-                                          SLICE_R22C5D       CIN0_TO_COUT0_DELAY  0.277                 19.841  2       
-tuner/n2496                                                  NET DELAY            0.000                 19.841  2       
-tuner/counter_89_add_4_23/CI1->tuner/counter_89_add_4_23/CO1
-                                          SLICE_R22C5D       CIN1_TO_COUT1_DELAY  0.277                 20.118  2       
-tuner/n943                                                   NET DELAY            0.555                 20.673  2       
-tuner/counter_89_add_4_25/CI0->tuner/counter_89_add_4_25/CO0
-                                          SLICE_R22C6A       CIN0_TO_COUT0_DELAY  0.277                 20.950  2       
-tuner/n2499                                                  NET DELAY            0.661                 21.611  2       
-tuner/counter_89_add_4_25/D1->tuner/counter_89_add_4_25/S1
-                                          SLICE_R22C6A       D1_TO_F1_DELAY       0.476                 22.087  1       
-tuner/n133[24] ( DI1 )                                       NET DELAY            0.000                 22.087  1       
+tuner/howLong/counter_85__i9/CK->tuner/howLong/counter_85__i9/Q
+                                          SLICE_R14C9B       CLK_TO_Q0_DELAY  1.388                  6.887  2       
+tuner/howLong/counter[9]                                     NET DELAY        2.617                  9.504  2       
+tuner/howLong/i5_4_lut/A->tuner/howLong/i5_4_lut/Z
+                                          SLICE_R15C12A      C0_TO_F0_DELAY   0.449                  9.953  1       
+tuner/howLong/n22                                            NET DELAY        2.551                 12.504  1       
+tuner/howLong/i14_4_lut/D->tuner/howLong/i14_4_lut/Z
+                                          SLICE_R16C11B      A1_TO_F1_DELAY   0.449                 12.953  1       
+tuner/howLong/n31                                            NET DELAY        2.763                 15.716  1       
+tuner/howLong/i16_4_lut/A->tuner/howLong/i16_4_lut/Z
+                                          SLICE_R15C11B      D0_TO_F0_DELAY   0.476                 16.192  2       
+tuner/howLong/n3764                                          NET DELAY        0.304                 16.496  2       
+tuner/howLong/i3529_4_lut/B->tuner/howLong/i3529_4_lut/Z
+                                          SLICE_R15C11B      C1_TO_F1_DELAY   0.449                 16.945  17      
+tuner/howLong/counter_31__N_268 ( LSR )                      NET DELAY        3.846                 20.791  17      
 
 
 Destination Clock Path
 
-                                                             CONSTRAINT           0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  66      
-tuner/howLong/int_osc ( CLK )                                NET DELAY            5.499                 47.165  66      
-                                                             Uncertainty          0.000                 47.165  
-                                                             Setup time           0.198                 46.967  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Required Time                                                                                           46.967  
-Arrival Time                                                                                           -22.086  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                    24.880  
+                                                             CONSTRAINT       0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  62      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        5.499                 47.165  62      
+                                                             Uncertainty      0.000                 47.165  
+                                                             Setup time       0.529                 46.636  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       46.636  
+Arrival Time                                                                                       -20.790  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                25.845  
 
 
 
 
 ++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/state_i1/Q  (SLICE_R21C7A)
-Path End         : tuner/counter_89__i23/D  (SLICE_R22C6A)
+Path Begin       : tuner/howLong/counter_85__i9/Q  (SLICE_R14C9B)
+Path End         : {tuner/howLong/counter_85__i29/SR   tuner/howLong/counter_85__i30/SR}  (SLICE_R14C11D)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 26
-Delay Ratio      : 46.3% (route), 53.7% (logic)
+Logic Level      : 5
+Delay Ratio      : 79.0% (route), 21.0% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 41.666 ns 
-Path Slack       : 25.157 ns  (Passed)
+Path Slack       : 25.845 ns  (Passed)
 
 
 Source Clock Path
-Name                                      Cell/Site Name     Delay Name           Delay  Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                  0.000  66      
-tuner/howLong/int_osc                                        NET DELAY            5.499                  5.499  66      
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  62      
+tuner/howLong/int_osc                                        NET DELAY        5.499                  5.499  62      
 
 
 Data Path
 
-tuner/state_i1/CK->tuner/state_i1/Q       SLICE_R21C7A       CLK_TO_Q1_DELAY      1.388                  6.887  23      
-tuner/state[1]                                               NET DELAY            2.141                  9.028  23      
-tuner/i998_2_lut_3_lut/C->tuner/i998_2_lut_3_lut/Z
-                                          SLICE_R21C6B       A0_TO_F0_DELAY       0.449                  9.477  1       
-tuner/n373[5]                                                NET DELAY            3.080                 12.557  1       
-tuner/counter_89_add_4_1/B1->tuner/counter_89_add_4_1/CO1
-                                          SLICE_R22C3A       B1_TO_COUT1_DELAY    0.357                 12.914  2       
-tuner/n921                                                   NET DELAY            0.000                 12.914  2       
-tuner/counter_89_add_4_3/CI0->tuner/counter_89_add_4_3/CO0
-                                          SLICE_R22C3B       CIN0_TO_COUT0_DELAY  0.277                 13.191  2       
-tuner/n2466                                                  NET DELAY            0.000                 13.191  2       
-tuner/counter_89_add_4_3/CI1->tuner/counter_89_add_4_3/CO1
-                                          SLICE_R22C3B       CIN1_TO_COUT1_DELAY  0.277                 13.468  2       
-tuner/n923                                                   NET DELAY            0.000                 13.468  2       
-tuner/counter_89_add_4_5/CI0->tuner/counter_89_add_4_5/CO0
-                                          SLICE_R22C3C       CIN0_TO_COUT0_DELAY  0.277                 13.745  2       
-tuner/n2469                                                  NET DELAY            0.000                 13.745  2       
-tuner/counter_89_add_4_5/CI1->tuner/counter_89_add_4_5/CO1
-                                          SLICE_R22C3C       CIN1_TO_COUT1_DELAY  0.277                 14.022  2       
-tuner/n925                                                   NET DELAY            0.000                 14.022  2       
-tuner/counter_89_add_4_7/CI0->tuner/counter_89_add_4_7/CO0
-                                          SLICE_R22C3D       CIN0_TO_COUT0_DELAY  0.277                 14.299  2       
-tuner/n2472                                                  NET DELAY            0.000                 14.299  2       
-tuner/counter_89_add_4_7/CI1->tuner/counter_89_add_4_7/CO1
-                                          SLICE_R22C3D       CIN1_TO_COUT1_DELAY  0.277                 14.576  2       
-tuner/n927                                                   NET DELAY            0.555                 15.131  2       
-tuner/counter_89_add_4_9/CI0->tuner/counter_89_add_4_9/CO0
-                                          SLICE_R22C4A       CIN0_TO_COUT0_DELAY  0.277                 15.408  2       
-tuner/n2475                                                  NET DELAY            0.000                 15.408  2       
-tuner/counter_89_add_4_9/CI1->tuner/counter_89_add_4_9/CO1
-                                          SLICE_R22C4A       CIN1_TO_COUT1_DELAY  0.277                 15.685  2       
-tuner/n929                                                   NET DELAY            0.000                 15.685  2       
-tuner/counter_89_add_4_11/CI0->tuner/counter_89_add_4_11/CO0
-                                          SLICE_R22C4B       CIN0_TO_COUT0_DELAY  0.277                 15.962  2       
-tuner/n2478                                                  NET DELAY            0.000                 15.962  2       
-tuner/counter_89_add_4_11/CI1->tuner/counter_89_add_4_11/CO1
-                                          SLICE_R22C4B       CIN1_TO_COUT1_DELAY  0.277                 16.239  2       
-tuner/n931                                                   NET DELAY            0.000                 16.239  2       
-tuner/counter_89_add_4_13/CI0->tuner/counter_89_add_4_13/CO0
-                                          SLICE_R22C4C       CIN0_TO_COUT0_DELAY  0.277                 16.516  2       
-tuner/n2481                                                  NET DELAY            0.000                 16.516  2       
-tuner/counter_89_add_4_13/CI1->tuner/counter_89_add_4_13/CO1
-                                          SLICE_R22C4C       CIN1_TO_COUT1_DELAY  0.277                 16.793  2       
-tuner/n933                                                   NET DELAY            0.000                 16.793  2       
-tuner/counter_89_add_4_15/CI0->tuner/counter_89_add_4_15/CO0
-                                          SLICE_R22C4D       CIN0_TO_COUT0_DELAY  0.277                 17.070  2       
-tuner/n2484                                                  NET DELAY            0.000                 17.070  2       
-tuner/counter_89_add_4_15/CI1->tuner/counter_89_add_4_15/CO1
-                                          SLICE_R22C4D       CIN1_TO_COUT1_DELAY  0.277                 17.347  2       
-tuner/n935                                                   NET DELAY            0.555                 17.902  2       
-tuner/counter_89_add_4_17/CI0->tuner/counter_89_add_4_17/CO0
-                                          SLICE_R22C5A       CIN0_TO_COUT0_DELAY  0.277                 18.179  2       
-tuner/n2487                                                  NET DELAY            0.000                 18.179  2       
-tuner/counter_89_add_4_17/CI1->tuner/counter_89_add_4_17/CO1
-                                          SLICE_R22C5A       CIN1_TO_COUT1_DELAY  0.277                 18.456  2       
-tuner/n937                                                   NET DELAY            0.000                 18.456  2       
-tuner/counter_89_add_4_19/CI0->tuner/counter_89_add_4_19/CO0
-                                          SLICE_R22C5B       CIN0_TO_COUT0_DELAY  0.277                 18.733  2       
-tuner/n2490                                                  NET DELAY            0.000                 18.733  2       
-tuner/counter_89_add_4_19/CI1->tuner/counter_89_add_4_19/CO1
-                                          SLICE_R22C5B       CIN1_TO_COUT1_DELAY  0.277                 19.010  2       
-tuner/n939                                                   NET DELAY            0.000                 19.010  2       
-tuner/counter_89_add_4_21/CI0->tuner/counter_89_add_4_21/CO0
-                                          SLICE_R22C5C       CIN0_TO_COUT0_DELAY  0.277                 19.287  2       
-tuner/n2493                                                  NET DELAY            0.000                 19.287  2       
-tuner/counter_89_add_4_21/CI1->tuner/counter_89_add_4_21/CO1
-                                          SLICE_R22C5C       CIN1_TO_COUT1_DELAY  0.277                 19.564  2       
-tuner/n941                                                   NET DELAY            0.000                 19.564  2       
-tuner/counter_89_add_4_23/CI0->tuner/counter_89_add_4_23/CO0
-                                          SLICE_R22C5D       CIN0_TO_COUT0_DELAY  0.277                 19.841  2       
-tuner/n2496                                                  NET DELAY            0.000                 19.841  2       
-tuner/counter_89_add_4_23/CI1->tuner/counter_89_add_4_23/CO1
-                                          SLICE_R22C5D       CIN1_TO_COUT1_DELAY  0.277                 20.118  2       
-tuner/n943                                                   NET DELAY            1.216                 21.334  2       
-tuner/counter_89_add_4_25/D0->tuner/counter_89_add_4_25/S0
-                                          SLICE_R22C6A       D0_TO_F0_DELAY       0.476                 21.810  1       
-tuner/n133[23] ( DI0 )                                       NET DELAY            0.000                 21.810  1       
+tuner/howLong/counter_85__i9/CK->tuner/howLong/counter_85__i9/Q
+                                          SLICE_R14C9B       CLK_TO_Q0_DELAY  1.388                  6.887  2       
+tuner/howLong/counter[9]                                     NET DELAY        2.617                  9.504  2       
+tuner/howLong/i5_4_lut/A->tuner/howLong/i5_4_lut/Z
+                                          SLICE_R15C12A      C0_TO_F0_DELAY   0.449                  9.953  1       
+tuner/howLong/n22                                            NET DELAY        2.551                 12.504  1       
+tuner/howLong/i14_4_lut/D->tuner/howLong/i14_4_lut/Z
+                                          SLICE_R16C11B      A1_TO_F1_DELAY   0.449                 12.953  1       
+tuner/howLong/n31                                            NET DELAY        2.763                 15.716  1       
+tuner/howLong/i16_4_lut/A->tuner/howLong/i16_4_lut/Z
+                                          SLICE_R15C11B      D0_TO_F0_DELAY   0.476                 16.192  2       
+tuner/howLong/n3764                                          NET DELAY        0.304                 16.496  2       
+tuner/howLong/i3529_4_lut/B->tuner/howLong/i3529_4_lut/Z
+                                          SLICE_R15C11B      C1_TO_F1_DELAY   0.449                 16.945  17      
+tuner/howLong/counter_31__N_268 ( LSR )                      NET DELAY        3.846                 20.791  17      
 
 
 Destination Clock Path
 
-                                                             CONSTRAINT           0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY        0.000                 41.666  66      
-tuner/howLong/int_osc ( CLK )                                NET DELAY            5.499                 47.165  66      
-                                                             Uncertainty          0.000                 47.165  
-                                                             Setup time           0.198                 46.967  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Required Time                                                                                           46.967  
-Arrival Time                                                                                           -21.809  
-----------------------------------------  -----------------  -------------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                    25.157  
+                                                             CONSTRAINT       0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  62      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        5.499                 47.165  62      
+                                                             Uncertainty      0.000                 47.165  
+                                                             Setup time       0.529                 46.636  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       46.636  
+Arrival Time                                                                                       -20.790  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                25.845  
 
 
 
 
 ++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/howLong/counter_90__i11/Q  (SLICE_R10C4C)
-Path End         : {tuner/howLong/counter_90__i21/SR   tuner/howLong/counter_90__i22/SR}  (SLICE_R10C5D)
+Path Begin       : tuner/howLong/counter_85__i9/Q  (SLICE_R14C9B)
+Path End         : tuner/howLong/counter_85__i31/SR  (SLICE_R14C12A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 5
-Delay Ratio      : 79.6% (route), 20.4% (logic)
+Delay Ratio      : 79.0% (route), 21.0% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 41.666 ns 
-Path Slack       : 25.395 ns  (Passed)
+Path Slack       : 25.845 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  66      
-tuner/howLong/int_osc                                        NET DELAY        5.499                  5.499  66      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  62      
+tuner/howLong/int_osc                                        NET DELAY        5.499                  5.499  62      
 
 
 Data Path
 
-tuner/howLong/counter_90__i11/CK->tuner/howLong/counter_90__i11/Q
-                                          SLICE_R10C4C       CLK_TO_Q0_DELAY  1.388                  6.887  2       
-tuner/howLong/counter[11]                                    NET DELAY        2.617                  9.504  2       
-tuner/howLong/i13_4_lut/D->tuner/howLong/i13_4_lut/Z
-                                          SLICE_R11C5D       C0_TO_F0_DELAY   0.449                  9.953  1       
-tuner/howLong/n36                                            NET DELAY        2.485                 12.438  1       
-tuner/howLong/i18_4_lut/B->tuner/howLong/i18_4_lut/Z
-                                          SLICE_R11C4B       B1_TO_F1_DELAY   0.449                 12.887  1       
-tuner/howLong/n41                                            NET DELAY        2.763                 15.650  1       
-tuner/howLong/i22_4_lut/B->tuner/howLong/i22_4_lut/Z
-                                          SLICE_R11C5B       D0_TO_F0_DELAY   0.476                 16.126  2       
-tuner/howLong/n1358                                          NET DELAY        0.304                 16.430  2       
-tuner/howLong/i6_4_lut/D->tuner/howLong/i6_4_lut/Z
-                                          SLICE_R11C5B       C1_TO_F1_DELAY   0.449                 16.879  17      
-tuner/howLong/counter_31__N_273 ( LSR )                      NET DELAY        4.362                 21.241  17      
+tuner/howLong/counter_85__i9/CK->tuner/howLong/counter_85__i9/Q
+                                          SLICE_R14C9B       CLK_TO_Q0_DELAY  1.388                  6.887  2       
+tuner/howLong/counter[9]                                     NET DELAY        2.617                  9.504  2       
+tuner/howLong/i5_4_lut/A->tuner/howLong/i5_4_lut/Z
+                                          SLICE_R15C12A      C0_TO_F0_DELAY   0.449                  9.953  1       
+tuner/howLong/n22                                            NET DELAY        2.551                 12.504  1       
+tuner/howLong/i14_4_lut/D->tuner/howLong/i14_4_lut/Z
+                                          SLICE_R16C11B      A1_TO_F1_DELAY   0.449                 12.953  1       
+tuner/howLong/n31                                            NET DELAY        2.763                 15.716  1       
+tuner/howLong/i16_4_lut/A->tuner/howLong/i16_4_lut/Z
+                                          SLICE_R15C11B      D0_TO_F0_DELAY   0.476                 16.192  2       
+tuner/howLong/n3764                                          NET DELAY        0.304                 16.496  2       
+tuner/howLong/i3529_4_lut/B->tuner/howLong/i3529_4_lut/Z
+                                          SLICE_R15C11B      C1_TO_F1_DELAY   0.449                 16.945  17      
+tuner/howLong/counter_31__N_268 ( LSR )                      NET DELAY        3.846                 20.791  17      
 
 
 Destination Clock Path
 
                                                              CONSTRAINT       0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  66      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        5.499                 47.165  66      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  62      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        5.499                 47.165  62      
                                                              Uncertainty      0.000                 47.165  
                                                              Setup time       0.529                 46.636  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 Required Time                                                                                       46.636  
-Arrival Time                                                                                       -21.240  
+Arrival Time                                                                                       -20.790  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                25.395  
+Path Slack  (Passed)                                                                                25.845  
 
 
 
@@ -1451,8 +810,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/state_i0/Q  (SLICE_R21C6D)
-Path End         : tuner/state_i1/D  (SLICE_R21C7A)
+Path Begin       : tuner/durThreshold_i0_i21/Q  (SLICE_R15C12D)
+Path End         : tuner/durThreshold_i0_i21/D  (SLICE_R15C12D)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -1465,24 +824,24 @@ Path Slack       : 1.715 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc                                        NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
 
 
 Data Path
 
-tuner/state_i0/CK->tuner/state_i0/Q       SLICE_R21C6D       CLK_TO_Q1_DELAY  0.766                  3.801  23      
-tuner/state[0]                                               NET DELAY        0.701                  4.502  23      
-tuner/i148_2_lut_3_lut/B->tuner/i148_2_lut_3_lut/Z
-                                          SLICE_R21C7A       D1_TO_F1_DELAY   0.248                  4.750  1       
-tuner/n3 ( DI1 )                                             NET DELAY        0.000                  4.750  1       
+tuner/durThreshold_i0_i21/CK->tuner/durThreshold_i0_i21/Q
+                                          SLICE_R15C12D      CLK_TO_Q0_DELAY  0.766                  3.801  2       
+tuner/howLong/durThreshold[21]                               NET DELAY        0.701                  4.502  2       
+i1340_3_lut/A->i1340_3_lut/Z              SLICE_R15C12D      D0_TO_F0_DELAY   0.248                  4.750  1       
+tuner/n2487 ( DI0 )                                          NET DELAY        0.000                  4.750  1       
 
 
 Destination Clock Path
 
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
                                                              Uncertainty      0.000                  3.035  
                                                              Hold time        0.000                  3.035  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
@@ -1496,8 +855,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/state_i2/Q  (SLICE_R21C6B)
-Path End         : tuner/freqThreshold__i15/D  (SLICE_R21C6C)
+Path Begin       : tuner/durThreshold_i0_i22/Q  (SLICE_R15C12D)
+Path End         : tuner/durThreshold_i0_i22/D  (SLICE_R15C12D)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -1510,23 +869,24 @@ Path Slack       : 1.715 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc                                        NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
 
 
 Data Path
 
-tuner/state_i2/CK->tuner/state_i2/Q       SLICE_R21C6B       CLK_TO_Q1_DELAY  0.766                  3.801  22      
-tuner/state[2]                                               NET DELAY        0.701                  4.502  22      
-i173_4_lut/C->i173_4_lut/Z                SLICE_R21C6C       D1_TO_F1_DELAY   0.248                  4.750  1       
-tuner/n673 ( DI1 )                                           NET DELAY        0.000                  4.750  1       
+tuner/durThreshold_i0_i22/CK->tuner/durThreshold_i0_i22/Q
+                                          SLICE_R15C12D      CLK_TO_Q1_DELAY  0.766                  3.801  2       
+tuner/howLong/durThreshold[22]                               NET DELAY        0.701                  4.502  2       
+i1339_4_lut/A->i1339_4_lut/Z              SLICE_R15C12D      D1_TO_F1_DELAY   0.248                  4.750  1       
+tuner/n2486 ( DI1 )                                          NET DELAY        0.000                  4.750  1       
 
 
 Destination Clock Path
 
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
                                                              Uncertainty      0.000                  3.035  
                                                              Hold time        0.000                  3.035  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
@@ -1540,8 +900,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/state_i2/Q  (SLICE_R21C6B)
-Path End         : tuner/state_i2/D  (SLICE_R21C6B)
+Path Begin       : tuner/durThreshold_i0_i17/Q  (SLICE_R16C12B)
+Path End         : tuner/durThreshold_i0_i17/D  (SLICE_R16C12B)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -1554,24 +914,24 @@ Path Slack       : 1.715 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
 
 
 Data Path
 
-tuner/state_i2/CK->tuner/state_i2/Q       SLICE_R21C6B       CLK_TO_Q1_DELAY  0.766                  3.801  22      
-tuner/state[2]                                               NET DELAY        0.701                  4.502  22      
-tuner/state_2__I_0_2_Mux_2_i7_4_lut/C->tuner/state_2__I_0_2_Mux_2_i7_4_lut/Z
-                                          SLICE_R21C6B       D1_TO_F1_DELAY   0.248                  4.750  1       
-tuner/nextstate[2] ( DI1 )                                   NET DELAY        0.000                  4.750  1       
+tuner/durThreshold_i0_i17/CK->tuner/durThreshold_i0_i17/Q
+                                          SLICE_R16C12B      CLK_TO_Q0_DELAY  0.766                  3.801  2       
+tuner/howLong/durThreshold[17]                               NET DELAY        0.701                  4.502  2       
+i1342_4_lut/A->i1342_4_lut/Z              SLICE_R16C12B      D0_TO_F0_DELAY   0.248                  4.750  1       
+tuner/n2489 ( DI0 )                                          NET DELAY        0.000                  4.750  1       
 
 
 Destination Clock Path
 
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
                                                              Uncertainty      0.000                  3.035  
                                                              Hold time        0.000                  3.035  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
@@ -1585,8 +945,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/state_i2/Q  (SLICE_R21C6B)
-Path End         : tuner/state_i0/D  (SLICE_R21C6D)
+Path Begin       : tuner/durThreshold_i0_i20/Q  (SLICE_R16C12B)
+Path End         : tuner/durThreshold_i0_i20/D  (SLICE_R16C12B)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -1599,24 +959,24 @@ Path Slack       : 1.715 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc                                        NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
 
 
 Data Path
 
-tuner/state_i2/CK->tuner/state_i2/Q       SLICE_R21C6B       CLK_TO_Q1_DELAY  0.766                  3.801  22      
-tuner/state[2]                                               NET DELAY        0.701                  4.502  22      
-tuner/state_2__I_0_2_Mux_0_i7_4_lut/B->tuner/state_2__I_0_2_Mux_0_i7_4_lut/Z
-                                          SLICE_R21C6D       D1_TO_F1_DELAY   0.248                  4.750  1       
-tuner/nextstate[0] ( DI1 )                                   NET DELAY        0.000                  4.750  1       
+tuner/durThreshold_i0_i20/CK->tuner/durThreshold_i0_i20/Q
+                                          SLICE_R16C12B      CLK_TO_Q1_DELAY  0.766                  3.801  2       
+tuner/howLong/durThreshold[20]                               NET DELAY        0.701                  4.502  2       
+i1341_3_lut/A->i1341_3_lut/Z              SLICE_R16C12B      D1_TO_F1_DELAY   0.248                  4.750  1       
+tuner/n2488 ( DI1 )                                          NET DELAY        0.000                  4.750  1       
 
 
 Destination Clock Path
 
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
                                                              Uncertainty      0.000                  3.035  
                                                              Hold time        0.000                  3.035  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
@@ -1630,8 +990,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/freqThreshold__i5/Q  (SLICE_R19C5C)
-Path End         : tuner/freqThreshold__i5/D  (SLICE_R19C5C)
+Path Begin       : tuner/durThreshold_i0_i16/Q  (SLICE_R16C13B)
+Path End         : tuner/durThreshold_i0_i16/D  (SLICE_R16C13B)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -1644,24 +1004,24 @@ Path Slack       : 1.715 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
 
 
 Data Path
 
-tuner/freqThreshold__i5/CK->tuner/freqThreshold__i5/Q
-                                          SLICE_R19C5C       CLK_TO_Q0_DELAY  0.766                  3.801  2       
-tuner/pitch/freqThreshold[4]                                 NET DELAY        0.701                  4.502  2       
-i180_4_lut/A->i180_4_lut/Z                SLICE_R19C5C       D0_TO_F0_DELAY   0.248                  4.750  1       
-tuner/n680 ( DI0 )                                           NET DELAY        0.000                  4.750  1       
+tuner/durThreshold_i0_i16/CK->tuner/durThreshold_i0_i16/Q
+                                          SLICE_R16C13B      CLK_TO_Q1_DELAY  0.766                  3.801  2       
+tuner/howLong/durThreshold[16]                               NET DELAY        0.701                  4.502  2       
+i1343_3_lut/A->i1343_3_lut/Z              SLICE_R16C13B      D1_TO_F1_DELAY   0.248                  4.750  1       
+tuner/n2490 ( DI1 )                                          NET DELAY        0.000                  4.750  1       
 
 
 Destination Clock Path
 
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
                                                              Uncertainty      0.000                  3.035  
                                                              Hold time        0.000                  3.035  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
@@ -1675,8 +1035,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/freqThreshold__i3/Q  (SLICE_R19C5A)
-Path End         : tuner/freqThreshold__i3/D  (SLICE_R19C5A)
+Path Begin       : tuner/durThreshold_i0_i12/Q  (SLICE_R16C11A)
+Path End         : tuner/durThreshold_i0_i12/D  (SLICE_R16C11A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -1689,24 +1049,24 @@ Path Slack       : 1.715 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
 
 
 Data Path
 
-tuner/freqThreshold__i3/CK->tuner/freqThreshold__i3/Q
-                                          SLICE_R19C5A       CLK_TO_Q0_DELAY  0.766                  3.801  2       
-tuner/pitch/freqThreshold[2]                                 NET DELAY        0.701                  4.502  2       
-i182_4_lut/A->i182_4_lut/Z                SLICE_R19C5A       D0_TO_F0_DELAY   0.248                  4.750  1       
-tuner/n682 ( DI0 )                                           NET DELAY        0.000                  4.750  1       
+tuner/durThreshold_i0_i12/CK->tuner/durThreshold_i0_i12/Q
+                                          SLICE_R16C11A      CLK_TO_Q0_DELAY  0.766                  3.801  2       
+tuner/howLong/durThreshold[12]                               NET DELAY        0.701                  4.502  2       
+i1346_3_lut/A->i1346_3_lut/Z              SLICE_R16C11A      D0_TO_F0_DELAY   0.248                  4.750  1       
+tuner/n2493 ( DI0 )                                          NET DELAY        0.000                  4.750  1       
 
 
 Destination Clock Path
 
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
                                                              Uncertainty      0.000                  3.035  
                                                              Hold time        0.000                  3.035  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
@@ -1720,184 +1080,180 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/counter_89__i3/Q  (SLICE_R22C3C)
-Path End         : tuner/counter_89__i3/D  (SLICE_R22C3C)
+Path Begin       : tuner/durThreshold_i0_i13/Q  (SLICE_R16C11A)
+Path End         : tuner/durThreshold_i0_i13/D  (SLICE_R16C11A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
-Delay Ratio      : 46.1% (route), 53.9% (logic)
+Delay Ratio      : 40.9% (route), 59.1% (logic)
 Clock Skew       : 0.000 ns
 Hold Constraint  : 0.000 ns 
-Path Slack       : 1.882 ns  (Passed)
+Path Slack       : 1.715 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
 
 
 Data Path
 
-tuner/counter_89__i3/CK->tuner/counter_89__i3/Q
-                                          SLICE_R22C3C       CLK_TO_Q0_DELAY  0.766                  3.801  2       
-tuner/counter[3]                                             NET DELAY        0.868                  4.669  2       
-tuner/counter_89_add_4_5/C0->tuner/counter_89_add_4_5/S0
-                                          SLICE_R22C3C       C0_TO_F0_DELAY   0.248                  4.917  1       
-tuner/n133[3] ( DI0 )                                        NET DELAY        0.000                  4.917  1       
+tuner/durThreshold_i0_i13/CK->tuner/durThreshold_i0_i13/Q
+                                          SLICE_R16C11A      CLK_TO_Q1_DELAY  0.766                  3.801  2       
+tuner/howLong/durThreshold[13]                               NET DELAY        0.701                  4.502  2       
+i1345_3_lut/A->i1345_3_lut/Z              SLICE_R16C11A      D1_TO_F1_DELAY   0.248                  4.750  1       
+tuner/n2492 ( DI1 )                                          NET DELAY        0.000                  4.750  1       
 
 
 Destination Clock Path
 
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
                                                              Uncertainty      0.000                  3.035  
                                                              Hold time        0.000                  3.035  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 Required Time                                                                                       -3.035  
-Arrival Time                                                                                         4.917  
+Arrival Time                                                                                         4.750  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                 1.882  
+Path Slack  (Passed)                                                                                 1.715  
 
 
 
 
 ++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/counter_89__i4/Q  (SLICE_R22C3C)
-Path End         : tuner/counter_89__i4/D  (SLICE_R22C3C)
+Path Begin       : tuner/durThreshold_i0_i9/Q  (SLICE_R15C12C)
+Path End         : tuner/durThreshold_i0_i9/D  (SLICE_R15C12C)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
-Delay Ratio      : 46.1% (route), 53.9% (logic)
+Delay Ratio      : 40.9% (route), 59.1% (logic)
 Clock Skew       : 0.000 ns
 Hold Constraint  : 0.000 ns 
-Path Slack       : 1.882 ns  (Passed)
+Path Slack       : 1.715 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
 
 
 Data Path
 
-tuner/counter_89__i4/CK->tuner/counter_89__i4/Q
-                                          SLICE_R22C3C       CLK_TO_Q1_DELAY  0.766                  3.801  2       
-tuner/counter[4]                                             NET DELAY        0.868                  4.669  2       
-tuner/counter_89_add_4_5/C1->tuner/counter_89_add_4_5/S1
-                                          SLICE_R22C3C       C1_TO_F1_DELAY   0.248                  4.917  1       
-tuner/n133[4] ( DI1 )                                        NET DELAY        0.000                  4.917  1       
+tuner/durThreshold_i0_i9/CK->tuner/durThreshold_i0_i9/Q
+                                          SLICE_R15C12C      CLK_TO_Q0_DELAY  0.766                  3.801  2       
+tuner/howLong/durThreshold[9]                                NET DELAY        0.701                  4.502  2       
+i1348_3_lut/A->i1348_3_lut/Z              SLICE_R15C12C      D0_TO_F0_DELAY   0.248                  4.750  1       
+tuner/n2495 ( DI0 )                                          NET DELAY        0.000                  4.750  1       
 
 
 Destination Clock Path
 
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
                                                              Uncertainty      0.000                  3.035  
                                                              Hold time        0.000                  3.035  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 Required Time                                                                                       -3.035  
-Arrival Time                                                                                         4.917  
+Arrival Time                                                                                         4.750  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                 1.882  
+Path Slack  (Passed)                                                                                 1.715  
 
 
 
 
 ++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/counter_89__i5/Q  (SLICE_R22C3D)
-Path End         : tuner/counter_89__i5/D  (SLICE_R22C3D)
+Path Begin       : tuner/durThreshold_i0_i11/Q  (SLICE_R15C12C)
+Path End         : tuner/durThreshold_i0_i11/D  (SLICE_R15C12C)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
-Delay Ratio      : 46.1% (route), 53.9% (logic)
+Delay Ratio      : 40.9% (route), 59.1% (logic)
 Clock Skew       : 0.000 ns
 Hold Constraint  : 0.000 ns 
-Path Slack       : 1.882 ns  (Passed)
+Path Slack       : 1.715 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
 
 
 Data Path
 
-tuner/counter_89__i5/CK->tuner/counter_89__i5/Q
-                                          SLICE_R22C3D       CLK_TO_Q0_DELAY  0.766                  3.801  2       
-tuner/counter[5]                                             NET DELAY        0.868                  4.669  2       
-tuner/counter_89_add_4_7/C0->tuner/counter_89_add_4_7/S0
-                                          SLICE_R22C3D       C0_TO_F0_DELAY   0.248                  4.917  1       
-tuner/n133[5] ( DI0 )                                        NET DELAY        0.000                  4.917  1       
+tuner/durThreshold_i0_i11/CK->tuner/durThreshold_i0_i11/Q
+                                          SLICE_R15C12C      CLK_TO_Q1_DELAY  0.766                  3.801  2       
+tuner/howLong/durThreshold[11]                               NET DELAY        0.701                  4.502  2       
+i1347_3_lut/A->i1347_3_lut/Z              SLICE_R15C12C      D1_TO_F1_DELAY   0.248                  4.750  1       
+tuner/n2494 ( DI1 )                                          NET DELAY        0.000                  4.750  1       
 
 
 Destination Clock Path
 
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
                                                              Uncertainty      0.000                  3.035  
                                                              Hold time        0.000                  3.035  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 Required Time                                                                                       -3.035  
-Arrival Time                                                                                         4.917  
+Arrival Time                                                                                         4.750  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                 1.882  
+Path Slack  (Passed)                                                                                 1.715  
 
 
 
 
 ++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : tuner/counter_89__i6/Q  (SLICE_R22C3D)
-Path End         : tuner/counter_89__i6/D  (SLICE_R22C3D)
+Path Begin       : tuner/durThreshold_i0_i8/Q  (SLICE_R16C13A)
+Path End         : tuner/durThreshold_i0_i8/D  (SLICE_R16C13A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
-Delay Ratio      : 46.1% (route), 53.9% (logic)
+Delay Ratio      : 40.9% (route), 59.1% (logic)
 Clock Skew       : 0.000 ns
 Hold Constraint  : 0.000 ns 
-Path Slack       : 1.882 ns  (Passed)
+Path Slack       : 1.715 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
 
 
 Data Path
 
-tuner/counter_89__i6/CK->tuner/counter_89__i6/Q
-                                          SLICE_R22C3D       CLK_TO_Q1_DELAY  0.766                  3.801  2       
-tuner/counter[6]                                             NET DELAY        0.868                  4.669  2       
-tuner/counter_89_add_4_7/C1->tuner/counter_89_add_4_7/S1
-                                          SLICE_R22C3D       C1_TO_F1_DELAY   0.248                  4.917  1       
-tuner/n133[6] ( DI1 )                                        NET DELAY        0.000                  4.917  1       
+tuner/durThreshold_i0_i8/CK->tuner/durThreshold_i0_i8/Q
+                                          SLICE_R16C13A      CLK_TO_Q1_DELAY  0.766                  3.801  2       
+tuner/howLong/durThreshold[8]                                NET DELAY        0.701                  4.502  2       
+i1349_3_lut/A->i1349_3_lut/Z              SLICE_R16C13A      D1_TO_F1_DELAY   0.248                  4.750  1       
+tuner/n2496 ( DI1 )                                          NET DELAY        0.000                  4.750  1       
 
 
 Destination Clock Path
 
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  67      
-tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  67      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  63      
+tuner/howLong/int_osc ( CLK )                                NET DELAY        3.035                  3.035  63      
                                                              Uncertainty      0.000                  3.035  
                                                              Hold time        0.000                  3.035  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 Required Time                                                                                       -3.035  
-Arrival Time                                                                                         4.917  
+Arrival Time                                                                                         4.750  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                 1.882  
+Path Slack  (Passed)                                                                                 1.715  
 
 
 

@@ -1,12 +1,4 @@
 
-STA Runtime and Peak Memory Usage :
-Total CPU Time: 0 secs 
-Total REAL Time: 0 secs 
-Peak Memory Usage: 93 MB
-
- 0.619294s wall, 0.484375s user + 0.093750s system = 0.578125s CPU (93.4%)
-
-
 tmcheck -par "latticeE155FinalProject_impl_1.par" 
 
 bitgen -w "latticeE155FinalProject_impl_1.udb" -f "latticeE155FinalProject_impl_1.t2b" 
@@ -25,14 +17,6 @@ Performance Grade:   High-Performance_1.2V
 WARNING - bitgen: Unable to find the instance/port 'clk' in the constraint 'ldc_set_location -site {4} [get_ports clk]'
 
 WARNING - bitgen: In the constraint 'ldc_set_location -site {4} [get_ports clk]', the locate object is not specified
-
-WARNING - bitgen: Unable to find the instance/port 'sck' in the constraint 'ldc_set_location -site {28} [get_ports sck]'
-
-WARNING - bitgen: In the constraint 'ldc_set_location -site {28} [get_ports sck]', the locate object is not specified
-
-WARNING - bitgen: Unable to find the instance/port 'sdi' in the constraint 'ldc_set_location -site {42} [get_ports sdi]'
-
-WARNING - bitgen: In the constraint 'ldc_set_location -site {42} [get_ports sdi]', the locate object is not specified
 
 Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
 
@@ -64,13 +48,13 @@ Bitstream generation complete!
 
 Total CPU Time: 0 secs 
 Total REAL Time: 7 secs 
-Peak Memory Usage: 110 MB
+Peak Memory Usage: 113 MB
 
 
 ibisgen "latticeE155FinalProject_impl_1.udb" "C:/lscc/radiant/3.2/cae_library/ibis/iCE40UP.ibs"
 IBIS Models Generator: Lattice Radiant Software (64-bit) 3.2.0.18.0
 
-Sun Dec  4 18:04:52 2022
+Tue Dec  6 23:45:22 2022
 
 Loading latticeE155FinalProject_impl_1.udb ...
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
@@ -86,10 +70,6 @@ Package: SG48
 Performance Grade:   High-Performance_1.2V
     <postMsg mid="77001032" type="Warning" dynamic="2" navigation="0" arg0="clk" arg1="ldc_set_location -site {4} [get_ports clk]"  />
     <postMsg mid="77001031" type="Warning" dynamic="1" navigation="0" arg0="ldc_set_location -site {4} [get_ports clk]"  />
-    <postMsg mid="77001032" type="Warning" dynamic="2" navigation="0" arg0="sck" arg1="ldc_set_location -site {28} [get_ports sck]"  />
-    <postMsg mid="77001031" type="Warning" dynamic="1" navigation="0" arg0="ldc_set_location -site {28} [get_ports sck]"  />
-    <postMsg mid="77001032" type="Warning" dynamic="2" navigation="0" arg0="sdi" arg1="ldc_set_location -site {42} [get_ports sdi]"  />
-    <postMsg mid="77001031" type="Warning" dynamic="1" navigation="0" arg0="ldc_set_location -site {42} [get_ports sdi]"  />
 Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
 
 Created design models.
@@ -127,4 +107,4 @@ Writing SDF timing to file latticeE155FinalProject_impl_1_vo.sdf
 Backanno finished with 0 posted error messages.
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 84 MB
+Peak Memory Usage: 91 MB
