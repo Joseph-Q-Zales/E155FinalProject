@@ -41,6 +41,18 @@ if (a)
 
 <DIV id="content" onclick="hideTocList()"><PRE>
 <A name="Syn"></A><B><U><big>Synthesis Report</big></U></B>
+synthesis:  version Radiant Software (64-bit) 3.2.0.18.0
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
+Wed Dec  7 11:31:24 2022
+
+
+Command Line:  C:\lscc\radiant\3.2\ispfpga\bin\nt64\synthesis.exe -f latticeE155FinalProject_impl_1_lattice.synproj -gui -msgset C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/promote.xml 
+
 Synthesis options:
 The -a option is iCE40UP.
 The -t option is SG48.
@@ -152,18 +164,139 @@ INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd(4): analyzing packa
 INFO - synthesis: The default VHDL library search path is now "C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/impl_1". VHDL-1504
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): top
-INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(6): compiling module top. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(50): compiling module top. VERI-1018
 INFO - synthesis: C:/lscc/radiant/3.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
-INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(84): compiling module MCU_spi. VERI-1018
-INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(320): compiling module enables. VERI-1018
-WARNING - synthesis: Net start has following drivers :
-	 instance start
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(123): compiling module MCU_spi. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(263): compiling module enables. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(139): compiling module make_signals. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(166): compiling module allTonesToFreqThreshold. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(185): compiling module toneToFreqThreshold. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(214): compiling module allDurMCU2DursThresh. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(234): compiling module durMCUtoDurationThreshold. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(288): compiling module tune. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(405): compiling module duration. VERI-1018
+INFO - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(451): compiling module freqGenerator. VERI-1018
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(374): expression size 32 truncated to fit in target size 2. VERI-1209
+                                                         
 
-	 instance start_2
+
+### Number of Logic Cells: 5280
+
+
+### Number of RAM Blocks: 30
+
+
+### Number of DSP Blocks: 8
+
+
+### Number of PLLs: 1
+
+
+### Number of IO Pins: 61
+
+
+##########################################################
+
+
+                                                         
+
+
+INFO - synthesis: Extracted state machine for register '\tuner/state' with one-hot encoding
+State machine has 8 reachable states with original encodings of:
+
+ 000000 
+
+ 000001 
+
+ 000010 
+
+ 000011 
+
+ 000100 
+
+ 000101 
+
+ 000110 
+
+ 000111 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 000000 -> 00000001
+
+ 000001 -> 00000010
+
+ 000010 -> 00000100
+
+ 000011 -> 00001000
+
+ 000100 -> 00010000
+
+ 000101 -> 00100000
+
+ 000110 -> 01000000
+
+ 000111 -> 10000000
 
 
 
-ERROR - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(333): net start is constantly driven from multiple places at instance start_2, on port q. VDB-1000
+
+WARNING - synthesis: Bit 6 of Register \tuner/state_FSM is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \tuner/state_FSM is stuck at Zero
+######## Missing driver on net n1184. Patching with GND.
+######## Missing driver on net n1285. Patching with GND.
+######## Missing driver on net n1386. Patching with GND.
+######## Missing driver on net n1637. Patching with GND.
+WARNING - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(367): Register \tuner/durThreshold_i0_i0 is stuck at Zero. VDB-5013
+Duplicate register/latch removal. \tuner/durThreshold_i0_i19 is a one-to-one match with \tuner/durThreshold_i0_i10.
+INFO - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
+
+
+<A name="lse_area"></A><B><U><big>Area Report</big></U></B>
+
+################### Begin Area Report (top)######################
+Number of register bits => 185 of 5280 (3 % )
+CCU2 => 34
+FD1P3XZ => 185
+HSOSC_CORE => 1
+IB => 4
+IOL_B => 1
+LUT4 => 211
+OB => 2
+################### End Area Report ##################
+Number of odd-length carry chains : 0
+Number of even-length carry chains : 2
+
+
+<A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : int_osc, loads : 0
+  Net : sck_c, loads : 0
+Clock Enable Nets
+Number of Clock Enables: 0
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : tuner/n2006, loads : 40
+  Net : enabler/flattenedMCUout_39__N_41, loads : 34
+  Net : tuner/howLong/counter_31__N_281, loads : 33
+  Net : tuner/pitch/counter_31__N_346, loads : 32
+  Net : tuner/n2136, loads : 31
+  Net : tuner/nextstate_5__N_124, loads : 28
+  Net : tuner/n2008, loads : 27
+  Net : enabler/flattenedMCUout[39], loads : 15
+  Net : enabler/flattenedMCUout[38], loads : 15
+  Net : enabler/flattenedMCUout[37], loads : 15
+################### End Clock Report ##################
+
+Peak Memory Usage: 90 MB
+
+--------------------------------------------------------------
+Total CPU Time: 1 secs 
+Total REAL Time: 5 secs 
+--------------------------------------------------------------
 
 
 
@@ -218,6 +351,14 @@ ERROR - synthesis: c:/users/jzales/desktop/e155finalproject/e155finalproject/lat
 <BR>
 <BR>
 </PRE></DIV>
+
+<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#Syn>Top</A></LI>
+<LI><A href=#lse_area>Area Report</A></LI>
+<LI><A href=#lse_clock>Clock Report</A></LI>
+</UL>
+</DIV>
 
 <button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
 <script type="text/javascript">

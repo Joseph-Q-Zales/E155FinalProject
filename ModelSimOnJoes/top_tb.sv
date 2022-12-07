@@ -3,10 +3,11 @@
 // Tests the top module
 /////////////////////////////////////////////
 module top_tb();
-    logic clk, sck, sdi, ce, start, pwm, maingMusic;
-    // logic [39:0] flattenedMCUout, newFlattenedMCUout;
+    logic clk, ce, nreset, start, pwm, maingMusic;
+    logic [39:0] newFlattenedMCUout;
 
-    top dut(clk, sck, sdi, ce, !start, pwm, maingMusic);
+
+    SimTop dut(clk, nreset, newFlattenedMCUout, ce, pwm, maingMusic);
 
     always begin
         clk = 1; #5; clk = 0; #5;
@@ -14,9 +15,22 @@ module top_tb();
 
 
     initial begin
-        start = 1;
-        #20;
-        start = 0;
+	#10;
+	nreset = 1;
+	#10;
+	nreset = 0;
+	#10;
+	ce = 1;
+	#5;
+	newFlattenedMCUout = 0'h0123456789;
+	#15;
+	ce = 0;
+	#20;
+	#1000;
+	nreset = 1;
+	#15;
+	nreset = 0;
+	#10;
 	
     end
 

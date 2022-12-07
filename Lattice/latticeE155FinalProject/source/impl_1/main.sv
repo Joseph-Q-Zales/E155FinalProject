@@ -1,8 +1,51 @@
+
+/////////////////////////////////////////////
+// SimTop
+//   Top level module to allow for simulation without SPI
+/////////////////////////////////////////////
+module SimTop(input logic int_osc,  // for simulation purposes, delete and make an internal clock in the top module when done simulating
+		   input  logic nreset,
+           input  logic [39:0] newFlattenedMCUout,
+		   input  logic ce,
+		   //input logic start,
+           output logic pwm,
+		   output logic makingMusic);
+                    
+    logic [39:0] flattenedMCUout;//, newFlattenedMCUout;
+	logic [3:0] tone0, tone1, tone2, tone3, durMCU0, durMCU1, durMCU2, durMCU3;
+	logic [7:0] repThreshold;
+	//logic [9:0] freq0, freq1, freq2, freq3, dur0, dur1, dur2, dur3; // max frequency of 1023 with 10 bits
+	logic [31:0] freqThreshold0;
+	logic [31:0] freqThreshold1;
+	logic [31:0] freqThreshold2;
+	logic [31:0] freqThreshold3;	
+	logic [31:0] durThresh0, durThresh1, durThresh2, durThresh3;
+	//logic [9:0] dur; // CHANGE, just for now doing 600
+	logic song;
+	//logic int_osc;
+	//logic makingMusic;
+	logic start;
+	
+	enables enabler(int_osc, ce, makingMusic, newFlattenedMCUout, start, flattenedMCUout);
+	
+	// decoder for the spi data to get the specific signals
+	make_signals makingSignals(flattenedMCUout, tone0, tone1, tone2, tone3, durMCU0, durMCU1, durMCU2, durMCU3, repThreshold);
+	
+	//allTonesToFreq aT2F(tone0, tone1, tone2, tone3, freq0, freq1, freq2, freq3);
+	allTonesToFreqThreshold aT2FT(tone0, tone1, tone2, tone3, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3);
+	
+	//allDurMCU2Durs ad2ds(durMCU0, durMCU1, durMCU2, durMCU3, dur0, dur1, dur2, dur3);
+	allDurMCU2DursThresh aD2DT(durMCU0, durMCU1, durMCU2, durMCU3, durThresh0, durThresh1, durThresh2, durThresh3);
+	
+	 tune tuner(int_osc, nreset, start, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3,  durThresh0, durThresh1, durThresh2, durThresh3, repThreshold, makingMusic, started, song);
+	
+	assign pwm = song;
+endmodule
+
 /////////////////////////////////////////////
 // top
 //   Top level module with SPI interface and SPI core
 /////////////////////////////////////////////
-
 module top(input  logic nreset, // for simulation purposes, delete and make an internal clock in the top module when done simulating
            input  logic sck, 
            input  logic sdi,
@@ -14,22 +57,17 @@ module top(input  logic nreset, // for simulation purposes, delete and make an i
     logic [39:0] flattenedMCUout, newFlattenedMCUout;
 	logic [3:0] tone0, tone1, tone2, tone3, durMCU0, durMCU1, durMCU2, durMCU3;
 	logic [7:0] repThreshold;
-	logic [9:0] freq0, freq1, freq2, freq3, dur0, dur1, dur2, dur3; // max frequency of 1023 with 10 bits
-	logic [31:0] freqThreshold0 = 0;
-	logic [31:0] freqThreshold1 = 0;
-	logic [31:0] freqThreshold2 = 0;
-	logic [31:0] freqThreshold3 = 0;	
+	//logic [9:0] freq0, freq1, freq2, freq3, dur0, dur1, dur2, dur3; // max frequency of 1023 with 10 bits
+	logic [31:0] freqThreshold0;
+	logic [31:0] freqThreshold1;
+	logic [31:0] freqThreshold2;
+	logic [31:0] freqThreshold3;	
 	logic [31:0] durThresh0, durThresh1, durThresh2, durThresh3;
-	logic [9:0] dur; // CHANGE, just for now doing 600
+	//logic [9:0] dur; // CHANGE, just for now doing 600
 	logic song;
 	logic int_osc;
 	//logic makingMusic;
-	logic start, started;
-	
-	//logic[127:0] clockSpeed;
-
-	// clockspeed is 2.4MHz
-	//assign clockSpeed = 2400000000;
+	logic start;
 
 	 // Internal high-speed oscillator (instantiates the 24 MHz clock)
 	HSOSC #(.CLKHF_DIV(2'b01))
@@ -40,7 +78,7 @@ module top(input  logic nreset, // for simulation purposes, delete and make an i
 	// get signal data from MCU
     MCU_spi spi(sck, sdi, newFlattenedMCUout);
 	
-	enables enabler(int_osc, ce, makingMusic, started, newFlattenedMCUout, start, flattenedMCUout);
+	enables enabler(int_osc, ce, makingMusic, newFlattenedMCUout, start, flattenedMCUout);
 	
 	// decoder for the spi data to get the specific signals
 	make_signals makingSignals(flattenedMCUout, tone0, tone1, tone2, tone3, durMCU0, durMCU1, durMCU2, durMCU3, repThreshold);
@@ -124,54 +162,6 @@ endmodule
 //////
 //    module to decode all tones into frequencies
 //////
-module allTonesToFreq(input logic[3:0] tone0,
-					input logic[3:0] tone1,
-					input logic[3:0] tone2,
-					input logic[3:0] tone3,
-					output logic[9:0] freq0,
-					output logic[9:0] freq1,
-					output logic[9:0] freq2,
-					output logic[9:0] freq3);
-					
-	toneToFreq t2F0(tone0, freq0);
-	toneToFreq t2F1(tone1, freq1);
-	toneToFreq t2F2(tone2, freq2);
-	toneToFreq t2F3(tone3, freq3);
-	
-endmodule
-
-//////
-//    module to decode tone into frequency
-//////
-module toneToFreq(input logic[3:0] tone,
-					output logic[9:0] freq);
-
-	always_comb begin
-		case(tone)
-			0	:	freq = 220;	// A3
-			1	:	freq = 247;	// B3
-			2	:	freq = 262;	// C4
-			3	: 	freq = 294;	// D4
-			4	:	freq = 330;	// E4
-			5	:	freq = 349;	// F4
-			6 	:	freq = 392; // G4
-			7	: 	freq = 440; // A4
-			8	:	freq = 494;	// B4
-			9	:	freq = 523;	// C5
-			10	:	freq = 587;	// D5
-			11	:	freq = 659;	// E5
-			12	:	freq = 698; // F5
-			13	:	freq = 784;	// G5
-			14	:	freq = 880;	// A5
-			15 	: 	freq = 262; // C4 (for the extra)
-			default : freq = 262; // C4 (default)
-		endcase
-	end			
-endmodule
-
-//////
-//    module to decode all tones into frequencies
-//////
 module allTonesToFreqThreshold(input logic[3:0] tone0,
 					input logic[3:0] tone1,
 					input logic[3:0] tone2,
@@ -215,25 +205,6 @@ module toneToFreqThreshold(input logic[3:0] tone,
 			default : threshold = 2726; // A4 (default)
 		endcase
 	end			
-endmodule
-
-//////
-//    module to decode all durMCUs into durations (ms)
-//////
-module allDurMCU2Durs(input logic[3:0] durMCU0,
-					input logic[3:0] durMCU1,
-					input logic[3:0] durMCU2,
-					input logic[3:0] durMCU3,
-					output logic[9:0] dur0,
-					output logic[9:0] dur1,
-					output logic[9:0] dur2,
-					output logic[9:0] dur3);
-					
-	durMCUtoDuration d2d0(durMCU0, dur0);
-	durMCUtoDuration d2d1(durMCU1, dur1);
-	durMCUtoDuration d2d2(durMCU2, dur2);
-	durMCUtoDuration d2d3(durMCU3, dur3);
-	
 endmodule
 
 //////
@@ -284,56 +255,26 @@ module durMCUtoDurationThreshold(input logic[3:0] durMCU,
 		endcase
 	end			
 endmodule
-
-//////
-//    module to decode durD into duration in ms
-//////
-module durMCUtoDuration(input logic[3:0] durMCU,
-					output logic[9:0] dur);
-
-	always_comb begin
-		case(durMCU)
-			0	:	dur = 1000;	// whole note (1 second)
-			1	:	dur = 1000;	// whole note (1 second)
-			2	:	dur = 1000;	// whole note (1 second)
-			3	: 	dur = 1000;	// whole note (1 second)
-			4	:	dur = 1000;	// whole note (1 second)
-			5	:	dur = 500;	// half note  (0.5 seconds)
-			6 	:	dur = 500;  // half note  (0.5 seconds)
-			7	: 	dur = 500;  // half note  (0.5 seconds)
-			8	:	dur = 500;	// half note  (0.5 seconds)
-			9	:	dur = 500;	// half note  (0.5 seconds)
-			10	:	dur = 500;	// half note  (0.5 seconds)
-			11	:	dur = 250;	// quarter note (0.25 seconds)
-			12	:	dur = 250;  // quarter note (0.25 seconds)
-			13	:	dur = 250;	// quarter note (0.25 seconds)
-			14	:	dur = 250;	// quarter note (0.25 seconds)
-			15 	: 	dur = 250;  // quarter note (0.25 seconds)
-			default : dur = 250; // default: quarter note (0.25 seconds)
-		endcase
-	end			
-endmodule
-
+ 
 //////
 //    module work with enables
 //////
 module enables(input logic int_osc,
 				input logic ce,
 				input logic makingMusic,
-				input logic started,
 				input logic [39:0] newFlattenedMCUout,
 				output logic start,
 				output logic [39:0] flattenedMCUout);
-
-	always_ff @(negedge ce) begin
-		if (makingMusic == 0) begin
+	logic twoAgoCE, lastCE;
+	
+	always_ff @(posedge int_osc) begin 
+		twoAgoCE <= ce;
+		lastCE <= twoAgoCE;
+		if (lastCE == 1 && ce == 0 && makingMusic == 0) begin
 			flattenedMCUout <= newFlattenedMCUout;
 			start <= 1;
 		end
-	end
-	
-	always_ff @(posedge int_osc) begin
-		if (started && makingMusic) start <= 0;
+		else if (makingMusic == 1) start <= 0;
 	end
 	
 endmodule
@@ -503,7 +444,6 @@ module duration(input logic int_osc,
 endmodule
 				
 
-
 //////
 //    takes in a unique frequency value, creates a strobe clock at that frequency
 /////
@@ -525,3 +465,100 @@ module freqGenerator(input logic int_osc,
 endmodule
 
 
+// //////
+// //    module to decode all tones into frequencies
+// //////
+// module allTonesToFreq(input logic[3:0] tone0,
+// 					input logic[3:0] tone1,
+// 					input logic[3:0] tone2,
+// 					input logic[3:0] tone3,
+// 					output logic[9:0] freq0,
+// 					output logic[9:0] freq1,
+// 					output logic[9:0] freq2,
+// 					output logic[9:0] freq3);
+					
+// 	toneToFreq t2F0(tone0, freq0);
+// 	toneToFreq t2F1(tone1, freq1);
+// 	toneToFreq t2F2(tone2, freq2);
+// 	toneToFreq t2F3(tone3, freq3);
+	
+// endmodule
+
+// //////
+// //    module to decode tone into frequency
+// //////
+// module toneToFreq(input logic[3:0] tone,
+// 					output logic[9:0] freq);
+
+// 	always_comb begin
+// 		case(tone)
+// 			0	:	freq = 220;	// A3
+// 			1	:	freq = 247;	// B3
+// 			2	:	freq = 262;	// C4
+// 			3	: 	freq = 294;	// D4
+// 			4	:	freq = 330;	// E4
+// 			5	:	freq = 349;	// F4
+// 			6 	:	freq = 392; // G4
+// 			7	: 	freq = 440; // A4
+// 			8	:	freq = 494;	// B4
+// 			9	:	freq = 523;	// C5
+// 			10	:	freq = 587;	// D5
+// 			11	:	freq = 659;	// E5
+// 			12	:	freq = 698; // F5
+// 			13	:	freq = 784;	// G5
+// 			14	:	freq = 880;	// A5
+// 			15 	: 	freq = 262; // C4 (for the extra)
+// 			default : freq = 262; // C4 (default)
+// 		endcase
+// 	end			
+// endmodule
+
+
+// //////
+// //    module to decode all durMCUs into durations (ms)
+// //////
+// module allDurMCU2Durs(input logic[3:0] durMCU0,
+// 					input logic[3:0] durMCU1,
+// 					input logic[3:0] durMCU2,
+// 					input logic[3:0] durMCU3,
+// 					output logic[9:0] dur0,
+// 					output logic[9:0] dur1,
+// 					output logic[9:0] dur2,
+// 					output logic[9:0] dur3);
+					
+// 	durMCUtoDuration d2d0(durMCU0, dur0);
+// 	durMCUtoDuration d2d1(durMCU1, dur1);
+// 	durMCUtoDuration d2d2(durMCU2, dur2);
+// 	durMCUtoDuration d2d3(durMCU3, dur3);
+	
+// endmodule
+
+
+// //////
+// //    module to decode durD into duration in ms
+// //////
+// module durMCUtoDuration(input logic[3:0] durMCU,
+// 					output logic[9:0] dur);
+
+// 	always_comb begin
+// 		case(durMCU)
+// 			0	:	dur = 1000;	// whole note (1 second)
+// 			1	:	dur = 1000;	// whole note (1 second)
+// 			2	:	dur = 1000;	// whole note (1 second)
+// 			3	: 	dur = 1000;	// whole note (1 second)
+// 			4	:	dur = 1000;	// whole note (1 second)
+// 			5	:	dur = 500;	// half note  (0.5 seconds)
+// 			6 	:	dur = 500;  // half note  (0.5 seconds)
+// 			7	: 	dur = 500;  // half note  (0.5 seconds)
+// 			8	:	dur = 500;	// half note  (0.5 seconds)
+// 			9	:	dur = 500;	// half note  (0.5 seconds)
+// 			10	:	dur = 500;	// half note  (0.5 seconds)
+// 			11	:	dur = 250;	// quarter note (0.25 seconds)
+// 			12	:	dur = 250;  // quarter note (0.25 seconds)
+// 			13	:	dur = 250;	// quarter note (0.25 seconds)
+// 			14	:	dur = 250;	// quarter note (0.25 seconds)
+// 			15 	: 	dur = 250;  // quarter note (0.25 seconds)
+// 			default : dur = 250; // default: quarter note (0.25 seconds)
+// 		endcase
+// 	end			
+// endmodule

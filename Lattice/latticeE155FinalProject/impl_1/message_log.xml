@@ -291,10 +291,10 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(6): </Dynamic>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(50): </Dynamic>
             <Dynamic>top</Dynamic>
             <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
-            <Navigation>6</Navigation>
+            <Navigation>50</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -307,33 +307,115 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(84): </Dynamic>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(123): </Dynamic>
             <Dynamic>MCU_spi</Dynamic>
             <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
-            <Navigation>84</Navigation>
+            <Navigation>123</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(320): </Dynamic>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(263): </Dynamic>
             <Dynamic>enables</Dynamic>
             <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
-            <Navigation>320</Navigation>
+            <Navigation>263</Navigation>
         </Message>
         <Message>
-            <ID>35001714</ID>
-            <Severity>16</Severity>
-            <Dynamic>start</Dynamic>
-        </Message>
-        <Message>
-            <ID>35931000</ID>
-            <Severity>256</Severity>
-            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(333): </Dynamic>
-            <Dynamic>start</Dynamic>
-            <Dynamic>start_2</Dynamic>
-            <Dynamic>q</Dynamic>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(139): </Dynamic>
+            <Dynamic>make_signals</Dynamic>
             <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
-            <Navigation>333</Navigation>
+            <Navigation>139</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(166): </Dynamic>
+            <Dynamic>allTonesToFreqThreshold</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>166</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(185): </Dynamic>
+            <Dynamic>toneToFreqThreshold</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>185</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(214): </Dynamic>
+            <Dynamic>allDurMCU2DursThresh</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>214</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(234): </Dynamic>
+            <Dynamic>durMCUtoDurationThreshold</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>234</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(288): </Dynamic>
+            <Dynamic>tune</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>288</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(405): </Dynamic>
+            <Dynamic>duration</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>405</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(451): </Dynamic>
+            <Dynamic>freqGenerator</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>451</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(374): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>2</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>374</Navigation>
+        </Message>
+        <Message>
+            <ID>35001774</ID>
+            <Severity>1</Severity>
+            <Dynamic>\tuner/state</Dynamic>
+            <Dynamic>one-hot</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>16</Severity>
+            <Dynamic>7</Dynamic>
+            <Dynamic>\tuner/state_FSM</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(367): </Dynamic>
+            <Dynamic>\tuner/durThreshold_i0_i0</Dynamic>
+            <Navigation>c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv</Navigation>
+            <Navigation>367</Navigation>
+        </Message>
+        <Message>
+            <ID>35002039</ID>
+            <Severity>1</Severity>
         </Message>
     </Task>
 </BaliMessageLog>
