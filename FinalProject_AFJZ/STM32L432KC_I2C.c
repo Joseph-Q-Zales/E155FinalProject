@@ -44,12 +44,6 @@ void initI2C() {
   // turning on open drain
   GPIOB->OTYPER |= (GPIO_OTYPER_OT6);
   GPIOB->OTYPER |= (GPIO_OTYPER_OT7);
-  
-
-
-  //TODO determine if we actually need stretch
-  //// turning off clock stretching as not supported by RFID peripheral
-  //I2C1->CR1 |= (I2C_CR1_NOSTRETCH);
 
   // turning analog noise filter on
   I2C1->CR1 &= ~(I2C_CR1_ANFOFF);
@@ -148,11 +142,8 @@ void sendI2C(char address, char send[], char nbytes) {
   // for loop going through entire send array
   for(int i = 0; i < nbytes; i++) {
     
-  //  if (i != 0) {
-      // while TXIS not equal to 1, wait
-      //while (!(I2C1->ISR & I2C_ISR_TXE));
-      while (!(I2C1->ISR & I2C_ISR_TXIS));
-  //  }
+    // while TXIS not equal to 1, wait
+    while (!(I2C1->ISR & I2C_ISR_TXIS));
 
     // once it goes high, set the transfer register (TXDR) to be w
     *((volatile char *) (&I2C1->TXDR)) = send[i]; // writing the sending character to DR
@@ -168,16 +159,12 @@ void readI2C(char address, char nbytes, char *reciev) {
   
   comInitI2C(address, nbytes, 1);
 
-  //while (!(I2C1->ISR & I2C_ISR_RXNE));
-
   // for loop going through entire send array
   for(int i = 0; i < nbytes; i++) {
     
-    //if (i != 0) {
-      // while RXNE not equal to 1, wait
-      while (!(I2C1->ISR & I2C_ISR_RXNE));
-    //}
-
+    // while RXNE not equal to 1, wait
+    while (!(I2C1->ISR & I2C_ISR_RXNE));
+    
     // once it goes high, read RXDR and store in array
     reciev[i] = (volatile char) I2C1->RXDR;
 
@@ -198,6 +185,7 @@ int read_ack(char address) {
     
     readI2C(address, 7, rack);
 
+    // compare each byte in recieved address to ack
     for(int i = 0; i < 7; i++) {
         volatile int k = rack[i] - rackcomp[i];
 
