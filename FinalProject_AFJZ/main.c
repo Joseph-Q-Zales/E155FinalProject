@@ -216,6 +216,23 @@ int main(void) {
   char ilpt[11] = {front[0], front[1], front[2], pl, plchk, tfi, 0x4A, 0x01, 0x00, pdchk, postamble};
   char recL[24] = {0};
 
+  //char pla = 0x06;
+  //char plchka = 0xFA;
+  //char pdchka = 0xF6;
+  //char pdchka = 0xF8;
+
+  //char rfconfig[11] = {front[0], front[1], front[2], pl, plchk, tfi, 0x32, 0x01, 0x01, pdchka, postamble};
+  //char rfconfig[13] = {front[0], front[1], front[2], pla, plchka, tfi, 0x32, 0x05, 0xFF, 0x01, 0xFF, pdchka, postamble};
+  //char recConfig[24] = {0};
+
+
+  pl = 0x03;
+  plchk = 0xFD;
+  pdchk = 0xD4;
+  
+  char rfRegTest[10] = {front[0], front[1], front[2], pl, plchk, tfi, 0x58, 0x00, pdchk, postamble};
+  char rRegTest[24] = {0};
+
 
   //pl = 0x02;
   //plchk = 0xFE;
@@ -245,19 +262,40 @@ int main(void) {
 
  // }
 
-  // set IRQ pin as an output and drive it to be 0
+  //// set IRQ pin as an output and drive it to be 0
   //pinMode(I2C_IRQ, GPIO_OUTPUT);
   //pinMode(I2C_reset, GPIO_OUTPUT);
+  //pinMode(I2C_P35, GPIO_OUTPUT);
 
-  //digitalWrite(I2C_IRQ, PIO_HIGH);
-  //digitalWrite(I2C_IRQ, PIO_LOW);
+  //digitalWrite(I2C_reset, PIO_HIGH);
+  //digitalWrite(I2C_reset, PIO_LOW);
   //delay_millis(TIM2, 1);
-  //digitalWrite(I2C_IRQ, PIO_HIGH);
+
+  //digitalWrite(I2C_P35, PIO_LOW);
+  //digitalWrite(I2C_IRQ, PIO_LOW);
+
+  //digitalWrite(I2C_reset, PIO_HIGH);
   //delay_millis(TIM2, 5);
 
   //digitalWrite(I2C_IRQ, PIO_LOW);
 
 
+  // TRYING TO TURN RF FIELD ON WITH RFCONFIG COMMAND
+  //sendI2C((0x48 >> 1), rfconfig, 11);
+  //while(digitalRead(I2C_IRQ));
+  //int accepted = 0;
+  //accepted = read_ack((0x48 >> 1));
+  //delay_millis(TIM2, 5);
+
+
+
+  sendI2C((0x48 >> 1), rfRegTest, 10);
+  while(digitalRead(I2C_IRQ));
+
+  int accepted = 0;
+    
+  accepted = read_ack((0x48 >> 1));
+  delay_millis(TIM2, 100);
 
 
   // send the signal data to the FPGA
@@ -281,7 +319,7 @@ int main(void) {
     //delay_millis(TIM2, 5);
 
 
-
+    //sendI2C((0x48 >> 1), rfconfig, 13);
 
 
     // testing resetP53 command
@@ -304,6 +342,12 @@ int main(void) {
     //delay_millis(TIM2, 5);
 
 
+//    sendI2C((0x48 >> 1), rfconfig, 13);
+
+//    while(digitalRead(I2C_IRQ));
+
+//    readI2C((0x48 >> 1), 24, recConfig);
+
 
 
     sendI2C((0x48 >> 1), ilpt, 11);
@@ -312,12 +356,12 @@ int main(void) {
     int accepted = 0;
     
     accepted = read_ack((0x48 >> 1));
-    //delay_millis(TIM2, 5);
+    ////delay_millis(TIM2, 5);
 
-    // wait for it to drop
+    //// wait for it to drop
     while(digitalRead(I2C_IRQ));
 
-    // wait for it to go high again
+    //// wait for it to go high again
     readI2C((0x48 >> 1), 24, recL);
 
 

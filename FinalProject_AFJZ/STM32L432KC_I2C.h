@@ -13,7 +13,8 @@
 #define I2C_SCL PB6
 #define I2C_SDA PB7
 #define I2C_IRQ PB1
-#define I2C_reset PB0
+#define I2C_reset PB4
+#define I2C_P35 PB5
 
 /* Enables the I2C peripheral and intializes its functions.
  * Refer to the datasheet for more low-level details. */ 

@@ -2,8 +2,11 @@
 <session>
  <Bookmarks/>
  <Breakpoints groups="Breakpoints" active_group="Breakpoints">
-  <BreakpointListItem trigger="" line="242" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
-  <BreakpointListItem trigger="" line="292" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="281" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="284" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="335" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="347" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="387" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="main.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="89" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="main.c" useHWbreakpoint="false"/>
   <Exceptions set="MemManage;UsageFault_Coprocessor;UsageFault_CheckingError;UsageFault_StateError;BusFault;ExceptionEntryReturnFault;HardFault"/>
  </Breakpoints>
@@ -61,21 +64,21 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="50" y="247" useTextEdit="1" path="main.c" left="0" selected="1" top="230" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="271" useTextEdit="1" path="main.c" left="0" selected="1" top="246" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="STM32L432KC_RCC.c" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="56" y="7683" useTextEdit="1" openedFrom="C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/FinalProject_AFJZ/STM32L432KC_I2C.c" path="STM32L4xx/Device/Include/stm32l432xx.h" left="0" top="7661" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="34" useTextEdit="1" path="PN532.c" left="0" top="3" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="24" y="15" useTextEdit="1" path="PN532.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="65" y="1528" useTextEdit="1" openedFrom="C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/FinalProject_AFJZ/STM32L432KC_I2C.c" path="CMSIS_5/CMSIS/Core/Include/core_cm4.h" left="24" top="1506" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="28" y="71" useTextEdit="1" path="C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.34/include/stdio.h" left="0" top="33" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="29" y="14" useTextEdit="1" path="STM32L432KC.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="22" y="20" useTextEdit="1" openedFrom="C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/FinalProject_AFJZ/main.c" path="STM32L432KC.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="8" y="29" useTextEdit="1" openedFrom="C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/FinalProject_AFJZ/STM32L432KC_I2C.c" path="STM32L432KC_GPIO.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="219" useTextEdit="1" path="STM32L4xx/Source/STM32L4xx_Startup.s" left="0" top="200" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="STM32L432KC_GPIO.c" left="0" top="15" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="95" useTextEdit="1" path="STM32L432KC_GPIO.c" left="0" top="70" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="24" useTextEdit="1" path="STM32L432KC_TIM.c" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditRight" x="0" y="0" useTextEdit="1" path="STM32L432KC_SPI.c" left="0" top="6" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditRight" x="21" y="15" useTextEdit="1" path="STM32L432KC_I2C.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditRight" x="0" y="153" useTextEdit="1" path="STM32L432KC_I2C.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditRight" x="21" y="15" useTextEdit="1" openedFrom="C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/FinalProject_AFJZ/STM32L432KC_I2C.c" path="STM32L432KC_I2C.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditRight" x="0" y="153" useTextEdit="1" path="STM32L432KC_I2C.c" left="0" top="156" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="FinalProject_AFJZ" fileDialogDefaultFilter="*.asm;*.s;*.inc" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/FinalProject_AFJZ/SEGGER_THUMB_Startup.s&#xa;C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/FinalProject_AFJZ/SEGGER_THUMB_Startup.s" fileDialogInitialDirectory="C:/Users/afascetti/Desktop/MicroPsFinalProject/E155FinalProject/FinalProject_AFJZ" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>
