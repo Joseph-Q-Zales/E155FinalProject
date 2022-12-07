@@ -39,4 +39,7 @@ void sendI2C(char address, char send[], char nbytes);
  *    -- nbytes: the amount of bytes to receive */
 void readI2C(char address, char nbytes, char *reciev);
 
+// returns a 1 if an ACK was read, 0 if no ACK
+int readack(char address);
+
 #endif

@@ -148,11 +148,11 @@ void sendI2C(char address, char send[], char nbytes) {
   // for loop going through entire send array
   for(int i = 0; i < nbytes; i++) {
     
-    if (i != 0) {
+  //  if (i != 0) {
       // while TXIS not equal to 1, wait
       //while (!(I2C1->ISR & I2C_ISR_TXE));
       while (!(I2C1->ISR & I2C_ISR_TXIS));
-    }
+  //  }
 
     // once it goes high, set the transfer register (TXDR) to be w
     *((volatile char *) (&I2C1->TXDR)) = send[i]; // writing the sending character to DR
@@ -164,7 +164,7 @@ void sendI2C(char address, char send[], char nbytes) {
 /* Reads characters over I2C.
  *    -- address: the address of the peripheral to send to over I2C
  *    -- nbytes: the amount of bytes to receive */
-readI2C(char address, char nbytes, char *reciev) {
+void readI2C(char address, char nbytes, char *reciev) {
   
   comInitI2C(address, nbytes, 1);
 
@@ -173,49 +173,45 @@ readI2C(char address, char nbytes, char *reciev) {
   // for loop going through entire send array
   for(int i = 0; i < nbytes; i++) {
     
-    if (i != 0) {
+    //if (i != 0) {
       // while RXNE not equal to 1, wait
       while (!(I2C1->ISR & I2C_ISR_RXNE));
-    }
+    //}
 
     // once it goes high, read RXDR and store in array
     reciev[i] = (volatile char) I2C1->RXDR;
 
    }
-
-///* initializes the controller communication on MCU
-//*     -- address: the address of the peripheral to send to
-//*     -- nbyts: number of byts to send the peripheral
-//*     -- RdWr: set to 0 for writing, 1 for reading
-//*/
-//void comInitI2Cr(char address, char nbyts, uint16_t RdWr) {
-
-//  // 7 bit addressing mode
-//  I2C1->CR2 &= ~(I2C_CR2_ADD10);
-
-//  // master only sends 7 bits followed by r/w
-//  I2C1->CR2 |= (I2C_CR2_HEAD10R);
-  
-//  // set slave address to send to 0x00 (the general call address for the PN532)
-//  I2C1->CR2 &= ~(I2C_CR2_SADD_Msk);
-
-//  I2C1->CR2 |= (address << 1);
-
-//  // set transfer direction (RD_WRN)
-//  if(RdWr) { // if RdWr is a 1, we are reading
-//    I2C1->CR2 |= (I2C_CR2_RD_WRN);
-//  }
-//  else { // sets to 0 if a write transfer
-//    I2C1->CR2 &= ~(I2C_CR2_RD_WRN);
-//  }
-
-//  // set NBYTES (numb bytes to send)
-//  I2C1->CR2 |= _VAL2FLD(I2C_CR2_NBYTES, nbyts);
-
-//    // enables the start bit
-//  //I2C1->CR2 |= (I2C_CR2_START);
-//  I2C1 -> CR2 |= (1 << 13);
-
-//}
-
 }
+
+
+///* Reads ack over I2C.
+// *    -- address: the address of the peripheral to send to over I2C
+// *    returns 1 if ACK recieved, 0 if not
+int read_ack(char address) {
+
+    char correct = 1;
+    
+    char rackcomp[7] = {0x01, 0x00, 0x00, 0xFF, 0x00, 0xFF, 0x00};
+
+    char rack[7] = {0};
+    
+    readI2C(address, 7, rack);
+
+    for(int i = 0; i < 7; i++) {
+        volatile int k = rack[i] - rackcomp[i];
+
+        if(k != 0) {
+            correct = 0;
+        }
+    }
+
+    if (correct) {
+      return 1;
+    }
+
+    else {
+      return 0;
+    }
+
+   }

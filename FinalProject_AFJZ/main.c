@@ -209,20 +209,20 @@ int main(void) {
   //char recievT[16] = {0};
 
 
-  //pl = 0x04;
-  //plchk = 0xFC;
-  //pdchk = 0xE1;
+  pl = 0x04;
+  plchk = 0xFC;
+  pdchk = 0xE1;
   
-  //char ilpt[11] = {front[0], front[1], front[2], pl, plchk, tfi, 0x4A, 0x01, 0x00, pdchk, postamble};
-  //char recL[24] = {0};
+  char ilpt[11] = {front[0], front[1], front[2], pl, plchk, tfi, 0x4A, 0x01, 0x00, pdchk, postamble};
+  char recL[24] = {0};
 
 
   //pl = 0x02;
   //plchk = 0xFE;
   //pdchk = 0x28;
   
-  char getGS[9] = {front[0], front[1], front[2], pl, plchk, tfi, 0x04, pdchk, postamble};
-  char recTes[24] = {0};
+  //char getGS[9] = {front[0], front[1], front[2], pl, plchk, tfi, 0x04, pdchk, postamble};
+  //char recTes[24] = {0};
 
 
   //pl = 0x02;
@@ -247,13 +247,13 @@ int main(void) {
 
   // set IRQ pin as an output and drive it to be 0
   //pinMode(I2C_IRQ, GPIO_OUTPUT);
-  pinMode(I2C_reset, GPIO_OUTPUT);
+  //pinMode(I2C_reset, GPIO_OUTPUT);
 
-  digitalWrite(I2C_IRQ, PIO_HIGH);
-  digitalWrite(I2C_IRQ, PIO_LOW);
-  delay_millis(TIM2, 1);
-  digitalWrite(I2C_IRQ, PIO_HIGH);
-  delay_millis(TIM2, 1);
+  //digitalWrite(I2C_IRQ, PIO_HIGH);
+  //digitalWrite(I2C_IRQ, PIO_LOW);
+  //delay_millis(TIM2, 1);
+  //digitalWrite(I2C_IRQ, PIO_HIGH);
+  //delay_millis(TIM2, 5);
 
   //digitalWrite(I2C_IRQ, PIO_LOW);
 
@@ -299,9 +299,31 @@ int main(void) {
     // if getFirmwareVersion works, should recieve back: 
     // 01, front, length (4), lchk, tfi (D5), data (01, 00, 78), pdchk, postamble
     // 01, 00, 00, FF, 06, FA, D5, 01, 32, 01, 06, 07, EA, 00
-
+    
     //readI2C((0x48 >> 1), 24, reci); // EXPECT BACK 14 bytes
     //delay_millis(TIM2, 5);
+
+
+
+
+    sendI2C((0x48 >> 1), ilpt, 11);
+    while(digitalRead(I2C_IRQ));
+
+    int accepted = 0;
+    
+    accepted = read_ack((0x48 >> 1));
+    //delay_millis(TIM2, 5);
+
+    // wait for it to drop
+    while(digitalRead(I2C_IRQ));
+
+    // wait for it to go high again
+    readI2C((0x48 >> 1), 24, recL);
+
+
+
+    
+
 
 
     // testing TgGetData
@@ -329,15 +351,15 @@ int main(void) {
 
 
     // testing getGeneralStatus
-    sendI2C((0x48 >> 1), getGS, 9);
-    delay_millis(TIM2, 5);
+    //sendI2C((0x48 >> 1), getGS, 9);
+    //delay_millis(TIM2, 5);
 
     // if InListPassiveTarget works, should recieve back: 
     // 01, front, length (4 or 12), lchk, tfi (D5), data (4B, 01, 00 or 01, ), pdchk, postamble
     // 
 
-    readI2C((0x48 >> 1), 24, recTes);   // EXPECT BACK 12 bytes or 24
-    delay_millis(TIM2, 5);
+    //readI2C((0x48 >> 1), 24, recTes);   // EXPECT BACK 12 bytes or 24
+    //delay_millis(TIM2, 5);
 
     
     // wait while the IRQ bit remains high
