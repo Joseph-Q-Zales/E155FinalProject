@@ -21,3 +21,4 @@ ERROR - c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/lattic
 ERROR - The port [start] has an invalid combination of IO settings according to the device specifications. Check the IO settings and correct the errors.
 ERROR - The port [start] has an invalid combination of IO settings according to the device specifications. Check the IO settings and correct the errors.
 ERROR - The port [start] has an invalid combination of IO settings according to the device specifications. Check the IO settings and correct the errors.
+ERROR - c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(333): net start is constantly driven from multiple places at instance start_2, on port q. VDB-1000

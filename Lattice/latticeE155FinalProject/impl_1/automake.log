@@ -1,110 +1,201 @@
+The -r option is OFF. [The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v. VERI-1482
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(1): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_addsub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="1"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_addsub.v(40): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/adder_subtractor/rtl/lscc_add_sub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_addsub.v" arg3="40"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(2): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_add.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="2"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_add.v(50): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/adder/rtl/lscc_adder.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_add.v" arg3="50"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(3): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_complex_mult.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="3"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_complex_mult.v(52): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/complex_mult/rtl/lscc_complex_mult.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_complex_mult.v" arg3="52"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(4): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_counter.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="4"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_counter.v(39): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/counter/rtl/lscc_cntr.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_counter.v" arg3="39"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(5): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="5"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo.v(44): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/fifo/rtl/lscc_fifo.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo.v" arg3="44"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(6): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo_dc.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="6"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo_dc.v(47): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/fifo_dc/rtl/lscc_fifo_dc.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo_dc.v" arg3="47"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(7): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_mac.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="7"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_mac.v(52): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/mult_accumulate/rtl/lscc_mult_accumulate.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_mac.v" arg3="52"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(8): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsubsum.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="8"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsubsum.v(53): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsubsum.v" arg3="53"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(9): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="9"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsub.v(52): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/mult_add_sub/rtl/lscc_mult_add_sub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsub.v" arg3="52"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(10): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_mult.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="10"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_mult.v(51): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/multiplier/rtl/lscc_multiplier.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_mult.v" arg3="51"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(11): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="11"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp.v(48): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp.v" arg3="48"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(12): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="12"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq.v(45): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq.v" arg3="45"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(13): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_rom.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="13"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_rom.v(45): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/rom/rtl/lscc_rom.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_rom.v" arg3="45"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(14): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_sub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="14"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_sub.v(50): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_sub.v" arg3="50"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(15): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp_be.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="15"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp_be.v(49): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp_be.v" arg3="49"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(16): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="16"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v(45): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v" arg3="45"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(17): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_dsp.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="17"  />
+Analyzing Verilog file c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv. VERI-1482
+Analyzing VHDL file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd. VHDL-1481
+Analyzing VHDL file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd
 
-tmcheck -par "latticeE155FinalProject_impl_1.par" 
+    <postMsg mid="35921014" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd(4): " arg1="components" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd" arg3="4"  />
+    <postMsg mid="35921504" type="Info" dynamic="2" navigation="0" arg0="" arg1="C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/impl_1"  />
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): top
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(6): " arg1="top" arg2="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv" arg3="6"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="C:/lscc/radiant/3.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): " arg1="HSOSC(CLKHF_DIV=2&apos;b01)" arg2="C:/lscc/radiant/3.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v" arg3="756"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(84): " arg1="MCU_spi" arg2="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv" arg3="84"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(320): " arg1="enables" arg2="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv" arg3="320"  />
+    <postMsg mid="35001714" type="Warning" dynamic="1" navigation="0" arg0="start"  />
+	 instance start
 
-bitgen -w "latticeE155FinalProject_impl_1.udb" -f "latticeE155FinalProject_impl_1.t2b" 
-Loading latticeE155FinalProject_impl_1.udb ...
-Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
-Package Status:                     Preliminary    Version 1.5.
-Performance Hardware Data Status:   Advanced       Version 1.0.
-
-
-
-Design:  top
-Family:  iCE40UP
-Device:  iCE40UP5K
-Package: SG48
-Performance Grade:   High-Performance_1.2V
-WARNING - bitgen: Unable to find the instance/port 'clk' in the constraint 'ldc_set_location -site {4} [get_ports clk]'
-
-WARNING - bitgen: In the constraint 'ldc_set_location -site {4} [get_ports clk]', the locate object is not specified
-
-Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
+	 instance start_2
 
 
 
-BITGEN: Bitstream Generator Radiant Software (64-bit) 3.2.0.18.0
+    <postMsg mid="35931000" type="Error" dynamic="4" navigation="2" arg0="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(333): " arg1="start" arg2="start_2" arg3="q" arg4="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv" arg5="333"  />
+child process exited abnormally
+Fail to run synthesis -f latticeE155FinalProject_impl_1_lattice.synproj -gui -msgset C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/promote.xml 
+
+"C:/lscc/radiant/3.2/tcltk/windows/bin/tclsh" "latticeE155FinalProject_impl_1_synthesize.tcl"
+
+synthesis -f latticeE155FinalProject_impl_1_lattice.synproj
+synthesis:  version Radiant Software (64-bit) 3.2.0.18.0
+
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
+Wed Dec  7 00:35:32 2022
 
 
-Running DRC.
-DRC detected 0 errors and 0 warnings.
+Command Line:  C:\lscc\radiant\3.2\ispfpga\bin\nt64\synthesis.exe -f latticeE155FinalProject_impl_1_lattice.synproj -gui -msgset C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/promote.xml 
 
-Preference Summary:
-+---------------------------------+---------------------------------+
-|  Preference                     |  Current Setting                |
-+---------------------------------+---------------------------------+
- *  Default setting.
- ** The specified setting matches the default setting.
-
-
-Creating bit map...
-Saving bit stream in "C:\Users\jzales\Desktop\E155FinalProject\E155FinalProject\Lattice\latticeE155FinalProject\impl_1\latticeE155FinalProject_impl_1.bin".
-    <postMsg mid="1009992" type="Info" dynamic="1" navigation="0" arg0="Bitstream authenticated."  />
-Bitstream generation complete!
-
-Total CPU Time: 0 secs 
-Total REAL Time: 7 secs 
-Peak Memory Usage: 113 MB
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is iCE40UP.
+The -t option is SG48.
+The -sp option is High-Performance_1.2V.
+The -p option is iCE40UP5K.
+                                                          
 
 
-ibisgen "latticeE155FinalProject_impl_1.udb" "C:/lscc/radiant/3.2/cae_library/ibis/iCE40UP.ibs"
-IBIS Models Generator: Lattice Radiant Software (64-bit) 3.2.0.18.0
-
-Tue Dec  6 23:45:22 2022
-
-Loading latticeE155FinalProject_impl_1.udb ...
-Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
-Package Status:                     Preliminary    Version 1.5.
-Performance Hardware Data Status:   Advanced       Version 1.0.
+##########################################################
 
 
-
-Design:  top
-Family:  iCE40UP
-Device:  iCE40UP5K
-Package: SG48
-Performance Grade:   High-Performance_1.2V
-    <postMsg mid="77001032" type="Warning" dynamic="2" navigation="0" arg0="clk" arg1="ldc_set_location -site {4} [get_ports clk]"  />
-    <postMsg mid="77001031" type="Warning" dynamic="1" navigation="0" arg0="ldc_set_location -site {4} [get_ports clk]"  />
-Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
-
-Created design models.
+### Lattice Family     : iCE40UP
 
 
-Generating: C:\Users\jzales\Desktop\E155FinalProject\E155FinalProject\Lattice\latticeE155FinalProject\impl_1\IBIS\latticeE155FinalProject_impl_1.ibs
+### Device             : iCE40UP5K
 
 
-    <postMsg mid="1191031" type="Info" dynamic="0" navigation="0"  />
-
-backanno "latticeE155FinalProject_impl_1.udb"  -o "latticeE155FinalProject_impl_1_vo.vo"      -sp "High-Performance_1.2V"  -w -neg
-backanno: version Radiant Software (64-bit) 3.2.0.18.0
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
-
-Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
-Package Status:                     Preliminary    Version 1.5.
-Loading udb::Database ...
-Design:  top
-Family:  iCE40UP
-Device:  iCE40UP5K
-Package: SG48
-Performance Grade:   High-Performance_1.2V
-Performance Hardware Data Status:   Advanced       Version 1.0.
+### Package            : SG48
 
 
+### Performance Grade  : High-Performance_1.2V
 
-Writing a verilog netlist based on the latticeE155FinalProject_impl_1 design file.
 
-Writing Verilog netlist to file latticeE155FinalProject_impl_1_vo.vo
-Writing SDF timing to file latticeE155FinalProject_impl_1_vo.sdf
-Backanno finished with 0 posted error messages.
-Total CPU Time: 0 secs 
-Total REAL Time: 0 secs 
-Peak Memory Usage: 91 MB
+                                                         
+
+
+    <postMsg mid="35001786" type="Info" dynamic="0" navigation="0"  />
+Optimization goal = Area
+Top-level module name = top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output HDL file name = latticeE155FinalProject_impl_1.vm.
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-path C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject (searchpath added)
+-path C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/impl_1 (searchpath added)
+-path C:/lscc/radiant/3.2/ispfpga/ice40tp/data (searchpath added)
+Mixed language design
+Verilog design file = C:/lscc/radiant/3.2/ip/pmi/pmi_iCE40UP.v
+Verilog design file = C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/source/impl_1/main.sv
+VHDL library = pmi
+VHDL design file = C:/lscc/radiant/3.2/ip/pmi/pmi_iCE40UP.vhd
+    <postMsg mid="35002033" type="Warning" dynamic="1" navigation="0" arg0="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv"  />
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v. VERI-1482
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(1): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_addsub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="1"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_addsub.v(40): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/adder_subtractor/rtl/lscc_add_sub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_addsub.v" arg3="40"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(2): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_add.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="2"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_add.v(50): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/adder/rtl/lscc_adder.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_add.v" arg3="50"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(3): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_complex_mult.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="3"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_complex_mult.v(52): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/complex_mult/rtl/lscc_complex_mult.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_complex_mult.v" arg3="52"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(4): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_counter.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="4"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_counter.v(39): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/counter/rtl/lscc_cntr.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_counter.v" arg3="39"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(5): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="5"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo.v(44): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/fifo/rtl/lscc_fifo.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo.v" arg3="44"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(6): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo_dc.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="6"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo_dc.v(47): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/fifo_dc/rtl/lscc_fifo_dc.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_fifo_dc.v" arg3="47"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(7): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_mac.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="7"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_mac.v(52): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/mult_accumulate/rtl/lscc_mult_accumulate.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_mac.v" arg3="52"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(8): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsubsum.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="8"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsubsum.v(53): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsubsum.v" arg3="53"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(9): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="9"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsub.v(52): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/mult_add_sub/rtl/lscc_mult_add_sub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsub.v" arg3="52"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(10): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_mult.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="10"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_mult.v(51): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/multiplier/rtl/lscc_multiplier.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_mult.v" arg3="51"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(11): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="11"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp.v(48): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp.v" arg3="48"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(12): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="12"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq.v(45): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq.v" arg3="45"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(13): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_rom.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="13"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_rom.v(45): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/rom/rtl/lscc_rom.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_rom.v" arg3="45"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(14): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_sub.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="14"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_sub.v(50): " arg1="c:/lscc/radiant/3.2/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_sub.v" arg3="50"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(15): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp_be.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="15"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp_be.v(49): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp_be.v" arg3="49"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(16): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="16"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v(45): " arg1="c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v" arg3="45"  />
+    <postMsg mid="35901328" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(17): " arg1="c:/lscc/radiant/3.2/ip/pmi/pmi_dsp.v" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v" arg3="17"  />
+Analyzing Verilog file c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv. VERI-1482
+Analyzing VHDL file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd. VHDL-1481
+Analyzing VHDL file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd
+
+    <postMsg mid="35921014" type="Info" dynamic="2" navigation="2" arg0="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd(4): " arg1="components" arg2="c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd" arg3="4"  />
+    <postMsg mid="35921504" type="Info" dynamic="2" navigation="0" arg0="" arg1="C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/impl_1"  />
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): top
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(6): " arg1="top" arg2="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv" arg3="6"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="C:/lscc/radiant/3.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): " arg1="HSOSC(CLKHF_DIV=2&apos;b01)" arg2="C:/lscc/radiant/3.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v" arg3="756"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(84): " arg1="MCU_spi" arg2="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv" arg3="84"  />
+    <postMsg mid="35901018" type="Info" dynamic="2" navigation="2" arg0="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(320): " arg1="enables" arg2="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv" arg3="320"  />
+    <postMsg mid="35001714" type="Warning" dynamic="1" navigation="0" arg0="start"  />
+	 instance start
+
+	 instance start_2
+
+
+
+    <postMsg mid="35931000" type="Error" dynamic="4" navigation="2" arg0="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv(333): " arg1="start" arg2="start_2" arg3="q" arg4="c:/users/jzales/desktop/e155finalproject/e155finalproject/lattice/latticee155finalproject/source/impl_1/main.sv" arg5="333"  />
+child process exited abnormally
+Fail to run synthesis -f latticeE155FinalProject_impl_1_lattice.synproj -gui -msgset C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice/latticeE155FinalProject/promote.xml 

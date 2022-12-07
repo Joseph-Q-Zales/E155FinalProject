@@ -3,7 +3,7 @@
 //   Top level module with SPI interface and SPI core
 /////////////////////////////////////////////
 
-module top(input  logic clk, // for simulation purposes, delete and make an internal clock in the top module when done simulating
+module top(input  logic nreset, // for simulation purposes, delete and make an internal clock in the top module when done simulating
            input  logic sck, 
            input  logic sdi,
 		   input  logic ce,
@@ -24,7 +24,7 @@ module top(input  logic clk, // for simulation purposes, delete and make an inte
 	logic song;
 	logic int_osc;
 	//logic makingMusic;
-	logic start;
+	logic start, started;
 	
 	//logic[127:0] clockSpeed;
 
@@ -40,7 +40,7 @@ module top(input  logic clk, // for simulation purposes, delete and make an inte
 	// get signal data from MCU
     MCU_spi spi(sck, sdi, newFlattenedMCUout);
 	
-	enables enabler(ce, makingMusic, newFlattenedMCUout, start, flattenedMCUout);
+	enables enabler(int_osc, ce, makingMusic, started, newFlattenedMCUout, start, flattenedMCUout);
 	
 	// decoder for the spi data to get the specific signals
 	make_signals makingSignals(flattenedMCUout, tone0, tone1, tone2, tone3, durMCU0, durMCU1, durMCU2, durMCU3, repThreshold);
@@ -68,8 +68,7 @@ module top(input  logic clk, // for simulation purposes, delete and make an inte
 	//assign start = 1;
 
 	
-	
-	 tune tuner(int_osc, start, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3,  durThresh0, durThresh1, durThresh2, durThresh3, repThreshold, makingMusic, song);
+	 tune tuner(int_osc, nreset, start, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3,  durThresh0, durThresh1, durThresh2, durThresh3, repThreshold, makingMusic, started, song);
 	
 	//assign freqThreshold0 = 27272;
 	//freqGenerator freqer(int_osc, 0'b1, freqThreshold0, song);
@@ -318,8 +317,10 @@ endmodule
 //////
 //    module work with enables
 //////
-module enables(input logic ce,
+module enables(input logic int_osc,
+				input logic ce,
 				input logic makingMusic,
+				input logic started,
 				input logic [39:0] newFlattenedMCUout,
 				output logic start,
 				output logic [39:0] flattenedMCUout);
@@ -330,6 +331,11 @@ module enables(input logic ce,
 			start <= 1;
 		end
 	end
+	
+	always_ff @(posedge int_osc) begin
+		if (started && makingMusic) start <= 0;
+	end
+	
 endmodule
 
 
@@ -338,6 +344,7 @@ endmodule
 //    uses an FSM to cycle through unique notes with unique durations
 //////
 module tune(input logic int_osc,
+				input logic nreset,
 				input logic start,
 				input logic[31:0] freqThreshold0,
 				input logic[31:0] freqThreshold1,
@@ -349,6 +356,7 @@ module tune(input logic int_osc,
 				input logic[31:0] durThreshold3,
 				input logic[7:0] repThreshold,
 				output logic makingMusic,
+				output logic started,
 				output logic song);
 				
 	logic done, en, rep, stopCountFlag;
@@ -372,7 +380,8 @@ module tune(input logic int_osc,
 	
 	// state register
 	always_ff @(posedge int_osc) begin
-		state <= nextstate;
+		if (nreset) state <= idle;
+		else state <= nextstate;
 	end
 	
 	// only play music when we aren't in the idle state
@@ -382,10 +391,15 @@ module tune(input logic int_osc,
 	end
 	
 	// if completed doorbell chime, flag makingMusic goes low
-	// if completed doorbell chime, flag makingMusic goes low
 	always_ff @(posedge int_osc) begin
-		if (state == complete) makingMusic <= 0;
-		if (state == note0) makingMusic <= 1;
+		if (state == complete || state == idle) begin
+			makingMusic <= 0;
+			started <= 0;
+			end
+		else if (state == note0) begin
+			makingMusic <= 1;
+			started <= 1;
+		end
 	end
 	
 		
@@ -410,6 +424,7 @@ module tune(input logic int_osc,
 		end
 	end
 	
+	// repition counter
 	always_ff @(posedge int_osc) begin
 		if (state == idle) counter <= 0;
 		else if (state == note0) stopCountFlag <= 0;
@@ -450,7 +465,6 @@ module duration(input logic int_osc,
 				output logic done);
 				
 	logic[31:0] counter = 0;
-	logic[31:0] THRESHOLD;
 	logic clkStrobe;
  	
 	
@@ -509,62 +523,5 @@ module freqGenerator(input logic int_osc,
 	end
 
 endmodule
-
-module tester(output logic oscil);
-	// 24MHz		
-		// Internal high-speed oscillator (instantiates the 48 MHz clock)
-	HSOSC #(.CLKHF_DIV(2'b01))
-		hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
-	
-	logic[31:0] counter = 0;
-	logic[31:0] THRESHOLD = 15305;
-	
-
-	always_ff @(posedge int_osc) begin
-		if (counter == THRESHOLD) counter <= 0;
-		else counter <= counter + 1;
-	end
-	always_ff @(posedge int_osc) begin
-		if (counter == THRESHOLD) oscil <= ~oscil;
-	end
-
-endmodule
-// module freqGenerator(input logic int_osc,
-// 					input logic en,
-// 					input logic[31:0] freqThreshold,
-// 					output logic toneFreq);
-// 	logic clkStrobe = 0;
-// 	logic[31:0] counter = 0;
-	
-// 	// threshold value is calculated from freq
-// 	// assign freqThreshold = ((1/freq)*clockSpeed)/2 - 1;
-	
-// 	// strobe counter (modified from E155 L02 on 9/1/22)
-// 	always_ff @(posedge int_osc) begin
-// 		if (clkStrobe) counter <= 0;
-// 		else counter <= counter + 1;
-// 	end
-// 	// always_ff @(posedge int_osc) begin
-// 	// 	if(!en)		begin 
-// 	// 			counter <= 0;
-// 	// 			toneFreq <= 0;
-// 	// 	end				
-// 	// 	else if(clkStrobe) 	begin
-// 	// 			counter <= 0;
-// 	// 	end
-// 	// 	else 	counter <= counter + 1;
-// 	// end
-	
-// 	// strobe generation (modified from E155 L02 on 9/1/22)
-// 	always_ff @(posedge int_osc) begin
-// 		if (counter == freqThreshold) clkStrobe <= 1;
-// 		else clkStrobe <= 0;
-// 	end
-	
-// 	//always_ff @(posedge int_osc) begin
-// 	//	if(clkStrobe) toneFreq <= ~toneFreq;
-// 	//end
-	
-// endmodule
 
 

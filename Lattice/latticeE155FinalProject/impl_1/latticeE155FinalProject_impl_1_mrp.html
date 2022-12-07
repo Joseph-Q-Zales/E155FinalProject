@@ -47,7 +47,7 @@ Target Device:        iCE40UP5KSG48
 Target Performance:   High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 3.2.0.18.0
-Mapped on: Tue Dec  6 23:45:06 2022
+Mapped on: Wed Dec  7 00:14:31 2022
 
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
@@ -58,22 +58,22 @@ Command line:   map -i latticeE155FinalProject_impl_1_syn.udb -pdc C:/Users/jzal
      latticeE155FinalProject_impl_1.mrp -hierrpt -gui
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of slice registers: 179 out of  5280 (3%)
+   Number of slice registers: 182 out of  5280 (3%)
    Number of I/O registers:      1 out of   117 (1%)
-   Number of LUT4s:           354 out of  5280 (7%)
-      Number of logic LUT4s:             212
-      Number of inserted feedthru LUT4s:  73
-      Number of replicated LUT4s:          1
+   Number of LUT4s:           357 out of  5280 (7%)
+      Number of logic LUT4s:             209
+      Number of inserted feedthru LUT4s:  78
+      Number of replicated LUT4s:          2
       Number of ripple logic:             34 (68 LUT4s)
-   Number of IO sites used:   5 out of 39 (13%)
-      Number of IO sites used for general PIO: 5
+   Number of IO sites used:   6 out of 39 (15%)
+      Number of IO sites used for general PIO: 6
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 5 out of 36 (14%)
+      Number of IO sites used for PIO+I3C: 6 out of 36 (17%)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 5 out of 39 (13%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 6 out of 39 (15%)
    Number of DSPs:             0 out of 8 (0%)
    Number of I2Cs:             0 out of 2 (0%)
    Number of High Speed OSCs:  1 out of 1 (100%)
@@ -87,36 +87,38 @@ Command line:   map -i latticeE155FinalProject_impl_1_syn.udb -pdc C:/Users/jzal
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  3
-      Net int_osc: 76 loads, 76 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
-      Net ce_c: 34 loads, 0 rising, 34 falling (Driver: Port ce)
       Net sck_c: 40 loads, 40 rising, 0 falling (Driver: Port sck)
-   Number of Clock Enables:  4
-      Net n2480: 19 loads, 19 SLICEs
+      Net int_osc: 79 loads, 79 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
+      Net ce_c: 34 loads, 0 rising, 34 falling (Driver: Port ce)
+   Number of Clock Enables:  6
+      Net n2126: 19 loads, 19 SLICEs
+      Net n2148: 3 loads, 3 SLICEs
       Net VCC_net: 1 loads, 0 SLICEs
-      Net n8: 1 loads, 1 SLICEs
-      Net n2476: 34 loads, 34 SLICEs
+      Net tuner.n2972: 1 loads, 1 SLICEs
+      Net tuner.n676: 1 loads, 1 SLICEs
+      Net n2123: 34 loads, 34 SLICEs
    Number of LSRs:  4
-      Net tuner.nextstate_5__N_116: 2 loads, 2 SLICEs
-      Net tuner.n2464: 1 loads, 1 SLICEs
-      Net tuner.pitch.counter_31__N_333: 17 loads, 17 SLICEs
-      Net tuner.howLong.counter_31__N_268: 17 loads, 17 SLICEs
+      Pin nreset: 6 loads, 6 SLICEs (Net: nreset_c)
+      Net tuner.nextstate_5__N_122: 2 loads, 2 SLICEs
 
+      Net tuner.pitch.counter_31__N_340: 17 loads, 17 SLICEs
+      Net tuner.howLong.counter_31__N_275: 17 loads, 17 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net state[0]: 54 loads
-      Net state[1]: 38 loads
-      Net state[2]: 35 loads
-      Net n2476: 34 loads
-      Net n2480: 30 loads
-      Net n11: 25 loads
-      Net tuner.howLong.counter_31__N_268: 17 loads
-      Net tuner.pitch.counter_31__N_333: 17 loads
+      Net tuner.n1995: 38 loads
+      Net n2123: 34 loads
+      Net n2126: 32 loads
+      Net tuner.nextstate_5__N_120: 28 loads
+      Net tuner.n1997: 25 loads
+      Net tuner.howLong.counter_31__N_275: 17 loads
+      Net tuner.pitch.counter_31__N_340: 17 loads
+      Net flattenedMCUout[13]: 16 loads
+      Net flattenedMCUout[15]: 16 loads
       Net flattenedMCUout[21]: 16 loads
-      Net flattenedMCUout[23]: 16 loads
 
 
 
 
-   Number of warnings:  12
+   Number of warnings:  2
    Number of errors:    0
 
 
@@ -124,22 +126,6 @@ Command line:   map -i latticeE155FinalProject_impl_1_syn.udb -pdc C:/Users/jzal
 
 <A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
 
-WARNING - map: C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice
-     /latticeE155FinalProject/pins_spi.pdc (6) : No port matched &apos;start&apos;.
-WARNING - map: C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice
-     /latticeE155FinalProject/pins_spi.pdc (7) : No port matched &apos;start&apos;.
-WARNING - map: No port matched &apos;start&apos;.
-WARNING - map: Can&apos;t resolve object &apos;start&apos; in constraint &apos;ldc_set_location
-     -site {10} [get_ports start]&apos;.
-WARNING - map: No port matched &apos;start&apos;.
-WARNING - map: Can&apos;t resolve object &apos;start&apos; in constraint &apos;ldc_set_port -iobuf
-     {DRIVE=NA} [get_ports start]&apos;.
-WARNING - map: Remove invalid constraint &apos;ldc_set_location -site {10} [get_ports
-     start]&apos;.
-WARNING - map: Remove invalid constraint &apos;ldc_set_port -iobuf {DRIVE=NA}
-     [get_ports start]&apos;.
-WARNING - map: Top module port &apos;clk&apos; does not connect to anything.
-WARNING - map: Top module port &apos;clk&apos; does not connect to anything.
 WARNING - map: The clock port [ce] is assigned to a non clock dedicated pin
      [36], which might affect the clock performance. Use dedicated clock
      resources for the port.
@@ -161,7 +147,8 @@ WARNING - map: The clock port [sck] is assigned to a non clock dedicated pin
 +---------------------+-----------+-----------+-------+-------+-----------+
 | sck                 | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-
+| nreset              | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 | makingMusic         | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | pwm                 | OUTPUT    | LVCMOS33  |       |       |           |
@@ -173,6 +160,8 @@ WARNING - map: The clock port [sck] is assigned to a non clock dedicated pin
 
 Block i4_1_lut was optimized away.
 Block i1 was optimized away.
+
+
 
 OSC Summary
 -----------
@@ -189,10 +178,10 @@ OSC 1:                                 Pin/Node Value
 <A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
 ---------------
 
-Instance Name: hf_osc
-         Type: HFOSC
 Instance Name: spi/newFlattenedMCUout_i0
          Type: IOLOGIC
+Instance Name: hf_osc
+         Type: HFOSC
 
 
 
@@ -202,6 +191,19 @@ Instance Name: spi/newFlattenedMCUout_i0
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 61 MB
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
