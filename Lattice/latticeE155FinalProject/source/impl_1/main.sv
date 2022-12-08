@@ -1,46 +1,12 @@
+///////////////////////////////////////////////////////////////////////////////////
+// main.sv																	     //
+// FPGA code to create a PWM at a frequency and duration determined by the MCU   //
+// Creates the "doorbell" sounds												 //					
+// Date: 12/8/2022																 //
+// Authors: Ava Fascetti & Joe Zales											 //
+// Emails: afascetti@hmc.edu, jzales@hmc.edu									 //
+///////////////////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////
-// SimTop
-//   Top level module to allow for simulation without SPI
-/////////////////////////////////////////////
-module SimTop(input logic int_osc,  // for simulation purposes, delete and make an internal clock in the top module when done simulating
-		   input  logic nreset,
-           input  logic [39:0] newFlattenedMCUout,
-		   input  logic ce,
-		   //input logic start,
-           output logic pwm,
-		   output logic makingMusic);
-                    
-    logic [39:0] flattenedMCUout;//, newFlattenedMCUout;
-	logic [3:0] tone0, tone1, tone2, tone3, durMCU0, durMCU1, durMCU2, durMCU3;
-	logic [7:0] repThreshold;
-	//logic [9:0] freq0, freq1, freq2, freq3, dur0, dur1, dur2, dur3; // max frequency of 1023 with 10 bits
-	logic [31:0] freqThreshold0;
-	logic [31:0] freqThreshold1;
-	logic [31:0] freqThreshold2;
-	logic [31:0] freqThreshold3;	
-	logic [31:0] durThresh0, durThresh1, durThresh2, durThresh3;
-	//logic [9:0] dur; // CHANGE, just for now doing 600
-	logic song;
-	//logic int_osc;
-	//logic makingMusic;
-	logic start;
-	
-	enables enabler(int_osc, ce, makingMusic, newFlattenedMCUout, start, flattenedMCUout);
-	
-	// decoder for the spi data to get the specific signals
-	make_signals makingSignals(flattenedMCUout, tone0, tone1, tone2, tone3, durMCU0, durMCU1, durMCU2, durMCU3, repThreshold);
-	
-	//allTonesToFreq aT2F(tone0, tone1, tone2, tone3, freq0, freq1, freq2, freq3);
-	allTonesToFreqThreshold aT2FT(tone0, tone1, tone2, tone3, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3);
-	
-	//allDurMCU2Durs ad2ds(durMCU0, durMCU1, durMCU2, durMCU3, dur0, dur1, dur2, dur3);
-	allDurMCU2DursThresh aD2DT(durMCU0, durMCU1, durMCU2, durMCU3, durThresh0, durThresh1, durThresh2, durThresh3);
-	
-	 tune tuner(int_osc, nreset, start, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3,  durThresh0, durThresh1, durThresh2, durThresh3, repThreshold, makingMusic, started, song);
-	
-	assign pwm = song;
-endmodule
 
 /////////////////////////////////////////////
 // top
@@ -50,34 +16,25 @@ module top(input  logic nreset, // for simulation purposes, delete and make an i
            input  logic sck, 
            input  logic sdi,
 		   input  logic ce,
-		   //input logic start,
            output logic pwm,
 		   output logic makingMusic);
-                    
+    
+	// internal signals
     logic [39:0] flattenedMCUout, newFlattenedMCUout;
 	logic [3:0] tone0, tone1, tone2, tone3, durMCU0, durMCU1, durMCU2, durMCU3;
 	logic [7:0] repThreshold;
-	//logic [9:0] freq0, freq1, freq2, freq3, dur0, dur1, dur2, dur3; // max frequency of 1023 with 10 bits
-	logic [31:0] freqThreshold0;
-	logic [31:0] freqThreshold1;
-	logic [31:0] freqThreshold2;
-	logic [31:0] freqThreshold3;	
+	logic [31:0] freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3;	
 	logic [31:0] durThresh0, durThresh1, durThresh2, durThresh3;
-	//logic [9:0] dur; // CHANGE, just for now doing 600
-	logic song;
-	logic int_osc;
-	//logic makingMusic;
-	logic start;
+	logic song, int_osc, start;
 
 	 // Internal high-speed oscillator (instantiates the 24 MHz clock)
 	HSOSC #(.CLKHF_DIV(2'b01))
 		hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
-	
-	//assign int_osc = clk;
-	
+		
 	// get signal data from MCU
     MCU_spi spi(sck, sdi, newFlattenedMCUout);
 	
+	// turns on enables based on the SPI's chip enable and whether or not the doorbell is ringing
 	enables enabler(int_osc, ce, makingMusic, newFlattenedMCUout, start, flattenedMCUout);
 	
 	// decoder for the spi data to get the specific signals
@@ -88,28 +45,11 @@ module top(input  logic nreset, // for simulation purposes, delete and make an i
 	
 	//allDurMCU2Durs ad2ds(durMCU0, durMCU1, durMCU2, durMCU3, dur0, dur1, dur2, dur3);
 	allDurMCU2DursThresh aD2DT(durMCU0, durMCU1, durMCU2, durMCU3, durThresh0, durThresh1, durThresh2, durThresh3);
-	// FSM to create unique tune from signal data
-	// tune makeMusic(int_osc, start, freq0, freq1, freq2, freq3, dur0, dur1, dur2, dur3, repThreshold, clockSpeed, makingMusic, song);
 	
-	//assign freqThreshold0 = 27272; // 440hz
-	//assign freqThreshold1 = 54544; // 698hz
-	//assign freqThreshold2 = 36363; // E4
-	//assign freqThreshold3 = 17191; // 698hz
-	
-	//assign durThresh0 = 24000000;
-	//assign durThresh1 = 24000000;
-	//assign durThresh2 = 24000000;
-	//assign durThresh3 = 24000000;
-	 
-	//assign repThreshold = 2;
-	
-	//assign start = 1;
+	 // FSM to create unique tune from signal data
+	 tune tuner(int_osc, nreset, start, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3,  durThresh0, durThresh1, durThresh2, durThresh3, repThreshold, makingMusic, song);
 
-	
-	 tune tuner(int_osc, nreset, start, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3,  durThresh0, durThresh1, durThresh2, durThresh3, repThreshold, makingMusic, started, song);
-	
-	//assign freqThreshold0 = 27272;
-	//freqGenerator freqer(int_osc, 0'b1, freqThreshold0, song);
+	// song output
 	assign pwm = song;
     
 endmodule
@@ -160,7 +100,7 @@ module make_signals(input logic[39:0] flattenedMCUout,
 endmodule
 
 //////
-//    module to decode all tones into frequencies
+//    module to decode all tones into the threshokds required by the frequency strobe clock
 //////
 module allTonesToFreqThreshold(input logic[3:0] tone0,
 					input logic[3:0] tone1,
@@ -179,7 +119,7 @@ module allTonesToFreqThreshold(input logic[3:0] tone0,
 endmodule
 
 //////
-//    module to decode tone into the threshold required for the strobe clock in the pwm frequency generator
+//    module to decode a tone into the threshold required for the strobe clock in the pwm frequency generator
 //////
 module toneToFreqThreshold(input logic[3:0] tone,
 					output logic[31:0] threshold);
@@ -192,23 +132,23 @@ module toneToFreqThreshold(input logic[3:0] tone,
 			3	: 	threshold = 40815;	// D4
 			4	:	threshold = 36363;	// E4
 			5	:	threshold = 34383;	// F4
-			6 	:	threshold = 30611; // G4
-			7	: 	threshold = 27272; // A4
+			6 	:	threshold = 30611;  // G4
+			7	: 	threshold = 27272;  // A4
 			8	:	threshold = 24290;	// B4
 			9	:	threshold = 22944;	// C5
 			10	:	threshold = 20442;	// D5
 			11	:	threshold = 18208;	// E5
-			12	:	threshold = 17191; // F5
+			12	:	threshold = 17191;  // F5
 			13	:	threshold = 15305;	// G5
 			14	:	threshold = 13635;	// A5
-			15 	: 	threshold = 27272; // A4 (for the extra)
+			15 	: 	threshold = 27272;  // A4 (for the extra)
 			default : threshold = 2726; // A4 (default)
 		endcase
 	end			
 endmodule
 
 //////
-//    module to decode all durMCUs into durations thresholds
+//    module to decode all durMCUs into durations thresholds required by the duration module's strobe clock
 //////
 module allDurMCU2DursThresh(input logic[3:0] durMCU0,
 					input logic[3:0] durMCU1,
@@ -228,7 +168,7 @@ endmodule
 
 
 //////
-//    module to decode durD into duration thresholds in ms
+//    module to decode durD into duration thresholds the threshold required by the duration module's strobe clock
 //////
 module durMCUtoDurationThreshold(input logic[3:0] durMCU,
 					output logic[31:0] durThresh);
@@ -258,6 +198,8 @@ endmodule
  
 //////
 //    module work with enables
+// 	  start bit set high (allowing the doorbell sound to play) if chip enable just went low AND the doorbell isn't currently making mus
+//	  This set of enables stops the doorbell from being reset with a new signal from the MCU
 //////
 module enables(input logic int_osc,
 				input logic ce,
@@ -265,16 +207,18 @@ module enables(input logic int_osc,
 				input logic [39:0] newFlattenedMCUout,
 				output logic start,
 				output logic [39:0] flattenedMCUout);
+	// local signals
 	logic twoAgoCE, lastCE;
 	
 	always_ff @(posedge int_osc) begin 
 		twoAgoCE <= ce;
 		lastCE <= twoAgoCE;
-		if (lastCE == 1 && ce == 0 && makingMusic == 0) begin
+		// if CE was high two clock cycles ago and is now low, and the doorbell isn't currently making music
+		if (lastCE == 1 && ce == 0 && makingMusic == 0) begin 
 			flattenedMCUout <= newFlattenedMCUout;
 			start <= 1;
 		end
-		else if (makingMusic == 1) start <= 0;
+		else if (makingMusic == 1) start <= 0; // if the doorbell is already running, start gets 0
 	end
 	
 endmodule
@@ -297,9 +241,9 @@ module tune(input logic int_osc,
 				input logic[31:0] durThreshold3,
 				input logic[7:0] repThreshold,
 				output logic makingMusic,
-				output logic started,
 				output logic song);
-				
+		
+	// local signals
 	logic done, en, rep, stopCountFlag;
 	logic[1:0] threshold;
 	logic[1:0] counter = 0;
@@ -307,13 +251,15 @@ module tune(input logic int_osc,
 	logic[31:0] freqThreshold;
 	
 	// assign repeat
-	assign threshold = repThreshold[1:0];        		// TODO - make a new signal to assign to how many times we repeat (mod on the MCU side)
-	assign rep = ~(counter == threshold);
+	assign threshold = repThreshold[1:0]; 
+	
+	// if the counter has reached the threshold, then rep (the signal for the FMS to continue to note0 instead of completed) will go low
+	assign rep = ~(counter == threshold); 
 	
 		
 	// instantiate dur and freq modules
 	duration howLong(int_osc, durThreshold, done);
-	freqGenerator pitch(int_osc, en, freqThreshold, toneFreq);
+	freqGenerator pitch(int_osc, makingMusic, freqThreshold, toneFreq);
 	
 	// state and next state definitions
 	typedef enum logic[5:0] {idle, note0, note1, note2, note3, complete} statetype;
@@ -326,20 +272,20 @@ module tune(input logic int_osc,
 	end
 	
 	// only play music when we aren't in the idle state
-	always_ff @(posedge int_osc) begin
-		if (state == idle) en <= 0;
-		else en <= 1;
-	end
+	// this is the enable for the frequency generator
+	//always_ff @(posedge int_osc) begin
+	//	if (state == idle) en <= 0;
+	//	else en <= 1;
+	// end
 	
 	// if completed doorbell chime, flag makingMusic goes low
+	// also the enable for the frequency generator
 	always_ff @(posedge int_osc) begin
 		if (state == complete || state == idle) begin
 			makingMusic <= 0;
-			started <= 0;
 			end
 		else if (state == note0) begin
 			makingMusic <= 1;
-			started <= 1;
 		end
 	end
 	
@@ -361,14 +307,18 @@ module tune(input logic int_osc,
 		else if (state == note3) begin
 			freqThreshold <= freqThreshold3;
 			durThreshold <= durThreshold3;
-			//counter <= counter + 1;
 		end
 	end
 	
 	// repition counter
 	always_ff @(posedge int_osc) begin
+		// if in the idle state, counter is 0
 		if (state == idle) counter <= 0;
+		// if in note0, the stop counting flag is 0
 		else if (state == note0) stopCountFlag <= 0;
+		
+		// if in note3 and it hasn't increased the repitition counter
+			// then counter is increased and it signals that it has counted already (stopCountFlag = 1)
 		else if((state == note3) && !stopCountFlag) begin
 			counter <= counter + 1;
 			stopCountFlag <= 1;
@@ -404,15 +354,11 @@ endmodule
 module duration(input logic int_osc,
 				input logic[31:0] durThreshold,
 				output logic done);
-				
+	
+	// local signals
 	logic[31:0] counter = 0;
 	logic clkStrobe;
  	
-	
-	// calculate THRESHOLD based on dur
-	//assign THRESHOLD = dur*clockSpeed - 1;
-	
-
 	// strobe counter (modified from E155 L02 on 9/1/22)
 	always_ff @(posedge int_osc) begin
 		if(counter == durThreshold) begin
@@ -423,46 +369,81 @@ module duration(input logic int_osc,
 				clkStrobe <= 0;
 				counter <= counter + 1;
 		end
-		// clkStrobe <= (counter == THRESHOLD);
 	end
 	
-	// strobe generation (modified from E155 L02 on 9/1/22)
-	// always_ff @(posedge int_osc) begin
-	// 		clkStrobe <= (counter == THRESHOLD);
-	// end
-	
+	// assign output
 	assign done = clkStrobe;
-
-	// always_ff @(posedge int_osc) begin
-	// 	counter <= counter + 1;
-	// end
-	 
-	// assign done = (counter == THRESHOLD);
-
-
 		
 endmodule
 				
-
 //////
-//    takes in a unique frequency value, creates a strobe clock at that frequency
+//    takes in a unique frequency threshold value corresponding to known frequencies, and creates a strobe clock at that frequency
 /////
 module freqGenerator(input logic int_osc,
 					input logic on,
 					input logic[31:0] freqThreshold,
 					output logic pwm);
 	
+	// local signal
 	logic[31:0] counter = 0;
 	
+	// strobe clock
 	always_ff @(posedge int_osc) begin
 		if (counter == freqThreshold || (!on)) counter <= 0;
 		else counter <= counter + 1;
 	end
+	// if the strobe clock strobes, the signal toggles thus creating a square wave at the desired frequency
 	always_ff @(posedge int_osc) begin
 		if (counter == freqThreshold) pwm <= ~pwm;
 	end
 
 endmodule
+
+/////////////////////////////////////////////
+// SimTop
+//   Top level module to allow for simulation without SPI 
+// FOR SIMULATION ONLY
+/////////////////////////////////////////////
+module SimTop(input logic int_osc,  // for simulation purposes, delete and make an internal clock in the top module when done simulating
+		   input  logic nreset,
+           input  logic [39:0] newFlattenedMCUout,
+		   input  logic ce,
+           output logic pwm,
+		   output logic makingMusic);
+                    
+    logic [39:0] flattenedMCUout;//, newFlattenedMCUout;
+	logic [3:0] tone0, tone1, tone2, tone3, durMCU0, durMCU1, durMCU2, durMCU3;
+	logic [7:0] repThreshold;
+	logic [31:0] freqThreshold0;
+	logic [31:0] freqThreshold1;
+	logic [31:0] freqThreshold2;
+	logic [31:0] freqThreshold3;	
+	logic [31:0] durThresh0, durThresh1, durThresh2, durThresh3;
+	logic song;
+	logic start;
+	
+	enables enabler(int_osc, ce, makingMusic, newFlattenedMCUout, start, flattenedMCUout);
+	
+	// decoder for the spi data to get the specific signals
+	make_signals makingSignals(flattenedMCUout, tone0, tone1, tone2, tone3, durMCU0, durMCU1, durMCU2, durMCU3, repThreshold);
+	
+	//allTonesToFreq aT2F(tone0, tone1, tone2, tone3, freq0, freq1, freq2, freq3);
+	allTonesToFreqThreshold aT2FT(tone0, tone1, tone2, tone3, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3);
+	
+	//allDurMCU2Durs ad2ds(durMCU0, durMCU1, durMCU2, durMCU3, dur0, dur1, dur2, dur3);
+	allDurMCU2DursThresh aD2DT(durMCU0, durMCU1, durMCU2, durMCU3, durThresh0, durThresh1, durThresh2, durThresh3);
+	
+	 tune tuner(int_osc, nreset, start, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3,  durThresh0, durThresh1, durThresh2, durThresh3, repThreshold, makingMusic, started, song);
+	
+	assign pwm = song;
+endmodule
+
+
+
+//////
+//    Below are modules which have been depreciated but kept
+// 	  These include decoders for frequnecy to an actual frequnecy in Hz and duration in ms
+//////
 
 
 // //////
