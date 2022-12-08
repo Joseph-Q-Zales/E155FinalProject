@@ -50,12 +50,6 @@ int main(void) {
   RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
   initTIM(TIM2);
 
-  //char signalData0 = 0b01101001; // n1n2
-  //char signalData1 = 0b10010001; // n3n4
-  //char signalData2 = 0b01011010; // d1d2
-  //char signalData3 = 0b01000111; // d3d4
-  //char signalData4 = 0b00000001; // times to repeat
-
 
   ////// ALL TRANSACTIONS INCLUDE:
   //////  preamble, startcode 1 & 2, packetlength, plchecksum, tfi, data, datachecksum, postamble
@@ -91,33 +85,36 @@ int main(void) {
   // send the signal data to the FPGA
   while(1){
 
-    // turning RF Field On
+    //// turning RF Field On
     sendI2C((0x48 >> 1), rfRegTest, 10); // send command
     while(digitalRead(I2C_IRQ)); // wait for IRQ line to drop
     int accepted = 0;
     accepted = read_ack((0x48 >> 1)); // read the ack back from the board
-    // TODO add in conditional only if accepted ?? otherwise if it fails it doesn't matter
-    delay_millis(TIM2, 100); // wait for RF Field to set up
+    
+    while(accepted) {
 
-    // send InListPassiveTarget command
-    sendI2C((0x48 >> 1), ilpt, 11);
+        delay_millis(TIM2, 100); // wait for RF Field to set up
 
-    // wait for IRQ to drop (meaning the PN532 is about to ack)
-    while(digitalRead(I2C_IRQ));
+        //// send InListPassiveTarget command
+        sendI2C((0x48 >> 1), ilpt, 11);
 
-    // read the ack
-    accepted = read_ack((0x48 >> 1));
+        //// wait for IRQ to drop (meaning the PN532 is about to ack)
+        while(digitalRead(I2C_IRQ));
 
-    // wait for IRQ to drop (meaning a card has been tapped)
-    while(digitalRead(I2C_IRQ));
+        //// read the ack
+        accepted = read_ack((0x48 >> 1));
 
-    // read output of InListPassiveTarget once an ID has been tapped
-    readI2C((0x48 >> 1), 24, recL);
+        //// wait for IRQ to drop (meaning a card has been tapped)
+        while(digitalRead(I2C_IRQ));
 
-    // create signalData from ID info and send to FPGA
-    process_and_send(recL);
+        //// read output of InListPassiveTarget once an ID has been tapped
+        readI2C((0x48 >> 1), 24, recL);
 
-    delay_millis(TIM2, 20);
+        // create signalData from ID info and send to FPGA
+        process_and_send(recL);
+
+        delay_millis(TIM2, 3000);
+    }
 
   }
   
@@ -140,7 +137,7 @@ void process_and_send(char *rec) {
     signalData2 = rec[16];
     signalData3 = rec[17];
 
-    signalData4 = (signalData0 + signalData1 + signalData2 + signalData3) % 3;
+    signalData4 = (2*signalData0 + signalData1 + 2*signalData2 + signalData3) % 3;
 
     mcu_to_fpga(signalData0, signalData1, signalData2, signalData3, signalData4);
 
