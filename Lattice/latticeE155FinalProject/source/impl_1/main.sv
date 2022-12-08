@@ -12,7 +12,7 @@
 // top
 //   Top level module with SPI interface and SPI core
 /////////////////////////////////////////////
-module top(input  logic nreset, // for simulation purposes, delete and make an internal clock in the top module when done simulating
+module top(input  logic reset, // for simulation purposes, delete and make an internal clock in the top module when done simulating
            input  logic sck, 
            input  logic sdi,
 		   input  logic ce,
@@ -47,7 +47,7 @@ module top(input  logic nreset, // for simulation purposes, delete and make an i
 	allDurMCU2DursThresh aD2DT(durMCU0, durMCU1, durMCU2, durMCU3, durThresh0, durThresh1, durThresh2, durThresh3);
 	
 	 // FSM to create unique tune from signal data
-	 tune tuner(int_osc, nreset, start, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3,  durThresh0, durThresh1, durThresh2, durThresh3, repThreshold, makingMusic, song);
+	 tune tuner(int_osc, reset, start, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3,  durThresh0, durThresh1, durThresh2, durThresh3, repThreshold, makingMusic, song);
 
 	// song output
 	assign pwm = song;
@@ -110,7 +110,8 @@ module allTonesToFreqThreshold(input logic[3:0] tone0,
 					output logic[31:0] freqThreshold1,
 					output logic[31:0] freqThreshold2,
 					output logic[31:0] freqThreshold3);
-					
+	
+	// converts tones to the known frequency threshold				
 	toneToFreqThreshold t2F0(tone0, freqThreshold0);
 	toneToFreqThreshold t2F1(tone1, freqThreshold1);
 	toneToFreqThreshold t2F2(tone2, freqThreshold2);
@@ -229,7 +230,7 @@ endmodule
 //    uses an FSM to cycle through unique notes with unique durations
 //////
 module tune(input logic int_osc,
-				input logic nreset,
+				input logic reset,
 				input logic start,
 				input logic[31:0] freqThreshold0,
 				input logic[31:0] freqThreshold1,
@@ -267,7 +268,7 @@ module tune(input logic int_osc,
 	
 	// state register
 	always_ff @(posedge int_osc) begin
-		if (nreset) state <= idle;
+		if (reset) state <= idle;
 		else state <= nextstate;
 	end
 	
@@ -405,7 +406,7 @@ endmodule
 // FOR SIMULATION ONLY
 /////////////////////////////////////////////
 module SimTop(input logic int_osc,  // for simulation purposes, delete and make an internal clock in the top module when done simulating
-		   input  logic nreset,
+		   input  logic reset,
            input  logic [39:0] newFlattenedMCUout,
 		   input  logic ce,
            output logic pwm,
@@ -433,7 +434,7 @@ module SimTop(input logic int_osc,  // for simulation purposes, delete and make 
 	//allDurMCU2Durs ad2ds(durMCU0, durMCU1, durMCU2, durMCU3, dur0, dur1, dur2, dur3);
 	allDurMCU2DursThresh aD2DT(durMCU0, durMCU1, durMCU2, durMCU3, durThresh0, durThresh1, durThresh2, durThresh3);
 	
-	 tune tuner(int_osc, nreset, start, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3,  durThresh0, durThresh1, durThresh2, durThresh3, repThreshold, makingMusic, started, song);
+	 tune tuner(int_osc, reset, start, freqThreshold0, freqThreshold1, freqThreshold2, freqThreshold3,  durThresh0, durThresh1, durThresh2, durThresh3, repThreshold, makingMusic, started, song);
 	
 	assign pwm = song;
 endmodule

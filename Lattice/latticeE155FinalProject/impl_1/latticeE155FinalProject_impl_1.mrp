@@ -5,7 +5,7 @@ Target Device:        iCE40UP5KSG48
 Target Performance:   High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 3.2.0.18.0
-Mapped on: Wed Dec  7 22:31:31 2022
+Mapped on: Thu Dec  8 15:52:03 2022
 
 Design Information
 ------------------
@@ -56,7 +56,7 @@ Design Summary
       Net n2169: 1 loads, 1 SLICEs
       Net enabler.flattenedMCUout_39__N_41: 34 loads, 34 SLICEs
    Number of LSRs:  4
-      Pin nreset: 6 loads, 6 SLICEs (Net: nreset_c)
+      Pin reset: 6 loads, 6 SLICEs (Net: reset_c)
       Net nextstate_5__N_126: 2 loads, 2 SLICEs
       Net tuner.pitch.counter_31__N_342: 17 loads, 17 SLICEs
       Net tuner.howLong.counter_31__N_277: 17 loads, 17 SLICEs
@@ -84,12 +84,19 @@ Design Summary (cont)
 
 
 
-   Number of warnings:  1
+   Number of warnings:  5
    Number of errors:    0
 
 Design Errors/Warnings
 ----------------------
 
+WARNING - map: C:/Users/jzales/Desktop/E155FinalProject/E155FinalProject/Lattice
+     /latticeE155FinalProject/pins_spi.pdc (5) : No port matched 'nreset'.
+WARNING - map: No port matched 'nreset'.
+WARNING - map: Can't resolve object 'nreset' in constraint 'ldc_set_location
+     -site {10} [get_ports nreset]'.
+WARNING - map: Remove invalid constraint 'ldc_set_location -site {10} [get_ports
+     nreset]'.
 WARNING - map: The clock port [sck] is assigned to a non clock dedicated pin
      [28], which might affect the clock performance. Use dedicated clock
      resources for the port.
@@ -107,7 +114,7 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+-------+-------+-----------+
 | sck                 | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| nreset              | INPUT     |           |       |       |           |
+| reset               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | makingMusic         | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -119,13 +126,6 @@ Removed logic
 
 Block i1 was optimized away.
 
-OSC Summary
------------
-
-OSC 1:                                 Pin/Node Value
-  OSC Instance Name:                            hf_osc
-  Power UP:                            NODE     VCC_net
-  Enable Signal:                       NODE     VCC_net
 
                                     Page 2
 
@@ -133,8 +133,13 @@ OSC 1:                                 Pin/Node Value
 
 
 
-OSC Summary (cont)
-------------------
+OSC Summary
+-----------
+
+OSC 1:                                 Pin/Node Value
+  OSC Instance Name:                            hf_osc
+  Power UP:                            NODE     VCC_net
+  Enable Signal:                       NODE     VCC_net
   OSC Output:                          NODE     int_osc
   DIV Setting:                                  01
 
@@ -151,12 +156,7 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 61 MB
-
-
-
-
-
+   Peak Memory Usage: 62 MB
 
 
 

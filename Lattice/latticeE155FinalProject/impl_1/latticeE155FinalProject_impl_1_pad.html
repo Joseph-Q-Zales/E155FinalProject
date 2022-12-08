@@ -48,7 +48,7 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Wed Dec  7 22:31:48 2022
+Thu Dec  8 15:52:11 2022
 
 Pinout by Port Name:
 +-------------+----------+--------------+-------+--------------------+
@@ -56,8 +56,8 @@ Pinout by Port Name:
 +-------------+----------+--------------+-------+--------------------+
 | ce          | 36/0     | LVCMOS33_IN  | PR10B | PULL:100K          |
 | makingMusic | 44/2     | LVCMOS33_OUT | PL7B  | DRIVE:8mA PULL:NA  |
-| nreset      | 10/1     | LVCMOS33_IN  | PL17A | PULL:100K          |
 | pwm         | 13/1     | LVCMOS33_OUT | PL20A | DRIVE:8mA PULL:NA  |
+| reset       | 10/1     | LVCMOS33_IN  | PL17A | PULL:100K          |
 | sck         | 28/0     | LVCMOS33_IN  | PR18A | PULL:100K          |
 | sdi         | 42/0     | LVCMOS33_IN  | PR9A  | PULL:100K          |
 +-------------+----------+--------------+-------+--------------------+
@@ -80,7 +80,7 @@ Vccio by Bank:
 | 4/2      |     unused, PULL:UP |            |              | PL10A |                  |
 | 6/1      |     unused, PULL:UP |            |              | PL14B |                  |
 | 9/1      |     unused, PULL:UP |            |              | PL16A |                  |
-| 10/1     | nreset              | LOCATED    | LVCMOS33_IN  | PL17A |                  |
+| 10/1     | reset               |            | LVCMOS33_IN  | PL17A |                  |
 | 11/1     |     unused, PULL:UP |            |              | PL18A |                  |
 | 12/1     |     unused, PULL:UP |            |              | PL19A |                  |
 | 13/1     | pwm                 | LOCATED    | LVCMOS33_OUT | PL20A |                  |
@@ -138,8 +138,8 @@ Locate Constraints for each Pin:
 
 ldc_set_location -site {36} [ get_ports {ce} ]
 ldc_set_location -site {44} [ get_ports {makingMusic} ]
-ldc_set_location -site {10} [ get_ports {nreset} ]
 ldc_set_location -site {13} [ get_ports {pwm} ]
+ldc_set_location -site {10} [ get_ports {reset} ]
 ldc_set_location -site {28} [ get_ports {sck} ]
 ldc_set_location -site {42} [ get_ports {sdi} ]
 
@@ -149,7 +149,7 @@ ldc_set_location -site {42} [ get_ports {sdi} ]
 
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Wed Dec  7 22:31:48 2022
+Thu Dec  8 15:52:11 2022
 
 
 
