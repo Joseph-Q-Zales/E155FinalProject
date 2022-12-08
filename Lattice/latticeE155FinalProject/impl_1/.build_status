@@ -15,9 +15,15 @@
             <Task name="PARTrace" build_result="2" update_result="0" update_time="1670481110"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
+<<<<<<< Updated upstream
         <Milestone name="Synthesis" build_result="2" build_time="1670481089">
             <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1670481089"/>
             <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1670481089"/>
+=======
+        <Milestone name="Synthesis" build_result="0" build_time="1670480458">
+            <Task name="Lattice_Synthesis" build_result="0" update_result="2" update_time="1670480458"/>
+            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1670480458"/>
+>>>>>>> Stashed changes
             <Task name="SynTrace" build_result="0" update_result="2" update_time="1667080327"/>
             <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1667080327"/>
         </Milestone>
@@ -41,4 +47,7 @@
         <Report name="latticeE155FinalProject_impl_1_vo.vo" last_build_time="1670481122" last_build_size="261052"/>
     </Strategy>
 </BuildStatus>
+<<<<<<< Updated upstream
    
+=======
+>>>>>>> Stashed changes

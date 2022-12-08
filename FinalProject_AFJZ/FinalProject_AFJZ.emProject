@@ -56,8 +56,6 @@
       <file file_name="STM32L432KC_USART.h" />
       <file file_name="STM32L432KC_I2C.c" />
       <file file_name="STM32L432KC_I2C.h" />
-      <file file_name="PN532.c" />
-      <file file_name="PN532.h" />
       <file file_name="STM32L432KC_SPI.c" />
     </folder>
     <folder Name="Script Files">

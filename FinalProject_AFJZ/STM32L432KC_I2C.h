@@ -2,7 +2,7 @@
 // Header for I2C functions
 // Authors: Ava Fascetti and Joe Zales
 // Emails: afascetti@hmc.edu || jzales@hmc.edu
-// Created: 11/6/22
+// December 8, 2022 
 
 #ifndef STM32L4_I2C_H
 #define STM32L4_I2C_H
@@ -19,25 +19,27 @@
 void initI2C();
 
 /* initializes the controller communication on MCU
-*     -- address: the address of the peripheral to send to
-*     -- nbyts: number of byts to send the peripheral
+*     -- address: the address of the I2C peripheral
+*     -- nbyts: number of bytes to send the peripheral
 *     -- RdWr: set to 0 for writing, 1 for reading
  */
 void comInitI2C(char address, char nbyts, uint16_t RdWr);
 
-/* Transmits a character (1 byte) over I2C.
- *    -- address: the address of the peripheral to send to over I2C
- *    -- send: the character received over I2C 
+/* Transmits characters over I2C.
+ *    -- address: the address of the I2C peripheral
+ *    -- send: the characters to send over I2C 
  *    -- nbytes: the number of bytes being sent*/
 void sendI2C(char address, char send[], char nbytes);
 
-
-/* Reads a character (1 byte) over I2C.
- *    -- address: the address of the peripheral to send to over I2C
- *    -- nbytes: the amount of bytes to receive */
+/* Reads characters over I2C.
+ *    -- address: the address of the I2C peripheral
+ *    -- nbytes: the amount of bytes to receive
+ *    -- *reciev: pointer to the char array that the recieved data should fill into */
 void readI2C(char address, char nbytes, char *reciev);
 
-// returns a 1 if an ACK was read, 0 if no ACK
+/* Reads ack over I2C.
+ *    -- address: the address of the I2C peripheral
+ *    returns: 1 if an ACK was read, 0 if no ACK was read */
 int readack(char address);
 
 #endif
