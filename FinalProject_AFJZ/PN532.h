@@ -19,10 +19,4 @@
 */
 void initPN532();
 
-
-/* reads the PN532 data memory location
-*   returns the 4 byte identifier of the RFID card tapped
-*/
-uint32_t readPN532();
-
 #endif
